@@ -1,0 +1,19 @@
+civil_war_faction = TYL
+graphical_culture = celticgfx
+color = { 25  23  204 }
+
+ship_names = {
+	Aigosages Argantia Artio
+	Belenos Belisama Bellona Bussomaros
+	Cernunnos
+	Comontorios
+	Damona Danu
+	Epona Erecura Esus
+	Grannos
+	Lug
+	Magosanos
+	Noaros
+	Oghma
+	Scordos Sulevia
+	Tamitenos Taranis Tarvos Teutates
+}

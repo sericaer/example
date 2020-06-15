@@ -1,0 +1,4 @@
+civil_war_faction = QBE
+region = region_belgica
+color = { 170 170 210 }
+color2 = { 70 70 150 }

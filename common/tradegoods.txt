@@ -1,0 +1,90 @@
+grasslands_horses = {
+	color = { 0.5 0.5 0.0 }
+	allow_unit_type = horse_archers
+}
+
+luxuries = {
+	color = { 0.7 0.0 0.0 }
+	local_tax_modifier = 0.05
+	local_religious_prestige = 0.25
+}
+
+olive = {
+	local_population_growth = 0.01
+	local_manpower = 0.05
+	color = { 0.7 0.0 0.0 }
+}
+
+grain = {
+	color = { 0.7 0.0 0.0 }
+	local_population_growth = 0.02
+}
+
+salt = {
+	color = { 0.6 0.2 0.2 }
+	local_regiment_recruit_speed = -0.25
+}
+
+
+iron = {
+	color = { 1.0 0.0 0.0 }
+	allow_unit_type = heavy_infantry
+}
+
+horses = {
+	color = { 0.5 0.5 0.0 }
+	allow_unit_type = cavalry
+}
+
+wine = {
+	color = { 0.5 0.8 0.0 }
+	local_revolt_risk = -1
+}
+
+wood = {
+	color = { 0.0 0.5 0.0  }
+	allow_unit_type = trireme
+	allow_unit_type = archers
+}
+
+amber = {
+	color = { 0.3 0.7 0.3 }
+	local_tax_modifier = 0.1
+}
+
+stone = {
+	local_defensive = 1
+	color = { 0.0 1.0 0.0 }
+}
+
+fish = {
+	local_manpower = 0.1
+	color = { 0.0 0.6 0.6 }
+}
+
+spices = {
+	local_religious_prestige = 0.5
+	color = { 0.2 0.9 0.9 }
+}
+
+elephants = {
+	allow_unit_type = warelephant
+	color = { 1.0 0.8 0.8 }
+}
+
+papyrus = {
+	local_research_points_modifier = 0.2
+	color = { 0.0 0.8 0.8 }
+}
+
+cloth = {
+	local_ship_recruit_speed = -0.25
+	color = { 0.3 0.7 0.9 }
+}
+
+wild_game = {
+	local_start_experience = 0.15
+	color = { 0.0 0.8 0.8 }
+}
+
+

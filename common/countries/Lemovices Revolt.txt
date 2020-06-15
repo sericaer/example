@@ -1,0 +1,18 @@
+civil_war_faction = LEM
+graphical_culture = celticgfx
+color = { 165  198  225 }
+
+ship_names = {
+	Acitodunon Albucio Argentate Ausrito
+	Blatomagos Boudiga "Briva Curretia"
+	Carantona Carovicos Cassinomagos
+	Durotincios Durotincon
+	Eluontios Epadextoris Excingidiaco
+	Ivaunon
+	Lemono
+	Petrocores
+	Roncomagos
+	Sermanicomagos
+	Uxello
+	Vesunna
+}

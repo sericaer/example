@@ -1,0 +1,42 @@
+hellenistic_pantheon = {
+	roman_pantheon = {
+		color = { 0.7 0.0 0.0 }
+	}
+	greek_pantheon = {
+		color = { 0.6 0.2 0.2 }
+	}
+	egyptian_pantheon = {
+		color = { 1.0 0.0 0.0 }
+	}
+}
+
+semitic_pantheon = {
+	carthaginian_pantheon = {
+		color = { 0.5 0.5 0.0 }
+	}
+	phoenician_pantheon = {
+		color = { 0.5 0.8 0.0 }
+	}
+}
+
+paganism = {
+	shamanism = {
+		color = { 0.0 0.5 0.0  }
+	}
+	druidism = {
+		color = { 0.6 0.7 0.6 }
+	}
+	animism = {
+		color = { 0.0 1.0 0.0 }
+	}
+}
+
+monotheism = {
+	judaism = {
+		color = { 0.0 0.6 0.6 }
+	}
+	zoroaster = {
+		color = { 0.3 0.9 0.9 }
+	}
+}
+

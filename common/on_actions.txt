@@ -1,0 +1,131 @@
+#character
+on_battle_won = 
+{
+	random_events = {
+		1000 	= 0		#weight 1000 on nothing
+		50	= 504		#low chance to get confident trait
+		50	= 505		#low chance to get tactician trait
+		50	= 506		#low chance to get discipline trait
+		50	= 507		#low chance to get steadfast trait
+		50	= 508		#low chance to get agressive trait
+		20  	= 500		#very low chance to get victorious
+	}
+}
+
+#character
+on_battle_lost = 
+{
+	random_events = {
+		100	= 501		#10% chance to lose Victorious if you have it
+		1000 	= 0		#weight 1000 on nothing
+		100 	= 503		#gaining brave or coward
+	}
+}
+
+#character
+on_siege_won = 
+{
+	random_events = {
+		1000 	= 0		#weight 1000 on nothing
+		100 	= 502		#gaining conqueror
+	}
+}
+
+#character
+on_failed_assassination = {
+	events = {
+ 		560 # Gain trait suspicious
+ 	}
+}
+
+#character
+on_bastard_birth = {
+	events = {
+ 		561 # A female friend of the ruler gives birth to a royal bastard
+ 	}
+}
+
+#country
+on_civil_war_lost = {
+	events = {
+		2033
+	}
+}
+
+#country
+on_civil_war_won = {
+	events = {
+		2032
+	}
+}
+
+#character
+in_land_battle = {
+	random_events = {
+		1	= 509		#low chance that a character dies
+		2	= 510		#low chance that he is wounded
+		2	= 514		#low chance that a character is maimed
+		10000 	= 0		#weight 10000 on nothing
+	}
+}
+
+#character
+in_naval_battle = {
+	random_events = {
+		1	= 511		#low chance that a character dies
+		2	= 512		#low chance that he is wounded
+		2	= 513		#low chance that a character is maimed
+		10000 	= 0		#weight 10000 on nothing
+	}
+}
+
+
+#country
+on_country_broken = {
+	events = {
+		530
+		531
+		532
+		533
+	}
+}
+
+
+# Country. Just after a new ruler has taken over in republics
+on_monarchy_ruler_change = {
+	random_events = {
+#		5  = 540 # Ruler gets offed by more popular family member (monarchy)
+#		5  = 541 # Disloyal Sibling decides to try for a civil war (monarchy)
+# 		5  = 544 # Ambitious family memeber steals throne for underage ruler (monarchy)
+# 		5  = 548 # Where their is not child of the previous ruler a popular member of the ruling family will go for it (monarchy)
+#		20  = 547 # The heir of the dictator reinsitutes the republic (Dictatorship only) 
+		10  = 545 # Small monarchy decides to give state away in will rather than pass to different family
+		90 = 0
+	}
+}
+
+# Country. Just after a new ruler has taken over in republics
+on_republic_ruler_change = {
+	random_events = {
+#		20 = 542 # Wealthier Character decides to bribe his way to victory
+		30 = 543 # Rival Army commander gets pissed off and goes for the jackpot
+		70 = 0
+	}
+}
+
+# Country. Just after a new ruler has taken over in tribes
+on_tribal_ruler_change = {
+	random_events = {
+		25 = 549 # high martial rival kills new ruler in duel (military tribe) 
+		25 = 550 # high charisma rival convinces crowd to stone new ruler to death (religious tribe)
+		25 = 551 # wealthier rival convinces people that new ruler will not lead them to prosperity (trade tribe)
+		25 = 552 # high finesse rival outmanuevers new ruler and takes his place (civic tribe) 
+	}
+}
+
+# Character. A previous king has returned to the country.
+on_return_of_the_king = {
+	events = {
+		5502 # Restoration or Civil War?
+	}
+}

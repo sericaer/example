@@ -1,0 +1,19 @@
+civil_war_faction = PER
+graphical_culture = greekgfx
+color = { 130  165 163 }
+
+ship_names = {
+	Alcyone Antandros Asia "Apollo Aktaios" "Apollo Hekatos" Argiope "Artemis Astyrene"
+	"Artemis Hekate" "Athena Tritonia"
+	Calyce
+	Canace
+	"Dionysos Bakkheios" "Dionysos Brisaios" "Dionysus Phallen" "Drakon Ophiogeneikos" "Drakon Pitanios"
+	"Eros Harpocraticos"
+	Gegenees
+	Hekatonnesoi "Hermes Agoraios"
+	Kaikos Kalliope Kharites "Kybele Asporene"
+	Methymna Myrina Mytilene Nyktimene "Nymphai Mysiai"
+	Okyrhoe Orpheus Orseis Ourea
+	Perimede Pordoselene "Poseidon Patros" Pisidice Pitane
+	Telephos Teuthrania Teuthras Thymbrios Troas
+}

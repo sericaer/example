@@ -1,0 +1,4 @@
+civil_war_faction = QIB
+region = region_iberia
+color = { 220 220 150 }
+color2 = { 80 80 40 }

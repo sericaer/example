@@ -1,0 +1,4 @@
+civil_war_faction = QA7
+region = region_armenia
+color = { 0 140 149 }
+color2 = { 0 30 80 }

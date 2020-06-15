@@ -1,0 +1,101 @@
+bookmark =
+{
+	name = "BM_PYRRHIC_WAR"
+	desc = "BM_PYRRHIC_DESC"
+	date = 474.1.1
+	
+	country = ROM
+	country = EPI
+}
+
+bookmark =
+{
+	name = "BM_FIRST_PUNIC"
+	desc = "BM_FIRST_PUNIC_DESC"
+	date = 490.1.1
+	
+	country = ROM
+	country = CAR
+}
+
+bookmark =
+{
+	name = "BM_SECOND_PUNIC"
+	desc = "BM_SECOND_PUNIC_DESC"
+	date = 536.1.1
+	
+	country = ROM
+	country = CAR
+	country = MAC
+	country = AET
+	country = PER
+}
+
+bookmark =
+{
+	name = "BM_SYRIAN_WAR"
+	desc = "BM_SYRIAN_WAR_DESC"
+	date = 562.1.1
+	
+	country = ROM
+	country = SEL
+	country = AET
+	country = ACH
+	country = PER
+}
+
+bookmark =
+{
+	name = "BM_MARE_NOSTRUM"
+	desc = "BM_MARE_NOSTRUM_DESC"
+	date = 604.1.1
+	
+	country = ROM
+	country = CAR
+	country = MAC
+}
+
+bookmark =
+{
+	name = "BM_GAIUS_MARIUS"
+	desc = "BM_GAIUS_MARIUS_DESC"
+	date = 647.1.1
+	
+	country = ROM
+	country = NUM
+	country = PON
+	country = BIT
+}
+
+bookmark =
+{
+	name = "BM_GALLIC_WARS"
+	desc = "BM_GALLIC_WARS_DESC"
+	date = 696.1.1
+	
+	country = ROM
+	country = ARV
+	country = HLV
+	country = AED
+	country = SEQ
+}
+bookmark =
+{
+	name = "BM_ALEA_IACTA_EST"
+	desc = "BM_ALEA_IACTA_EST_DESC"
+	date = 705.3.1
+	
+	country = ROM
+	country = RO2
+}
+
+bookmark =
+{
+	name = "BM_FIRST_EMPEROR"
+	desc = "BM_FIRST_EMPEROR_DESC"
+	date = 723.1.1
+	
+	country = ROM
+	country = RO2
+	country = EGY
+}

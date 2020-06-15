@@ -1,0 +1,1755 @@
+###DEATH BY OLD AGE#####
+
+
+character_event = {
+	id = 3800
+	
+	trigger = {
+		age = 45
+	}
+
+	mean_time_to_happen = {
+
+		months = 360
+		
+		modifier = {
+			age = 50 
+			factor = 0.9
+		}
+		modifier = {
+			age = 55
+			factor= 0.8
+		}
+		modifier = {
+			age = 60
+			factor = 0.6
+		}
+		modifier = {
+			age = 65
+			factor = 0.5
+		}
+		modifier = {
+			age = 70
+			factor = 0.4
+		}
+		modifier = {
+			age = 80
+			factor = 0.3
+		}
+		modifier = {
+			age = 85
+			factor = 0.1
+		}
+		modifier = {
+			age = 95
+			factor = 0.01
+		}
+		modifier = {
+			NOT = { health = 0.7 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.85
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.5
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+		modifier = {
+			is_female = yes
+			factor = 1.15
+		}
+	}
+
+	title = "EVTNAME3800"
+	desc = "EVTDESC3800"
+	
+	option = {
+		name = "EVTOPTA3800"
+		death = yes
+	}
+}
+
+
+####DEATH BY ILLNESS
+
+character_event = {
+
+	id = 3801
+	
+	major_character = yes	
+
+	trigger = {
+		age = 1
+		OR = {
+			traits = unhealthy
+			traits = plague
+			traits = pneumonia 
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 1200
+
+		modifier = {
+			age = 50 
+			factor = 0.85
+		}
+		modifier = {
+			age = 55
+			factor= 0.80
+		}
+		modifier = {
+			age = 60 
+			factor = 0.75 
+		}
+		modifier = {
+			age = 65
+			factor = 0.5
+		}
+		modifier = {
+			age = 70
+			factor = 0.25
+		}
+		modifier = {
+			age = 80
+			factor = 0.1
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+		modifier = {
+			traits = plague 
+			factor = 0.5
+		}
+		modifier = {
+			traits = pneumonia 
+			factor = 0.75
+		}
+		
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3801"
+	desc = "EVTDESC3801"
+
+	option = {
+		name = "EVTOPTA3801"
+		death = yes
+	}
+}
+
+#####DEATH BY SUICIDE FOR CRAZY PEOPLE####
+			
+character_event = {
+
+	id = 3802
+	
+	major_character = yes	
+
+	trigger = {
+		age = 16
+		OR = {
+			traits = stressed
+			traits = schizophrenic
+			traits = maniac
+		}
+	}
+	
+	mean_time_to_happen = {
+
+		months = 5000
+
+		modifier = {
+			traits = schizophrenic
+			factor = 0.9
+		}
+		modifier = {
+			traits = maniac
+			factor = 0.85
+		}
+		modifier = {
+			traits = weak_willed 
+			factor = 0.95
+		}
+		modifier = {
+			traits = stubborn 
+			factor = 1.05
+		}
+		modifier = {
+			traits = devout 
+			factor = 1.05
+		}
+		modifier = {
+			traits = lapsed
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3802"
+	desc = "EVTDESC3802"
+
+	option = {
+		name = "EVTOPTA3802"
+		death = yes
+	}
+}
+
+
+#####DEATH BY SUICIDE FOR SHAMED PEOPLE####
+
+character_event = {
+
+	id = 3803
+	
+	major_character = yes	
+
+	trigger = {
+		num_of_children = 1
+		NOT = { popularity = 5 }
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 5000 
+
+		modifier = {
+			traits = coward 
+			factor = 0.95
+		}
+		modifier = {
+			traits = unnoticeable 
+			factor = 0.95
+		}
+		modifier = {
+			traits = maimed 
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3803"
+	desc = "EVTDESC3803"
+
+	option = {
+		name = "EVTOPTA3803"
+		death = yes
+		random_child = {
+			popularity = 10 
+		}
+	}
+}
+
+
+#####DEATH FROM WOUNDS w####
+
+character_event = {
+
+	id = 3804
+	
+	major_character = yes	
+
+	trigger = {
+		age = 16
+		OR = {
+			traits = wounded
+			traits = invalid
+			traits = maimed
+		}
+	}
+	
+	mean_time_to_happen = {
+
+		months = 5000
+
+		modifier = {
+			traits = invalid
+			factor = 0.9
+		}
+		modifier = {
+			traits = maimed
+			factor = 0.85
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+	}
+
+	title = "EVTNAME3804"
+	desc = "EVTDESC3804"
+
+	option = {
+		name = "EVTOPTA3804"
+		death = yes
+	}
+}
+
+##### CHARACTER GETS ILL #########
+
+character_event = {
+	
+	id = 3805 
+
+	trigger = {
+		NOT = {
+			OR = {
+				traits = unhealthy
+				traits = plague
+				traits = pneumonia 
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 9000
+
+		modifier = {
+			age = 40 
+			factor = 0.9
+		}
+		modifier = {
+			age = 50 
+			factor = 0.75
+		}
+		modifier = {
+			age = 60 
+			factor = 0.5
+		}
+		modifier = {
+			age = 70 
+			factor = 0.25
+		}
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+	}
+
+	title = "EVTNAME3805"
+	desc = "EVTDESC3805"
+
+	option = {
+		name = "EVTOPTA3805"
+		add_trait = unhealthy
+	}
+}
+
+character_event = {
+	
+	id = 3806 
+
+	trigger = {
+		traits = unhealthy
+	}
+
+	mean_time_to_happen = {
+
+		months = 9000
+
+		modifier = {
+			age = 40 
+			factor = 0.9
+		}
+		modifier = {
+			age = 50 
+			factor = 0.75
+		}
+		modifier = {
+			age = 60 
+			factor = 0.5
+		}
+		modifier = {
+			age = 70 
+			factor = 0.25
+		}
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+	}
+
+	title = "EVTNAME3806"
+	desc = "EVTDESC3806"
+
+	option = {
+		name = "EVTOPTA3806"
+		remove_trait = unhealthy
+		add_trait = pneumonia
+	}
+}
+
+
+character_event = {
+	
+	id = 3807
+
+	trigger = {
+		traits = unhealthy
+	}
+
+	mean_time_to_happen = {
+
+		months = 9000
+
+		modifier = {
+			age = 40 
+			factor = 0.9
+		}
+		modifier = {
+			age = 50 
+			factor = 0.75
+		}
+		modifier = {
+			age = 60 
+			factor = 0.5
+		}
+		modifier = {
+			age = 70 
+			factor = 0.25
+		}
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+	}
+
+	title = "EVTNAME3807"
+	desc = "EVTDESC3807"
+
+	option = {
+		name = "EVTOPTA3807"
+		remove_trait = unhealthy
+		add_trait = plague
+	}
+}
+
+##### CHARACTER GETS BETTER #########
+
+character_event = {
+	
+	id = 3808
+
+	trigger = {
+			traits = unhealthy
+	}
+
+	mean_time_to_happen = {
+
+		months = 4500
+
+		modifier = {
+			age = 40 
+			factor = 1.1
+		}
+		modifier = {
+			age = 50 
+			factor = 1.25
+		}
+		modifier = {
+			age = 60 
+			factor = 2
+		}
+		modifier = {
+			age = 70 
+			factor = 4
+		}
+		modifier = {
+			is_governor = yes
+			factor = 1.05
+		}
+		modifier = {
+			in_command = yes
+			factor = 1.05
+		}
+		modifier = {
+			has_office = land
+			factor = 1.05
+		}
+		modifier = {
+			has_office = naval
+			factor = 1.05
+		}
+		modifier = {
+			has_office = civic
+			factor = 1.05
+		}
+		modifier = {
+			has_office = construction
+			factor = 1.05
+		}
+		modifier = {
+			has_office = religious
+			factor = 1.05
+		}
+		modifier = {
+ 			health = 0.7
+			factor = 0.9
+		}
+		modifier = {
+			health = 0.8
+			factor = 0.8
+		}
+		modifier = {
+			health = 0.9 
+			factor = 0.75
+		}
+	}
+
+	title = "EVTNAME3808"
+	desc = "EVTDESC38058"
+
+	option = {
+		name = "EVTOPTA3808"
+		remove_trait = unhealthy
+	}
+}
+
+character_event = {
+	
+	id = 3809
+
+	trigger = {
+		traits = pneumonia
+	}
+
+	mean_time_to_happen = {
+
+		months = 6000
+
+		modifier = {
+			age = 40 
+			factor = 1.1
+		}
+		modifier = {
+			age = 50 
+			factor = 1.25
+		}
+		modifier = {
+			age = 60 
+			factor = 2
+		}
+		modifier = {
+			age = 70 
+			factor = 4
+		}
+		modifier = {
+			is_governor = yes
+			factor = 1.05
+		}
+		modifier = {
+			in_command = yes
+			factor = 1.05
+		}
+		modifier = {
+			has_office = land
+			factor = 1.05
+		}
+		modifier = {
+			has_office = naval
+			factor = 1.05
+		}
+		modifier = {
+			has_office = civic
+			factor = 1.05
+		}
+		modifier = {
+			has_office = construction
+			factor = 1.05
+		}
+		modifier = {
+			has_office = religious
+			factor = 1.05
+		}		
+		modifier = {
+ 			health = 0.7
+			factor = 0.9
+		}
+		modifier = {
+			health = 0.8
+			factor = 0.8
+		}
+		modifier = {
+			health = 0.9 
+			factor = 0.75
+		}
+	}
+
+	title = "EVTNAME3809"
+	desc = "EVTDESC3809"
+
+	option = {
+		name = "EVTOPTA3809"
+		add_trait = unhealthy
+		remove_trait = pneumonia
+		health = -0.1
+	}
+}
+
+
+character_event = {
+	
+	id = 3810
+
+	trigger = {
+		traits = plague
+	}
+
+	mean_time_to_happen = {
+
+		months = 18000
+
+		modifier = {
+			age = 40 
+			factor = 1.1
+		}
+		modifier = {
+			age = 50 
+			factor = 1.25
+		}
+		modifier = {
+			age = 60 
+			factor = 2
+		}
+		modifier = {
+			age = 70 
+			factor = 4
+		}
+		modifier = {
+			is_governor = yes
+			factor = 1.05
+		}
+		modifier = {
+			in_command = yes
+			factor = 1.05
+		}
+		modifier = {
+			has_office = land
+			factor = 1.05
+		}
+		modifier = {
+			has_office = naval
+			factor = 1.05
+		}
+		modifier = {
+			has_office = civic
+			factor = 1.05
+		}
+		modifier = {
+			has_office = construction
+			factor = 1.05
+		}
+		modifier = {
+			has_office = religious
+			factor = 1.05
+		}
+		modifier = {
+ 			health = 0.7
+			factor = 0.9
+		}
+		modifier = {
+			health = 0.8
+			factor = 0.8
+		}
+		modifier = {
+			health = 0.9 
+			factor = 0.75
+		}
+	}
+
+	title = "EVTNAME3810"
+	desc = "EVTDESC3810"
+
+	option = {
+		name = "EVTOPTA3810"
+		add_trait = unhealthy
+		remove_trait = plague
+		health = -0.1
+	}
+}
+
+##### CHARACTER GOES MAD #########
+
+character_event = {
+	
+	id = 3811
+
+	trigger = {
+		age = 16 
+		NOT = {
+			traits = stressed
+			traits = schizophrenic
+			traits = maniac
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3811"
+	desc = "EVTDESC3811"
+
+	option = {
+		name = "EVTOPTA3811"
+		add_trait = stressed
+	}
+}
+
+character_event = {
+	
+	id = 3812 
+
+	trigger = {
+		traits = stressed
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3812"
+	desc = "EVTDESC3812"
+
+	option = {
+		name = "EVTOPTA3812"
+		remove_trait = stressed
+		add_trait = schizophrenic
+	}
+}
+
+
+character_event = {
+	
+	id = 3813
+
+	trigger = {
+		traits = stressed
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME3813"
+	desc = "EVTDESC3813"
+
+	option = {
+		name = "EVTOPTA3813"
+		remove_trait = stressed
+		add_trait = maniac
+	}
+}
+
+#######THOSE CRAZY THINGS CHARACTERS GET UP TO###########
+
+##We know our Child has dishonoured us
+
+character_event = {
+
+	id = 3814 
+	
+	major_character = yes	
+
+	trigger = {
+		traits =  schizophrenic
+		any_child = {
+			age = 10
+			NOT = { age = 16 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	title = "EVTNAME3814"
+	desc = "EVTDESC3814"
+
+	option = {
+		name = "EVTOPTA3814"
+		random_child = {
+			limit = {
+				age = 10
+				NOT = { age = 16 }
+			}
+			death = yes 
+		}
+	}
+}
+
+###They are out to get us
+
+character_event = {
+	
+	id = 3815
+
+	trigger= {
+		traits = schizophrenic 
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				NOT = { traits = maniac }
+				NOT = { traits = schizophrenic }
+				NOT  = { is_rival = THIS }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3815"
+	desc = "EVTDESC3815"
+
+	option = {
+		name = "EVTOPTA3815"
+		country = {
+			random_character = {
+			limit = {
+				NOT = { traits = maniac }
+				NOT = { traits = schizophrenic }
+				NOT =  { is_rival = THIS }
+			}
+			add_rival = THIS
+			}
+		}
+	}
+}
+
+####We must avoid those dangerous crazy people
+
+character_event = {
+
+	id = 3816
+
+	trigger = {
+		traits = schizophrenic 
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				traits = maniac
+				traits = schizophrenic
+				NOT = { is_rival = THIS }
+			}	
+		}
+	}	
+
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	title = "EVTNAME3816"
+	desc = "EVTDESC3816"
+
+	option = {
+		name = "EVTOPTA3816"
+		country = {
+			random_character = {
+				limit = {
+					traits = maniac
+					traits = schizophrenic
+					NOT = { is_rival = THIS}
+				}
+				add_rival = THIS
+			}
+		}
+	}
+}
+
+
+####OUR FRIEND SAYS WE ARE MAD######
+
+character_event = {
+	
+	id = 3817
+
+	trigger = {
+		traits = schizophrenic 
+		country = {
+			any_character = {
+				NOT = { traits = maniac }
+				NOT = { traits = schizophrenic }
+				is_friend = THIS
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3817"
+	desc = "EVTDESC3817"
+
+	option = {
+		name = "EVTOPTA3817"
+		country = {
+			random_character = {
+				limit = {
+					NOT = { traits = maniac }
+					NOT = { traits = schizophrenic }
+					is_friend = THIS
+				}
+				remove_friend = THIS
+			}
+		}
+	}
+}
+
+####OUR FRIEND HAS GONE CRAZY
+
+character_event = {
+	
+	id = 3818
+
+	trigger = {
+		traits = schizophrenic 
+		country = {
+			any_character = {
+				traits = maniac
+				traits = schizophrenic
+				is_friend = yes
+			}
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	title = "EVTNAME3818"
+	desc = "EVTDESC3818"
+
+	option = {
+		name = "EVTOPTA3818"
+		country = {
+			random_character = {
+				limit = {
+					traits = maniac 
+					traits = schizophrenic
+					is_friend = yes
+				}
+				remove_friend = THIS
+			}	
+		}
+	}
+}
+
+######Military Obsession
+
+character_event = {
+
+	id = 3819
+	trigger = {
+		age = 16
+		traits = maniac
+		NOT = { traits = brave }
+		NOT = { traits = reckless }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3819"
+	desc = "EVTDESC3819"
+
+	option = {
+		name = "EVTOPTA3819"
+		add_trait = brave
+		remove_trait = coward
+		add_trait = reckless
+		remove_trait = cautious
+	}
+}
+
+######Spending obession 
+
+character_event = {
+	
+	id = 3820
+
+	trigger = {	
+		age = 16 
+		traits = maniac 
+		NOT = { traits = rash }
+		NOt = { traits = generous }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3820"
+	desc = "EVTDESC3820"
+
+	option = {
+		name = "EVTOPTA3820"
+		wealth = -100 
+		add_trait = rash
+		remove_trait = wise
+		add_trait = generous
+		remove_trait = selfish
+	}
+}
+
+#####Can't Control your rage 
+
+character_event = {
+
+	id = 3821
+
+	 trigger = {	
+		age = 16 
+		traits = maniac 
+		NOT = { traits = abrasive }
+		NOT = { traits = arbitrary }
+		NOT = { traits = cruel }
+		NOT = { traits = vengeful }
+		
+	}	
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+
+	title = "EVTNAME3821"
+	desc = "EVTDESC3821"
+
+	option = {
+		add_trait = abrasive
+		add_trait = arbitrary
+		add_trait = cruel 
+		add_trait = vengeful
+		remove_trait = good_natured
+		remove_trait = just
+		remove_trait = merciful
+		remove_trait = forgiving	
+	}
+}
+
+####Can't control yourself
+
+character_event = {
+
+	id = 3822
+
+	trigger = {
+		age = 16 
+		traits = maniac 
+		NOT = { traits = blunt }
+		NOT = { traits = corrupt }
+		NOT = { traits = lustful }
+		NOT = { traits = gluttonous }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3822"
+	desc = "EVTDESC3822"
+
+	option = {
+		name = "EVTOPTA3822"
+		add_trait = blunt
+		remove_trait = silver_tongued 
+		add_trait = corrupt
+		remove_trait = righteous
+		add_trait = lustful 
+		remove_trait = chaste
+		add_trait = gluttonous
+		remove_trait = self_controlled
+	}
+}
+
+####You have discovered religion 
+
+character_event = {
+
+	id = 3823
+
+	trigger = {
+		age = 16
+		traits = maniac
+		NOT = { traits = pious }
+		NOT = { traits = zealous }
+		NOT = { traits = devout }
+		NOT = { traits = narrowminded }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3823"
+	desc = "EVTDESC3823"
+
+	option = {
+		name = "EVTOPTA3823"
+		add_trait = pious 
+		remove_trait = sceptical
+		add_trait = zealous 
+		remove_trait = tolerant 
+		add_trait = devout 
+		remove_trait = lapsed
+		add_trait = narrowminded
+		remove_trait = inventor 
+	}
+}
+
+
+#####You fall under the influence of others
+
+character_event = {
+
+	id = 3824
+
+	trigger = {
+		age = 16
+		traits = maniac
+		NOT = { traits = humble }
+		NOT = { traits = submissive }
+		NOT = { traits = unnoticeable }
+		NOT = { traits = trusting }
+		NOT = { traits = weak_willed }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3824"
+	desc = "EVTDESC3824"
+	
+	option = {
+		name = "EVTOPTA3824"
+		add_trait = humble
+		remove_trait = proud 
+		add_trait = submissive 
+		remove_trait = assertive
+		add_trait = unnoticeable
+		remove_trait = prominent
+		add_trait = trusting 
+		remove_trait = sispicious 
+		add_trait = weak_willed 
+		remove_trait = stubborn
+	}
+}
+
+#####You are destined for greatness
+
+character_event = {
+
+	id = 3825
+
+	trigger = {
+		age = 16
+		traits = maniac
+		NOT = { traits = dumb }
+		NOT = { traits = deceitful }
+		NOT = { traits = energetic }
+		NOT = { traits = arrogant }
+		NOT = { traits = ambitious }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	title = "EVTNAME3825"
+	desc = "EVTDESC3825"
+
+	option = {
+		name = "EVTOPTA3825"
+		add_trait = dumb
+		remove_trait = intelligent 
+		add_trait = deceitful
+		remove_trait = honest
+		add_trait = energetic
+		remove_trait = lazy 
+		add_trait = arrogant 
+		remove_trait = modest
+		add_trait = ambitious
+		remove_trait = content  
+	}
+}
+
+
+
+#####RECOVERY FROM WOUNDS##############
+character_event = {
+	
+	id = 3826
+
+	trigger = {
+			traits = wounded
+	}
+
+	mean_time_to_happen = {
+		months = 900
+
+		modifier = {
+			age = 40 
+			factor = 1.1
+		}
+		modifier = {
+			age = 50 
+			factor = 1.25
+		}
+		modifier = {
+			age = 60 
+			factor = 2
+		}
+		modifier = {
+			age = 70 
+			factor = 4
+		}
+		modifier = {
+			is_governor = yes
+			factor = 1.05
+		}
+		modifier = {
+			in_command = yes
+			factor = 1.05
+		}
+		modifier = {
+			has_office = land
+			factor = 1.05
+		}
+		modifier = {
+			has_office = naval
+			factor = 1.05
+		}
+		modifier = {
+			has_office = civic
+			factor = 1.05
+		}
+		modifier = {
+			has_office = construction
+			factor = 1.05
+		}
+		modifier = {
+			has_office = religious
+			factor = 1.05
+		}
+		modifier = {
+ 			health = 0.7
+			factor = 0.9
+		}
+		modifier = {
+			health = 0.8
+			factor = 0.8
+		}
+		modifier = {
+			health = 0.9 
+			factor = 0.75
+		}
+	}
+
+	title = "EVTNAME3826"
+	desc = "EVTDESC3826"
+
+	option = {
+		name = "EVTOPTA3826"
+		remove_trait = wounded
+	}
+}
+
+character_event = {
+	
+	id = 3827
+
+	trigger = {
+			traits = invalid
+			NOT = { traits = wounded }
+	}
+
+	mean_time_to_happen = {
+		months = 900
+
+		modifier = {
+			age = 40 
+			factor = 1.1
+		}
+		modifier = {
+			age = 50 
+			factor = 1.25
+		}
+		modifier = {
+			age = 60 
+			factor = 2
+		}
+		modifier = {
+			age = 70 
+			factor = 4
+		}
+		modifier = {
+			is_governor = yes
+			factor = 1.05
+		}
+		modifier = {
+			in_command = yes
+			factor = 1.05
+		}
+		modifier = {
+			has_office = land
+			factor = 1.05
+		}
+		modifier = {
+			has_office = naval
+			factor = 1.05
+		}
+		modifier = {
+			has_office = civic
+			factor = 1.05
+		}
+		modifier = {
+			has_office = construction
+			factor = 1.05
+		}
+		modifier = {
+			has_office = religious
+			factor = 1.05
+		}
+		modifier = {
+ 			health = 0.7
+			factor = 0.9
+		}
+		modifier = {
+			health = 0.8
+			factor = 0.8
+		}
+		modifier = {
+			health = 0.9 
+			factor = 0.75
+		}
+	}
+
+	title = "EVTNAME3827"
+	desc = "EVTDESC3827"
+
+	option = {
+		name = "EVTOPTA3827"
+		remove_trait = invalid
+		add_trait = wounded 
+		health = -1 
+	}
+}
+
+###WOUND GETS WORSE
+
+character_event = {
+	
+	id = 3828
+
+	trigger = {
+		traits = wounded
+		NOT = { traits = invalid }
+	}
+
+	mean_time_to_happen = {
+		months = 900
+
+		modifier = {
+			age = 40 
+			factor = 0.9
+		}
+		modifier = {
+			age = 50 
+			factor = 0.75
+		}
+		modifier = {
+			age = 60 
+			factor = 0.5
+		}
+		modifier = {
+			age = 70 
+			factor = 0.25
+		}
+		modifier = {
+			is_governor = yes
+			factor = 0.95
+		}
+		modifier = {
+			in_command = yes
+			factor = 0.95
+		}
+		modifier = {
+			has_office = land
+			factor = 0.95
+		}
+		modifier = {
+			has_office = naval
+			factor = 0.95
+		}
+		modifier = {
+			has_office = civic
+			factor = 0.95
+		}
+		modifier = {
+			has_office = construction
+			factor = 0.95
+		}
+		modifier = {
+			has_office = religious
+			factor = 0.95
+		}
+		modifier = {
+			NOT = { health = 0.6 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { health = 0.5 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { health = 0.4 } 
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { health = 0.3 }
+			factor = 0.7
+		}
+		modifier = {
+			NOT = { health = 0.2 } 
+			factor = 0.1
+		}
+	}
+
+	title = "EVTNAME3828"
+	desc = "EVTDESC3828"
+
+	option = {
+		name = "EVTOPTA3828"
+		remove_trait = wounded
+		add_trait = invalid
+	}
+}
+

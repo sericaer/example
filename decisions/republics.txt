@@ -1,0 +1,404 @@
+laws = {
+
+	lex_acilia_repetundarum = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			ruler = {
+				OR = {
+					party = populist_party
+					party = religious_party
+				}
+			}
+		}
+		effect = {
+			stability = -1
+		}
+		
+		revoke_allowed = {
+			ruler = {
+				NOT = { party = populist_party }
+				NOT = { party = religious_party }
+			}
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		
+		# Modifiers while in effect
+		corruption = -0.05
+		 
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+	
+	lex_aelia_et_fufia = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			ruler = {
+				NOT = { party = religious_party }
+			}
+			NOT = { has_law = lex_domitia_de_sacerdotiis }
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		
+		revoke_allowed = {
+			ruler = {
+				party = religious_party
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		
+		# Modifiers while in effect
+		omen_power = -0.1
+		omen_chance = 0.1
+		 
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+	
+	lex_calpurnia = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			ruler = {
+				NOT = { party = civic_party }
+			}
+		}
+		effect = {
+			stability = -1
+		}
+		
+		revoke_allowed = {
+			ruler = {
+				party = civic_party
+			}
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		
+		# Modifiers while in effect
+		corruption = -0.05
+		 
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+	
+	lex_canuleia = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			has_law = lex_acilia_repetundarum
+			ruler = {
+				OR = {
+					party = populist_party
+					party = religious_party
+				}
+			}
+		}
+		effect = {
+			stability = -3
+		}
+		
+		revoke_allowed = {
+			ruler = {
+				NOT = { party = populist_party }
+				NOT = { party = religious_party }
+			}
+		}
+		revoke_effect = {
+			stability = -3
+		}
+		
+		# Modifiers while in effect
+		global_revolt_risk = -0.5
+		 
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+	
+	lex_mercis_libero = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			NOT = { has_law = lex_gabinia }
+			ruler = {
+				OR = {
+					party = populist_party
+					party = military_party
+				}
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+
+		revoke_allowed = {
+			ruler = {
+				party = mercantile_party
+			}
+			stability = 1
+		}
+		revoke_effect =  {
+			stability = 1
+		}
+		pirate_spawn_chance = 0.1
+		badboy = 0.01
+		trade_income_modifier = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+
+	lex_gabinia = {	
+		potential = {
+			government = republic
+		}
+		allow = {
+			NOT = { has_law = lex_mercis_libero }
+			ruler = {
+				party = mercantile_party
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				party = populist_party
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		pirate_spawn_chance = -0.1
+		naval_morale = -0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+
+	lex_venditio_pauper_servitium = {
+		potential = {
+			government = republic 
+		}
+		allow = {
+			NOT= { has_law = lex_sempronia_agraria }
+			ruler = {
+				OR = {
+					party = civic_party
+					party = mercantile_party
+				}
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				OR = {
+					party = military_party
+					party = populist_party
+				}	
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		slaves_to_freedmen = -0.02
+		trade_income_modifier = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}	
+
+	lex_sempronia_agraria = {
+		potential = {
+			government = republic 
+		}
+		allow = {
+			NOT= { has_law = lex_venditio_pauper_servitium }
+			ruler = {
+				OR = {
+					party = populist_party
+					party = military_party
+				}
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				party = mercantile_party
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		slaves_to_freedmen = 0.02
+		global_tax_modifier = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}	
+	
+	lex_gellia_et_cornelia = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			NOT = { has_law = lex_civitas_deses }
+			ruler = {
+				OR = {
+					party = civic_party 
+					party = populist_party
+				}
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				party = military_party
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		freedmen_to_citizen = 0.02
+		global_tax_modifier = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+
+	lex_civitas_deses = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			NOT = { has_law = lex_gellia_et_cornelia }
+			ruler = {
+				party = military_party
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				OR = {
+					party = civic_party 
+					party = populist_party 
+				}
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		freedmen_to_citizen = -0.02
+		heavy_infantry_discipline = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+	
+	lex_domitia_de_sacerdotiis = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			NOT = { has_law = lex_aelia_et_fufia }
+			ruler = {
+				party = religious_party
+			}
+			stability = 1
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			 ruler = {
+				party  = populist_party
+			}
+			stability = 1
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		omen_power = 0.1
+		omen_chance = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}		 
+}

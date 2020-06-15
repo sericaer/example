@@ -1,0 +1,4 @@
+civil_war_faction = QMT
+region = region_mesopotamia
+color = { 30 125 125 }
+color2 = { 255 255 255 }

@@ -1,0 +1,581 @@
+abrasive = {
+	opposites =  {
+		good_natured
+	}
+	max_rivals = 1
+}
+
+good_natured = {
+	opposites = {
+		abrasive
+	}
+	max_friends = 1
+}
+
+silver_tongued = {
+	opposites = {
+		blunt
+	}
+	country = {
+		badboy = -0.025
+	}
+	diplomatic_missions = 0.1
+}
+
+blunt = {
+	opposites = {
+		silver_tongued
+	}
+	diplomatic_missions = -0.1
+}
+
+crafty = {
+	opposites = {
+		guileless
+	}
+	intrigue_missions = 0.1
+}
+
+guileless = {
+	opposites = {
+		crafty
+	}
+	intrigue_missions = -0.1
+}
+
+sceptical = {
+	opposites = {
+		pious
+	}
+	country = {
+		research_points_modifier = -0.1
+	}
+}
+pious = {
+	opposites = {
+		sceptical	
+	}
+	country = {
+		research_points_modifier = +0.1
+	}
+}
+
+zealous = {
+	opposites = {
+		tolerant
+	}
+	country = {
+		omen_power = 0.1
+	}
+
+}
+tolerant = {
+	opposites = {
+		zealous
+	}
+	country = {
+		omen_power = -0.1
+	}
+}
+devout = {
+	opposites = {
+		lapsed
+	}
+	country = {
+		omen_chance = 0.1
+	}
+
+}
+lapsed = {
+	opposites = {
+		devout
+	}
+	country = {
+		omen_chance = -0.1
+	}
+}
+original_thinker = {
+	opposites = {
+		tactically_inflexible
+	}
+	battle_event_chance = 0.1
+}
+tactically_inflexible = {
+	opposites = {
+		original_thinker
+	}
+	battle_event_chance = -0.1
+}
+just = {
+	opposites = {
+		arbitrary
+	}
+	province = {
+		local_revolt_risk = -1
+		minimum_revolt_risk = -1
+	}
+}
+arbitrary = {
+	opposites = {
+		just
+	}
+	province = {
+		local_revolt_risk = 1
+	}
+}
+cruel = {
+	opposites = {
+		merciful
+	}
+	province = {
+		local_tax_modifier = 0.2
+		local_revolt_risk = 2
+	}
+}
+merciful = {
+	opposites = {
+		cruel
+	}
+	province = {
+		local_tax_modifier = -0.1
+		local_revolt_risk = -2
+		minimum_revolt_risk = -2
+	}
+}
+righteous = {
+	opposites = {
+		corrupt
+	}
+	country = {
+		badboy = -0.025
+	}
+
+	corruption = -0.2
+}
+corrupt = {
+	opposites = {
+		righteous
+	}
+	province = {
+		local_revolt_risk = 1
+	}
+	corruption = 0.2
+	monthly_character_loyalty = -0.05
+}
+founder = {
+	opposites = {
+		incapable
+	}
+	country = {
+		build_cost = -0.05
+	}
+}
+incapable = {
+	opposites = {
+		founder
+	}
+	country = {
+		build_cost = +0.05
+	}
+}
+benefactor = {
+	province = {
+		local_tax_modifier = 0.05
+	}
+}
+inventor = {
+	opposites = {
+		narrowminded
+	}
+	country = {
+		research_points_modifier = +0.1
+	}
+}
+narrowminded = {
+	opposites = {
+		inventor
+	}
+	country = {
+		research_points_modifier = -0.1
+	}
+}
+lustful = {
+	opposites = {
+		chaste
+	}
+	fertility = 0.1
+}
+chaste = {
+	opposites = {
+		lustful
+	}
+	fertility = -0.2
+}
+proud = {
+	opposites = {
+		humble
+	}
+	charisma = -1
+	monthly_character_popularity = 0.1
+}
+humble = {
+	opposites = {
+		proud
+	}
+	charisma = 1
+	monthly_character_popularity = -0.1
+}
+
+vengeful = {
+	opposites = {
+		forgiving
+	}
+	finesse = 1
+	charisma = -1
+}
+forgiving = {
+	opposites = {
+		vengeful
+	}
+	charisma = 1
+	intrigue_missions = -0.2
+}
+assertive = {
+	opposites = {
+		submissive
+	}
+	monthly_character_loyalty = -0.2
+}
+submissive = {
+	opposites = {
+		assertive
+	}
+	monthly_character_loyalty = 0.2
+}
+intelligent = {
+	opposites = {
+		dumb
+	}
+	diplomatic_missions = 0.1
+}
+dumb = {
+	opposites = {
+		intelligent
+	}
+	diplomatic_missions = -0.1
+}
+generous = {
+	opposites = {
+		selfish
+	}
+	corruption = -0.2
+	monthly_character_popularity = 0.05
+}
+selfish = {
+	opposites = {
+		generous
+	}
+	corruption = 0.2
+	monthly_character_popularity = -0.05
+}
+
+honest = {
+	opposites = {
+		deceitful
+	}
+	corruption = -0.1
+}
+deceitful = {
+	opposites = {
+		honest
+	}
+	corruption = 0.1
+}
+energetic = {
+	opposites = {
+		lazy
+	}
+	finesse = 1
+	charisma = 1
+	martial = 1
+}
+lazy = {
+	opposites = {
+		energetic
+	}
+	finesse = -1
+	charisma = -1
+	martial = -1
+}
+cautious = {
+	opposites = {
+		reckless
+	}
+	intrigue_missions = 0.05
+	diplomatic_missions = 0.05
+}
+reckless = {
+	opposites = {
+		cautious
+	}
+	intrigue_missions = -0.05
+	diplomatic_missions = -0.05
+}
+shrewd = {
+	opposites = {
+		foolish
+	}
+	finesse = 2
+}
+foolish = {
+	opposites = {
+		shrewd
+	}
+	finesse = -1
+	charisma = -1
+}
+gluttonous = {
+	opposites = {
+		self_controlled
+	}
+	monthly_character_wealth = -0.05
+}
+self_controlled = {
+	opposites = {
+		gluttonous
+	}
+	monthly_character_wealth = 0.05
+}
+arrogant = {
+	opposites = {
+		modest
+	}
+	charisma = -1
+	diplomatic_missions = -0.2
+}
+modest = {
+	opposites = {
+		arrogant
+	}
+	monthly_character_popularity = 0.05
+}
+prominent = {
+	opposites = {
+		unnoticeable
+	}
+	monthly_character_popularity = 0.05
+}
+unnoticeable = {
+	opposites = {
+		prominent
+	}
+	monthly_character_popularity = -0.05
+}
+loving = {
+	opposites = {
+		cold
+	}
+	charisma = 1
+}
+cold = {
+	opposites = {
+		loving
+	}
+	charisma = -1
+}
+ambitious = {
+	opposites = {
+		content
+	}
+	monthly_character_loyalty = -0.2
+}
+content = {
+	opposites = {
+		ambitious
+	}
+	monthly_character_loyalty = 0.2
+}
+suspicious = {
+	opposites = {
+		trusting
+	}
+	intrigue_missions = 0.1
+}
+trusting = {
+	opposites = {
+		suspicious
+	}
+	intrigue_missions = -0.1
+}
+wise = {
+	opposites = {
+		rash
+	}
+	monthly_character_wealth = 0.05
+}
+rash = {
+	opposites = {
+		wise
+	}
+	monthly_character_wealth = -0.05
+}
+jealous = {
+	opposites = {
+		secure
+	}
+	max_rivals = 1
+}
+secure = {
+	opposites = {
+		jealous
+	}
+	max_rivals = -1
+}
+sarcastic = {
+	opposites = {
+		plain_speaking
+	}
+	max_friends = -1
+}
+plain_speaking = {
+	opposites = {
+		sarcastic
+	}
+	diplomatic_missions = -0.1
+	monthly_character_popularity = 0.1
+}
+stubborn = {
+	opposites = {
+		weak_willed
+	}
+	diplomatic_missions = -0.1
+}
+weak_willed = {
+	opposites = {
+		stubborn
+	}
+	finesse = -2
+}
+
+hunchback = {
+	congenital = yes
+	
+	charisma = -1
+}
+lisp = {
+	congenital = yes
+
+	diplomatic_missions = -0.2
+}
+stutter = {
+	congenital = yes
+	
+	intrigue_missions = -0.2
+}
+
+fair = {
+	congenital = yes
+
+	max_friends = 1
+}
+inbred = {
+	congenital = yes
+	
+	charisma = -3
+	finesse = -1
+	martial = -1
+	fertility = -0.4
+}
+limp = {
+	congenital = yes
+	
+	martial = -1
+}
+ugly = {
+	congenital = yes
+	
+	charisma = -1
+}
+orator = {
+	monthly_character_popularity = 0.2
+}
+unhealthy = {
+	health = -0.3
+}
+plague = {
+	health = -0.8
+}
+leper = {
+	health = -0.8
+	fertility = -1
+	monthly_character_popularity = -0.2
+}
+pneumonia = {
+	health = -0.5
+}
+stressed = {
+	finesse = -1
+}
+schizophrenic = {
+	congenital = yes
+	
+	health = -0.1
+	charisma = -2
+}
+maniac = {
+	congenital = yes
+	
+	charisma = -1
+	finesse = 1
+}
+invalid = {
+	martial = -3
+}
+wounded = {
+	health = -0.1
+	martial = -1
+}
+maimed = {
+	martial = -2
+}
+epileptic = {
+	congenital = yes
+	
+	intrigue_missions = -0.2
+}
+victorious = {
+	max_friends = 1
+	max_rivals = 1
+}
+conqueror = {
+	monthly_character_popularity = 0.1
+	loyalty_gain_chance = 0.05
+}
+
+brave = {
+	opposites = {
+		coward
+	}
+	loyalty_gain_chance = 0.05
+}
+coward = {
+	opposites = {
+		brave
+	}
+	loyalty_gain_chance = -0.1
+}
+confident = {
+	combat = rally
+}
+tactician = {
+	combat = envelope
+}
+disciplined = {
+	combat = wedge
+}
+steadfast = {
+	combat = hold_ground
+}
+aggressive = {
+	combat = force_attack
+}

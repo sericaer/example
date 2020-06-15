@@ -1,0 +1,17 @@
+civil_war_faction = MA6
+graphical_culture = egyptgfx
+color = { 105 149 181 }
+color2 = { 223 223 223 }
+
+ship_names = {
+	Babba
+	Banasa
+	Chellah
+	Iol
+	Lixus
+	Mauri Mogador
+	Oujda
+	Siga
+	Tingis Tipaza
+	Volubilis
+}

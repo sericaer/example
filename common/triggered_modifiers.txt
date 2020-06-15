@@ -1,0 +1,1037 @@
+cultural_influence = {
+	trigger = {
+		capital_scope = {
+			NOT = { civilization_value = 45 }
+		}
+		any_neighbor_country = {
+			culture_group = this
+			relation = { who = this value = 150 }
+			capital_scope = {
+				civilization_value = 85
+			}
+		}
+	}
+	build_cost = -0.03
+	icon = 9
+}
+
+metropolis = {
+	trigger = {
+		num_of_cities = 10
+		or = {
+			invention = large_scale_building
+			invention = civic_planning
+			idea = national_prestige
+		}
+		capital_scope = {
+			civilization_value = 90
+			has_building = aqueduct
+			population = 200
+		}
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+tribute_from_a_neighbour = {
+	trigger = {
+		capital_scope = {
+			not = { civilization_value = 40 }
+		}
+		any_neighbor_country = {
+			not = { relation = { who = THIS value = 0 } }
+			num_of_cities = 2
+			capital_scope = {
+				civilization_value = 70
+			}
+		}
+	}
+	tribute_income_modifier = 0.08
+	icon = 9
+}
+
+mediterranean_breadbasket = {
+	trigger = {
+		not = { owns = 100 }	# Syracusae
+		not = { owns = 101 }	# Panormus
+		not = { owns = 102 }	# Sardinia
+		owns = 247	# Carthage
+		controls = 247
+		owns = 225	# Alexandria
+		controls = 225
+	}
+	global_tax_modifier = 0.05
+	icon = 9
+}
+
+mediterranean_breadbaskets = {
+	trigger = {
+		or = {
+			owns = 100	# Syracusae
+			owns = 101	# Panormus
+			owns = 102	# Sardinia
+		}
+		owns = 247	# Carthage
+		controls = 247
+		owns = 225	# Alexandria
+		controls = 225
+	}
+	global_tax_modifier = 0.05
+	icon = 9
+}
+
+incense_route = {
+	trigger = {
+		owns = 222
+		owns = 223
+		owns = 217
+		owns = 216
+		owns = 221
+		owns = 213
+		owns = 196
+		controls = 222
+		controls = 223
+		controls = 217
+		controls = 216
+		controls = 221
+		controls = 213
+		controls = 196
+	}
+	trade_income_modifier = 0.2
+	icon = 9
+}
+
+silk_route = {
+	trigger = {
+		year = 600
+		owns = 201	# Rhagae
+		owns = 202	# Ecbatana
+		owns = 203	# Opis
+		owns = 207	# Hyrcania
+		owns = 214	# Babylon
+		owns = 215	# Arabia
+		owns = 219	# Damascus
+		owns = 220	# Phoenicia
+		controls = 201	# Rhagae
+		controls = 202	# Ecbatana
+		controls = 203	# Opis
+		controls = 207	# Hyrcania
+		controls = 214	# Babylon
+		controls = 215	# Arabia
+		controls = 219	# Damascus
+		controls = 220	# Phoenicia
+	}
+	trade_income_modifier = 0.2
+	icon = 9
+}
+
+school_of_athens = {
+	trigger = {
+		or = {
+			idea = philosophies
+			idea = philosophical_advances
+		}
+		owns = 142	# Argolis (Athens)
+		capital_scope = {
+			has_building = academy
+			civilization_value = 80
+		}
+	}
+	research_points_modifier = 0.08
+	icon = 1
+}
+
+
+scientific_greatness = {
+	trigger = {
+		owns = 225	# Alexandria
+		owns = 156	# Pergamon
+		not = { owns = 142 }	# Athens
+	}
+	research_points_modifier = 0.05
+	icon = 1
+}
+
+scientific_supremacy = {
+	trigger = {
+		owns = 225	# Alexandria
+		owns = 156	# Pergamon
+		owns = 142	# Athens
+	}
+	research_points_modifier = 0.1
+	icon = 1
+}
+
+naval_supremacy_in_the_west = {
+	trigger = {
+		71 = {	# Massilia
+			owned_by = this
+			has_building = harbour
+		}
+		101 = { # Panormous
+			owned_by = this
+			has_building = harbour
+		}
+		102 = { # Sardinia
+			owned_by = this
+			has_building = harbour
+		}
+		247 = { # Carthage
+			owned_by = this
+			has_building = harbour
+		}
+	}
+	naval_morale = 0.1
+        trade_income_modifier = 0.1
+	icon = 3
+}
+
+naval_supremacy_in_the_east = {
+	trigger = {
+		220 = {	# Phoenicia
+			owned_by = this
+			has_building = harbour
+		}
+		225 = {	# Alexandria
+			owned_by = this
+			has_building = harbour
+		}
+		147 = { # Crete
+			owned_by = this
+			has_building = harbour
+		}
+		145 = { # rhodes
+			owned_by = this
+			has_building = harbour
+		}
+	}
+	naval_morale = 0.1
+        trade_income_modifier = 0.1
+	icon = 3
+}
+
+controller_of_rome = {
+	trigger = {
+		owns = 93	# Rome
+		controls = 93 
+		not = { culture_group = latin }
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+controller_of_alexandria = {
+	trigger = {
+		owns = 225	# Alexandria
+		controls = 225	# Alexandria
+		not = { culture_group = hellenic }
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+controller_of_carthage = {
+	trigger = {
+		owns = 247	# Carthage
+		controls = 247	# Carthage
+		not = { culture_group = north_levantine }
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+eastern_sound_toll = {
+	trigger = {
+		owns = 134	# Thracia
+		controls = 134
+		or = {
+			owns = 156	# Pergamon
+			owns = 148	# Bithynia
+		}
+	}
+	global_tax_modifier = 0.05
+	icon = 9
+}
+
+starvation = {
+	trigger = {
+		not = { grain = 1 }
+		not = { fish = 1 }
+		capital_scope = {
+			not = { has_building = roads }
+			port = no
+		}
+	}
+	global_tax_modifier = -0.06
+	icon = 10
+}
+
+deified_ruler = {
+	trigger = {
+		idea = deification
+		num_of_cities = 4
+		capital_scope = {
+			has_building = temple
+		}
+	}
+	omen_power = 0.05
+	icon = 5
+}
+
+
+controller_of_antioch = {
+	trigger = {
+		owns = 190	# Antioch
+		controls = 190	# Antioch
+		not = { culture_group = hellenic }
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+sculptural_greatness = {
+	trigger = {
+		capital_scope = {
+			has_building = academy
+			trade_goods = stone
+		}
+		invention = large_scale_building
+	}
+	build_cost = -0.05
+	icon = 9
+}
+
+architectural_influences = {
+	trigger = {
+		capital_scope = {
+			not = { civilization_value = 45 }
+			any_neighbor_province = {
+				civilization_value = 60
+			}
+		}
+	}
+	build_cost = -0.05
+	icon = 9
+}
+
+religious_outcast = {
+	trigger = {
+		idea = religious_state
+		not = { idea = tolerance }
+		or = {
+			government = theocracy
+			government = religious_tribe
+		}
+		any_province = {
+			not = { religion_group = this }
+			any_neighbor_province = {
+				owned_by = this
+				not = { religion_group = this }
+			}
+		}
+	}
+	global_religious_prestige = -0.05
+	icon = 6
+}
+
+border_dispute = {
+	trigger = {
+#		war = yes
+		any_neighbor_country = {
+			not = { relation = { who = THIS value = 0 } }
+
+
+			any_province = {
+				is_core = this
+			}
+		}
+	}
+	ruler_popularity_gain = -0.1
+	icon = 2
+}
+
+military_inspiration = {
+	trigger = {
+		not = { idea = professional_soldiers }
+		capital_scope = {
+			not = { has_building = foundry }
+			not = { civilization_value = 65 }
+		}
+		any_neighbor_country = {
+			relation = { who = THIS value = 200 }
+			idea = professional_soldiers
+			capital_scope = {
+				has_building = foundry
+				civilization_value = 85
+			}
+		}
+	}
+	research_points_modifier = 0.05
+	icon = 1
+}
+
+barbarians_exacting_tribute = {
+	trigger = {
+		any_province = {
+			not = { units_in_province = 1 }
+			civilization_value = 70
+			has_empty_adjacent_province = yes
+			any_empty_neighbor_province = {
+				not = { civilization_value = 40 }
+				barbarian_power = 8
+				not = { units_in_province = 1 }
+			}
+		}
+	}
+	global_tax_modifier= -0.02
+	icon = 2
+}
+
+disconnected_problem_area = {
+	trigger = {
+		num_of_cities = 2
+		any_province = {
+			not = { has_building = roads }
+			not = { has_building = fort1 }
+			not = { civilization_value = 40 }
+			not = { population = 10 }
+			not = { infantry_in_province = 1 }
+			has_empty_adjacent_province = yes
+			any_empty_neighbor_province = {
+				barbarian_power = 7
+			}
+		}
+	}
+	stability_cost = 0.05
+	icon = 2
+}
+
+large_neighbour_city = {
+	trigger = {
+		capital_scope = {
+			not = { population = 30 }
+			any_neighbor_province = {
+				not = { owned_by = this }
+				population = 200
+			}
+		}
+	}
+	trade_income_modifier = 0.03
+	icon = 9
+}
+
+spread_of_religious_ideas = {
+	trigger = {
+		or = {
+			idea = divine_right
+			idea = religious_state
+		}
+		capital_scope = {
+			has_building = temple
+		}
+		any_neighbor_country = {
+			relation = { who = this value = 150 }
+			idea = tolerance
+		}
+	}
+	global_religious_prestige = 0.08
+	icon = 5
+}
+
+philosophical_inspiration = {
+	trigger = {
+		not = { idea = philosophies }
+		not = { idea = philosophical_advances }
+		capital_scope = {
+			not = { has_building = academy }
+			not = { civilization_value = 65 }
+		}
+		any_neighbor_country = {
+			relation = { who = this value = 200 }
+			or = {
+				idea = philosophies
+				idea = philosophical_advances
+			}
+			capital_scope = {
+				has_building = academy
+				civilization_value = 85
+			}
+		}
+	}
+	research_points_modifier = 0.05
+	icon = 1
+}
+
+barbarian_mercenaries = {
+	trigger = {
+		invention = renowned_diplomacy
+		any_province = {
+			has_empty_adjacent_province = yes
+			any_empty_neighbor_province = {
+				barbarian_power = 7
+			}
+		}
+		any_neighbor_country = {
+			not = { relation = { who = THIS value = 0 } }
+		}
+	}
+	regiment_reinforcement_speed = 0.1
+	icon = 3
+}
+
+unexpected_reinforcement = {
+	trigger = {
+		any_province = {
+			has_empty_adjacent_province = yes
+			any_empty_neighbor_province = {
+				barbarian_power = 7
+			}
+		}
+		any_neighbor_country = {
+			relation = { who = THIS value = 200 }
+		}
+	}
+	regiment_reinforcement_speed = 0.04
+	land_morale = 0.04
+	icon = 3
+}
+
+owns_oracle = {
+	trigger = {
+		religious_tech = 10
+		or = {
+			owns = 139 # Dodona
+			owns = 141 # Delphi
+			owns = 230 # ammon
+		}
+	}
+	global_religious_prestige = 0.05
+	icon = 5
+}
+
+owns_oracle_all = {
+	trigger = {
+		and = {
+			owns = 139 # Dodona
+			owns = 141 # Delphi
+			owns = 230 # ammon
+		}
+	}
+	global_religious_prestige = 0.10
+	icon = 5
+}
+
+supreme_ruler = {
+	trigger = {
+		owns = 225	# Alexandria
+		owns = 247	# Carthage
+		owns = 93	# Rome
+	}
+	ruler_popularity_gain = 0.01
+	icon = 1
+}
+
+#mediterranean_control = {
+#	trigger = {
+#		owns = 247	# Carthage
+#		owns = 101	# Panormus
+#		controls = 247	# Carthage
+#		controls = 101	# Panormus
+#	}
+#	global_tax_modifier = 0.08
+#	icon = 9
+#}
+
+panhellenic_games = {
+	trigger = {
+		culture_group = hellenic
+		owns = 141	# Aetolia
+		owns = 142	# Argolis
+		owns = 143	# Achaea
+		owns = 144	# Sparta
+		capital_scope = {
+			has_building = arena
+		}
+	}
+	global_revolt_risk = -0.15
+	icon = 1
+}
+
+rep_inef_level1 = {
+
+	trigger = {
+
+			AND = {	government = republic
+				num_of_cities = 36
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+rep_inef_level2 = {
+
+	trigger = {
+
+			AND = {	government = republic
+				num_of_cities = 72
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+rep_inef_level3 = {
+
+	trigger = {
+
+			AND = {	government = republic
+				num_of_cities = 108
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+tri_inef_level1 = {
+
+	trigger = {
+
+			AND = {	government = tribal
+				num_of_cities = 12
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+tri_inef_level2 = {
+
+	trigger = {
+
+			AND = {	government = tribal
+				num_of_cities = 24
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+tri_inef_level3 = {
+
+	trigger = {
+
+			AND = {	government = tribal
+				num_of_cities = 36
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+mon_inef_level1 = {
+
+	trigger = {
+
+			AND = {	government = monarchy
+				NOT = {
+					government = imperium
+				}
+				NOT = {
+					government = dictatorship
+				}
+				num_of_cities = 24
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+mon_inef_level2 = {
+
+	trigger = {
+
+			AND = {	government = monarchy
+				NOT = {
+					government = imperium
+				}
+				NOT = {
+					government = dictatorship
+				}
+				num_of_cities = 48
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+mon_inef_level3 = {
+
+	trigger = {
+
+			AND = {	government = monarchy
+				NOT = {
+					government = imperium
+				}
+				NOT = {
+					government = dictatorship
+				}
+				num_of_cities = 72
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+dic_inef_level1 = {
+
+	trigger = {
+
+			AND = {	government = dictatorship
+				num_of_cities = 48
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+dic_inef_level2 = {
+
+	trigger = {
+
+			AND = {	government = dictatorship
+				num_of_cities = 96
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+dic_inef_level3 = {
+
+	trigger = {
+
+			AND = {	government = dictatorship
+				num_of_cities = 144
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+imp_inef_level1 = {
+
+	trigger = {
+
+			AND = {	government = imperium
+				num_of_cities = 60
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+imp_inef_level2 = {
+
+	trigger = {
+
+			AND = {	government = imperium
+				num_of_cities = 120
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+imp_inef_level3 = {
+
+	trigger = {
+
+			AND = {	government = imperium
+				num_of_cities = 180
+			}
+
+	}
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.1
+	build_cost = 0.1
+	global_revolt_risk = 0.5	
+	icon = 10
+}
+
+Archimedes_of_Syracuse = {
+	trigger = {
+		owns = 100	
+		controls = 100
+		tag = SYR
+	}
+	global_defensive  = 1	
+	icon = 3
+}
+
+Asian_Elephant = {
+	trigger = {
+		owns = 209	
+		controls = 209
+		owns = 210	
+		controls = 210
+	}
+	warelephant_discipline = 0.1
+	icon = 3
+}
+
+Heavy_infantry_tradition = {
+	trigger = {
+		owns = 93	
+		controls = 93
+		owns = 144	
+		controls = 144
+		owns = 138	
+		controls = 138
+	}
+	heavy_infantry_offensive = 0.1
+	icon = 3
+}
+
+Pillars_of_Hercules = {
+	trigger = {
+		owns = 255	# tingis
+		controls = 255
+		owns = 6	# Gadira
+		controls = 6
+	}
+	trade_income_modifier = 0.02
+	icon = 9
+}
+
+
+#Roman - ?????????????³²????????????????????????????????§³???????????????????????????????????
+
+roman_warf = {
+	trigger = {
+		culture_group = latin
+	}
+	heavy_infantry_offensive = 0.1
+	heavy_infantry_defensive = 0.1
+	battle_event_chance = 0.1
+	icon = 3
+}
+
+
+#Eastern - ?????????????????????????????????????????????????????
+
+persia_warf = {
+	trigger = {
+		culture_group = persia
+	}
+	archers_offensive = 0.10
+	horse_archers_offensive = 0.10
+	cavalry_offensive = 0.1
+	cavalry_defensive = 0.1
+	cavalry_cost = 0.1
+	icon = 3
+}
+
+#Illyrian - ?????????????
+
+illyria_warf = {
+	trigger = {
+		culture_group = illyria
+	}
+	trireme_cost = -0.3
+	icon = 3
+}
+
+#??? - ???????????????????????????????????????????¦Å??????
+
+manzhu_warf = {
+	trigger = {
+		or = {
+		culture_group = thracia
+                culture_group = germanic
+            }
+	}
+	militia_offensive = 0.2
+	land_morale = 0.2
+	icon = 3
+}
+
+#Numidian - ??????????§Ô?????????????????????????????
+
+numidian_warf = {
+	trigger = {
+		or = {
+		culture = numidian
+		culture = libyan
+            }
+	}
+	land_morale = 0.1
+	cavalry_offensive = 0.1
+	cavalry_cost = -0.1
+	icon = 3
+}
+
+scythia_warf = {
+	trigger = {
+		culture_group = scythia
+	}
+	horse_archers_offensive = 0.05
+	horse_archers_cost = -0.1
+	cavalry_offensive = 0.05
+	cavalry_cost = -0.1
+	icon = 3
+}
+
+#Iberian - ?????????§Ù??????????????????????????????
+
+iberian_warf = {
+	trigger = {
+		culture_group = iberia
+	}
+	militia_offensive = 0.12
+	heavy_infantry_offensive = 0.12
+	cavalry_offensive = 0.12
+	icon = 3
+}
+
+#Gallic ?????????????????????????????????????????????????‰^
+
+gallic_warf_prim = {
+	trigger = {
+		culture_group = gallic
+	}
+	heavy_infantry_offensive = 0.1
+	land_organisation = 0.1
+	land_morale = 0.1
+	icon = 3
+}
+
+#greek ???????????????????????????????????????????????§Ü????³‡
+
+greek_warf_prim = {
+	trigger = {
+		  culture = greek
+	}
+	heavy_infantry_offensive = 0.1
+	heavy_infantry_defensive = 0.1
+	research_points_modifier = 0.1	
+	icon = 3
+}
+
+#macedonian ??????????¼ž?????????????????????????????????
+
+macedonian_warf_prim = {
+	trigger = {
+		  culture = macedonian
+	}
+	heavy_infantry_offensive = 0.15
+        archers_offensive = 0.05
+	cavalry_offensive = 0.1	
+	icon = 3
+}
+
+#egyptian ?????????????????????????????????????¦Ë??
+
+egyptian_warf_prim = {
+	trigger = {
+		  culture = egyptian
+	}
+	omen_power = 0.15
+	omen_chance = 0.15
+	icon = 5
+}
+
+#carthaginian ??????????????????????????????????????????????????????¦Ë?§Ý????????????????????????????????????
+
+car_warf_prim = {
+	trigger = {
+		culture = carthaginian
+	}
+        tribute_income_modifier = 0.10
+	global_tax_modifier = 0.10
+        trade_income_modifier = 0.10
+	icon = 9
+}
+
+#¨®?????? - ??????????§»???????????????????????????????????
+
+pho_warf = {
+	trigger = {
+		or = {
+		culture = phoenician
+		culture = nabatean
+            }
+	}
+        trade_income_modifier = 0.3
+	icon = 9
+}
+
+
+#?????? - ?????????????????????????????
+
+jewish_warf = {
+	trigger = {
+		culture = jewish
+	}
+        trade_income_modifier = 0.1
+	omen_power = 0.1
+	global_religious_prestige = 0.1	
+	icon = 5
+}
+

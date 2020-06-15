@@ -1,0 +1,302 @@
+reliable_omens = {
+	trigger = {
+		religious_tech = 1
+	}
+	effect = {
+	}
+	omen_chance = 0.1			# Increases Omen chance
+}
+
+cult_of_war = {
+	trigger = {
+		religious_tech = 3
+		capital_scope = { civilization_value = 5 }
+	}
+	effect = {
+	}
+	land_morale = 0.1
+}
+
+go_forth_and_multiply = {
+	trigger = {
+		religious_tech = 5
+		capital_scope = {civilization_value = 15 }
+	}
+	effect = {
+	}
+	global_population_growth = 0.02
+}	
+
+powerful_omens = {
+	trigger = {
+		religious_tech = 6
+		invention = reliable_omens
+		capital_scope = {civilization_value = 35 }
+	}
+	effect = {
+	}
+	omen_power = 0.05			# Increase Omen power
+}
+
+preistly_caste = {
+	trigger = {
+		religious_tech = 8
+		capital_scope = {civilization_value = 35 }
+	}
+	effect = {
+	}
+	stability_cost = -0.05				
+}
+
+prophetic_texts = {
+	trigger = {
+		religious_tech = 10
+		capital_scope = {civilization_value = 35 }
+	}
+	effect = {
+	}
+	omen_failure_penalty = -0.05
+}
+
+cult_of_the_sea = {
+	trigger = {
+		religious_tech = 12
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	naval_morale = 0.1
+ }
+
+political_priesthood = {
+	trigger = {
+		religious_tech = 15
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	monthly_character_loyalty = 0.02
+}
+
+civilised_power = {
+	trigger = {
+		religious_tech = 18 
+		capital_scope = { civilization_value = 50 }
+	}
+	effect = {
+	}
+	global_religious_prestige = 0.05 
+}
+
+societal_status = {
+	trigger = {
+		religious_tech = 20 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	civilization_spread = 0.05
+}
+
+prophets = {
+	trigger = {
+		religious_tech = 22
+		capital_scope = { civilization_value = 65 }
+		religion_group = monotheism
+		invention = reliable_omens
+
+	}
+	effect = {
+		lose_invention = reliable_omens
+	}
+	land_organisation = 0.1
+}
+
+
+messianic_belief = {
+	trigger = {
+		religious_tech = 24
+		capital_scope = { civilization_value = 65 }
+		religion_group = monotheism 
+		invention = powerful_omens
+		invention = political_priesthood
+	}
+	effect = {
+		lose_invention = powerful_omens
+		lose_invention = political_priesthood
+	}
+	land_organisation = 0.1
+	land_morale = 0.1
+}		
+
+the_chosen_people = {
+	trigger = {
+		religious_tech = 26
+		capital_scope = { civilization_value = 65 }
+		religion_group = monotheism
+	}
+	effect = {
+	}
+	global_population_growth = 0.02
+}
+
+militarisation_of_the_faith = {
+	trigger = {
+		religious_tech = 28
+		capital_scope = { civilization_value = 65 }
+		religion_group = monotheism
+		invention = the_chosen_people
+	}
+	effect = {
+		lose_invention = political_priesthood
+	}
+	land_morale = 0.1
+}
+the_power_of_superstition = {
+	trigger = {
+		religious_tech = 22
+		capital_scope = { civilization_value = 65 }
+		religion_group = paganism 
+	}
+	effect = {
+	}
+	omen_power = 0.05
+}
+
+valhalla = {
+	trigger = {
+		religious_tech = 24
+		capital_scope = { civilization_value = 65 }
+		religion_group = paganism
+	}
+	effect = {
+		lose_invention = societal_status
+	}
+	land_morale = 0.1
+}
+
+
+
+cult_of_the_warrior = {
+	trigger = {
+		religious_tech = 26
+		capital_scope = { civilization_value = 65 }
+		religion_group = paganism
+		invention = valhalla
+	}
+	effect = {
+	}
+	land_morale = 0.1
+}	
+
+prophetic_superstition = {
+	trigger = {
+		religious_tech = 28 
+		capital_scope = { civilization_value = 65 }
+		religion_group = paganism 
+		invention = civilised_power
+	}
+	effect = {
+		lose_invention = civilised_power
+	}
+	omen_power = 0.05
+}
+
+the_call_of_the_sea = {
+	trigger = {
+		religious_tech = 22
+		capital_scope = { civilization_value = 65 }
+		religion_group = semitic_pantheon
+	}
+	effect = {
+	}
+	naval_morale = 0.1
+}
+
+child_sacrafice = {
+	trigger = {
+		religious_tech = 24
+		capital_scope = { civilization_value = 65 }
+		religion_group = semitic_pantheon
+	}
+	effect = {
+	}
+	ruler_popularity_gain = -0.05
+	stability_cost = -0.05	
+}
+
+honouring_the_sea = {
+	trigger = {
+		religious_tech = 26
+		capital_scope = { civilization_value = 65 }
+		religion_group = semitic_pantheon
+	}
+	effect = {
+	}
+	naval_morale = 0.1
+}
+
+massed_child_sacrafice = {
+	trigger = {
+		religious_tech = 28
+		capital_scope = { civilization_value = 65 }
+		religion_group = semitic_pantheon
+		invention = child_sacrafice
+	}
+	effect = {
+	}
+	ruler_popularity_gain = -0.05
+	stability_cost_modifier = -0.2
+}
+
+historic_oracular_predictions = {
+	trigger = {
+		religious_tech = 22
+		capital_scope = { civilization_value = 65 }
+		religion_group = hellenistic_pantheon
+	}
+	effect = {
+	}
+	omen_chance = 0.05
+}
+
+religious_stability = {
+	trigger = {
+		religious_tech = 24
+		capital_scope = { civilization_value = 65 }
+		religion_group = hellenistic_pantheon
+		invention = societal_status
+	}
+	effect = {
+		lose_invention = societal_status
+	}
+	land_organisation = 0.1
+}
+
+historic_faith = {
+	trigger = {
+		religious_tech = 26
+		capital_scope = { civilization_value = 65 }
+		religion_group = hellenistic_pantheon 
+		invention = societal_status 
+	}
+	effect = {
+	}
+	omen_chance = 0.05
+}
+
+flexible_deities = {
+	trigger = {
+		religious_tech = 28
+		capital_scope = { civilization_value = 65 }
+		religion_group = hellenistic_pantheon 
+	}
+	effect = {
+	}
+	global_religious_prestige = -0.05
+	land_organisation = 0.1
+}
+
+
+		 
+	

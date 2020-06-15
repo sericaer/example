@@ -1,0 +1,3 @@
+graphical_culture = celticgfx
+color = { 96 95 78 }
+color2 = { 151 110 81 }

@@ -1,0 +1,20 @@
+civil_war_faction = AT2
+graphical_culture = celticgfx
+color = { 115 154 66 }
+color2 = { 255 230 90 }
+
+ship_names = {
+	Ambianos Artos
+	Bagaco Bononia
+	Divona Duronon
+	Epomore
+	Felsina
+	Ganda Gesoriaco
+	Lintomagos
+	Menapios
+	Nemetaco
+	Oromansacos
+	Rhenos
+	Samara Samarobriva Scaldis
+	Taruanna Teucera
+}

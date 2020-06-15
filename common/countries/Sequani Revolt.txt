@@ -1,0 +1,17 @@
+civil_war_faction = SEQ
+graphical_culture = celticgfx
+color = { 213  194  152 }
+
+ship_names = {
+	Alisa Arar Ariolica Aturona
+	Bebrona Beleno
+	Cosantia
+	Divoduro Dubis
+	Epomanduoduron Epona
+	Gramaton
+	Isarnodoron
+	Luxsa Luxovion
+	Odoanna
+	Segobodion Sequana
+	Varcia Velatuduro Vellosimos Vesontio
+}

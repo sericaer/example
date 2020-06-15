@@ -1,0 +1,472 @@
+# A New Career
+character_event = {
+
+	id = 7300
+
+	trigger = {
+		age = 16
+		or = {
+			traits = ambitious
+			traits = crafty
+			traits = original_thinker
+			traits = corrupt
+			traits = assertive
+			traits = intelligent
+			traits = shrewd
+			traits = prominent
+			traits = wise
+			traits = jealous
+			traits = stubborn
+		}
+		wealth = 100
+		is_ruler = no
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7300"
+
+	desc = "EVTDESC7300"
+
+	option = {
+		name = "EVTOPTA7300"					# My career is more important than anything else
+		ai_chance = { factor = 30 }
+		wealth = -100
+		popularity = 10
+	}
+	option = {
+		name = "EVTOPTB7300"					# It does have some importance
+		ai_chance = { factor = 55 }
+		wealth = -50
+		popularity = 5
+	}
+	option = {
+		name = "EVTOPTC7300"					# It's not really that important
+		ai_chance = { factor = 15 }
+		popularity = -2
+	}
+}
+
+# Small Incentives
+character_event = {
+
+	id = 7301
+
+	trigger = {
+		age = 16
+		or = {
+			finesse = 8
+			and = {
+				charisma = 4
+				finesse = 4
+			}
+		}
+		wealth = 100
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7301"
+
+	desc = "EVTDESC7301"
+
+	option = {
+		name = "EVTOPTA7301"					# I have plenty of money to share
+		ai_chance = { factor = 30 }
+		wealth = -100
+		popularity = 10
+	}
+	option = {
+		name = "EVTOPTB7301"					# I guess I could share some of my wealth
+		ai_chance = { factor = 55 }
+		wealth = -50
+		popularity = 5
+	}
+	option = {
+		name = "EVTOPTC7301"					# You'll never gain any true friends that way
+		ai_chance = { factor = 15 }
+		popularity = -2
+	}
+}
+
+# Lack of Appreciation
+character_event = {
+
+	id = 7302
+
+	trigger = {
+		not = { traits = unnoticeable }
+		not = { traits = prominent }
+		not = { traits = submissive } 
+		not = { traits = assertive }
+		not = { traits = weak_willed }
+		not = { traits = stubborn }
+		not = { traits = coward	}
+		not = { traits = brave }
+		military = 8
+		not = { popularity = 40 }
+		age = 16
+		can_get_rivals = yes
+		is_female = no
+		country = {
+			any_character = {
+				popularity = 80
+				not = { military = 5 }
+				age = 16
+				is_female = no
+				can_get_rivals = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7302"
+
+	desc = "EVTDESC7302"
+
+	option = {
+		name = "EVTOPTA7302"					# It won't happen again
+		ai_chance = { factor = 70 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					is_female = no
+					popularity = 80
+					not = { military = 5 }
+					can_get_rivals = yes
+				}
+				add_rival = this
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7302"					# Maybe, I'm overreacting
+		ai_chance = { factor = 30 }
+		random_list = {
+			25 = { add_trait = unnoticeable }
+			25 = { add_trait = submissive }
+			25 = { add_trait = weak_willed }
+			25 = { add_trait = coward }
+		}
+	}
+}
+
+# The Unfairness of Life
+character_event = {
+
+	id = 7303
+
+	trigger = {
+		military = 6
+		age = 16
+		not = { popularity = 40 }
+		is_female = no
+		or = {
+			traits = tactician
+			traits = confident
+			traits = conqueror
+			traits = victorious
+			traits = wise
+			traits = shrewd
+			traits = intelligent
+			traits = original_thinker
+		}
+		country = {
+			any_character = {
+				popularity = 80
+				age = 16
+				is_female = no
+				can_get_rivals = yes
+				or = {
+					traits = coward
+					traits = rash
+					traits = foolish
+					traits = reckless
+					traits = lazy
+					traits = selfish
+					traits = dumb
+					traits = incapable
+					traits = arbitrary
+					traits = tactically_inflexible
+				}
+				not = { traits = tactician }
+				not = { traits = confident }
+				not = { traits = conqueror }
+				not = { traits = victorious }
+				not = { traits = wise }
+				not = { traits = shrewd }
+				not = { traits = intelligent }
+				not = { traits = original_thinker }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			military = 8
+		}
+		modifier = {
+			factor = 0.9
+			military = 7
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7303"
+
+	desc = "EVTDESC7303"
+
+	option = {
+		name = "EVTOPTA7303"					# It won't happen again
+		ai_chance = { factor = 70 }
+		country = {
+			random_character = {
+				limit = {
+					popularity = 80
+					age = 16
+					is_female = no
+					can_get_rivals = yes
+					not = { traits = tactician }
+					not = { traits = confident }
+					not = { traits = conqueror }
+					not = { traits = victorious }
+					not = { traits = wise }
+					not = { traits = shrewd }
+					not = { traits = intelligent }
+					not = { traits = original_thinker }					
+					or = {
+						traits = coward
+						traits = rash
+						traits = foolish
+						traits = reckless
+						traits = lazy
+						traits = selfish
+						traits = dumb
+						traits = incapable
+						traits = arbitrary
+						traits = tactically_inflexible
+					}
+				}
+				add_rival = this
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7303"					# Maybe, I'm overreacting
+		ai_chance = { factor = 30 }
+		change_finesse = -1
+	}
+}

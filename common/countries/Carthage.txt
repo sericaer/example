@@ -1,0 +1,15 @@
+civil_war_faction = CA2
+graphical_culture = carthagegfx
+color = { 74 174 85 }
+color2 = { 240 231 213 }
+
+ship_names = {
+	Adonis Anath Asherah Astarte
+	Baal "Baal-Hammon" "Baalat Asclepius"
+	Kathirat Kothar
+	Melqarth Mot
+	Resheph
+	Shahar Shalim Shapash
+	Tanit
+	Yamm Yarikh
+}

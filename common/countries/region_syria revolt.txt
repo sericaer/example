@@ -1,0 +1,4 @@
+civil_war_faction = QSY
+region = region_syria
+color = { 50 130 139 }
+color2 = { 35 60 60 }

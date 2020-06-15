@@ -1,0 +1,17 @@
+civil_war_faction = AUL
+graphical_culture = celticgfx
+color = { 198  97  91 }
+color2 = { 190 166 164 }
+
+ship_names = {
+	Alauna Anextlomaros Arganta Avallon
+	Bricilonno Brittenacos
+	Combariston
+	Ebroica
+	Icauna
+	Lavaratodunon Liger
+	Mantalomagus Mediconno Meduana Mullo
+	Ritona
+	Sarta Saucona Segora Sipia
+	Vernodion Vindobodua Vindunos
+}

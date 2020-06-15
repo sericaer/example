@@ -1,0 +1,77 @@
+country_decisions = {
+	
+	lighthouse_of_alexandria = {
+		potential = {
+			not = { has_country_modifier = the_lighthouse_of_alexandria }
+			tag = EGY
+			owns = 225	# Alexandria
+		}
+		allow = {
+			225 = { has_building = harbour }
+		}
+		effect = {
+			ruler = { popularity = 5 }
+			add_country_modifier = {
+				name = "the_lighthouse_of_alexandria"
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	patronice_scientific_research = {
+		potential = {
+			not = { has_country_modifier = patronice_research }
+			tag = EGY
+		}
+		allow = {
+			war = no
+			capital_scope = { has_building = academy }
+			ruler = { finesse = 7 }
+		}
+		effect = {
+			ruler = { popularity = 5 }
+			add_country_modifier = {
+				name = "patronice_research"
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	embrace_egyptian_religion = {
+		potential = {
+			not = { has_country_modifier = embrace_the_egyptian_religion }
+			tag = EGY
+		}
+		allow = {
+			or = {
+				idea = religious_state
+				idea = divine_right
+				idea = national_faith
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "embrace_the_egyptian_religion"
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

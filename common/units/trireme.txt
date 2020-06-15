@@ -1,0 +1,4 @@
+type = trireme
+
+maneuver = 5
+trireme = 1.0

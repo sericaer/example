@@ -1,0 +1,17 @@
+civil_war_faction = PA3
+graphical_culture = greekgfx
+color = { 43 141 0 }
+color2 = { 255 234 0 }
+
+ship_names = {
+	Abonuteichos Aigialos Amastris Amnias
+	Cinotis
+	Docea
+	Gangra Gazora
+	Halys
+	Kleitos Kromna Kytorus
+	"Naias Parthenia" Nymphaios
+	Parthenios Pimolisa Pylaimenes
+	Sinope
+	Teius
+}

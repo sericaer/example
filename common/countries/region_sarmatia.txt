@@ -1,0 +1,4 @@
+civil_war_faction = QS4
+region = region_sarmatia
+color = { 150 145 40 }
+color2 = { 70 70 30 }

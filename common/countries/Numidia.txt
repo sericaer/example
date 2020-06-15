@@ -1,0 +1,16 @@
+civil_war_faction = NU2
+graphical_culture = carthagegfx
+color = { 57  132  176 }
+color2 = { 246 255 13 }
+
+ship_names = {
+	Cirta
+	"Hippo Regius"
+	Khamissa
+	Lambessa
+	Markuna
+	Partenia
+	Rusicada
+	Theveste Timgad
+	Verecunda
+}

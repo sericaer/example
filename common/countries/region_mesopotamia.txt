@@ -1,0 +1,4 @@
+civil_war_faction = QM7
+region = region_mesopotamia
+color = { 10 80 80 }
+color2 = { 255 255 255 }

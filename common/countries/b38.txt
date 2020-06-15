@@ -1,0 +1,25 @@
+civil_war_faction = C38
+graphical_culture = germangfx
+color = { 81  160  236 }
+color2 = { 68 134 196 }
+
+ship_names = {
+	Agilaz Albaz Alfheim Auzawandilaz
+	Berchta
+	Donar Dwergaz
+	Ermunaz
+	Fosite Frijo Fullo
+	Gautaz
+	Haljo Holda
+	Irmin Isaz
+	Lorelei Lureln
+	Medjanagardaz Muthspell
+	Nerthus Nikwuz
+	Ostara
+	Ragnarök
+	Sowilo
+	Teiwaz Thunraz Thurisaz
+	Valhalla
+	Waelanduz Wodanaz Wulthuz Wurdiz
+	Ziu
+}

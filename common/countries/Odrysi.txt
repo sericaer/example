@@ -1,0 +1,19 @@
+civil_war_faction = OD2
+graphical_culture = scythiangfx
+color = { 87 191 217 }
+color2 = { 41 10 10 }
+
+ship_names = {
+	Adila Aprus Azila
+	Benndis
+	Caropithla Cotiata Cycolis
+	Dicotella Diesema Dokela Dracontos
+	Hormea
+	Iele
+	Manteia Mendruta
+	Nemenepsa
+	Pegrina Polpum Priadela
+	Rathibida Riborasta
+	Salia Skiare Stirsozila
+	Zalmoxis Zena Zired
+}

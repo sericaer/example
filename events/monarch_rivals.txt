@@ -1,0 +1,1737 @@
+character_event = {
+
+	id = 4400
+
+	trigger = {
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				OR = {
+					has_office = land_tech
+					has_office = naval_tech
+					has_office = civic_tech
+					has_office = construction_tech
+					has_office = religious_tech
+				}
+				can_get_rivals = yes
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				finesse = 5
+			}
+		}
+		is_ruler = yes
+		can_get_rivals = yes
+		NOT = { finesse = 5 } 
+		NOT = { traits = trusting }
+	}
+
+	mean_time_to_happen = {
+	
+		months = 60 
+	
+		modifier = {
+			NOT = { finesse = 5 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 0.9
+		}
+		modifier = { 
+			traits = crafty 
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 0.9
+		}
+		modifier = {
+			traits = just 
+			factor = 1.1
+		}
+		modifier = {
+			traits = arbitrary
+			factor = 0.9
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 0.9
+		}
+		modifier = {
+			traits = forgiving
+			factor = 1.1
+		}
+		modifier = { 
+			traits = assertive
+			factor = 0.9
+		}
+		modifier = {
+			traits = submissive 
+			factor = 1.1
+		}
+		modifier = {
+			traits = intelligent 
+			factor = 1.1
+		}
+		modifier = {
+			traits = dumb 
+			factor = 0.9
+		}
+		modifier = {
+			traits = cautious 
+			factor = 1.1
+		}
+		modifier = {
+			traits = reckless
+			factor = 0.9
+		}
+		modifier = {
+			traits = shrewd 
+			factor = 1.1
+		}
+		modifier = {
+			traits = foolish 
+			factor = 0.9
+		}
+		modifier = {
+			traits = suspicious 
+			factor = 0.9
+		}
+		modifier = {
+			traits = wise 
+			factor = 1.1 
+		}
+		modifier = {
+			traits = rash 
+			factor = 0.9
+		}
+		modifier = {
+			traits = jealous 
+			factor = 0.9
+		}
+		modifier = {
+			traits = secure 
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4400"
+	desc = "EVTDESC4400"
+
+	option = {
+
+		name = "EVTOPTA4400"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							OR = {
+								has_office = land_tech
+								has_office = naval_tech
+								has_office = civic_tech
+								has_office = construction_tech
+								has_office = religious_tech
+							}
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							finesse = 5
+							traits = ambitious 
+							traits = reckless
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				country = {
+					random_character = {
+						limit = {
+							OR = {
+								has_office = land_tech
+								has_office = naval_tech
+								has_office = civic_tech
+								has_office = construction_tech
+								has_office = religious_tech
+							}
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							finesse = 5
+							traits = ambitious 
+							NOT = { traits = reckless }
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				country = {
+					random_character = {
+						limit = {
+							OR = {
+								has_office = land_tech
+								has_office = naval_tech
+								has_office = civic_tech
+								has_office = construction_tech
+								has_office = religious_tech
+							}
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							finesse = 5
+							NOT = { traits = ambitious } 
+							NOT = { traits = reckless }
+						}
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+
+		name = "EVTOPTB4400"
+		add_trait = trusting 
+		remove_trait = suspicious
+	}
+}
+	
+character_event = {
+
+	id = 4401 
+
+	trigger = {
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+		}
+		any_neighbor_country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			ruler = {
+				can_get_rivals = yes
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				military = 5
+			}
+		}
+		is_ruler = yes
+		can_get_rivals = yes
+		NOT = { military = 5 } 
+		NOT = { traits = forgiving }
+		NOT = { traits = victorious }
+		NOT = { traits = conqueror }
+		NOT = { traits = brave }
+		NOT = { traits = confident }
+		NOT = { traits = tactician }
+		NOT = { traits = disciplined }
+		NOT = { traits = steadfast }
+		NOT = { traits = aggressive }
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+	
+		modifier = {
+			NOT = { military = 5 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 4 }
+			factor = 1.1
+		}
+		modifier = { 
+			NOT = { military = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 1 }
+			factor = 0.9
+		}
+		modifier = { 
+			traits = coward 
+			factor = 0.9
+		}
+		modifier = {
+			traits = invalid 
+			factor = 1.1
+		}	
+		modifier = { 	
+			traits = wounded 
+			factor = 1.1
+		}
+		modifier = {
+			traits = maimed 
+			factor = 1.1
+		}
+		modifier = {
+			traits = limp 
+			factor = 0.9
+		}
+		modifier = {
+			traits = inbred
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy 
+			factor = 0.9
+		}
+		modifier = {
+			traits = energetic 
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4401"
+	desc = "EVTDESC4401"
+
+	option = {
+
+		name = "EVTOPTA4401"
+		random_list = {
+			50  = {
+				any_neighbor_country = {
+					limit = {
+						OR = {
+							government = dictatorship
+							government = theocracy
+							government = despotic_monarchy
+							government = federal_monarchy
+							government = aristocratic_monarchy
+						}
+						ruler = {
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							military = 5
+							OR = {
+								traits = victorious
+								traits = conqueror
+								traits = confident
+								traits = tactician
+								traits = disciplined
+								traits = steadfast
+								traits = aggressive
+							}
+							NOT = { traits = brave }
+						}
+					}
+					ruler = {	
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				any_neighbor_country = {
+					limit = {
+						OR = {
+							government = dictatorship
+							government = theocracy
+							government = despotic_monarchy
+							government = federal_monarchy
+							government = aristocratic_monarchy
+						}
+						ruler = {
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							military = 5
+							NOT = {
+								OR = {
+									traits = victorious
+									traits = conqueror
+									traits = confident
+									traits = tactician
+									traits = disciplined
+									traits = steadfast
+									traits = aggressive
+								}
+							}
+							traits = brave
+						}
+					}
+					ruler = {	
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				any_neighbor_country = {
+					limit = {
+						OR = {
+							government = dictatorship
+							government = theocracy
+							government = despotic_monarchy
+							government = federal_monarchy
+							government = aristocratic_monarchy
+						}
+						ruler = {
+							can_get_rivals = yes
+							NOT = { is_friend = THIS }
+							NOT = { is_rival = THIS }
+							military = 5
+							NOT = {
+								OR = {
+									traits = victorious
+									traits = conqueror
+									traits = confident
+									traits = tactician
+									traits = disciplined
+									traits = steadfast
+									traits = aggressive
+								}
+							}
+							NOT = { traits = brave }
+						}
+					}
+					ruler = {	
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		
+		name = "EVTOPTB4401"
+		add_trait = forgiving
+		remove_trait = vengeful
+		popularity = -5
+	}
+}
+
+character_event = {
+
+	id = 4402
+
+	trigger = {
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				is_friend = THIS
+				NOT = { is_rival = THIS }
+				traits = deceitful
+				age = 16
+			}
+		}
+		NOT = { traits = foolish }
+		finesse = 5
+		popularity = 50 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 60 
+	
+		modifier = {
+			NOT = { finesse = 6 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 7 }
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 7
+			factor = 0.9
+		}
+		modifier = { 
+			finesse = 8 
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9 
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 0.9
+		}
+		modifier = {
+			traits = energetic 
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy
+			factor = 1.1
+		}
+		modifier = {
+			traits = shrewd
+			factor = 0.9
+		}
+		modifier = {
+			traits = weak_willed 
+			factor = 1.1
+		}
+		modifier = {
+			traits = stressed
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4402"
+	desc = "EVTDESC4402"
+
+	option = {
+		name = "EVTOPTA4402"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							traits = deceitful
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							traits = deceitful
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							traits = deceitful
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB4402"
+		add_trait = foolish 
+		remove_trait = shrewd
+	}
+}
+
+character_event = {
+	
+	id = 4403
+	
+	trigger = {
+		can_get_rivals = yes
+		NOT = { popularity = 15 }
+		NOT = { wealth = 500 }
+		NOT = { family_prestige = 1000 }
+		charisma = 7
+		age = 16	
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				is_friend = THIS
+				NOT = { is_rival = THIS }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { wealth = 250 }
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 250 
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { family_prestige = 100 }
+			factor = 0.9
+		}
+		modifier =  { 
+			NOT = { family_prestige = 200 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 300 }
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { family_prestige = 400 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 500 }
+			factor = 0.9
+		}
+		modifier = {
+			family_prestige = 500
+			factor = 1.1 
+		}
+		modifier = {
+			family_prestige = 600 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 700 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 800
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 900
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4403"
+	desc = "EVTDESC4403"
+
+	option = {
+	
+		name = "EVTOPTA4403"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							popularity = 50 
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 50 }
+							popularity = 15
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 15 }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		
+		name = "EVTOPTB4403"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					is_friend = THIS
+					NOT = { is_rival = THIS }
+					age = 16
+				}
+				remove_friend = THIS 
+				add_rival = THIS
+			}
+		}
+		random = {
+			chance = 70
+			popularity = 10 
+		}
+	}
+}
+			
+				
+character_event = {
+	
+	id = 4404
+	
+	trigger = {
+		can_get_rivals = yes
+		NOT = { popularity = 15 }
+		NOT = { wealth = 500 }
+		NOT = { family_prestige = 1000 }
+		NOT = { charisma = 7 }
+		charisma = 4
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				is_friend = THIS
+				NOT = { is_rival = THIS }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { wealth = 250 }
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 250 
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { family_prestige = 100 }
+			factor = 0.9
+		}
+		modifier =  { 
+			NOT = { family_prestige = 200 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 300 }
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { family_prestige = 400 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 500 }
+			factor = 0.9
+		}
+		modifier = {
+			family_prestige = 500
+			factor = 1.1 
+		}
+		modifier = {
+			family_prestige = 600 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 700 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 800
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 900
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4404"
+	desc = "EVTDESC4404"
+
+	option = {
+	
+		name = "EVTOPTA4404"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							popularity = 50 
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 50 }
+							popularity = 15
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 15 }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		
+		name = "EVTOPTB4404"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					is_friend = THIS
+					NOT = { is_rival = THIS }
+					age = 16
+				}
+				remove_friend = THIS 
+				add_rival = THIS
+			}
+		}
+		random = {
+			chance = 40 
+			popularity = 10 
+		}
+	}
+}
+
+character_event = {
+	
+	id = 4405
+	
+	trigger = {
+		can_get_rivals = yes
+		NOT = { popularity = 15 }
+		NOT = { wealth = 500 }
+		NOT = { family_prestige = 1000 }
+		NOT = { charisma = 4 }
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				is_friend = THIS
+				NOT = { is_rival = THIS }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { wealth = 250 }
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 250 
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { family_prestige = 100 }
+			factor = 0.9
+		}
+		modifier =  { 
+			NOT = { family_prestige = 200 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 300 }
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { family_prestige = 400 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 500 }
+			factor = 0.9
+		}
+		modifier = {
+			family_prestige = 500
+			factor = 1.1 
+		}
+		modifier = {
+			family_prestige = 600 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 700 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 800
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 900
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4405"
+	desc = "EVTDESC4405"
+
+	option = {
+	
+		name = "EVTOPTA4405"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							popularity = 50 
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			35  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 50 }
+							popularity = 15
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+			15  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							NOT = { popularity = 15 }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		
+		name = "EVTOPTB4405"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					is_friend = THIS
+					NOT = { is_rival = THIS }
+					age = 16
+				}
+				remove_friend = THIS 
+				add_rival = THIS
+			}
+		}
+		random = {
+			chance = 10 
+			popularity = 10 
+		}
+	}
+}		
+		  
+character_event = {
+	
+	id = 4406
+	
+	trigger = {
+		can_get_rivals = yes
+		NOT = { popularity = 15 }
+		age = 16
+		wealth = 500
+		NOT = { family_prestige = 1000 }
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				is_friend = THIS
+				NOT = { is_rival = THIS }
+				NOT = { wealth = 500 }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { wealth = 750 }
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 750 
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { family_prestige = 100 }
+			factor = 0.9
+		}
+		modifier =  { 
+			NOT = { family_prestige = 200 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 300 }
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { family_prestige = 400 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { family_prestige = 500 }
+			factor = 0.9
+		}
+		modifier = {
+			family_prestige = 500
+			factor = 1.1 
+		}
+		modifier = {
+			family_prestige = 600 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 700 
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 800
+			factor = 1.1
+		}
+		modifier = {
+			family_prestige = 900
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4406"
+	desc = "EVTDESC4406"
+
+	option = {
+	
+		name = "EVTOPTA4406"
+		random_list = {
+			25  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						wealth = 100 
+						random = {
+							chance = 25
+							add_trait = corrupt
+							remove_trait = righteous
+						}
+					}
+				}
+				wealth = -100 
+				random = {
+					chance = 25
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+			75 = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+						random = {
+							chance = 25
+							remove_trait = corrupt
+							add_trait = righteous
+						}
+					}
+				}
+				random = {
+					chance = 10
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+			
+		}
+	}
+	option = {
+		
+		name = "EVTOPTB4406"
+		random_list = {
+			50  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						wealth = 250
+						random = {
+							chance = 50
+							add_trait = corrupt
+							remove_trait = righteous
+						}
+					}
+				}
+				wealth = -250
+				random = {
+					chance = 50
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+			50 = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+						random = {
+							chance = 50
+							remove_trait = corrupt
+							add_trait = righteous
+						}
+					}
+				}
+				random = {
+					chance = 25
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+			
+		}
+	}
+	option = {
+		
+		name = "EVTOPTB4406"
+		random_list = {
+			75  = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						wealth = 500
+						random = {
+							chance = 75
+							add_trait = corrupt
+							remove_trait = righteous
+						}
+					}
+				}
+				wealth = -500
+				random = {
+					chance = 75
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+			25 = {
+				country = {
+					random_character = {
+						limit = {
+							can_get_rivals = yes
+							is_friend = THIS
+							NOT = { is_rival = THIS }
+							age = 16
+						}
+						remove_friend = THIS 
+						add_rival = THIS
+						random = {
+							chance = 75
+							remove_trait = corrupt
+							add_trait = righteous
+						}
+					}
+				}
+				random = {
+					chance = 50
+					add_trait = corrupt
+					remove_trait = righteous
+				}
+			}
+		}
+	}
+}		
+
+character_event = {
+	
+	id = 4407
+	
+	trigger = {
+		can_get_rivals = yes
+		traits = deceitful
+		is_ruler = no
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				traits = trusting 
+				is_ruler = no
+				age = 16
+			}
+		}
+	}	
+
+	mean_time_to_happen = {
+	
+		months = 60 
+
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 5 }
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 5
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 6
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 7 
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 8 
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9 
+			factor = 0.9
+		}
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous 
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 0.9
+		}
+		modifier = {
+			traits = forgiving 
+			factor = 1.1
+		}
+		modifier = {
+			traits = honest 
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4407"
+	desc = "EVTDESC4407"
+
+	option = {
+		
+		name = "EVTOPTA4407"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					NOT = { is_friend = THIS }
+					NOT = { is_rival = THIS }
+					traits = trusting 
+					is_ruler = no
+					age = 16
+				}
+				add_rival = THIS
+			}
+		}
+	}
+}
+
+character_event = {
+	
+	id = 4408
+	
+	trigger = {
+		can_get_rivals = yes
+		traits = trusting
+		is_ruler = yes
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				traits = arbitrary 
+				is_ruler = no
+				age = 16
+				NOT = {
+					OR = {
+						in_command = yes
+						is_governor = yes
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+	
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 6
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 7
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 8
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4408"
+	desc = "EVTDESC4408"
+
+	option = {
+		name = "EVTOPTA4408"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					NOT = { is_friend = THIS }
+					NOT = { is_rival = THIS }
+					traits = arbitrary 
+					is_ruler = no
+					age = 16
+					NOT = {
+						OR = {
+							in_command = yes
+							is_governor = yes
+						}
+					}
+				}
+				add_rival = THIS
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB4408"
+		add_trait = trusting 
+		remove_trait = suspicious
+	}
+}	
+
+character_event = {
+
+	id = 4409 
+
+	trigger = {
+		NOT = { traits = suspicious }
+		is_ruler = yes 
+		can_get_rivals = yes
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				is_friend = THIS
+				traits = ambitious 
+				age = 16
+			}
+			any_character = {
+				can_get_rivals = yes
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+	
+		months = 60 
+
+		modifier = {
+			traits = crafty
+			factor = 1.1
+		}
+		modifier = {
+			traits = guileless
+			factor = 0.9
+		}
+		modifier = {
+			traits = righteous 
+			factor = 1.1
+		}
+		modifier = {
+			traits = corrupt
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 1.1
+		}
+		modifier = {
+			traits = forgiving 
+			factor = 0.9
+		}
+		modifier = {
+			traits = honest 
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4409"
+	desc = "EVTDESC4409"
+
+	option = {
+		name = "EVTOPTA4409"
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					NOT = { is_friend = THIS }
+					NOT = { is_rival = THIS }
+					age = 16
+				}	
+				add_rival = THIS
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA4409"
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+					traits = ambitious 
+					age = 16
+				}	
+				remove_friend = THIS
+			}
+		}	
+	}
+}	
+
+character_event = {
+
+	id = 4410 
+
+	trigger = {
+		traits = selfish
+		wealth = 500 
+		can_get_rivals = yes
+		age = 16
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				can_get_rivals = yes
+				traits = vengeful 
+				NOT = { wealth = 100 }
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { charisma = 1 }
+			factor = 0.9		
+		}
+		modifier = {
+			NOT = { charisma = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { charisma = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 7
+			factor = 1.1
+		}
+		modifier = {
+			charisma = 8
+			factor = 1.1
+		}
+		modifier = {
+			charisma = 9
+			factor = 1.1
+		}
+		modifier = {
+			traits = reckless
+			factor = 0.9 
+		}
+		modifier = {
+			traits = abrasive
+			factor = 0.9
+		}
+		modifier = {
+			traits = good_natured
+			factor = 1.1
+		}
+		modifier = {
+			traits = cruel 	
+			factor = 0.9
+		}
+		modifier = {
+			traits = merciful 
+			factor  = 1.1
+		}
+	}
+
+	title = "EVTNAME4410"
+	desc = "EVTDESC4410"
+
+	option = {
+		name = "EVTOPTA4410"
+		
+		country = {
+			random_character = {
+				limit = {
+					can_get_rivals = yes
+					traits = vengeful 
+					NOT = { wealth = 100 }
+					age = 16
+				}
+				add_rival = THIS
+			}
+		}
+	}
+}
+		

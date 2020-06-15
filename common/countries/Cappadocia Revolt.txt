@@ -1,0 +1,23 @@
+civil_war_faction = CAP
+graphical_culture = persiangfx
+color = { 163  151  128 }
+color2 = { 37 195 255 }
+
+ship_names = {
+	Adar Amardad Anahit Aneran "Ara Geghetsik" Aralez Aramazd Ararat Ard "Arda-Fravash" Ardibehesht
+	Ashtad Asman Astghik Avan
+	Bahman Barzo Behram
+	Dae-pa-Adar Dae-pa-Din Daham Din
+	Erman
+	Ghosh Govad
+	Haik Hom
+	Khordad Korshed
+	Marespand Meher
+	Mithra Mohor
+	Nuneh
+	Ram Rashn
+	Shehrevar Sorush Spendarmad
+	Tir Tork Angegh Tsovinar
+	Vahagan Vanatur
+	Zamyad Zarathoustra
+}

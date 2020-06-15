@@ -1,0 +1,203 @@
+##########################################
+#  		Diseases		 #
+##########################################
+province_event = {
+		
+	id = 7100
+
+	trigger = {
+		not = { has_building = aqueduct }
+		population = 10
+		owner = {
+			any_character = {
+				traits = unhealthy
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+		
+		modifier = {
+			factor = 0.9
+			port = yes
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				has_omen = yes
+				is_omen_failure = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = { war = yes }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 30 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 40 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 50 }
+		}
+		modifier = {
+			factor = 3.0
+			owner = {
+				has_country_flag = diseases_are_spreading
+			}
+		}
+	}
+
+	title = "EVTNAME7100"
+	desc = "EVTDESC7100"
+
+	option = {
+		name = "EVTOPTA7100"
+		owner = {
+			set_country_flag = diseases_are_spreading
+			treasury = -30
+			random_character = {
+				limit = { not = { traits = unhealthy } }
+				add_trait = unhealthy
+			}
+			random_character = {
+				limit = { not = { traits = unhealthy } }
+				add_trait = unhealthy
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7100"
+		owner = {
+			set_country_flag = diseases_are_spreading
+			random_character = {
+				limit = { not = { traits = unhealthy } }
+				add_trait = unhealthy
+			}
+			random_character = {
+				limit = { not = { traits = unhealthy } }
+				add_trait = unhealthy
+			}
+			random_character = {
+				limit = { not = { traits = unhealthy } }
+				add_trait = unhealthy
+			}
+		}
+		population = -5
+	}
+}
+
+province_event = {
+
+	id = 7101
+
+	trigger = {
+		not = { has_building = aqueduct }
+		port = yes
+		population = 10
+	}
+
+	mean_time_to_happen = {
+		months = 6000
+
+		modifier = {
+			factor = 0.9
+			owner = { war = yes }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				has_omen = yes
+				is_omen_failure = yes
+			}
+		}
+		modifier = {
+			factor = 3.0
+			owner = {
+				has_country_flag = diseases_are_spreading
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 30 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 40 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { num_of_cities = 50 }
+		}
+	}
+
+	title = "EVTNAME7101"
+	desc = "EVTDESC7101"
+
+	option = {
+		name = "EVTOPTA7101"
+		owner = {
+			set_country_flag = diseases_are_spreading
+			random_character = {
+				limit = { not = { traits = plague } }
+				add_trait = plague
+			}
+			random_character = {
+				limit = { not = { traits = plague } }
+				add_trait = plague
+			}
+			random_character = {
+				limit = { not = { traits = plague } }
+				add_trait = plague
+			}
+		}
+		random_list = {
+			50 = { population = -2 }
+			50 = { population = -4 }
+		}
+		random = {
+			chance = 50
+			random_neighbor_province = {
+				province_event = 7102
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7102
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7102"
+	desc = "EVTDESC7102"
+
+	option = {
+		name = "EVTOPTA7102"
+		population = -2
+		owner = {
+			random_character = {
+				limit = { not = { traits = plague } }
+				add_trait = plague
+			}
+			random_character = {
+				limit = { not = { traits = plague } }
+				add_trait = plague
+			}
+		}
+	}
+}

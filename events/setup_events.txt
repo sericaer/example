@@ -1,0 +1,722 @@
+# Set Up Events
+# For countries at start that should be stronger than they get by the calculations
+# the game does to decide what they should start with, like Epirus during Pyrrhos
+
+country_event = {
+
+	id = 10001
+
+	trigger = {
+		tag = SYR
+		not = { has_country_flag = SYR_start }
+		exists = EPI
+		CAR = { owns = 101 }
+	}
+
+	mean_time_to_happen = {
+	
+		months = 0
+
+	}
+
+	title = "寻求外援"
+	desc = "我们正面临迦太基的威胁，应当尽快找到同盟来帮助我们。" 
+
+	option = {
+		name = "伊庇鲁斯的皮洛士王是可以信赖的朋友。"
+		EPI = {
+			relation = { who = this value = 50 }
+		}
+		set_country_flag = SYR_start
+	}
+}
+
+
+#Primarily for when created by event, but will happen even if started later (in which case they already have an army)
+#May not happen after their defeat at the hands of Attalus of Pergamon
+country_event = {
+
+	id = 10002
+
+	trigger = {
+		not = { has_country_flag = galatians_in_galatia }
+		year = 474
+		tag = GAL
+		owns = 154		# Galatia
+		not = { year = 522 }
+	}
+
+	mean_time_to_happen = {
+	
+		months = 0
+
+	}
+
+	title = "加拉太人"
+	desc = "EVTDESC10002"
+
+	option = {
+		name = "我们战无不胜。"
+		heavy_infantry = 154
+		heavy_infantry = 154
+		archers = 154
+		cavalry = 154
+		heavy_infantry = 154
+		heavy_infantry = 154
+		archers = 154
+		militia = 154
+		militia = 154
+		treasury = 60
+		set_country_flag = galatians_in_galatia
+	}
+}
+
+#Epirus/ First phase, only in SYR
+country_event = {
+
+	id = 10003
+
+	trigger = {
+		not = { has_country_flag = epirus_start }
+		tag = EPI
+		exists = SYR
+		war_with = CAR
+	}
+
+	mean_time_to_happen = {
+	
+		months = 0
+
+	}
+
+	title = "伊庇鲁斯的皮洛士王"
+	desc = "EVTDESC7050" #From Paradox event
+
+	option = {
+		name = "大军集结，出发!"
+		heavy_infantry = 100
+		heavy_infantry = 100
+		heavy_infantry = 100
+		heavy_infantry = 100
+		archers = 100
+		archers = 100
+		archers = 100
+		cavalry = 100
+		cavalry = 100
+		warelephant = 100
+		treasury = 80
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		trireme = 100
+		set_country_flag = epirus_start
+	}
+}
+
+# Galatia; Hard to simulate in another way, thinking of how to do it in an alternate way
+country_event = {
+
+	id = 10004
+
+	trigger = {
+		not = { exists = GAL }
+		not = { has_country_flag = galatian_nation }
+		owns = 154		# Galatia
+		year = 476 #Invited by Bithynia
+#		tag = SEL #The Seleucids own Galatia to begin with. If it ends up in someone elses possession it is probably because Galatia appeared and was crushed by them.
+		not = { year = 500 } #By this time this should have happened already
+		ruler = { not = { military = 8 } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 120
+
+		modifier = {
+			factor = 0.2
+			war = yes
+		}
+		modifier = {
+			factor = 0.5
+			year = 480
+		}
+		modifier = {
+			factor = 1.6 #Though luck for the Galatians, but if they still haven't arrived at this time, well...
+			year = 490
+		}
+		modifier = {
+			factor = 0.6
+			ruler = { military = 4 }
+		}
+		modifier = {
+			factor = 0.4
+			ruler = { military = 3 }
+		}
+		modifier = {
+			factor = 0.2
+			ruler = { military = 2 }
+		}
+		modifier = {
+			factor = 0.2
+			ruler = { military = 1 }
+		}
+		modifier = {
+			factor = 0.4
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.2
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.2
+			stability = 2
+		}
+	}
+
+	title = "加拉太人定居加拉提亚"
+	#desc = "The Galatians that have recently arrived in Asia Minor have managed to proclaim their independence, in territory that is technically part of our realm! All things considered, it may be for the best, at least they aren't roaming around and causing more destruction or something like that."
+	desc = "EVTDESC10004"
+
+	option = {
+		name = "去吧。"
+		set_country_flag = galatian_nation
+		GAL = {
+			add_core = 154
+		}
+		THIS = {
+			remove_core = 154
+		}
+		154 = { 
+			culture = celtic
+			religion = druidism
+			secede_province = GAL }
+	}
+}
+
+#Rome, gain cores on Sicily
+
+country_event = {
+
+	id = 10005
+
+	trigger = {
+		not = { has_country_flag = mamertines_help }	
+		owns = 99		# Croton
+		tag = ROM		# Only for Rome
+		not = { year = 491 } # Reduce risk of it happening when starting at a later date (when MAM is gone, happens in 489)
+#               war = no
+
+	}
+
+	mean_time_to_happen = {
+
+		months = 18
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.8
+			owns = 96 # Lucania
+		}
+		modifier = {
+			factor = 0.8
+			owns = 98 # Tarentum
+		}
+	}
+
+	title = "进军西西里"
+	desc = "EVTDESC10005"
+
+	option = {
+		name = "好的。"
+		set_country_flag = mamertines_help
+		THIS = {
+			add_core = 101
+		}
+		SYR = {
+			relation = { who = this value = 100 }
+		}
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		trireme = 93
+		treasury = -60
+	}
+}
+
+#Rome, gain core on Carthage
+country_event = {
+
+	id = 10006
+
+	trigger = {
+		not = { has_country_flag = delenda_carthago }
+		tag = ROM		# Only for Rome
+		war_with = CAR		# War with Carthage
+		owns = 101		# Has Panormus
+		CAR = {
+			owns = 247 # Carthage must still be Carthaginian
+		}
+                year = 500
+		not = { year = 600 }
+	}
+
+	mean_time_to_happen = {
+
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+	}
+
+	title = "毁灭迦太基"
+	desc = "EVTDESC10006"
+
+	option = {
+		name = "必须毁灭迦太基！"
+		set_country_flag = delenda_carthago
+		THIS = {
+			add_core = 247
+		}
+	}
+}
+
+country_event = {
+
+	id = 10007
+
+	trigger = {		
+		owns = 101		
+		tag = ROM		# Only for Rome
+	OR = { 
+		not = {
+			owns = 102
+		      }
+		not = {
+			owns = 104
+		      }
+	     }
+		war = no
+
+	}
+
+	mean_time_to_happen = {
+
+		months = 24
+
+	}
+
+	title = "进占撒丁岛"
+	desc = "EVTDESC10007"
+
+	option = {
+		name = "好的。"
+		THIS = {
+			add_core = 102
+                        add_core = 104
+		}
+		102 = { 
+			culture = roman
+			religion = roman_pantheon
+			secede_province = ROM
+	        }
+		104 = { 
+			culture = roman
+			religion = roman_pantheon
+			secede_province = ROM
+                }
+	}
+}
+
+country_event = {
+
+	id = 10008
+
+	trigger = {
+		not = { has_country_flag = Illyria_help }
+		tag = ROM		# Only for Rome
+		not = {
+			owns = 137
+		}
+                year = 510
+		not = { year = 526 }
+	}
+
+	mean_time_to_happen = {
+
+		months = 36
+
+	}
+
+	title = "伊利里亚海盗"
+	desc = "EVTDESC10008"
+
+	option = {
+		name = "消灭海盗!"
+		set_country_flag = Illyria_help
+		THIS = {
+			add_core = 137
+		}
+	}
+}
+
+
+
+country_event = {
+
+	id = 10009
+
+	trigger = {
+		not = { has_country_flag = Carthage_start }
+		owns = 8			
+		8 = {   culture = iberian
+	        }
+		tag = CAR		# Only for car
+		war = no
+
+	}
+
+	mean_time_to_happen = {
+
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+	}
+
+	title = "新迦太基城的建立"
+	desc = "EVTDESC10009"
+
+	option = {
+		name = "好的。"
+		set_country_flag = Carthage_start
+		8 = {   remove_core = TUR
+			culture = carthaginian
+			religion = carthaginian_pantheon
+                        population = 3
+                        civilization_value = 5
+	        }
+		        heavy_infantry = 8
+		        heavy_infantry = 8
+		        heavy_infantry = 8
+		        heavy_infantry = 8
+		        heavy_infantry = 8
+                        heavy_infantry = 8
+		        archers = 8
+                        archers = 8
+		        archers = 8
+		        cavalry = 8
+                        cavalry = 8
+		        warelephant = 8
+		        treasury = -40
+
+	}
+}
+
+
+country_event = {
+
+	id = 10010
+
+	trigger = {
+		tag = ROM		# Only for Rome
+		not = { has_country_flag = saguntum_help }
+		CAR = {
+			owns = 14 # saguntum must be Carthaginian
+		}
+                year = 500
+		not = { year = 600 }
+	}
+
+	mean_time_to_happen = {
+
+		months = 12
+		modifier = {
+			factor = 0.8
+			stability = 3
+		}
+		modifier = {
+			factor = 0.7
+			stability = 2
+		}
+	}
+
+	title = "战争导火线"
+	desc = "EVTDESC10010"
+
+	option = {
+		name = "好的"
+		set_country_flag = saguntum_help
+		THIS = {
+			add_core = 14
+                        add_core = 8
+		}
+	}
+}
+
+#Province defects!
+province_event = {
+	id = 10011
+	
+	trigger = {
+		controlled_by = REB
+		any_neighbor_province = {
+			NOT = { owned_by = THIS }
+		}
+		has_siege = no
+		last_control_change = 90
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	title = "省份叛逃"
+	desc = "我们的一个省份叛逃到了别国!"
+	
+	option = {
+		name = "我们必须惩罚他们！"
+		random_neighbor_province = {
+			limit = {
+				NOT = { owned_by = THIS }
+			}
+			owner = {
+				country_event = 10012
+			}
+		}
+		set_province_flag = seceding
+	}
+}
+
+#Notification for country the province seceded to.
+country_event = {
+	id = 10012
+	
+	is_triggered_only = yes
+	
+	title = "他们请求帮助"
+	desc = "这个省份从他们原来的国家叛逃，加入到我们强大的国家."
+	
+	option = {
+		name = "很好"
+		any_owned = {
+			any_neighbor_province = {
+				limit = {
+					controlled_by = REB
+					has_province_flag = seceding
+				}
+				owner = { casus_belli = THIS }
+				secede_province = FROM
+				change_controller = THIS
+				clr_province_flag = seceding
+			}
+		}
+	}
+}
+
+
+
+
+#come from TCM2.0
+#Diploannexation events
+country_event = {
+	id = 10060
+	
+	is_triggered_only = yes
+	
+	title = "外交吞并"
+	desc = "你的宗主国要求你并入他们的国家。你会接受吗？"
+	
+	option = {
+		name = "接受"
+		ai_chance = {
+			factor = 100
+		}
+		FROM = { 
+			country_event = 10061
+		}
+	}
+	
+
+}
+
+country_event = {
+	id = 10061
+	
+	is_triggered_only = yes
+	
+	title = "吞并附庸"
+	desc = "我们的附庸国已经同意加入我们伟大的国家."
+	
+	option = {
+		name = "很好"
+		inherit = FROM
+#		clr_country_flag = annexing_vassal
+	}
+}
+
+
+
+
+country_event = {
+	id = 10062
+	trigger = {
+		tag = CAR
+                                exists = NUM
+                                exists = MSY
+                                war = no
+	}
+
+	mean_time_to_happen = {
+	
+		months = 600
+		modifier = {
+			factor = 0.8
+			stability = 2
+		}
+		modifier = {
+			factor = 0.8
+			stability = 3
+		}
+	}
+	
+	title = "努米底亚部落求亲"
+	desc = "努米底亚的两个部落同时派人来为他们的王族求亲，但只有一位大臣的女儿勉强愿意去那种蛮荒之地，我们要将她送到哪个部落？"
+	
+	option = {
+		name = "将她送到马西利部落"
+		ai_chance = {
+			factor = 36
+		}
+
+		MSY = {
+		relation = { who = THIS value = 50 }
+		}
+		NUM = {
+		relation = { who = THIS value = -50 }
+		}
+	}
+	option = {
+		name = "将她送到马塞西利部落"
+		ai_chance = {
+			factor = 36
+		}
+		MSY = {
+		relation = { who = THIS value = -50 }
+		}
+		NUM = {
+		relation = { who = THIS value = 50 }
+		}
+	}
+	option = {
+		name = "花大价钱另选两位身份没有那么好的少女送过去"
+		ai_chance = {
+			factor = 28
+		}
+		treasury = -75
+		MSY = {
+		relation = { who = THIS value = 25 }
+		}
+		NUM = {
+		relation = { who = THIS value = 25 }
+		}
+	}
+}
+
+
+
+
+#country_event = {
+#	id = 10063
+#	trigger = {
+#		tag = MSY
+#                             exists = CAR
+#                                exists = ROM
+#                                war = no
+#                                CAR = {
+#		not = { 
+#			relation = -100 
+#                                          }
+#                                          }
+#		not = { 
+#                                alliance_with = ROM
+#                                 }
+#	}
+
+	
+#	title = "未雨绸缪"
+#	desc = "我们与迦太基霸主的关系每况愈下，与其未来兵戎相见时任人宰割，不如未雨绸缪和罗马结盟，对我们绝对是个有利的保障。"
+#	option = {
+#		name = "好的"
+#		ROM = {
+#		relation = { who = THIS value = 30 }
+#		}
+#                                alliance_with = ROM
+#	}
+#}
+
+
+#country_event = {
+#	id = 10064
+#	trigger = {
+#		tag = NUM
+#                                exists = CAR
+#                                exists = ROM
+#                                war = no
+#                                CAR = {
+#		not = { 
+#			relation = { who = THIS value = -100 }
+#                                          }
+#                                          }
+#		not = { 
+#                               alliance_with = ROM
+#                                 }
+#	}
+
+
+	
+#	title = "未雨绸缪"
+#	desc = "我们与迦太基霸主的关系每况愈下，与其未来兵戎相见时任人宰割，不如未雨绸缪和罗马结盟，对我们绝对是个有利的保障。"
+#	option = {
+#		name = "好的"
+#		ROM = {
+#		relation = { who = THIS value = 30 }
+#		}
+#                                alliance_with = ROM
+#	}
+#}

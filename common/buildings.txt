@@ -1,0 +1,91 @@
+aqueduct = {
+	cost = 160
+	time = 730
+	local_population_growth = 0.02
+}
+
+forum = {
+	cost = 80
+	time = 365
+	local_trade_routes = 1
+}
+
+temple = {
+	cost = 120
+	time = 365
+	local_religious_prestige = 1
+}
+
+arena = {
+	cost = 120
+	time = 365
+	local_revolt_risk  = -1
+}
+
+academy = {
+	cost = 160
+	time = 730
+	local_research_points_modifier = 0.20
+}
+
+foundry = {
+	cost = 120
+	time = 365
+	local_start_experience = 0.1
+}
+
+irrigation = {
+	resource_restriction = { grain wine cloth papyrus olive }
+	cost = 120
+	time = 730
+	local_tax_modifier = 0.4
+}
+
+mine = {
+	resource_restriction = { salt iron stone amber luxuries }
+	cost = 160
+	time = 730
+	local_tax_modifier = 0.6
+}
+
+forestry = {
+	resource_restriction = { wood horses elephants wild_game grasslands_horses fish spices }
+	cost = 80
+	time = 360
+	local_tax_modifier = 0.2
+}
+
+roads = {
+	cost = 120
+	time = 365
+	trade_transit_capacity = 1.0
+	movement_cost = -0.5
+}
+
+harbour = {
+	cost = 120
+	time = 730
+	local_trade_routes = 1
+	port = yes
+	local_tax_modifier = 0.1
+}
+
+fort1 = {
+	cost = 80
+	time = 365
+	fort_level = 1
+}
+
+fort2 = {
+	prerequisites = { fort1 }
+	cost = 120
+	time =365
+	fort_level = 1
+}
+
+fort3 = {
+	prerequisites = { fort2 }
+	cost = 160
+	time = 730
+	fort_level = 1
+}

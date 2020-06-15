@@ -1,0 +1,4 @@
+civil_war_faction = QRO
+region = region_roma
+color = { 155 102 57 }
+color2 = { 205 256 50 }

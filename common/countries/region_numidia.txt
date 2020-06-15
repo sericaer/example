@@ -1,0 +1,4 @@
+civil_war_faction = QN3
+region = region_numidia
+color = { 136 136 10 }
+color2 = { 0 0 0 }

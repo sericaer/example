@@ -1,0 +1,4 @@
+civil_war_faction = QDA
+region = region_dalmatia
+color = { 150 70 150 }
+color2 = { 70 70 70 }

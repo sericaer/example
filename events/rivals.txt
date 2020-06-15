@@ -1,0 +1,680 @@
+############################################
+#	     Obstinate Commander	   #
+############################################
+character_event = {
+
+	id = 7900
+
+	trigger = {
+		is_ruler = yes
+		not = { family_prestige = 500 }
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				in_command = yes
+				family_prestige = 500
+				num_of_loyal_cohorts = 2
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { family_prestige = 400 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { family_prestige = 300 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { family_prestige = 200 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			popularity = 90
+		}
+		modifier = {
+			factor = 1.1
+			popularity = 80
+		}
+		modifier = {
+			factor = 1.1
+			popularity = 70
+		}
+	}
+
+	title = "EVTNAME7900"
+
+	desc = "EVTDESC7900"
+
+	option = {
+		name = "EVTOPTA7900"					# Who does he think he is?
+		country = {
+			random_character = {
+				limit = {
+					in_command = yes
+					family_prestige = 500
+					num_of_loyal_cohorts = 2
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+			}
+		}
+	}
+}
+
+############################################
+#	     Plots and Schemes		   #
+############################################
+character_event = {
+
+	id = 7901
+
+	trigger = {
+		is_ruler = yes
+		is_married = yes
+		not = { finesse = 3 }
+		can_get_rivals = yes
+		any_child = { age = 16 }
+		country = {
+			any_character = {
+				age = 16
+				family = this
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 70 }
+		}
+	}
+
+	title = "EVTNAME7901"
+
+	desc = "EVTDESC7901"
+
+	option = {
+		name = "EVTOPTA7901"					# I just don't care anymore
+		ai_chance = { factor = 70 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					family = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7901"					# Try to settle any disagreements
+		ai_chance = { factor = 30 }
+		wealth = -100
+		random = {
+			chance = 30
+			country = {
+				random_character = {
+					limit = {
+						age = 16
+						family = this
+						can_get_rivals = yes
+						not = { is_rival = this }
+						not = { is_friend = this }
+					}
+					add_rival = this
+				}
+			}
+		}
+	}
+}
+
+############################################
+#	     Sibling Rivalry		   #
+############################################
+character_event = {
+
+	id = 7902
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		or = {
+			not = { military = 3 }
+			not = { finesse = 3 }
+		}
+		country = {
+			any_character = {
+				sibling = this
+				is_female = no
+				age = 16
+				military = 3
+				finesse = 3
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}	
+	}
+		
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME7902"
+
+	desc = "EVTDESC7902"
+
+	option = {
+		name = "EVTOPTA7902"					# I have to get rid of him somehow
+		ai_chance = { factor = 60 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					sibling = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+				loyalty = -10
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7902"					# Just make sure he stays out of your way
+		ai_chance = { factor = 40 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					sibling = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+				popularity = -5
+			}
+		}
+	}
+}
+
+# Female
+character_event = {
+
+	id = 7903
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		or = {
+			not = { military = 3 }
+			not = { finesse = 3 }
+		}
+		country = {
+			any_character = {
+				sibling = this
+				is_female = yes
+				age = 16
+				military = 3
+				finesse = 3
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}	
+	}
+		
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME7903"
+
+	desc = "EVTDESC7903"
+
+	option = {
+		name = "EVTOPTA7903"					# I have to get rid of her somehow
+		ai_chance = { factor = 60 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					sibling = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+				loyalty = -10
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7903"					# Just make sure she stays out of my way
+		ai_chance = { factor = 40 }
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+					sibling = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+				popularity = -5
+			}
+		}
+	}
+}
+
+# Bad Influences
+character_event = {
+
+	id = 7904
+
+	trigger = {
+		is_ruler = yes
+		age = 16
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				family = this
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+				any_rival = { has_job = yes }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 1.4
+			finesse = 9
+		}
+		modifier = {
+			factor = 1.4
+			finesse = 8
+		}
+		modifier = {
+			factor = 1.4
+			finesse = 7
+		}
+		modifier = {
+			factor = 1.4
+			military = 9
+		}
+		modifier = {
+			factor = 1.4
+			military = 8
+		}
+		modifier = {
+			factor = 1.4
+			military = 7
+		}
+		modifier = {
+			factor = 0.9
+			traits = submissive
+		}
+		modifier = {
+			factor = 0.9
+			traits = blunt
+		}
+		modifier = {
+			factor = 0.9
+			traits = guileless
+		}
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 0.9
+			traits = incapable
+		}
+		modifier = {
+			factor = 0.9
+			traits = humble
+		}
+		modifier = {
+			factor = 0.9
+			traits = forgiving
+		}
+		modifier = {
+			factor = 0.9
+			traits = trusting
+		}
+		modifier = {
+			factor = 0.9
+			traits = stressed
+		}
+		modifier = {
+			factor = 1.2
+			traits = silver_tongued
+		}
+		modifier = {
+			factor = 1.2
+			traits = proud
+		}
+		modifier = {
+			factor = 1.2
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.2
+			traits = intelligent
+		}
+		modifier = {
+			factor = 1.2
+			traits = shrewd
+		}
+		modifier = {
+			factor = 1.2
+			traits = stubborn
+		}
+		modifier = {
+			factor = 1.2
+			traits = secure
+		}
+		modifier = {
+			factor = 1.4
+			traits = conqueror
+		}
+		modifier = {
+			factor = 1.4
+			traits = confident
+		}
+		modifier = {
+			factor = 1.4
+			traits = brave
+		}
+	}
+
+	title = "EVTNAME7904"
+
+	desc = "EVTDESC7904"
+
+	option = {
+		name = "EVTOPTA7904"					# Speak up for yourself
+		ai_chance = { factor = 50 }
+		country = {
+			random_character = {
+				limit = {
+					family = this
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+					any_rival = { has_job = yes }
+				}
+				add_rival = this
+			}
+		}		
+	}
+	option = {
+		name = "EVTOPTB7904"					# Take the blame once again
+		ai_chance = { factor = 50 }
+		random_list = {
+			30 = { popularity = -6 }
+			30 = { popularity = -3 }
+			40 = {  }
+		}
+	}
+}
+
+# A Question of Loyalty
+character_event = {
+
+	id = 7905
+	
+	trigger = {
+		age = 18
+		country = {
+			any_character = {
+				age = 18
+				not = { family = this }
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+				any_rival = { family = this }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.8
+			loyalty = 90
+		}
+		modifier = {
+			factor = 0.8
+			loyalty = 80
+		}
+		modifier = {
+			factor = 0.8
+			loyalty = 70
+		}
+		modifier = {
+			factor = 1.2
+			not = { loyalty = 30 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { loyalty = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { loyalty = 10 }
+		}
+	}
+	
+	title = "EVTNAME7905"
+	desc = "EVTDESC7905"
+	
+	option = {
+		name = "EVTOPTA7905"					# Do something about it
+		country = {
+			random_character = {
+				limit = {
+					age = 18
+					not = { family = this }
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+					any_rival = { family = this } 
+				}
+				add_rival = this
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7905"					# Stay out of it
+		loyalty = -6
+	}
+}

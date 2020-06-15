@@ -1,0 +1,48 @@
+##########################################
+#  		Population type province events		 #
+##########################################
+
+# Freemen want citizenship
+province_event = {
+	id = 8100
+
+	trigger = {
+		NOT = { citizens = 0.2 }
+		freedmen = 0.35
+		NOT = { has_province_modifier = disgruntled_freemen }
+		owner = { primary_culture = THIS }
+		OR = {
+			NOT = { revolt_risk = 3 }
+			is_core = THIS
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2400
+		modifier = {
+			OR = {
+				owner = { religion = THIS }
+				governor_scope = {
+					religion = THIS
+				}
+			}
+			factor = 0.8
+		}
+	}
+
+	title = "EVTNAME8100"
+	desc = "EVTDESC8100"
+
+	option = {
+		name = "EVTOPTA8100"
+		freedmen_fraction = -0.1
+		citizens_fraction = 0.111
+	}
+	option = {
+		name = "EVTOPTB8100"
+		add_province_modifier = {
+			name = "disgruntled_freemen"
+			duration = 730
+		}
+	}
+}

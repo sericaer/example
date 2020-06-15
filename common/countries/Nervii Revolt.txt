@@ -1,0 +1,18 @@
+civil_war_faction = NRV
+graphical_culture = celticgfx
+color = { 159  113  85 }
+
+ship_names = {
+	Arduinna
+	Bagaco Belisama Branavinda
+	Camaraco Carantiana Catotaxos
+	Dubibebros
+	Erecura Exsobinos
+	Hesus
+	Ivos
+	Mantibarga Mosa
+	Rhenos
+	Scaldis Sucellos
+	Tornaco
+	Viromandis Viromanuduoro
+}

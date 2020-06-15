@@ -1,0 +1,1324 @@
+character_event = {
+
+	major_character = yes
+	id = 7510 
+
+	trigger = {
+		has_objective = obj_death
+		wealth = 150 #life is cheap, death is slightly more expensive
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			obj_death = {
+				NOT = {
+					finesse = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_death = {
+				NOT = {
+					finesse = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			obj_death = {
+				finesse = 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_death = {
+				finesse = 8
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 4
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.5
+			finesse = 8
+		}		
+	}
+
+	title = "EVTNAME7510"
+	desc = "EVTDESC7510"
+	
+	option = {
+		name = "EVTOPT7510A"					
+		random_list = {
+			50 = { 
+				obj_death = {
+					death = yes
+					any_child = {
+						limit = {
+							can_get_rivals = yes
+						}
+						add_rival = THIS
+					}
+				}
+				wealth = -100
+				prominence = 10 
+				popularity = -20
+			}
+			25 = {
+				obj_death = {
+					add_trait = wounded
+					prominence = 5
+					popularity = -10
+				}
+				wealth = -100
+				prominence = 5
+				popularity = -10
+			}
+			25 = {
+				obj_death = {
+					wealth = -150
+				}	
+				wealth = -100
+				death = yes
+			}
+		}
+	}
+}
+
+#former governor accused of corruption
+character_event = {
+
+	major_character = yes
+	id = 7511 
+
+	trigger = {
+		has_objective = obj_exile_rival
+		obj_exile_rival = {
+			has_title = title_ex_governor
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = corrupt
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = righteous
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					finesse = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					charisma = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					prominence = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					popularity = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				finesse = 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				charisma = 7
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				prominence = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				popularity = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				charisma = 4
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = {
+				prominence = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				popularity = 25
+			}
+		}
+		modifier = {
+			factor = 0.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.5
+			charisma = 7
+		}		
+		modifier = {
+			factor =0.5
+			prominence = 75
+		}
+		modifier = {
+			factor = 0.5
+			popularity = 75
+		}
+	}
+
+	
+	title = "EVTNAME7511"
+	desc = "EVTDESC7511"
+	
+	option = {
+		name = "EVTOPTA7511"					
+		random_list = {
+			75 = { 
+				obj_exile_rival = {
+					banish = yes
+					any_child = {
+						limit = {
+							can_get_rivals = yes
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			25 = {
+				popularity = -10
+				cancel_objective = obj_exile_rival
+			}	
+		}
+	}
+}		
+
+#former commander accused of immoral behavour
+character_event = {
+
+	major_character = yes
+	id = 7512
+
+	trigger = {
+		has_objective = obj_exile_rival
+		obj_exile_rival = {
+			OR = {
+				has_title = title_ex_general
+				has_title = title_ex_admiral
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = lustful
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = chaste
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					military = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					charisma = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					prominence = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					popularity = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				military = 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				charisma = 7
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				prominence = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				popularity = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				charisma = 4
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = {
+				prominence = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				popularity = 25
+			}
+		}
+		modifier = {
+			factor = 0.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.5
+			charisma = 7
+		}		
+		modifier = {
+			factor =0.5
+			prominence = 75
+		}
+		modifier = {
+			factor = 0.5
+			popularity = 75
+		}
+	}
+
+	
+	title = "EVTNAME7512"
+	desc = "EVTDESC7512"
+	
+	option = {
+		name = "EVTOPTA7512"					
+		random_list = {
+			50 = { 
+				obj_exile_rival = {
+					banish = yes
+					any_child = {
+						limit = {
+							can_get_rivals = yes
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			50 = {
+				popularity = -10
+				cancel_objective = obj_exile_rival
+			}	
+		}
+	}
+}	
+
+#scralidge
+character_event = {
+
+	major_character = yes
+	id = 7513
+
+	trigger = {
+		has_objective = obj_exile_rival
+		obj_exile_rival = {
+			OR = {
+				has_title = title_religious_tech
+				has_title = title_ex_religious_tech
+				has_title = title_augur
+				has_title = title_pontifex	
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = lapsed
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				traits = pious
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					finesse = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					charisma = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					prominence = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					popularity = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				finesse = 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				charisma = 7
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				prominence = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				popularity = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				charisma = 4
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = {
+				prominence = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				popularity = 25
+			}
+		}
+		modifier = {
+			factor = 0.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.5
+			charisma = 7
+		}		
+		modifier = {
+			factor =0.5
+			prominence = 75
+		}
+		modifier = {
+			factor = 0.5
+			popularity = 75
+		}
+	}
+
+	
+	title = "EVTNAME7513"
+	desc = "EVTDESC7513"
+	
+	option = {
+		name = "EVTOPTA7513"					
+		random_list = {
+			75 = { 
+				obj_exile_rival = {
+					banish = yes
+					any_child = {
+						limit = {
+							can_get_rivals = yes
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			25 = {
+				popularity = -10
+				cancel_objective = obj_exile_rival
+			}	
+		}
+	}
+}	
+
+#generic one
+character_event = {
+
+	major_character = yes
+	id = 7514
+
+	trigger = {
+		has_objective = obj_exile_rival
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					finesse  = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					charisma = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					prominence = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			obj_exile_rival = {
+				NOT = {
+					popularity = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				finesse  = 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				charisma = 7
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				prominence = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			obj_exile_rival = {
+				popularity = 75
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				finesse = 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				charisma = 4
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = {
+				prominence = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				popularity = 25
+			}
+		}
+		modifier = {
+			factor = 0.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.5
+			charisma = 7
+		}		
+		modifier = {
+			factor =0.5
+			prominence = 75
+		}
+		modifier = {
+			factor = 0.5
+			popularity = 75
+		}
+	}
+	
+	
+	title = "EVTNAME7514"
+	desc = "EVTDESC7514"
+
+	option = {
+		name = "EVTOPTA7514"					
+		random_list = {
+			50 = { 
+				obj_exile_rival = {
+					banish = yes
+					any_child = {
+						limit = {
+							can_get_rivals = yes
+						}
+						add_rival = THIS
+					}
+				}
+			}
+			50 = {
+				popularity = -10
+				cancel_objective = obj_exile_rival
+			}	
+		}
+	}
+}		
+
+#get the job you wanted
+
+character_event = {
+	
+	id = 7517
+	
+	major_character = yes	
+
+	trigger = {
+		has_objective = obj_become_land_magistrate
+		can_hold_title = title_land_tech
+		has_job = no
+		is_ruler = no
+		prisoner = no
+		country = {
+			government = republic 
+			ruler = {
+				NOT = { party = populist_party }
+			}
+			any_character = {
+				has_office = land_tech
+				title_land_tech = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7517"
+	desc = "EVTDESC7517"
+
+	option = {
+		name = "EVTOPTA7517"
+		ai_chance = {
+			factor = 75
+		}
+		assign_office = land_tech
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}
+	}
+	option = {
+		name = "EVTOPTB7517"
+		ai_chance = {
+			factor = 25
+		}
+		country = {
+			populist_party = 3
+		}
+	}
+}
+
+character_event = {
+
+	major_character = yes
+	id = 7518
+
+	trigger = {
+		has_objective = obj_become_naval_magistrate
+		can_hold_title = title_naval_tech
+		has_job = no 
+		is_ruler = no
+		prisoner = no
+		country = {
+			government = republic
+			ruler = {
+				NOT = { party = populist_party }
+			}
+			any_character = {
+				has_office = naval_tech
+				title_naval_tech = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7518"
+	desc = "EVTDESC7518"
+
+	option = {
+		name = "EVTOPTA7518"
+		ai_chance = {
+			factor = 75
+		}
+		assign_office = naval_tech
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}
+	}
+	option = {
+		NAME = "EVTOPTB7518"
+		ai_chance = {
+			factor = 25
+		}
+		country = {
+			populist_party = 1
+		}
+	}
+}	
+
+character_event = {
+
+	major_character = yes
+	id = 7519
+
+	trigger = {
+		has_objective = obj_become_construction_magistrate
+		can_hold_title = title_construction_tech
+		has_job = no  
+		is_ruler = no
+		prisoner = no
+		country = {
+			government = republic
+			ruler = {
+				NOT = { party = populist_party }
+			}
+			any_character = {
+				has_office = construction_tech
+				title_construction_tech = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7519"
+	desc = "EVTDESC7519"
+
+	option = {
+		name = "EVTOPTA7519"
+		ai_chance = {
+			factor = 75
+		}
+		assign_office =construction_tech
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}
+	}
+	option = {
+		name = "EVTOPTB7519"
+		ai_chance = {
+			factor = 25
+		}
+		country = {
+			populist_party = 1
+		}
+	}
+}	
+
+character_event = {
+
+	major_character = yes
+	id = 7520
+
+	trigger = {
+		has_objective = obj_become_civic_magistrate
+		can_hold_title = title_civic_tech
+		has_job = no 
+		is_ruler = no
+		prisoner = no
+		country = {
+			government = republic 
+			ruler = {
+				NOT = { party = populist_party }
+			}
+			any_character = {
+				has_office = civic_tech
+				title_civic_tech = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7520"
+	desc = "EVTDESC7520"
+
+	option = {
+		name = "EVTOPTA7520"
+		ai_chance = {
+			factor = 75
+		}
+		assign_office = civic_tech
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}  
+	}
+	option = {
+		name = "EVTOPTB7520"
+		ai_chance = {
+			factor = 25
+		}
+		county = {
+			populist_party = 1
+		}
+	}
+}			
+
+character_event = {
+
+	major_character = yes
+	id = 7521
+
+	trigger = {
+		has_objective = obj_become_religious_magistrate
+		can_hold_title = title_religious_tech
+		has_job = no 
+		is_ruler = no
+		prisoner = no
+		country = {
+			government = republic
+			ruler = {
+				NOT = { party = populist_party }
+			}
+			any_character = {
+				has_office = religious_tech
+				title_religious_tech = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7521"
+	desc = "EVTDESC7521"
+
+	option = {
+		name = "EVTOPTA7521"
+		ai_chance = {
+			factor = 75
+		}
+		assign_office = religious_tech
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}
+	}
+	option = {
+		name = "EVTOPTB7521"
+		ai_chance = {
+			factor = 25
+		}
+		country = {
+			populist_party = 1
+		}
+	}
+}			
+
+character_event = {
+
+	major_character = yes
+	id = 7522
+
+	trigger = {
+		has_objective = obj_become_governor_of_region
+		has_job = no
+		is_ruler = no
+		can_hold_title = title_governor
+		prisoner = no
+		country = {
+			government = republic
+		} 
+		obj_become_governor_of_region = {
+			governor_scope = {
+				title_governor = full_term
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			traits = ambitious
+			factor = 0.5
+		}
+		modifier = {
+			traits = content
+			factor = 1.5
+		}
+		modifier = {
+			loyalty = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}			
+	}
+
+	title = "EVTNAME7522"
+	desc = "EVTDESC7522"
+
+	option = {
+		name = "EVTOPTA7522"
+		ai_chance = {
+			factor = 75
+		}
+		obj_become_governor_of_region = {
+			governor = THIS
+		}
+		country = {
+			populist_party = -1
+			ruling_party = 3
+		}
+	}
+	option = {
+		name = "EVTOPTB7522"
+		ai_chance = {
+			factor = 25
+		}
+		country = {
+			populist_party = 1
+		}
+	}
+}			
+
+
+#Military party gains support
+
+country_event = {
+
+	id = 7524
+
+	trigger = {
+		government = republic 
+		OR = {
+			war = yes 
+			army_size_percentage = 0.7
+			biggest_party = military_party
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		
+	}
+
+	title = "EVTNAME7524"
+	desc = "EVTDESC7524"
+
+	option = {
+		name = "EVTOPTA7524"
+		military_party = 5
+	}
+}
+
+#merchantilist party gains support
+country_event = {
+
+	id = 7525
+
+	trigger = {
+		government = republic 
+		OR = {
+			any_province = {
+				has_building = forum
+			}	
+			navy_size_percentage = 0.7
+			biggest_party = military_party
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		
+	}
+
+	title = "EVTNAME7525"
+	desc = "EVTDESC7525"
+
+	option = {
+		name = "EVTOPTA7525"
+		mercantile_party = 5
+	}
+}
+
+#civic party
+country_event = {
+
+	id = 7526
+
+	trigger = {
+		government = republic 
+		OR = {
+			treasury = 100	
+			war = no
+			biggest_party = civic_party
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		
+	}
+
+	title = "EVTNAME7526"
+	desc = "EVTDESC7526"
+
+	option = {
+		name = "EVTOPTA7526"
+		civic_party = 5
+	}
+}
+
+#religious_party
+country_event = {
+
+	id = 7527
+
+	trigger = {
+		government = republic 
+		OR = {
+			any_province = {
+				has_building = temple
+			}
+			NOT = { stability = 3 }
+			biggest_party = religious_party
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		
+	}
+
+	title = "EVTNAME7527"
+	desc = "EVTDESC7527"
+
+	option = {
+		name = "EVTOPTA7527"
+		religious_party = 5
+	}
+}

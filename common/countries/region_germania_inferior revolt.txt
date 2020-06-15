@@ -1,0 +1,4 @@
+civil_war_faction = QGI
+region = region_germania_inferior
+color = { 100 170 170 }
+color2 = { 10 10 10 }

@@ -1,0 +1,16 @@
+civil_war_faction = DA3
+graphical_culture = greekgfx
+color = { 170  224  174 }
+color2 = { 121 155 250 }
+
+ship_names = {
+	Bardhylli Bato Broket
+	Genusus Glaukias
+	Mikon
+	Ou
+	Korrotos
+	Pleuratus
+	Redo
+	Shkumbe
+	Zeau
+}

@@ -1,0 +1,172 @@
+character_event = {
+
+	id = 7700
+
+	trigger = {
+
+		age = 16
+		is_female = no
+		wealth = 1000
+		country = {
+			NOT = { treasury = 0 }	
+			has_civil_war = yes
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 240
+		
+		modifier = {
+			NOT = { wealth = 200 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { wealth = 300 }
+			factor = 1.1
+		}	
+		modifier = {
+			wealth = 400 
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 500 
+			factor = 0.9
+		}
+		modifier = {
+			military = 9
+			factor = 1.1
+		}	
+		modifier = {
+			military = 8
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 2 }
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME7700"
+	desc = "EVTDESC7700"
+
+	option = {
+		
+		name = "EVTOPTA7700"
+		wealth = -1000
+		country = {
+			country_event = 7701
+		}
+	}
+}
+
+country_event = {
+
+	id = 7701
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME7701"
+	desc = "EVTDESC7701"
+
+	option = {
+	
+		name = "EVTOPTA7701"
+		treasury = 100 
+	}
+}
+
+character_event = {
+
+	id = 7702
+
+	trigger = {
+
+		age = 16
+		is_female = no
+		wealth = 1000 
+		is_land = yes
+		country = {	
+			has_civil_war = yes
+			NOT = { army_size_percentage = 1.2 }
+			iron = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 288
+		
+		modifier = {
+			NOT = { wealth = 200 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { wealth = 300 }
+			factor = 1.1
+		}	
+		modifier = {
+			wealth = 400 
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 500 
+			factor = 0.9
+		}
+		modifier = {
+			military = 9
+			factor = 0.9
+		}	
+		modifier = {
+			military = 8
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 2 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME7702"
+	desc = "EVTDESC7702"
+
+	option = {
+		
+		name = "EVTOPTA7702"
+		wealth = -1000
+		country = {
+			country_event = 7703
+		}
+	}
+}	
+
+country_event = {
+		
+	id = 7703
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME7703"
+	desc = "EVTDESC7703"
+
+	option = {
+	
+		name = "EVTOPTA7703"
+		from = { 
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+		 	heavy_infantry = THIS
+			heavy_infantry = FROM
+			archers = THIS 
+			cavalry = THIS
+		}
+	}
+}

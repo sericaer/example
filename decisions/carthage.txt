@@ -1,0 +1,46 @@
+country_decisions = {
+
+	carthaginian_mercenary_army = {
+		potential = {
+			tag = CAR
+			not = { has_country_modifier = carthaginian_mercenary_armies }
+		}
+		allow = {
+			stability = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "carthaginian_mercenary_armies"
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ship_production = {
+		potential = {
+			tag = CAR
+			not = { has_country_modifier = standardized_ship_production }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = "standardized_ship_production"
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

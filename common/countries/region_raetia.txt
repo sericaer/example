@@ -1,0 +1,4 @@
+civil_war_faction = QR3
+region = region_raetia
+color = { 100 130 170 }
+color2 = { 30 30 50 }

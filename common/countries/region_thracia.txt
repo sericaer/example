@@ -1,0 +1,4 @@
+civil_war_faction = QT2
+region = region_thracia
+color = { 20 120 120 }
+color2 = { 0 60 60 }

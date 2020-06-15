@@ -1,0 +1,14 @@
+civil_war_faction = MAU
+graphical_culture = carthagegfx
+color = { 180 190 163 }
+
+ship_names = {
+	Chellah
+	Iol
+	Lixus
+	Mauri Mogador
+	Oujda
+	Siga
+	Tingis Tipaza
+	Volubilis
+}

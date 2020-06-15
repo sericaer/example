@@ -1,0 +1,26 @@
+groups = {
+	roman_tech = 1.0
+	seleucid_tech = 1.0
+	egyptian_tech = 1.0
+	greek_tech = 1.0
+	carthaginian_tech = 1.0
+	persian_tech = 1.0
+	german_tech = 1.0
+	celtic_tech = 1.0
+	iberian_tech = 1.0
+	scythian_tech = 1.0
+}
+
+tables = {
+	land_tech = "technologies/land_table.txt"
+	naval_tech = "technologies/naval_table.txt"
+	construction_tech = "technologies/construction_table.txt"
+	civic_tech = "technologies/civic_table.txt"
+	religious_tech = "technologies/religious_table.txt"
+}
+
+invention = "technologies/naval_inventions.txt"
+invention = "technologies/land_inventions.txt"
+invention = "technologies/construction_inventions.txt"
+invention = "technologies/civic_inventions.txt"
+invention = "technologies/religious_inventions.txt"

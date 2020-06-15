@@ -1,0 +1,15 @@
+civil_war_faction = DAR
+graphical_culture = greekgfx
+color = { 63  197  194 }
+
+ship_names = {
+	Bardhylli Bato Broket
+	Genusus Glaukias
+	Mikon
+	Ou
+	Korrotos
+	Pleuratus
+	Redo
+	Shkumbe
+	Zeau
+}

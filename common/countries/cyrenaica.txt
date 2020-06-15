@@ -1,0 +1,28 @@
+civil_war_faction = CY2
+region = region_cyrenaica
+graphical_culture = egyptgfx
+color = { 219  169  111 }
+color2 = { 195 33 36 }
+
+ship_names = {
+	Abedju
+	Abu
+	Behdet Bahariya Baki Buhen Bubastis
+	Dahshur Dakhla Dunqul Djedu
+	Farafra
+	Henen-nesw Heh
+	Iken
+	Itjtawy
+	Kharga Kerma Kyrene
+	Lunet
+	Meidum Men-nefer Nekhen
+	Nubt
+	On
+	Perwadjyt Pwenet
+	Qadesh
+	Rostja
+	Saqqara "Serabit Khadim" Sauty
+	Sawu Selima Shaat Sharuhen
+	Timna Thinis Toshka
+	Waset
+}

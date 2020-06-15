@@ -1,0 +1,183 @@
+military_republic = {
+
+	title_ruler = 730
+	title_general = 730
+	title_admiral = 730
+	title_governor = 730
+	title_land_tech = 730
+	title_naval_tech = 730
+	title_construction_tech = 730
+	title_civic_tech = 730
+	title_religious_tech = -1
+	title_censor = 730
+	
+}
+
+aristocratic_republic = {
+
+	title_ruler = 2920
+	title_general = 730
+	title_admiral = 730
+	title_governor = 730
+	title_land_tech = 730
+	title_naval_tech = 730
+	title_construction_tech = 730
+	title_civic_tech = -1
+	title_religious_tech = 730
+	title_censor = 730
+}
+
+oligarchic_republic = {
+
+	title_ruler = 730
+	title_general = 730
+	title_admiral = 730
+	title_governor = 730
+	title_land_tech = 730
+	title_naval_tech = 730
+	title_construction_tech = 730
+	title_civic_tech = 730
+	title_religious_tech = -1
+	title_censor = 730
+}
+
+democratic_republic = {
+
+	title_ruler = 1460
+	title_general = 730
+	title_admiral = 730
+	title_governor = 730
+	title_land_tech = 730
+	title_naval_tech = 730
+	title_construction_tech = 730
+	title_civic_tech = 730
+	title_religious_tech = 730
+	title_censor = 730
+	
+}
+
+republic_confederacy = {
+
+	title_ruler = 1460
+	title_general = 730
+	title_admiral = 730
+	title_governor = 730
+	title_land_tech = 730
+	title_naval_tech = 730
+	title_construction_tech = 730
+	title_civic_tech = 730
+	title_religious_tech = 730
+	title_censor = -1
+}
+
+dictatorship = {
+
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = 1825
+	title_land_tech = 1825
+	title_naval_tech = 1825
+	title_construction_tech = 1825
+	title_civic_tech = 1825
+	title_religious_tech = 1825
+}
+
+theocracy = {
+
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+despotic_monarchy = {
+
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+federal_monarchy = {
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+aristocratic_monarchy = {
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+military_tribe = {
+
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+religious_tribe = {
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+trade_tribe = {
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}
+
+civic_tribe = {
+	title_ruler = -1
+	title_general = -1
+	title_admiral = -1
+	title_governor = -1
+	title_land_tech = -1
+	title_naval_tech = -1
+	title_construction_tech = -1
+	title_civic_tech = -1
+	title_religious_tech = -1
+}

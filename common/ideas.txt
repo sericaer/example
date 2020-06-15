@@ -1,0 +1,267 @@
+military_ideas = {
+	horse_lords = {
+		trigger = {
+				land_tech = 0
+			}
+		cavalry_discipline = 0.10			# Cavalry Discipline +10%
+	}
+	professional_soldiers = {
+		trigger = {
+				land_tech = 0
+		}
+		heavy_infantry_discipline = 0.10		# Heavy Infantry Discipline +10%
+	}
+	martial_ethos = {
+		trigger = {
+			land_tech = 8
+		}
+		land_morale = 0.25				# Land Morale +25%
+	}
+	naval_ethos = {
+		trigger = {
+			naval_tech = 8
+		}
+		naval_morale = 0.3				# Naval Morale +30%
+	}
+	tribal_recruitment = {
+		trigger = {
+			land_tech = 8
+		}
+		regiment_reinforcement_speed = 0.5		# +50% quicker reinforce on regiments
+	}
+	military_camps = {
+		trigger = {
+			land_tech = 16
+		}
+		land_organisation = 0.15				# Organisation +15%
+	}
+	militarized_society = {
+		trigger = {
+			land_tech = 16
+		}
+			experience_decay = -0.1			# 10% less experience decay
+	}
+	cataphracts = {
+		trigger = {
+				land_tech = 24
+		}
+		cavalry_offensive = 0.25				# +off on cavalry
+	    cavalry_defensive = 0.25		
+        cavalry_cost = 0.25
+        horse_archers_cost = -0.25
+	}
+	legionary_military_system = {
+		trigger = {
+				land_tech = 24
+	    }
+		heavy_infantry_offensive = 0.1				
+	    heavy_infantry_defensive = 0.1		
+        heavy_infantry_discipline = 0.1		# Heavy Infantry Discipline +10%
+		heavy_infantry_cost = -0.2			# 50% cheaper heavy inf
+	}
+	
+	siege_train = {
+		trigger = {
+			land_tech = 24
+		}
+		siege_speed = -0.2				# Siege speed ?0%
+	}
+}
+
+
+economical_ideas = {
+	organized_recruitment = {
+		trigger = {
+			construction_tech = 0
+		}
+		global_regiment_recruit_speed = -0.2				# Reduced  recruit speed
+	}
+	naval_blockades = {
+		trigger = {
+			construction_tech = 0
+		}
+		blockade_efficiency = 0.5				# Income from blockading
+	}
+	national_prestige = {
+		trigger = {
+			construction_tech = 8
+		}
+		tribute_income_modifier = 0.3				# +Income from tributes
+	}
+	tariffs = {
+		trigger = {
+			construction_tech = 8
+		}
+		trade_income_modifier = 0.2				# +15% trade income
+	}
+	improved_construction = {
+		trigger = {
+			construction_tech = 8
+		}
+		build_cost = -0.15				# Reduced cost for building things
+	}
+	tax_farming = {
+		trigger = {
+			construction_tech = 16
+		}
+		global_tax_modifier= 0.1				# +10% more tax income
+	}
+	tradition_of_service = {
+		trigger = {
+			construction_tech = 16
+		}
+            global_start_experience = 0.1			#better experienced troops
+    }
+	regulated_markets = {
+		trigger = {
+			construction_tech = 24
+		}
+		global_trade_routes = 1					# +1 Trade Route
+		trade_income_modifier = 0.1
+	}
+	industry = {
+		trigger = {
+			construction_tech = 24
+		}
+		build_time = -0.2				#20% quicker
+		siege_speed = -0.1				# Siege speed ?0%
+		global_defensive  = 0.5				# 50% Defensiveness
+	}
+	bureaucratic_traditions = {
+		trigger = {
+			construction_tech = 24
+		}
+		maintenance_cost = -0.2			# Reduced maintenance costs
+	}
+}
+
+
+civic_ideas = {
+	diplomatic = {
+		trigger = {
+			civic_tech = 0
+		}
+		diplomatic_missions = 0.1				# +10% on diplomatic style missions
+	}
+	duplicity = {
+		trigger = {
+			civic_tech = 0
+		}
+		intrigue_missions = 0.1				# +10% on intrigue style missions
+	}
+	civic_duty = {
+		trigger = {
+			civic_tech = 8
+		}
+		global_defensive  = 0.5				# 0.5 Defensiveness
+	}
+	citizenship = {
+		trigger = {
+			civic_tech = 8
+		}
+		freedmen_to_citizen = 0.1			# Converts 10% freemen to citizens over 10 years
+	}
+	emancipation = {
+		trigger = {
+			civic_tech = 8
+		}
+		slaves_to_freedmen = 0.1			# Converts 10% slaves to freemen over 10 years
+	}
+	higher_duty = {
+		trigger = {
+			civic_tech = 16
+		}
+		max_rivals = -1					# -1 max rivals
+		max_friends = -1					# -1 friends on each char
+	}
+	philosophies = {
+		trigger = {
+			civic_tech = 16
+		}
+		research_points_modifier = 0.20			# + 20% Research points
+	}
+	loyal_politics = {
+		trigger = {
+			civic_tech = 24
+		}
+		monthly_character_loyalty = 0.20		# + to loyalty change
+	}
+	populist_politics = {
+		trigger = {
+			civic_tech = 24
+		}
+		monthly_character_popularity  = 0.03
+	}
+	rule_of_law = {
+		trigger = {
+			civic_tech = 24
+		}
+		corruption = -0.2				# Reduces corruption
+	}	
+}
+
+religious_ideas = {
+	deification = {
+		trigger = {
+			religious_tech = 0
+		}
+
+		ruler_popularity_gain = 0.1				# Ruler Popularity +10%
+	}
+	national_faith = {
+		trigger = {
+			religious_tech = 0
+		}
+		omen_power = 0.15				# Omen Power +15%
+	}
+	religious_state = {
+		trigger = {
+			religious_tech = 8
+		}
+		global_revolt_risk = -0.5				# Reduced Unrest
+	}
+	tolerance = {
+		trigger = {
+			religious_tech = 8
+		}
+		corruption = 0.1
+		global_revolt_risk = -0.5	
+		ruler_popularity_gain = 0.05
+	}
+	college_of_pontifices = {
+		trigger = {
+			religious_tech = 8
+		}
+		omen_failure_penalty = -0.5			# Omen Failure Penalty ?50%
+	}
+	national_oracle = {
+		trigger = {
+			religious_tech = 16
+		}
+		stability_cost_modifier = -0.33				# Lower Stability Costs (-33%)
+	}
+	divine_right = {
+		trigger = {
+			religious_tech = 16
+		}
+		omen_chance = 0.15				# Omen Success + 15%
+	}
+	pantheon = {
+		trigger = {
+			religious_tech = 24
+		}
+		global_religious_prestige = 0.3				# Increased Religious Power from Temples
+	}
+	philosophical_advances = {
+		trigger = {
+			religious_tech = 24
+		}
+		civilization_spread = 0.25					#civ spread power
+	}
+	evangelical_faith = {
+		trigger = {
+			religious_tech = 24
+		}
+		seduce_cost = -0.5
+	}
+}

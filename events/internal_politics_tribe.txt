@@ -1,0 +1,2044 @@
+##########################################
+#  		Tribal Problems		 #
+##########################################
+character_event = {
+
+	id = 3500
+
+	trigger = {
+		is_ruler = yes
+		not = { military = 4 }
+		not = { popularity = 40 }
+		can_get_rivals = yes
+		not = { traits = ambitious }
+		not = { traits = content }
+		not = { has_character_flag = new_chief }
+		country = {
+			or = {
+				government = military_tribe
+				government = religious_tribe
+				government = trade_tribe
+				government = civic_tribe
+			}
+			any_character = {
+				is_female = no
+				is_ruler = no
+				age = 16
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 264
+
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			traits = guileless
+		}
+		modifier = {
+			factor = 0.9
+			traits = lapsed
+		}
+		modifier = {
+			factor = 0.9
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 0.9
+			traits = arbitrary
+		}
+		modifier = {
+			factor = 0.9
+			traits = incapable
+		}
+		modifier = {
+			factor = 0.9
+			traits = submissive
+		}
+		modifier = {
+			factor = 0.9
+			traits = dumb
+		}
+		modifier = {
+			factor = 0.9
+			traits = lazy
+		}
+		modifier = {
+			factor = 0.9
+			traits = reckless
+		}
+		modifier = {
+			factor = 0.9
+			traits = foolish
+		}
+		modifier = {
+			factor = 0.9
+			traits = unnoticeable
+		}
+		modifier = {
+			factor = 0.9
+			traits = weak_willed
+		}
+		modifier = {
+			factor = 0.9
+			traits = unhealthy
+		}
+		modifier = {
+			factor = 0.9
+			traits = maniac
+		}
+		modifier = {
+			factor = 0.9
+			traits = stressed
+		}
+		modifier = {
+			factor = 0.9
+			traits = maimed
+		}
+		modifier = {
+			factor = 0.9
+			traits = schizophrenic
+		}
+		modifier = {
+			factor = 0.9
+			traits = invalid
+		}
+		modifier = {
+			factor = 0.9
+			traits = coward
+		}
+		modifier = {
+			factor = 1.1
+			traits = confident
+		}
+		modifier = {
+			factor = 1.1
+			traits = brave
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = generous
+		}
+		modifier = {
+			factor = 1.1
+			traits = prominent
+		}
+		modifier = {
+			factor = 1.1
+			traits = intelligent
+		}
+		modifier = {
+			factor = 1.1
+			traits = benefactor
+		}
+		modifier = {
+			factor = 1.1
+			traits = righteous
+		}
+		modifier = {
+			factor = 1.1
+			traits = crafty
+		}
+		modifier = {
+			factor = 1.5
+			traits = conqueror
+		}
+		modifier = {
+			factor = 1.5
+			traits = victorious
+		}
+	}
+
+	title = "EVTNAME3500"
+	desc = "EVTDESC3500"
+	
+	option = {
+		name = "EVTOPTA3500"					# He's doing the best he can
+		ai_chance = { factor = 60 }
+		set_character_flag = new_chief
+		country = {
+			random_character = {
+				limit = {
+					is_female = no
+					is_ruler = no
+					age = 16
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+				character_event = 3501
+			}
+		}		
+	}
+	option = {
+		name = "EVTOPTB3500"					# Sometimes that isn't good enough
+		set_character_flag = new_chief
+		ai_chance = { factor = 40 }
+		country = { stability = -1 }
+	}
+}
+
+# High Ambitions
+character_event = {
+
+	id = 3501
+
+	is_triggered_only = yes
+
+	title = "EVTNAME3501"
+	desc = "EVTDESC3501"
+	
+	option = {
+		name = "EVTOPTA3501"					# Indeed
+		ai_chance = { factor = 40 }
+		popularity = 5
+		from = { popularity = -10 }
+		set_character_flag = assault
+	}
+	option = {
+		name = "EVTOPTB3501"					# They are just as bad
+		ai_chance = { factor = 60 }
+		add_trait = ambitious
+		set_character_flag = assault
+	}
+}
+
+# Untrustworthy Son
+character_event = {
+
+	id = 3502
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		not = { traits = stubborn }
+		not = { traits = weak_willed }
+		has_character_flag = new_chief
+		not = { has_character_flag = untrustworthy_son }
+		any_child = {
+			is_female = no
+			age = 16
+			not = { is_friend = this }
+			not = { is_rival = this }
+			can_get_rivals = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5
+
+		modifier = {
+			factor = 1.1
+			traits = loving
+		}
+		modifier = {
+			factor = 1.1
+			loyalty = 90
+		}
+		modifier = {
+			factor = 1.1
+			loyalty = 80
+		}
+		modifier = {
+			factor = 1.1
+			loyalty = 70
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 1 }
+		}
+	}
+
+	title = "EVTNAME3502"
+	desc = "EVTDESC3502"
+	
+	option = {
+		name = "EVTOPTA3502"					# He'll never succeed regardless
+		ai_chance = { factor = 30 }
+		set_character_flag = untrustworthy_son
+		any_child = {
+			limit = {
+				is_female = no
+				age = 16
+				not = { is_friend = this }
+				not = { is_rival = this }
+			}
+			add_rival = this
+			set_character_flag = assault
+		}
+	}
+	option = {
+		name = "EVTOPTB3502"					# Refuse to believe any of it
+		ai_chance = { factor = 70 }
+		set_character_flag = untrustworthy_son
+		any_child = {
+			limit = {
+				is_female = no
+				age = 16
+				not = { is_friend = this }
+				not = { is_rival = this }
+			}
+			set_character_flag = assault
+		}
+		add_trait = stubborn
+	}
+}
+
+# Changes  
+character_event = {
+
+	id = 3503
+
+	trigger = {
+		country = {
+			ruler = {
+				has_character_flag = new_chief
+				has_character_flag = untrustworthy_son
+				not = { traits = wounded }
+				not = { traits = stressed }
+				not = { traits = submissive }
+				not = { traits = assertive }
+			}
+		}
+		is_female = no
+		age = 16
+		has_character_flag = assault
+	}
+
+	mean_time_to_happen = {
+		months = 25
+
+		modifier = {
+			factor = 0.9
+			country = { ruler = { age = 40 } }
+		}
+		modifier = {
+			factor = 0.7
+			country = { ruler = { age = 50 } }
+		}
+		modifier = {
+			factor = 0.5
+			country = { ruler = { age = 60 } }
+		}
+		modifier = {
+			factor = 0.9
+			not = { loyalty = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { loyalty = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { loyalty = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			loyalty = 90
+		}
+		modifier = {
+			factor = 1.2
+			loyalty = 80
+		}
+		modifier = {
+			factor = 1.1
+			loyalty = 70
+		}
+	}
+
+	title = "EVTNAME3503"
+	desc = "EVTDESC3503"
+	
+	option = {
+		name = "EVTOPTA3503"					# Do something about it
+		ai_chance = { factor = 50 }
+		ruler = {
+			clr_character_flag = new_chief
+			clr_character_flag = untrustworthy_son
+		}
+		clr_character_flag = assault
+		random_list = {
+			35 = { country = { ruler = { death = yes } } }
+			35 = { country = { ruler = { add_trait = wounded } } }
+			30 = { country = { ruler = { add_trait = stressed } } }
+		}
+		loyalty = -20
+	}
+	option = {
+		name = "EVTOPTB3503"					# Keep on suffering
+		ai_chance = { factor = 50 }
+		ruler = {
+			clr_character_flag = new_chief
+			clr_character_flag = untrustworthy_son
+		}
+		clr_character_flag = assault
+		add_trait = submissive
+		change_martial = -2
+	}
+}
+
+##########################################
+#  	In Search of Better Lands	 #
+##########################################
+character_event = {
+
+	id = 3510
+
+	trigger = {
+		country = {
+			ruler = {
+				can_get_rivals = yes
+				or = {
+					traits = pious
+					traits = zealous
+					traits = devout
+					traits = tactically_inflexible
+					traits = righteous
+					traits = narrowminded
+					traits = lazy
+					traits = cautious
+					traits = stubborn
+					traits = coward
+				}
+			}
+			or = {
+				government = military_tribe
+				government = religious_tribe
+				government = trade_tribe
+				government = civic_tribe
+			}
+			not = { has_country_flag = search_for_better_lands }
+			capital_scope = {
+				population = 3
+				has_empty_adjacent_province = yes
+				any_empty_neighbor_province = {
+					barbarian_power = 3
+				}
+			}
+		}
+		age = 20
+		is_ruler = no
+		is_female = no
+		can_get_rivals = yes
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.9
+			traits = blunt
+		}
+		modifier = {
+			factor = 0.9
+			traits = crafty
+		}
+		modifier = {
+			factor = 0.9
+			traits = original_thinker
+		}
+		modifier = {
+			factor = 0.9
+			traits = assertive
+		}
+		modifier = {
+			factor = 0.9
+			traits = energetic
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 0.9
+			traits = plain_speaking
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			traits = weak_willed
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = coward
+		}
+		modifier = {
+			factor = 1.1
+			traits = guileless
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = unnoticeable
+		}
+	}
+
+	title = "EVTNAME3510"
+	desc = "EVTDESC3510"
+	
+	option = {
+		name = "EVTOPTA3510"					# That's crazy talk
+		ai_chance = { factor = 60 }
+		country = { set_country_flag = search_for_better_lands }
+		random = {
+			chance = 80
+			country = {
+				ruler = { add_rival = this }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB3510"					# He may have a point
+		ai_chance = { factor = 40 }
+		country = { set_country_flag = search_for_better_lands }
+		random = {
+			chance = 80
+			country = {
+				capital_scope = { population = -1 }
+			}
+		}	
+	}
+}
+
+# Two Tribes
+country_event = {
+
+	id = 3511
+
+	trigger = {
+		ruler = {
+			not = { traits = silver_tongued }
+			not = { traits = blunt }
+			not = { traits = abrasive }
+			not = { traits = good_natured }
+			not = { traits = jealous }			
+		}
+		has_country_flag = search_for_better_lands
+		not = { has_country_flag = two_tribes }
+	}
+
+	mean_time_to_happen = {
+		months = 20
+
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+	}
+
+	title = "EVTNAME3511"
+	desc = "EVTDESC3511"
+	
+	option = {
+		name = "EVTOPTA3511"					# Try to settle things cordially
+		ai_chance = { factor = 35 }
+		clr_country_flag = search_for_better_lands
+		random_list = {
+			55 = { ruler = { add_trait = silver_tongued } }
+			40 = { ruler = { add_trait = blunt } }
+			 5 = { ruler = { popularity = -5 } }
+		}
+	}
+	option = {
+		name = "EVTOPTB3511"					# Use threats if necessary
+		ai_chance = { factor = 35 }
+		set_country_flag = two_tribes
+		random_list = {
+			50 = { ruler = { add_trait = abrasive } }
+			50 = { ruler = { add_trait = secure } }
+		}		
+	}
+	option = {
+		name = "EVTOPTC3511"					# Just let them go
+		ai_chance = { factor = 30 }
+		clr_country_flag = search_for_better_lands
+		ruler = { popularity = 5 }
+		capital_scope = { population = -1 }
+	}
+}
+
+# Some members decide to leave the tribe
+province_event = {
+
+	id = 3512
+
+	trigger = {
+		owner = {
+			has_country_flag = search_for_better_lands
+			has_country_flag = two_tribes
+		}
+		has_empty_adjacent_province = yes
+		any_empty_neighbor_province = {
+			barbarian_power = 3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { popularity = 40 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { popularity = 30 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { popularity = 20 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { popularity = 10 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 3 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 2 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 1 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { charisma = 3 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { charisma = 2 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { charisma = 1 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 9 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 8 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 7 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { charisma = 9 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { charisma = 8 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { charisma = 7 } }
+		}
+	}
+
+	title = "EVTNAME3512"
+	desc = "EVTDESC3512"
+	
+	option = {
+		name = "EVTOPTA3512"					# Just let them go
+		ai_chance = { factor = 50 }
+		owner = {
+			clr_country_flag = search_for_better_lands
+			clr_country_flag = two_tribes
+		}
+		population = -1
+		random_empty_neighbor_province = {
+			limit = { barbarian_power = 3 }
+			spawn_horde = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB3512"					# Make a last attempt to settle things
+		ai_chance = { factor = 50 }
+		owner = {
+			clr_country_flag = search_for_better_lands
+			clr_country_flag = two_tribes
+		}
+		random = {
+			chance = 30
+			owner = { stability = -1 }
+		}
+		random = {
+			chance = 30
+			population = -1
+			random_empty_neighbor_province = {
+				limit = { barbarian_power = 3 }
+				spawn_horde = 1
+			}
+		}
+	}
+}
+
+##########################################
+#  		Fugitive		 #
+##########################################
+country_event = {
+
+	id = 3520
+
+	trigger = {
+		ruler = {
+			or = {
+				can_get_friends = yes
+				can_get_rivals = yes
+				not = { traits = merciful }
+				not = { traits = cruel }
+				not = { traits = sceptical }
+				not = { traits = pious }
+				traits = tolerant
+				traits = original_thinker
+				traits = benefactor
+				traits = humble
+				traits = forgiving
+				traits = generous
+				traits = loving
+				traits = trusting
+			}
+			num_of_friends = 1
+		}	
+		or = {
+			government = military_tribe
+			government = religious_tribe
+			government = trade_tribe
+			government = civic_tribe
+		}
+		not = { has_country_flag = fugitive }	
+		or = {
+			any_neighbor_country = {
+				or = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}			
+				not = { relation = { who = this value = 0 } }
+				not = { stability = 0 }
+			}
+			any_province = {
+				any_neighbor_province = {
+					not = { owned_by = this }
+					barbarian_power = 7
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {  popularity = 90 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {  popularity = 80 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {  popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {  not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {  not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {  not = { popularity = 10 } }
+		}
+	}
+
+	title = "EVTNAME3520"
+	desc = "EVTDESC3520"
+	
+	option = {
+		name = "EVTOPTA3520"					# Let him stay
+		set_country_flag = fugitive
+		ruler = { add_trait = merciful }
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB3520"					# Send him away
+		ruler = { add_trait = sceptical }
+	}
+}
+
+# Retribution
+country_event = {
+
+	id = 3521
+
+	trigger = {
+		ruler = {
+			not = { traits = blunt }
+			not = { traits = silver_tongued }
+		}
+		not = { has_country_flag = retribution }
+		has_country_flag = fugitive
+	}
+
+	mean_time_to_happen = {
+		months = 18
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+	}
+
+	title = "EVTNAME3521"
+	desc = "EVTDESC3521"
+	
+	option = {
+		name = "EVTOPTA3521"					# They worry too much
+		set_country_flag = retribution
+		random = {
+			chance = 40
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB3521"					# He has probably outlived his usefulness
+		clr_country_flag = fugitive
+		ruler = { add_trait = blunt }
+	}
+}
+
+# Unknown Motives
+character_event = {
+
+	id = 3522
+
+	trigger = {
+		country = {
+			ruler = {
+				can_get_friends = yes
+				can_get_rivals = yes
+			}
+			not = { has_country_flag = suspicious_behavious }
+			has_country_flag = fugitive
+			has_country_flag = retribution
+		}
+		is_ruler = no
+		can_get_friends = yes
+		can_get_rivals = yes
+		not = { traits = reckless }
+		not = { traits = cautious }
+	}
+
+	mean_time_to_happen = {
+		months = 20
+
+		modifier = {
+			factor = 0.9
+			loyalty = 90
+		}
+		modifier = {
+			factor = 0.9
+			loyalty = 80
+		}
+		modifier = {
+			factor = 0.9
+			loyalty = 70
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 90
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 80
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 70
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { popularity = 10 }
+		}
+	}
+
+	title = "EVTNAME3522"
+	desc = "EVTDESC3522"
+	
+	option = {
+		name = "EVTOPTA3522"					# Try talking to him
+		country = { set_country_flag = suspicious_behavious }
+		random_list = {
+			40 = { country = { ruler = { add_friend = this } } }
+			60 = { country = { ruler = { add_rival = this } } }
+		}
+	}
+	option = {
+		name = "EVTOPTB3522"					# It's better to wait and see
+		country = { set_country_flag = suspicious_behavious }		
+		add_trait = cautious
+	}
+}
+
+# Murder
+character_event = {
+
+	id = 3523
+
+	trigger = {
+		is_ruler = yes
+		num_of_friends = 1
+		not = { traits = selfish }
+		not = { traits = generous }
+		country = {
+			has_country_flag = retribution
+			has_country_flag = fugitive
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+
+		modifier = {
+			factor = 0.9
+			traits = guileless
+		}
+		modifier = {
+			factor = 0.9
+			traits = weak_willed
+		}
+		modifier = {
+			factor = 0.9
+			traits = stressed
+		}
+		modifier = {
+			factor = 1.1
+			country = { stability = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { stability = 2 }
+		}
+	}
+
+	title = "EVTNAME3523"
+	desc = "EVTDESC3523"
+	
+	option = {
+		name = "EVTOPTA3523"					# Ask for their forgiveness
+		country = {
+			clr_country_flag = fugitive
+			clr_country_flag = retribution
+			clr_country_flag = suspicious_behavious
+		}
+		popularity = -3
+		family_prestige = -20
+	}
+	option = {
+		name = "EVTOPTB3523"					# How could you have known?
+		country = {
+			clr_country_flag = fugitive
+			clr_country_flag = retribution
+			clr_country_flag = suspicious_behavious
+		}
+		add_trait = selfish
+	}
+}
+
+##########################################
+#  	    Innovative Ideas		 #
+##########################################
+country_event = {
+
+	id = 3530
+
+	trigger = {
+		or = {
+			government = military_tribe
+			government = religious_tribe
+			government = trade_tribe
+			government = civic_tribe
+		}
+		capital_scope = {
+			not = { civilization_value = 40 }
+			population = 5
+		}
+		ruler = {
+			not = { traits = original_thinker }
+			not = { traits = tactically_inflexible }
+			not = { traits = narrowminded }
+			not = { traits = inventor }
+		}
+		not = { has_country_flag = innovative_ideas }
+		any_character = {
+			is_envoy = yes
+			location = {
+				not = { owned_by = this }
+				civilization_value = 70
+			}
+		}
+
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			any_neighbor_country = {
+				relation = { who = this value = 200 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			any_neighbor_country = {
+				relation = { who = this value = 250 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+		}
+	}
+
+	title = "EVTNAME3530"
+	desc = "EVTDESC3530"
+
+	option = {
+		name = "EVTOPTA3530"					# Very interesting...
+		set_country_flag = innovative_ideas
+		ruler = { add_trait = original_thinker }
+		random_list = {
+			50 = { country = { ruler = { character_event = 3532 } } }
+			50 = { country = { ruler = { character_event = 3533 } } }
+		}
+	}
+	option = {
+		name = "EVTOPTB3530"					# It's a complete waste of time
+		set_country_flag = disregard_any_new_ideas
+		ruler = { add_trait = narrowminded }
+		random = {
+			chance = 40
+			stability = 1
+		}
+	}
+}
+
+# Dedication
+character_event = {
+
+	id = 3531
+
+	trigger = {
+		country = {
+			ruler = {
+				not = { traits = assertive }
+				not = { traits = submissive }
+			}
+			has_country_flag = disregard_any_new_ideas
+		}
+		age = 20
+		is_female = no
+		not = { traits = wounded }
+	}
+
+	mean_time_to_happen = {
+		months = 18
+
+		modifier = {
+			factor = 1.1
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.1
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME3531"
+	desc = "EVTDESC3531"
+
+	option = {
+		name = "EVTOPTA3531"					# See to it that he's not
+		country = { clr_country_flag = disregard_any_new_ideas }
+		random = {
+			chance = 30
+			add_trait = wounded
+		}
+		random = {
+			chance = 10
+			popularity = -5
+		}
+	}
+	option = {
+		name = "EVTOPTB3531"					# He doesn't stand a chance
+		country = { clr_country_flag = disregard_any_new_ideas }
+		random = {
+			chance = 50
+			country = { ruler = { popularity = -15 } }
+		}
+		country = { ruler = { add_trait = assertive } }
+	}
+}
+
+# Too high expectations
+character_event = {
+
+	id = 3532
+
+	is_triggered_only = yes
+
+	title = "EVTNAME3532"
+	desc = "EVTDESC3532"
+
+	option = {
+		name = "EVTOPTA3532"					# It looked so promising
+		clr_country_flag = innovative_ideas
+		popularity = -5
+		country = { ruler = { popularity = -5 } }
+	}
+}
+
+#  
+character_event = {
+
+	id = 3533
+
+	is_triggered_only = yes
+
+	title = "EVTNAME3533"
+	desc = "EVTDESC3533"
+
+	option = {
+		name = "EVTOPTA3533"					# Nothing else could be expected
+		clr_country_flag = disregard_any_new_ideas
+		popularity = 5
+		country = { ruler = { popularity = 5 } }
+	}
+}
+
+##########################################
+#  		People in Need		 #
+##########################################
+country_event = {
+
+	id = 3540
+
+	trigger = {
+		war = no
+		stability = 1	
+		or = {
+			government = military_tribe
+			government = religious_tribe
+			government = trade_tribe
+			government = civic_tribe
+		}
+		not = { has_country_flag = people_in_need }
+		any_neighbor_country = {
+			war = yes
+			not = { stability = 0 }
+			relation = { who = this value = 100 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 18
+
+		modifier = {
+			factor = 1.1
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 90 } 
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 70 }
+		}
+	}
+
+	title = "EVTNAME3540"
+	desc = "EVTDESC3540"
+
+	option = {
+		name = "EVTOPTA3540"					# Allow them to stay
+		set_country_flag = people_in_need
+		treasury = -15
+		capital_scope = {
+			population = 2
+		}
+	}
+	option = {
+		name = "EVTOPTB3540"					# You can't afford to help them all
+		set_country_flag = people_in_need
+		treasury = -8
+		capital_scope = {
+			population = 1
+		}
+	}
+}
+
+# Difficulties Settling In
+country_event = {
+
+	id = 3541
+
+	trigger = {
+		has_country_flag = disagreements
+		not = { has_country_flag = difficulties_settling_in }
+	}
+
+	mean_time_to_happen = {
+		months = 18
+
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+	}
+
+	title = "EVTNAME3541"
+	desc = "EVTDESC3541"
+
+	option = {
+		name = "EVTOPTA3541"					# Assemble the tribe for a meeting
+		set_country_flag = difficulties_settling_in
+		ruler = { change_finesse = 1 }
+		random = {
+			chance = 50
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB3541"					# Let them settle it amongst themselves
+		set_country_flag = difficulties_settling_in
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Warriors
+province_event = {
+
+	id = 3542
+
+	trigger = {
+		owner = {
+			has_country_flag = disagreements
+			has_country_flag = difficulties_settling_in
+		}
+		is_land = yes
+	}
+
+	mean_time_to_happen = {
+		months = 18
+
+		modifier = {
+			factor = 0.9
+			owner = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME3542"
+	desc = "EVTDESC3542"
+
+	option = {
+		name = "EVTOPTA3542"					# Accept their offer
+		owner = {
+			clr_country_flag = disagreements
+			clr_country_flag = difficulties_settling_in
+			treasury = 10
+		}
+	}
+	option = {
+		name = "EVTOPTB3542"					# Ask them to join you
+		owner = {
+			clr_country_flag = disagreements
+			clr_country_flag = difficulties_settling_in
+			militia = this
+		}
+	}
+}
+
+#clan chief unhappy, no one has job
+character_event = {
+
+	major_character = yes
+	id = 3543
+
+	trigger = {
+		country = {
+			government = tribal
+		}
+		is_clan_chief = yes
+		has_job = no
+		NOT = {
+			any_family_member = {
+				has_job = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			loyalty = 90
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 80
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 70
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { loyalty = 35 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 25 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 15 }
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 15 }
+			factor = 1.1
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}
+	}
+	
+	title = "EVTNAME3543"
+	desc = "EVTDESC3543"
+
+	option = {
+		name = "EVTOPTA3543"
+		country = {
+			stability = -1
+		}
+	}
+}	
+		
+	
+character_event = {
+
+	major_character = yes
+	id = 3544
+
+	trigger = {
+		country = {
+			government = tribal
+		}
+		is_clan_chief = yes
+		has_job = no
+		NOT = {
+			any_family_member = {
+				OR = {
+					has_job = yes
+					has_title = title_bodyguard
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			loyalty = 90
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 80
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 70
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { loyalty = 35 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 25 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 15 }
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 15 }
+			factor = 1.1
+		}
+		modifier = {
+			prominence = 90
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 80
+			factor = 0.9
+		}
+		modifier = {
+			prominence = 70
+			factor = 0.9
+		}
+		modifier = { 
+			NOT = { prominence = 35 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 25 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { prominence = 15 }
+			factor = 1.1
+		}
+	}
+	
+	title = "EVTNAME3544"
+	desc = "EVTDESC3544"
+
+	option = {
+		name = "EVTOPTA3544"
+		country = {
+			stability = -1
+		}
+	}
+}	
+	
+character_event = {
+	
+	major_character = yes
+	id = 3545
+
+	trigger = {
+		country = {
+			government = tribal
+		}
+		is_clan_chief = yes
+		ruler = {
+			is_rival = THIS
+		}
+		prominence = 75
+		popularity = 50 
+	}	
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			loyalty = 90
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 80
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 70
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { loyalty = 35 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 25 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 15 }
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 9 
+			factor = 0.9
+		}		
+		modifier = {
+		 	charisma = 8
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 7
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { charisma = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { charisma = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { charisma = 2 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME3545"
+	desc = "EVTDESC3545"
+
+	option = {
+		
+		name = "EVTOPTA3545"
+		set_ruler = THIS
+	}
+}
+
+character_event = {
+	
+	major_character = yes
+	id = 3546
+
+	trigger = {
+		country = {
+			government = tribal
+		}
+		is_clan_chief = yes
+		ruler = {
+			is_rival = THIS
+		}
+		prominence = 75
+		popularity = 50 
+	}	
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			loyalty = 90
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 80
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 70
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { loyalty = 35 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 25 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 15 }
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9 
+			factor = 0.9
+		}		
+		modifier = {
+		 	finesse = 8
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 7
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME3546"
+	desc = "EVTDESC3546"
+
+	option = {
+		
+		name = "EVTOPTA3546"
+		ruler = {
+			banish = yes
+		}
+	}
+}
+	
+character_event = {
+	
+	major_character = yes
+	id = 3547
+
+	trigger = {
+		country = {
+			government = tribal
+		}
+		is_clan_chief = yes
+		ruler = {
+			is_rival = THIS
+		}
+		prominence = 75
+		popularity = 50 
+	}	
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			loyalty = 90
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 80
+			factor = 1.1
+		}
+		modifier = {
+			loyalty = 70
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { loyalty = 35 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 25 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 15 }
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			military = 9 
+			factor = 0.9
+		}		
+		modifier = {
+		 	military = 8
+			factor = 0.9
+		}
+		modifier = {
+			military = 7
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 2 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME3547"
+	desc = "EVTDESC3547"
+
+	option = {
+		
+		name = "EVTOPTA3547"
+		ruler = {
+			death = yes
+		}
+	}
+}			

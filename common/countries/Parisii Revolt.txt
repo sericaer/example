@@ -1,0 +1,17 @@
+civil_war_faction = PRS
+graphical_culture = celticgfx
+color = { 187  164  167 }
+
+ship_names = {
+	Arxoialo Axiona Axona
+	Bratuspantio Brivisara
+	Divoduro
+	Iantinon Isara
+	Litanobriga Lutetia
+	Matrona Medanta Mediolanon Meldes Metlosedon
+	Nemetoduron
+	Petromantalo
+	Ritumagos Rotoialum
+	Savara Secoanas Silvanectes
+	Veliocasses
+}

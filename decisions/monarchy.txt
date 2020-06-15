@@ -1,0 +1,432 @@
+laws = {
+	
+	# DO NOT CHANGE THE TAG OF THIS LAW: Default monarchy succession law.
+	agnatic_succession_law = {
+		potential = {
+			government = monarchy
+			NOT = { has_law = agnatic_succession_law }
+		}
+		allow = {
+			stability = 2
+			ruler = {
+				any_child = {
+					is_female = no
+				}
+				NOT = { prominence = 50 }
+				popularity = 70
+			}
+		}
+		effect = {
+			stability = -1
+			revoke_law = cognatic_succession_law
+			revoke_law = agnatic_seniority_succession_law
+			revoke_law = egyption_succession_law
+			succession = agnatic
+			ruler = {
+				prominence = 25
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+
+	cognatic_succession_law = {
+		potential = {
+			government = monarchy
+			NOT = { has_law = cognatic_succession_law }
+		}
+		allow = {
+			stability = 2 
+			current_heir = {
+				from_ruler_family = no
+			}
+			ruler = {
+				num_of_children = 1
+			}
+		}
+		effect = {
+			stability = -1
+			revoke_law = agnatic_succession_law
+			revoke_law = agnatic_seniority_succession_law
+			revoke_law = egyption_succession_law
+			succession = cognatic
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+
+	agnatic_seniority_succession_law = {
+		potential = {
+			government = monarchy
+			NOT = { has_law = agnatic_seniority_succession_law }
+		}
+		allow = {
+			stability = 2
+			ruler = {
+				any_sibling = {
+					is_female = no
+					is_bastard = no
+				}
+				NOT = {
+					any_child = {
+						is_female = no
+						is_bastard = no
+					}
+				}
+			}
+		}
+		effect = {
+			stability = -1
+			revoke_law = agnatic_succession_law
+			revoke_law = cognatic_succession_law
+			revoke_law = egyption_succession_law
+			succession = agnatic_seniority
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+
+	egyption_succession_law = {
+		potential = {
+			government = monarchy
+			NOT = { has_law = egyption_succession_law }
+		}
+		allow = {
+			stability = 2
+			current_heir = {
+				from_ruler_family = no
+			}
+			OR = {
+				ruler = {
+					is_female = no
+					country = {
+						any_character = {
+							from_ruler_family = yes
+							is_female = yes
+						}
+					}
+				}
+				ruler = {
+					is_female = yes
+					country = {
+						any_character = {
+							from_ruler_family = yes
+							is_female = no
+						}
+					}
+				}
+			}
+			
+		}
+		effect = {
+			stability = -1
+			revoke_law = agnatic_succession_law
+			revoke_law = cognatic_succession_law
+			revoke_law = agnatic_seniority_succession_law
+			succession = egyptian_succession
+		}
+		revoke_allowed = {
+			always = no
+		}			
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+
+	encourage_piracy = {
+		potential = {
+			government = monarchy
+		}
+		allow  = {
+			NOT  = { has_law = discourage_piracy }
+			num_of_ports = 1
+			NOT = { stability = -1 }
+			ruler = { 
+				military = 4 
+			}
+		}
+		effect = {
+			stability = -1
+		}
+
+		revoke_allowed = {
+			OR = {
+				NOT = { num_of_ports = 1 }
+				war = yes
+				AND = {
+					ruler = {
+						NOT = { military = 4 }
+					}
+					stability = -3
+				}
+			}
+		}
+		revoke_effect =  {
+			stability = 1
+		}
+		pirate_spawn_chance = 0.1
+		badboy = 0.01
+		trade_income_modifier = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+
+	discourage_piracy = {
+		potential = {
+			government = monarchy
+		}
+		allow  = {
+			stability = -2
+			NOT = { has_law = encourage_piracy }
+			num_of_ports = 1
+			ruler = { charisma = 4 }
+		}
+		effect = {
+			stability = 1
+		}
+		revoke_allowed = {
+			OR = {
+				NOT = { num_of_ports = 1 }
+				war = yes 
+				AND = { 
+					ruler = {
+						NOT = { charisma = 4 }
+						NOT = { stability = -2 }
+					}
+				}
+			}
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		pirate_spawn_chance = -0.1
+		naval_morale = -0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+
+	debt_slavery = {
+		potential = {
+			government = monarchy
+		}
+		allow  = {
+			NOT = {
+				has_law = encourage_smallholders
+			}
+			stability = 1
+			max_manpower = 80
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			NOT = { max_manpower = 20 } 
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		slaves_to_freedmen = -0.02
+		trade_income_modifier = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}	
+
+	encourage_smallholders = {
+		potential = {
+			government = monarchy 
+		}
+		allow  = {
+			NOT = {
+				has_law = debt_slavery
+			}
+			stability = -2
+			NOT = { max_manpower = 20 } 
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			max_manpower = 80
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		slaves_to_freedmen = 0.02
+		global_tax_modifier = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}	
+
+	citizenship_for_sale = {
+		potential = {
+			government = monarchy
+		}
+		allow  = {
+			NOT = {
+				has_law = service_gaurnatees_citizenship
+			}
+			stability = -2
+			#something about research here?
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			#something else about research
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		freedmen_to_citizen = 0.02
+		global_tax_modifier = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+
+	service_gaurnatees_citizenship = {
+		potential = {
+			government = monarchy
+		}
+		allow  = {
+			NOT = {
+				has_law = citizenship_for_sale
+			}
+			stability = -2
+			#something about research here?
+		}	
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			#something else about research
+		}
+		revoke_effect = {
+			stability = -1
+		}
+		freedmen_to_citizen = -0.02
+		heavy_infantry_discipline = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+
+	omens_are_fairly_accurate = {
+		potential = {
+			government = monarchy 
+		}
+		allow  = {
+			NOT = {
+				has_law = cnn_is_already_calling_this_omen_successful
+			}
+			stability = -2
+			is_omen_failure = yes
+		}	
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			is_omen_failure = no
+		}
+		omen_power = -0.1
+		omen_chance = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+
+	cnn_is_already_calling_this_omen_successful = {
+		potential = {
+			government = monarchy 
+		}
+		allow  = {
+			NOT = {
+				has_law = omens_are_fairly_accurate
+			}
+			stability = -2
+			is_omen_failure = no
+		}	
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			NOT = { stability = -2 }
+			is_omen_failure = yes
+		}
+		omen_power = 0.1
+		omen_chance = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.1
+		}
+	}
+}

@@ -1,0 +1,834 @@
+character_event = {
+
+	id = 9900
+	
+	trigger = {
+		has_job = no
+		prisoner = no
+		is_female = no
+		is_ruler = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			is_governor = yes
+			is_ruler = no
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = righteous
+			factor = 1.1
+		}
+		modifier = {
+			traits = corrupt
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9900"
+	desc = "EVTDESC9900"
+	
+	option = {
+		name = "EVTOPTA9900"
+		wealth = -100
+		country= {
+			random_owned = {
+				limit = {
+					governor_scope = {
+						is_rival = THIS
+						is_ruler = no
+					}
+				}
+				province_event = 9901
+			}
+		}
+	}
+}
+
+province_event = {
+	
+	id = 9901
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9901"
+	desc = "EVTDESC9901"
+
+	option = {
+		name = "EVTOPTA9901"
+		governor_scope = {
+			remove_governor = yes
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		governor = FROM
+		owner = {
+			treasury = 10 
+		}
+	}
+	option = {
+		name = "EVTOPTB9901"
+		FROM = {
+			loyalty = -10 
+		}
+		owner = {
+			random_character = {
+				limit = {
+					is_friend = FROM
+					in_command = yes
+					is_ruler = no
+				}
+				loyalty = -5
+			}
+			treasury = 10 
+		}
+	}
+}
+
+character_event = {
+
+	id = 9902
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			in_command = yes
+			is_ruler = no
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = coward
+			factor = 1.1
+		}
+		modifier = {
+			traits = brave
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9902"
+	desc = "EVTDESC9902"
+	
+	option = {
+		name = "EVTOPTA9902"
+		wealth = -100
+		country= {
+			country_event = 9903
+		}
+	}
+}
+country_event = {
+	
+	id = 9903
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9903"
+	desc = "EVTDESC9903"
+
+	option = {
+		name = "EVTOPTA9903"
+		random_character = {
+			limit = {
+			 	is_rival = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -10
+			remove_from_unit = yes
+			assign_to_unit = FROM
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9903"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				is_ruler = no
+				in_command = yes
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}
+	
+character_event = {
+
+	id = 9904
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			has_office = land_tech
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9904"
+	desc = "EVTDESC9904"
+	
+	option = {
+		name = "EVTOPTA9904"
+		wealth = -100
+		country= {
+			country_event = 9905
+		}
+	}
+}
+country_event = {
+	
+	id = 9905
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9905"
+	desc = "EVTDESC9905"
+
+	option = {
+		name = "EVTOPTA9905"
+		random_character = {
+			limit = {
+			 	has_office = land_tech
+				is_rival = FROM
+			}
+			loyalty = -10
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		FROM = {
+			assign_office = land_tech
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9905"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}			
+
+character_event = {
+
+	id = 9906
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			has_office = naval_tech
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9906"
+	desc = "EVTDESC9906"
+	
+	option = {
+		name = "EVTOPTA9906"
+		wealth = -100
+		country= {
+			country_event = 9907
+		}
+	}
+}
+country_event = {
+	
+	id = 9907
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9907"
+	desc = "EVTDESC9907"
+
+	option = {
+		name = "EVTOPTA9907"
+		random_character = {
+			limit = {
+			 	has_office = naval_tech
+				is_rival = FROM
+			}
+			loyalty = -10
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		FROM = {
+			assign_office = naval_tech
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9907"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}			
+
+character_event = {
+
+	id = 9908
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			has_office = construction_tech
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = incapable
+			factor = 1.1
+		}
+		modifier = {
+			traits = founder
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud 
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9908"
+	desc = "EVTDESC9908"
+	
+	option = {
+		name = "EVTOPTA9908"
+		wealth = -100
+		country= {
+			country_event = 9909
+		}
+	}
+}
+country_event = {
+	
+	id = 9909
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9909"
+	desc = "EVTDESC9909"
+
+	option = {
+		name = "EVTOPTA9909"
+		random_character = {
+			limit = {
+			 	has_office = construction_tech
+				is_rival = FROM
+			}
+			loyalty = -10
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		FROM = {
+			assign_office = construction_tech
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9909"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}					
+
+character_event = {
+
+	id = 9910
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			has_office = religious_tech
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = lapsed
+			factor = 1.1
+		}
+		modifier = {
+			traits = devout
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9910"
+	desc = "EVTDESC9910"
+	
+	option = {
+		name = "EVTOPTA9910"
+		wealth = -100
+		country= {
+			country_event = 9911
+		}
+	}
+}
+country_event = {
+	
+	id = 9911
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9911"
+	desc = "EVTDESC9911"
+
+	option = {
+		name = "EVTOPTA9911"
+		random_character = {
+			limit = {
+			 	has_office = religious_tech
+				is_rival = FROM
+			}
+			loyalty = -10
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		FROM = {
+			assign_office = religious_tech
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9911"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}	
+
+character_event = {
+
+	id = 9912
+	
+	trigger = {
+		has_job = no
+		is_female = no
+		is_ruler = no
+		prisoner = no
+		age = 16
+		wealth = 100
+		any_friend = {
+			in_command = yes
+			is_ruler = no
+		}	
+		any_rival = {
+			has_office = civic_tech
+		}
+	}
+
+
+	mean_time_to_happen = {
+	
+		months = 120
+		modifier = {
+			traits = crafty
+			factor = 0.9
+		}
+		modifier = {
+			any_friend = {
+				is_ruler = yes
+			}
+			factor = 0.9
+		}
+		modifier = {
+			traits = guileless
+			factor = 1.1
+		}
+		modifier = {	
+			traits = arbitrary
+			factor = 1.1
+		}
+		modifier = {
+			traits = just
+			factor = 0.5
+		}
+		modifier = {
+			traits = proud
+			factor = 0.9
+		}
+		modifier = {
+			traits = humble 
+			factor = 1.1
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+		modifier = {
+			traits = content
+			factor = 1.1
+		}
+	}
+		 
+	title = "EVTNAME9912"
+	desc = "EVTDESC9912"
+	
+	option = {
+		name = "EVTOPTA9912"
+		wealth = -100
+		country= {
+			country_event = 9913
+		}
+	}
+}
+country_event = {
+	
+	id = 9913
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME9913"
+	desc = "EVTDESC9913"
+
+	option = {
+		name = "EVTOPTA9913"
+		random_character = {
+			limit = {
+			 	has_office = civic_tech
+				is_rival = FROM
+			}
+			loyalty = -10
+			any_friend = {
+				loyalty = -5
+			}
+		}
+		FROM = {
+			assign_office = civic_tech
+		}
+		treasury = 10 
+	}
+	option = {
+		name = "EVTOPTB9913"
+		FROM = {
+			loyalty = -10 
+		}
+		random_character = {
+			limit = {
+				is_friend = FROM
+				in_command = yes
+				is_ruler = no
+			}
+			loyalty = -5
+		}
+		treasury = 10 
+	}
+}							

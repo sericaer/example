@@ -1,0 +1,4 @@
+civil_war_faction = QTA
+region = tarraconensis
+color = { 16 106 120 }
+color2 = { 15 40 40 }

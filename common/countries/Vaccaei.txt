@@ -1,0 +1,29 @@
+civil_war_faction = VA2
+graphical_culture = iberiangfx
+color = { 255 194 111 }
+color2 = { 64 146 218 }
+
+ship_names = {
+	Abiafelaesurraecus Abna Aegiamunniaegus Aernus Aetio Albucelainco Ameipicer Apuleius
+	Arabo Arabrigenses Aracus Aratibro Aravi Arentia Arentio "Ares Lusitani" Ataegina Attio
+	Baeculum Banderaeicus Bandiarbariaicus Bandonga Bandua Bandueaetobrigus Bmervasecus
+	Bormanico Breogan Brigus
+	Cabar Cabuniaegenis Caesarus Candeberonio Caraucenus Cariocecus Caros Carneus Castulus
+	Caucenus Cauleces Coilarni Collouesei Coniumbricenses Connoba Corocotta Coronus Coruae
+	Coso Crouga Curius Cusicelenses Cusuneneaecus
+	Debaroni Dercetius "Dominus Cusus Neneoecus" Duberdicus Durius
+	Edovio Endovelicus Eniragillo Epona Erbina
+	Frovida
+	Igaeditani Igaedo Ilerda Ilurbeda Indibil Intercatia "Iuppiter Optimus Maximus"
+	Laepo Laho Lancia Lancienses Laneana Laraucus Laribero Laro Lima Lucubo Luruni
+	Mandonius Meidubrigenses Miraro Moelio Moricilo Munidis
+	Nabia Nantosvelta Netaci Neton
+	Ocaere
+	Paesures Punicus
+	Quangeio
+	Rauda Reo Reue Runesocesius
+	Saur Segobriga Sucellus Sulo
+	Tameobrigus Tantalus Tapori Toga Tongoe Tongoenabiagus Torolo Trebaruna Turiacus Turolici
+	Ulaca
+	Verore Vestio Viriathus
+}

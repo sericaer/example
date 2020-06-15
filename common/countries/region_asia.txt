@@ -1,0 +1,4 @@
+civil_war_faction = QA6
+region = region_asia
+color = { 180 40 40 }
+color2 = { 70 0 0 }

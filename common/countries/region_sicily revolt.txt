@@ -1,0 +1,4 @@
+civil_war_faction = QSI
+region = region_sicily
+color = { 0 252 252 }
+color2 = { 0 152 152 }

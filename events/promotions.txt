@@ -1,0 +1,1378 @@
+############################################
+#	Friend asks for promotion	   #
+############################################
+# Magistrate - Male
+character_event = {
+
+	id = 7800
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_friend = {
+				can_hold_title = title_religious_tech
+			}
+			any_character = {
+				has_office = religious_tech
+				not = { family = this }
+				not = { popularity = 60 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7800"
+
+	desc = "EVTDESC7800"
+
+	option = {
+		name = "EVTOPTA7800"					# His friendship means a lot to me
+		country = {
+			random_character = {
+				limit = { has_office = religious_tech }
+				family_prestige = -50
+				loyalty = -10
+			}
+			random_friend = {
+				limit = {
+					can_hold_title = title_religious_tech
+				}
+				loyalty = 10
+				assign_office = religious_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7800"					# I can't hand out promotions just like that
+		country = {
+			random_character = {
+				limit = { has_office = religious_tech }
+				loyalty = 15
+			}
+			random_friend = {
+				limit = {
+					can_hold_title = title_religious_tech
+				}
+				loyalty = -15
+				family_prestige = -25
+			}
+		}
+	}
+}
+
+# Magistrate - Female
+character_event = {
+
+	id = 7801
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_friend = {
+				can_hold_title = title_religious_tech
+			}
+			any_character = {
+				has_office = religious_tech
+				not = { family = this }
+				not = { popularity = 60 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7801"
+
+	desc = "EVTDESC7801"
+
+	option = {
+		name = "EVTOPTA7801"					# Her friendship means a lot to me
+		country = {
+			random_character = {
+				limit = { has_office = religious_tech }
+				family_prestige = -50
+				loyalty = -10
+			}
+			random_friend = {
+				limit = {
+					can_hold_title = title_religious_tech
+				}
+				loyalty = 10
+				assign_office = religious_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7801"					# I can't hand out promotions just like that
+		country = {
+			random_character = {
+				limit = { has_office = religious_tech }
+				loyalty = 15
+			}
+			random_friend = {
+				limit = {
+					can_hold_title = title_religious_tech
+				}
+				loyalty = -15
+				family_prestige = -25
+			}
+		}
+	}
+}
+
+############################################
+#   Money in exchange for a new position   #
+############################################
+# Shipwright - Male
+character_event = {
+
+	id = 7802
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_character = {
+				wealth = 100
+				popularity = 70
+				or = {
+					military = 7
+					charisma = 7
+					finesse = 7
+				}
+				can_hold_title = title_naval_tech
+				not = { traits = vengeful }
+				not = { traits = forgiving }
+			}
+			any_character = {
+				has_office = naval_tech
+				not = { popularity = 50 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7802"
+
+	desc = "EVTDESC7802"
+
+	option = {
+		name = "EVTOPTA7802"					# I'm sure he's the right man for the job
+		country = {
+			random_character = {
+				limit = { has_office = naval_tech }
+				family_prestige = -50
+				loyalty = -10
+			}
+			random_character = {
+				limit = {
+					wealth = 100
+					popularity = 70
+					or = {
+						military = 8
+						charisma = 8
+						finesse = 8
+					}
+					can_hold_title = title_naval_tech
+				}
+				loyalty = 5
+				family_prestige = 50
+				assign_office = naval_tech
+			}
+		}
+		wealth = 100
+	}
+	option = {
+		name = "EVTOPTB7802"					# Why on earth would I promote someone like him?
+		country = {
+			random_character = {
+				limit = { has_office = naval_tech }
+				loyalty = 10
+			}
+			random_character = {
+				limit = {
+					wealth = 100
+					popularity = 70
+					or = {
+						military = 8
+						charisma = 8
+						finesse = 8
+					}
+					can_hold_title = title_naval_tech
+				}
+				loyalty = -5
+				add_trait = vengeful
+			}
+		}
+		popularity = -5
+	}
+}
+
+# Shipwright - Female
+character_event = {
+
+	id = 7803
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_character = {
+				is_female = yes
+				wealth = 100
+				popularity = 70
+				or = {
+					military = 7
+					charisma = 7
+					finesse = 7
+				}
+				age = 16
+				has_job = no
+				is_ruler = no
+				prisoner = no
+				not = { traits = vengeful }
+				not = { traits = forgiving }
+			}
+			any_character = {
+				has_office = naval_tech
+				not = { popularity = 50 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7803"
+
+	desc = "EVTDESC7803"
+
+	option = {
+		name = "EVTOPTA7803"					# I'm sure she's the right person for the job
+		country = {
+			random_character = {
+				limit = { has_office = naval_tech }
+				family_prestige = -50
+				loyalty = -10
+			}
+			random_character = {
+				limit = {
+					is_female = yes
+					wealth = 100
+					popularity = 70
+					or = {
+						military = 8
+						charisma = 8
+						finesse = 8
+					}
+					can_hold_title = title_naval_tech
+				}
+				loyalty = 5
+				family_prestige = 50
+				assign_office = naval_tech
+			}
+		}
+		wealth = 100
+	}
+	option = {
+		name = "EVTOPTB7803"					# Why on earth would I promote someone like her?
+		country = {
+			random_character = {
+				limit = { has_office = naval_tech }
+				loyalty = 10
+			}
+			random_character = {
+				limit = {
+					is_female = yes
+					wealth = 100
+					popularity = 70
+					or = {
+						military = 8
+						charisma = 8
+						finesse = 8
+					}
+					can_hold_title = title_naval_tech
+				}
+				loyalty = -5
+				add_trait = vengeful
+			}
+		}
+		popularity = -5
+	}
+}
+
+############################################
+#    Competent Relative Wants Promotion    #
+############################################
+character_event = {
+
+	id = 7804
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_character = {
+				not = { family = this }
+				has_office = land_tech
+				not = { military = 5 }
+			}
+			any_character = {
+				not = { has_office = land_tech }
+				family = this
+				military = 8
+				popularity = 50
+				can_hold_title = title_land_tech
+				not = { traits = forgiving }
+				not = { traits = vengeful }
+				not = { traits = jealous }
+				not = { traits = secure }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7804"
+
+	desc = "EVTDESC7804"
+
+	option = {
+		name = "EVTOPTA7804"					# I've been thinking about replacing him anyway
+		country = {
+			random_character = {
+				limit = { has_office = land_tech }
+				loyalty = -10
+				family_prestige = -50
+			}
+			random_character = {
+				limit = {
+					not = { has_office = land_tech }
+					family = this
+					military = 8
+					popularity = 50
+					can_hold_title = title_land_tech
+					not = { traits = forgiving }
+					not = { traits = vengeful }
+					not = { traits = jealous }
+					not = { traits = secure }
+				}
+				loyalty = 10
+				family_prestige = 50
+				assign_office = land_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7804"					# It's better to leave things as they are
+		country = {
+			random_character = {
+				limit = { has_office = land_tech }
+				loyalty = 10
+			}
+			random_character = {
+				limit = {
+					not = { has_office = land_tech }
+					family = this
+					military = 8
+					popularity = 50
+					can_hold_title = title_land_tech
+					not = { traits = forgiving }
+					not = { traits = vengeful }
+					not = { traits = jealous }
+					not = { traits = secure }
+				}
+				loyalty = -10
+				family_prestige = -25
+				random_list = {
+					50 = { add_trait = vengeful }
+					50 = { add_trait = jealous }
+				}
+			}
+		}
+	}
+}
+
+############################################
+#   Incompetent Relative Wants Promotion   #
+############################################
+character_event = {
+
+	id = 7805
+
+	trigger = {
+		is_ruler = yes
+		country = {
+			any_character = {
+				not = { family = this }
+				has_office = civic_tech
+				military = 8
+			}
+			any_character = {
+				not = { has_office = civic_tech }
+				can_hold_title = title_civic_tech
+				family = this
+				not = { military = 3 }
+				not = { traits = forgiving }
+				not = { traits = vengeful }
+				not = { traits = jealous }
+				not = { traits = secure }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = just
+		}
+		modifier = {
+			factor = 0.9
+			traits = righteous
+		}
+		modifier = {
+			factor = 0.9
+			traits = intelligent
+		}
+		modifier = {
+			factor = 0.9
+			traits = wise
+		}
+		modifier = {
+			factor = 1.1
+			traits = tactically_inflexible
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+		modifier = {
+			factor = 1.1
+			traits = proud
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			traits = dumb
+		}
+		modifier = {
+			factor = 1.1
+			traits = lazy
+		}
+		modifier = {
+			factor = 1.1
+			traits = reckless
+		}
+		modifier = {
+			factor = 1.1
+			traits = foolish
+		}
+		modifier = {
+			factor = 1.1
+			traits = arrogant
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = trusting
+		}
+		modifier = {
+			factor = 1.1
+			traits = secure
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.8
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7805"
+
+	desc = "EVTDESC7805"
+
+	option = {
+		name = "EVTOPTA7805"					# I should be able to find something for him
+		country = {
+			random_character = {
+				limit = { has_office = civic_tech }
+				loyalty = -10
+				family_prestige = -50
+			}
+			random_character = {
+				limit = {
+					not = { has_office = civic_tech }
+					can_hold_title = title_civic_tech
+					family = this
+					is_female = no
+					not = { traits = forgiving }
+					not = { traits = vengeful }
+					not = { traits = jealous }
+					not = { traits = secure }
+				}
+				loyalty = 10
+				family_prestige = 50
+				assign_office = civic_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7805"					# No, he's too embarassing
+		country = {
+			random_character = {
+				limit = { has_office = civic_tech }
+				loyalty = 10
+			}
+			random_character = {
+				limit = {
+					not = { has_office = civic_tech }
+					can_hold_title = title_civic_tech
+					family = this
+					not = { traits = forgiving }
+					not = { traits = vengeful }
+					not = { traits = jealous }
+					not = { traits = secure }
+				}
+				loyalty = -10
+				family_prestige = -25
+				random_list = {
+					50 = { add_trait = vengeful }
+					50 = { add_trait = jealous }
+				}
+			}
+		}
+	}
+}
+
+############################################
+# 	    Disloyal Magistrate 	   #
+############################################
+character_event = {
+
+	id = 7810
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		not = { is_rival = this }
+		not = { is_friend = this }
+		not = { traits = submissive }
+		not = { traits = assertive }
+		country = {
+			any_character = {
+				is_female = no
+				not = { family = this }
+				family_prestige = 500
+				has_office = civic_tech
+				not = { loyalty = 50 }
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+			any_character = {
+				can_hold_title = title_civic_tech
+				loyalty = 90
+				can_get_friends = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.8
+			owner = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7810"
+	desc = "EVTDESC7810"
+
+	option = {
+		name = "EVTOPTA7810"					# It makes no matter, I'll find someone new
+		ai_chance = { factor = 60 }
+		country = {
+			random_character = {
+				limit = { can_hold_title = title_civic_tech loyalty = 90 }
+				add_friend = this
+				assign_office = civic_tech
+			}
+			random_character = {
+				limit = {
+					is_female = no
+					not = { family = this }
+					family_prestige = 500
+					has_office = civic_tech
+					not = { loyalty = 50 }
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				loyalty = -20
+				add_rival = this
+			}
+		}
+		popularity = -5
+	}
+	option = {
+		name = "EVTOPTB7810"					# It's probably best to leave things as they are
+		ai_chance = { factor = 40 }
+		add_trait = submissive
+		random = {
+			chance = 20
+			owner = { ruler = { add_trait = maimed } }
+		}
+	}
+	option = {
+		name = "EVTOPTC7810"					# He may just need some incentive to change his mind
+		ai_chance = { factor = 40 }
+		wealth = -150
+		country = {
+			random_character = {
+				limit = {
+					is_female = no
+					not = { family = this }
+					family_prestige = 500
+					has_office = civic_tech
+					not = { loyalty = 50 }
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				wealth = 150
+			}
+		}
+	}
+}
+
+############################################
+#       A Relative is Brought to Trial     #
+############################################
+character_event = {
+
+	id = 7811
+
+	trigger = {
+		is_ruler = yes
+		popularity = 70
+		country = {
+			any_character = {
+				is_female = no
+				family = this
+				is_governor = yes
+			}
+		}
+		any_rival = {
+			can_hold_title = title_civic_tech
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 2
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 4
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 6
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 80
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 90
+		}
+		modifier = {
+			factor = 2.0
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 2.0
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7811"
+	desc = "EVTDESC7811"
+
+	option = {
+		name = "EVTOPTA7811"					# Money is usually convincing
+		family_prestige = 25
+		wealth = -200
+		random_rival = { wealth = 200 }
+	}
+	option = {
+		name = "EVTOPTB7811"					# Appoint him to magistrate
+		family_prestige = 25
+		country = {
+			random_character = {
+				limit = { has_office = civic_tech }
+				loyalty = -20
+			}
+		}
+		random_rival = {
+			limit = { can_hold_title = title_civic_tech }
+			assign_office = civic_tech
+		}
+	}
+}
+
+
+############################################
+#            Overlooked Relative    	   #
+############################################
+# Male 
+character_event = {
+
+	id = 7812
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				family = this
+				can_hold_title = title_construction_tech
+				can_get_rivals = yes
+				not = { is_rival = this }
+				not = { is_friend = this }
+			}
+			any_character = {
+				not = { family = this }
+				has_job = yes
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			loyalty = 90
+		}
+		modifier = {
+			factor = 0.9
+			loyalty = 80
+		}
+		modifier = {
+			factor = 0.9
+			loyalty = 70
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { loyalty = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME7812"
+
+	desc = "EVTDESC7812"
+
+	option = {
+		name = "EVTOPTA7812"					# Yes, and now I've found it
+		country = {
+			random_character = {
+				limit = {
+					has_office = construction_tech
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				loyalty = -15
+				add_rival = this
+			}
+			random_character = {
+				limit = {
+					family = this
+					can_hold_title = title_construction_tech
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				assign_office = construction_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7812"					# No, that's not really true
+		country = {
+			random_character = {
+				limit = {
+					family = this
+					can_hold_title = title_construction_tech
+					can_get_rivals = yes
+					not = { is_rival = this }
+					not = { is_friend = this }
+				}
+				add_rival = this
+			}
+		}
+	}
+}
+

@@ -1,0 +1,1609 @@
+###############
+# Job Ambitions
+###############
+
+obj_become_governor_of_region = {
+	type = country_regions
+	allow = {
+		is_capital = no
+		is_governor = no
+		OR = {
+			government = republic
+			is_ruler = no
+		}
+		can_hold_title = title_governor
+		NOT = { has_title = title_governor }
+	}
+	chance = {
+		factor = 50
+		modifier = {
+			factor = 0.1
+			is_governor = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		is_governor = THIS
+	}
+	abort = {
+		OR = {
+			AND = {
+				is_governor = yes
+				NOT = { is_governor = THIS }
+			}
+			AND = {
+				is_ruler = yes
+				NOT = { government = republic }
+			}
+		}
+	}
+	effect = {
+		family_prestige = 20
+		loyalty = 40
+		change_finesse = 1
+		mercantile_conviction = 6
+	}
+	
+}
+
+obj_become_general = {
+	type = character
+	allow = {
+		can_hold_title = title_general
+		NOT = { has_title = title_general }
+	}
+		
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			military = 5
+		}
+		modifier = {
+			factor = 1.5
+			military = 7
+		}
+	}
+	success = {
+		is_general = yes
+	}
+	abort = {
+		prisoner = yes
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_martial = 1
+		military_conviction = 5
+	}
+}
+
+obj_become_admiral = {
+	type = character
+	allow = {
+		country = {
+			num_of_ports = 1
+		}
+		can_hold_title = title_admiral
+		NOT = { has_title = title_admiral }
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			military = 5
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			military = 7
+		}
+	}
+	success = {
+		is_admiral = yes
+	}
+	abort = {
+		prisoner = yes
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_martial = 1
+		military_conviction = 5
+	}
+}
+
+obj_become_land_magistrate = {
+	type = character
+	allow = {
+		NOT = { has_office = land_tech }
+		NOT = { completed_objective = obj_become_land_magistrate }
+		can_hold_title = title_land_tech
+		OR = {
+			government = republic
+			is_ruler = no
+		}	
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.5
+			NOT = { military = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { military = 3 }
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		has_office = land_tech
+	}
+	abort = {
+		is_ruler = yes
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+		ruler_conviction = 5
+	}
+}
+
+obj_become_naval_magistrate = {
+	type = character
+	allow = {
+		NOT = { has_office = naval_tech }
+		NOT = { completed_objective = obj_become_naval_magistrate }
+		can_hold_title = title_naval_tech
+		OR = {
+			government = republic
+			is_ruler = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.5
+			NOT = { military = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { military = 3 }
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		has_office = naval_tech
+	}
+	abort = {
+		is_ruler = yes
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+		ruler_conviction = 5
+	}
+}
+
+obj_become_construction_magistrate = {
+	type = character
+	allow = {
+		NOT = { has_office = construction_tech }
+		NOT = { completed_objective = obj_become_construction_magistrate }
+		can_hold_title = title_construction_tech
+		OR = {
+			government = republic
+			is_ruler = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		has_office = construction_tech
+	}
+	abort = {
+		is_ruler = yes
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+		ruler_conviction = 5
+	}
+}
+
+obj_become_civic_magistrate = {
+	type = character
+	allow = {
+		NOT = { has_office = civic_tech }
+		can_hold_title = title_civic_tech
+		NOT = { completed_objective = obj_become_civic_magistrate }
+		OR = {
+			government = republic
+			is_ruler = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		has_office = civic_tech
+	}
+	abort = {
+		is_ruler = yes
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+		civic_conviction = 6
+	}
+}
+
+obj_become_religious_magistrate = {
+	type = character
+	allow = {
+		NOT = { has_office = religious_tech }
+		NOT = { completed_objective = obj_become_religious_magistrate }
+		can_hold_title = title_religious_tech
+		OR = {
+			government = republic
+			is_ruler = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.1
+			traits = sceptical
+		}
+		modifier = {
+			factor = 0.1
+			traits = lapsed
+		}
+		modifier = {
+			factor = 4.0
+			traits = pious
+		}
+		modifier = {
+			factor = 4.0
+			traits = devout
+		}
+	}
+	success = {
+		has_office = religious_tech
+	}
+	abort = {
+		is_ruler = yes
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+		religious_conviction = 6
+	}
+}
+
+obj_become_censor = {
+	type = character
+	allow = {
+		NOT = { has_title = title_censor }
+		NOT = { completed_objective = obj_become_censor }
+		can_hold_title = title_censor
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			has_title = title_ex_censor
+		}
+		modifier = {
+			factor = 2
+			age = 40
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { age = 30 }
+		}
+	}
+	success = {
+		has_title = title_censor
+	}
+	abort = {
+		NOT = { government = republic }
+	}
+	effect = {
+		family_prestige = 10
+		loyalty = 30
+		change_finesse = 1
+	}
+}
+
+obj_become_minister = {
+	type = character
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+		is_courtier = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.01
+			traits = content
+		}
+		modifier = {
+			factor = 1.5
+			is_bastard = yes
+		}
+		modifier = {
+			factor = 1.25
+			from_ruler_family = yes
+		}
+		modifier = {
+			factor = 2.0
+			traits = ambitious
+		}
+	}
+	success = {
+		is_courtier = yes
+		has_tech_office = no
+	}
+	abort = {
+		OR = {
+			is_ruler = yes
+			NOT = { government = monarchy }
+		}
+	}
+	effect = {
+		family_prestige = 20
+		loyalty = 25
+		change_finesse = 1
+	}
+}
+
+obj_become_ruler = {
+	type = character
+	allow = {
+		is_ruler = no
+		can_hold_title = title_ruler
+		OR = {
+			is_female = no
+			gender_equality = yes
+			country = { has_law = cognatic_succession_law }
+			country = { has_law = egyption_succession_law }
+		}
+	}
+	
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.01
+			or = {
+				traits = content
+				traits = submissive
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_female = yes
+		}
+		modifier = {
+			factor = 0.5
+			country = { government = monarchy } 
+		}
+		modifier = {
+			factor = 0.1
+			is_pretender = no
+			is_primary_heir = no
+			from_ruler_family = no
+			has_job = no
+			is_clan_chief = no
+			is_bastard = no
+		}
+		modifier = {
+			factor = 8.0
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 6.0
+			is_pretender = yes
+		}
+		modifier = {
+			factor = 4.0
+			is_bastard = yes
+			from_ruler_family = no # Unacknowledged bastard
+		}
+		modifier = {
+			factor = 4.0
+			traits = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			country = { government = monarchy } 
+			is_governor = no
+			is_general = no
+			is_pretender = no
+			is_primary_heir = no
+			OR = {
+				is_bastard = no
+				from_ruler_family = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				is_clan_chief = yes
+				is_governor = yes
+				is_general = yes
+			}
+		}
+		
+		modifier = {
+			factor = 100.0
+			employer = {
+				tag = BAR
+			}
+		}
+	}
+	success = {
+		is_ruler = yes
+	}
+	effect = {
+		family_prestige = 50
+		change_charisma = 1
+	}
+	
+	# Modifier while unfulfilled
+	monthly_character_loyalty = -0.2
+	
+}
+
+obj_become_augur = {
+	type = character
+	allow = {
+		NOT = { has_title = title_augur }
+		NOT = { has_title = title_pontifex }
+		NOT = { completed_objective = obj_become_augur }
+		government = republic
+		is_ruler = no
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		NOT = { age = 25 }
+		can_hold_title = title_augur
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.1
+			traits = sceptical
+		}
+		modifier = {
+			factor = 0.1
+			traits = lapsed
+		}
+		modifier = {
+			factor = 4.0
+			traits = pious
+		}
+		modifier = {
+			factor = 4.0
+			traits = devout
+		}
+		modifier = {
+			factor = 1.1 
+			has_office = religious_tech
+		}
+	}
+	success = {
+		has_title = title_augur
+	}
+	abort = {
+		OR = {
+			age = 25
+			is_ruler = yes
+			NOT = { government = republic }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 10
+		religious_conviction = 3
+	}
+}
+
+obj_become_pontifix = {
+	type = character
+	allow = {
+		NOT = { has_title = title_augur }
+		NOT = { has_title = title_pontifex }
+		NOT = { completed_objective = obj_become_pontifix }
+		government = republic
+		is_ruler = no
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		NOT = { age = 25 }
+		can_hold_title = title_pontifex
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			is_courtier = yes
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.1
+			traits = sceptical
+		}
+		modifier = {
+			factor = 0.1
+			traits = lapsed
+		}
+		modifier = {
+			factor = 4.0
+			traits = pious
+		}
+		modifier = {
+			factor = 4.0
+			traits = devout
+		}
+		modifier = {
+			factor = 1.1 
+			has_office = religious_tech
+		}
+	}
+	success = {
+		has_title = title_pontifex
+	}
+	abort = {
+		OR = {
+			age = 25
+			is_ruler = yes
+			NOT = { government = republic }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 10
+		religious_conviction = 3
+	}
+}
+
+obj_become_plebeian_aedile  = {
+	type = character
+	allow = {
+		NOT = { has_title = title_plebeian_aedile  }
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+		NOT = { completed_objective = obj_become_plebeian_aedile }
+		government = republic
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		NOT = { age = 25 }
+		can_hold_title = title_plebeian_aedile
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			charisma = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			charisma = 7
+		}
+	}
+	success = {
+		has_title = title_plebeian_aedile 
+	}
+	abort = {
+		OR = {
+			age = 25
+			is_ruler = yes
+			NOT = { government = republic }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 15
+		civic_conviction = 3
+	}
+}
+
+obj_become_tribune_of_the_soldiers = {
+	type = character
+	allow = {
+		NOT = { has_title = title_tribune_of_the_soldiers }
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+		NOT = { completed_objective = obj_become_tribune_of_the_soldiers }
+		government = republic
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		NOT = { age = 25 }
+		can_hold_title = title_tribune_of_the_soldiers
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			military = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			military = 7
+		}
+	}
+	success = {
+		has_title = title_tribune_of_the_soldiers
+	}
+	abort = {
+		OR = {
+			age = 25
+			is_ruler = yes
+			NOT = { government = republic }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 15
+		military_conviction = 3
+	}
+}
+
+obj_become_tribune_of_the_treasury = {
+	type = character
+	allow = {
+		NOT = { has_title = title_tribune_of_the_treasury }
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+		NOT = { completed_objective = obj_become_tribune_of_the_treasury }
+		government = republic
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		NOT = { age = 25 }
+		can_hold_title = title_tribune_of_the_treasury
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			finesse = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			finesse = 7
+		}
+	}
+	success = {
+		has_title = title_tribune_of_the_treasury
+	}
+	abort = {
+		OR = {
+			age = 25
+			is_ruler = yes
+			NOT = { government = republic }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 15
+		mercantile_conviction = 3
+	}
+}
+
+obj_become_title_cupbearer = {
+	type = character 
+	allow = {
+		NOT = { has_title = title_cupbearer }
+		government = monarchy 
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		is_ruler = no
+		NOT = { completed_objective = obj_become_title_cupbearer }
+		OR = {
+			is_courtier = yes
+			NOT = { age = 25 }
+		}
+		can_hold_title = title_cupbearer
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 0.1
+			traits = ambitious 
+		}
+	}
+
+	success = {
+		has_title = title_cupbearer
+	}
+	abort = {
+		OR = {
+			is_ruler = yes
+			AND = {
+				age = 25
+				is_courtier = no
+			}
+			NOT = { government = monarchy }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 10 
+	}
+}
+
+obj_become_title_huntsman = {
+	type = character 
+	allow = {
+		NOT = { has_title = title_huntsman }
+		government = monarchy 
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		is_ruler = no
+		NOT = { completed_objective = obj_become_title_huntsman }
+		OR = {
+			is_courtier = yes
+			NOT = { age = 25 }
+		}
+		can_hold_title = title_huntsman
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 0.1
+			traits = ambitious 
+		}
+	}
+
+	success = {
+		has_title = title_huntsman
+	}
+	abort = {
+		OR = {
+			is_ruler = yes
+			AND = {
+				age = 25
+				is_courtier = no
+			}
+			NOT = { government = monarchy }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 10 
+	}
+}
+
+obj_become_title_seneschal = {
+	type = character 
+	allow = {
+		NOT = { has_title = title_seneschal }
+		government = monarchy 
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		is_ruler = no
+		NOT = { completed_objective = obj_become_title_seneschal }
+		OR = {
+			is_courtier = yes
+			NOT = { age = 25 }
+		}
+		can_hold_title = title_seneschal
+	}
+
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 0.1
+			traits = ambitious 
+		}
+	}
+
+	success = {
+		has_title = title_seneschal
+	}
+	abort = {
+		OR = {
+			is_ruler = yes
+			AND = {
+				age = 25
+				is_courtier = no
+			}
+			NOT = { government = monarchy }
+		}
+	}
+	
+	effect = {
+		family_prestige = 5
+		loyalty = 10 
+	}
+}
+
+obj_become_title_physician = {
+	type = character 
+	allow = {
+		NOT = { has_title = title_physician }
+		government = monarchy 
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		is_ruler = no
+		NOT = { completed_objective = obj_become_title_physician }
+		OR = {
+			is_courtier = yes
+			NOT = { age = 25 }
+		}
+		can_hold_title = title_physician
+	}
+
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			NOT = { prominence = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 0.1
+			traits = ambitious 
+		}
+	}
+
+	success = {
+		has_title = title_physician
+	}
+	abort = {
+		OR = {
+			is_ruler = yes
+			AND = {
+				age = 25
+				is_courtier = no
+			}
+			NOT = { government = monarchy }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 10 
+	}
+}
+
+obj_become_title_bodyguard = {
+	type = character
+	allow = {
+		NOT = { has_title = title_title_bodyguard }
+		NOT = { completed_objective = obj_become_title_bodyguard }
+		government = tribal
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		is_ruler = no
+		NOT = { age = 30 } 
+		can_hold_title = title_title_bodyguard
+	}
+	
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			military = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { family_prestige = 100 }
+		}
+		modifier = {
+			factor = 1.5
+			military = 7
+		}
+	}
+	success = {
+		has_title = title_bodyguard
+	}
+	abort = {
+		OR = {
+			age = 30
+			NOT = { government = tribal }
+		}
+	}
+	effect = {
+		family_prestige = 5
+		loyalty = 15
+	}
+}
+
+##################
+# Misc Ambitions
+##################
+
+obj_amass_wealth = {
+	type = character
+	allow = {
+		NOT = { wealth = 100 }
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 2.0
+			traits = corrupt
+		}
+	}
+	success = {
+		wealth = 500
+	}
+	effect = {
+		family_prestige = 25
+		popularity = 20
+		mercantile_conviction = 10
+	}
+}
+
+obj_have_a_son = {
+	type = character
+	allow = {
+		NOT = {
+			any_child = {
+				is_female = no
+			}
+		}
+		NOT = {
+			spouse = {
+				is_female = yes
+				age = 45
+			}
+		}
+		NOT = {
+			is_female = yes
+			age = 45
+		}
+	}
+	abort = {
+		OR = {
+			spouse = {
+				is_female = yes
+				age = 45
+			}
+			AND = {
+				is_female = yes
+				age = 45
+			}
+		}
+	}
+
+
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 2.0
+			traits = loving
+		}
+	}
+	success = {
+		any_child = {
+			is_female = no
+		}
+	}
+	abort = {
+		age = 45
+	}
+	effect = {
+		family_prestige = 5
+		religious_conviction = 3
+	}
+}
+
+obj_get_married = {
+	type = character
+	allow = {
+		is_married = no
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			traits = cold
+		}
+		modifier = {
+			factor = 0.1
+			traits = chaste
+		}
+		modifier = {
+			factor = 2.0
+			traits = lustful
+		}
+		modifier = {
+			factor = 2.0
+			traits = loving
+		}
+	}
+	success = {
+		is_married = yes
+	}
+	effect = {
+		family_prestige = 5
+		religious_conviction = 1
+	}
+}
+
+obj_marry_ruler = {
+	type = character
+	allow = {
+		is_female = yes
+		is_married = no
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0.1
+			traits = chaste
+		}
+		modifier = {
+			factor = 2.0
+			traits = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			traits = lustful
+		}
+	}
+	success = {
+		is_married = yes
+		spouse = {
+			is_ruler = yes
+		}
+	}
+	effect = {
+		family_prestige = 25
+		change_charisma = 1
+	}
+}
+
+obj_exile_rival = {
+	type = rivals
+	allow = {
+		THIS = { has_job = no }
+		THIS = { is_courtier = no }
+		THIS = { is_female = no }
+		OR = {
+			has_job = yes
+			is_courtier = yes
+		}
+	}
+	chance = {
+		factor = 200
+		modifier = {
+			factor = 2.0
+			traits = vengeful 
+		}
+		modifier = {
+			factor = 0.5
+			traits = forgiving
+		}
+		modifier = {
+			factor = 2.0
+			traits = ambitious 
+		}
+	}
+	success = {
+		is_banished = yes 
+	}
+	abort = {
+		NOT = {
+			is_rival = THIS
+		}
+	}
+	effect = {
+		THIS = { family_prestige = 20 }
+		THIS = { loyalty = 10  }
+		any_child = {
+			limit = {
+				can_get_rivals = yes
+			}
+			add_rival = THIS
+		}
+		any_sibling = {
+			limit = {
+				can_get_rivals = yes 
+			}
+			add_rival = THIS
+		}
+	}
+}
+
+obj_death = {
+	type = rivals
+	allow = {
+		THIS = { age = 16}
+		THIS = { wealth = 500 }
+	}
+	chance = {
+		factor = 500
+		modifier = {
+			factor = 2.0
+			traits = vengeful 
+		}
+		modifier = {
+			factor = 0.5
+			traits = forgiving
+		}
+		modifier = {
+			factor = 2.0
+			traits = ambitious 
+		}
+	}
+	success = {
+		is_alive = no
+	}
+	abort = {
+		NOT = {
+			is_rival = THIS
+		}
+	}
+	effect = {
+	}
+}
+
+obj_help_friend_job = {
+	type = friends
+	allow = {
+		OR = {
+			gender_equality = yes
+			is_female = no
+		}
+		
+		has_job = no 
+		age = 16
+		THIS = { has_job = yes  }
+	}
+	chance = {
+		factor = 200
+	}
+	success = {
+		OR = {
+			has_job = yes
+			is_courtier = yes
+		}
+	}
+	abort = {
+		NOT = { is_friend = THIS }
+	}
+	effect = {
+		THIS = { family_prestige = 20 }
+		THIS = { loyalty = 10  }
+	}
+}
+
+obj_help_friend_prison = {
+	type = friends
+	allow = {
+		prisoner = yes
+		THIS = { has_job = yes  }
+	}
+	chance = {
+		factor = 200
+	}
+	success = {
+		prisoner = no
+		is_alive = yes
+	}
+	abort = {
+		NOT = { is_friend = THIS }
+	}
+	effect = {
+		THIS = { family_prestige = 20 }
+		THIS = { loyalty = 10  }
+	}
+}
+		
+#################################################
+# Country ambitions for the Councillors/Clan Chiefs
+#################################################
+obj_war_with_country = {
+	type = neighbor_countries
+	allow = {
+		NOT = { war_with = THIS }
+		THIS = {
+			OR = {
+				is_courtier = yes
+				is_clan_chief = yes
+			}
+			country = {
+				OR = {
+					government = monarchy
+					government = tribal
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 200
+		modifier = {
+			factor = 2.0
+			traits = brave
+		}
+		modifier = {
+			factor = 0.05
+			traits = coward
+		}
+	}
+	success = {
+		war_with = THIS
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_cities = 1 }
+			THIS = {
+				is_courtier = no
+				is_clan_chief = no
+			}
+		}
+	}
+	effect = {
+		family_prestige = 20
+		loyalty = 40
+	}
+	
+	monthly_character_loyalty = -0.1
+}
+
+obj_ally_with_country = {
+	type = neighbor_countries
+	allow = {
+		NOT = { war_with = THIS }
+		NOT = { alliance_with = THIS }
+		THIS = {
+			OR = {
+				is_courtier = yes
+				is_clan_chief = yes
+			}
+			country = {
+				OR = {
+					government = monarchy
+					government = tribal
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 200
+		modifier = {
+			factor = 2.0
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { charisma = 4 }
+		}
+	}
+	success = {
+		alliance_with = THIS
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_cities = 1 }
+			THIS = {
+				is_courtier = no
+				is_clan_chief = no
+			}
+		}
+	}
+	effect = {
+		family_prestige = 20
+		loyalty = 40
+	}
+	
+	monthly_character_loyalty = -0.1
+	
+}
+
+obj_build_army = {
+	type = neighbor_countries
+	allow = {
+		NOT = { war_with = THIS }
+		army = THIS
+		THIS = {
+			OR = {
+				is_courtier = yes
+				is_clan_chief = yes
+			}
+			country = {
+				OR = {
+					government = monarchy
+					government = tribal
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 200
+		modifier = {
+			factor = 2.0
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { charisma = 4 }
+		}
+	}
+	success = {
+		NOT = { army = THIS }
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_cities = 1 }
+			THIS = {
+				is_courtier = no
+				is_clan_chief = no
+			}
+		}
+	}
+	
+	effect = {
+		family_prestige = 20
+		loyalty = 40
+	}
+	
+	monthly_character_loyalty = -0.1
+	
+}
+
+obj_build_navy = {
+	type = neighbor_countries
+	allow = {
+		NOT = { war_with = THIS }
+		navy = THIS
+		num_of_ports = 1
+		THIS = {
+			OR = {
+				is_courtier = yes
+				is_clan_chief = yes
+			}
+			country = {
+				OR = {
+					government = monarchy
+					government = tribal
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 200
+		modifier = {
+			factor = 2.0
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { charisma = 4 }
+		}
+	}
+	success = {
+		NOT = { navy = THIS }
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_cities = 1 }
+			THIS = {
+				is_courtier = no
+				is_clan_chief = no
+			}
+		}
+	}
+	
+	effect = {
+		family_prestige = 20
+		loyalty = 40
+	}
+	
+	monthly_character_loyalty = -0.1
+	
+}

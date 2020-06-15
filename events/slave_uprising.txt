@@ -1,0 +1,496 @@
+province_event = {
+
+	id = 4900
+
+	trigger = {
+		owner = {
+			OR = {
+				any_province = {
+					OR = {
+						controlled_by = REB
+						controlled_by = BAR
+					}
+				}
+				war = yes
+			}
+		}
+		is_capital = no 
+		controlled_by = owner
+		revolt_risk = 1
+		slaves = 25
+	}
+
+	mean_time_to_happen = {
+
+		months = 800
+		
+		modifier = {
+			civilization_value = 80
+			factor = 0.9
+		} 
+		modifier = {
+			civilization_value = 60
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.1
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			slaves = 0.3
+			factor = 0.9
+		}
+		modifier = {
+			slaves = 0.5
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = just	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = corrupt
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			}
+			factor = 1.1
+		}
+		modifier = {
+			revolt_risk = 2
+			factor = 0.9
+		}
+		modifier = {
+			revolt_risk = 5
+			factor = 0.8
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+	}
+
+	title = "EVTNAME4900"
+	desc = "EVTDESC4900"
+
+	option = {
+		
+		name = "EVTOPTA4900"
+		random_list = {
+			30 = {
+				slaves = -2
+				create_revolt = 5
+			}
+			40 = {
+				slaves = -6
+				create_revolt = 15
+			}
+			30 = {
+				slaves = -10
+				create_revolt = 25 
+				governor_scope = {
+					death = yes
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+
+	id = 4901
+
+	trigger = {
+
+		slaves = 3
+		controlled_by = REB
+		has_siege = no
+		units_in_province = 1
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+
+		modifier = {
+			civilization_value = 90
+			factor = 0.9
+		} 
+		modifier = {
+			civilization_value = 80
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4901"
+	desc = "EVTDESC4901"
+
+	option = {
+
+		name = "EVTOPTA4901"
+		slaves = -2
+		create_revolt = 10
+	}
+}
+
+province_event = {
+
+	id = 4902
+	
+	trigger = {
+
+		has_building = irrigation
+		controlled_by = REB
+		has_siege = no
+		units_in_province = 1
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+
+		modifier = {
+			civilization_value = 90
+			factor = 0.9
+		} 
+		modifier = {
+			civilization_value = 80
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4902"
+	desc = "EVTDESC4902"
+
+	option = {
+		name = "EVTOPTA4902"
+		remove_building = irrigation
+	}
+}
+
+province_event = {
+
+	id = 4903
+
+	trigger = {
+		
+		slaves = 4
+		any_neighbor_province = {
+			controlled_by = REB
+			has_siege = no
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60
+		
+		modifier = {
+			civilization_value = 90
+			factor = 0.9
+		} 
+		modifier = {
+			civilization_value = 80
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.1
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = just	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = corrupt
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			}
+			factor = 1.1
+		}
+		modifier = {
+			revolt_risk = 2
+			factor = 0.9
+		}
+		modifier = {
+			revolt_risk = 5
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4903"
+	desc = "EVTDESC4903"
+
+	option = {
+		
+		name = "EVTOPTA4903"
+		random_list = {
+			33 = {
+				slaves = -1
+				create_revolt = 4
+			}
+			33 = {
+				slaves = -2
+				create_revolt = 10
+			}
+			33 = {
+				slaves = -3
+				create_revolt = 20
+			}
+		}
+	}
+}
+
+country_event = {
+
+	id = 4904
+
+	trigger = {
+		has_country_flag = propose_land_reform
+		any_province = {
+			slaves = 10
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+		modifier = {
+			popularity = 70
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 80
+			factor = 0.9
+		}
+		modifier = {
+			popularity = 90
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 40 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 20 }
+			factor = 1.1
+		}
+		modifier = {
+			traits = just
+			factor = 0.9
+		}
+		modifier = {
+			traits = arbitrary
+			factor = 1.1
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4904"
+	desc = "EVTDESC4904"
+	
+	option = {
+
+		name = "EVTOPTA4904"
+		random_province = {
+			limit = {
+				slaves = 10 
+			}
+			slaves = -3
+			freedmen = 3
+		}
+	}
+}	
+	
+country_event = {
+
+	id = 4905
+
+	trigger = {
+		has_country_flag = propose_land_reform
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+		modifier = {
+			popularity = 70
+			factor = 1.1
+		}
+		modifier = {
+			popularity = 80
+			factor = 1.1
+		}
+		modifier = {
+			popularity = 90
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { popularity = 40 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 30 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 20 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = just
+			factor = 1.1
+		}
+		modifier = {
+			traits = arbitrary
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 0.9
+		}
+		modifier = {
+			traits = righteous
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4905"
+	desc = "EVTDESC4905"
+	
+	option = {
+
+		name = "EVTOPTA4905"
+		clr_country_flag = propose_land_reform
+	}
+}	
+		

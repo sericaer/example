@@ -1,0 +1,489 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+
+#these names can NOT be removed or changes, as the code uses them....
+
+##########################################################################
+# Difficulty Modifiers
+##########################################################################
+
+very_easy_player = {
+
+	global_manpower_modifier = 0.3
+	build_cost = -0.6
+	global_revolt_risk = -1
+	ruler_popularity_gain = 1
+}
+
+easy_player = {
+	global_manpower_modifier = 0.15
+	build_cost = -0.3
+	global_revolt_risk = -0.5
+	ruler_popularity_gain = 0.5
+}
+
+hard_player = {
+	discipline = -0.15
+	global_tax_modifier = -0.1
+	global_revolt_risk = 0.5
+	global_manpower_modifier = -0.15
+}
+
+very_hard_player = {
+	discipline = -0.3
+	global_tax_modifier = -0.2
+	global_revolt_risk = 1
+	global_manpower_modifier = -0.3
+}
+
+
+
+
+very_easy_ai = {
+	land_morale = -0.25
+	naval_morale = -0.25
+
+}
+
+easy_ai = {
+
+}
+
+hard_ai = {
+	land_morale = 0.25
+	naval_morale = 0.25
+	global_tax_modifier = 0.5
+        global_revolt_risk = -0.5
+
+}
+
+very_hard_ai = {
+	land_morale = 0.5
+	naval_morale = 0.5
+	global_tax_modifier = 1
+        global_revolt_risk = -1
+
+}
+
+
+##########################################################################
+# Provincial Static Modifiers
+##########################################################################
+
+province_base_values = {
+	local_trade_routes = 1
+}
+
+
+overseas = {
+	local_tax_modifier = -0.3		#30% penalty if overseas.
+	local_regiment_recruit_speed = 0.5		#50% longer time to build troops
+	local_ship_recruit_speed = 0.5		#100% longer time to build troops
+}
+
+barbarian_power = {
+	barbarian_spawn_chance = 0.05		#5
+	local_tax_modifier = -0.05
+	local_manpower_modifier = -0.05
+}
+
+civilization_value = {
+	local_research_points_modifier = 0.01		#1% for each.
+	barbarian_spawn_chance = -0.01			#1% for each.
+	supply_limit = 0.03				#5 supply limit at very max civ
+}
+
+no_governor = {
+	local_tax_modifier = -0.5		#severe tax penalty.
+	local_research_points_modifier = -0.25	#severe research penalty.
+}
+
+corruption = {
+	local_tax_modifier = 1			#100% tax bonus with max corruption
+	local_research_points_modifier = -0.25	#25% penalty on research
+	local_manpower_modifier = -0.5		#50% penalty on manpower.
+	local_revolt_risk = 5			#high revolt risk at max.
+}
+
+coastal = {
+
+}
+
+non_coastal = {
+}
+
+coastal_sea = {
+}
+
+tropical = {
+	local_population_growth = -0.08		#Harsh population growth
+	attrition = 5				#Attrition increased by 5 weights
+	max_attrition = 5			#Maximum Attrition is increased by 5
+}
+
+sea_zone = {
+	max_attrition = 5			#Maximum Attrition is 5
+}
+
+land_province = {
+	max_attrition = 5			#Maximum Attrition is 5
+	stability_cost = 5			#stability cost
+	garrison_growth = 0.1			#10% base growth
+}
+
+
+mild_winter = {
+	attrition = 2				#Attrition increased by 2 weights
+	max_attrition = 2			#Maximum Attrition is increased by 2
+}
+
+normal_winter = {
+	attrition = 5				#Attrition increased by 5 weights
+	max_attrition = 5			#Maximum Attrition is increased by 5
+}
+
+severe_winter = {
+	attrition = 10				#Attrition increased by 10 weights
+	max_attrition = 10			#Maximum Attrition is increased by 10
+}
+
+out_of_supply = 
+{
+	max_attrition = 10			#Maximum Attrition is increased by 10
+}
+
+blockaded = 
+{
+	local_tax_modifier = -0.75		#75% penalty if blockaded
+}
+
+no_adjacent_controlled = {
+}
+
+
+
+
+city_population = {
+	supply_limit = 0.1				#10 pop = +1 supply limit
+}
+
+
+
+core = {
+}
+
+
+same_culture_group = {
+	local_tax_modifier = -0.3		#30% penalty if same culture group but nothing else.
+	local_manpower_modifier = -0.6		#-60% penalty.mod
+}
+
+non_accepted_culture = {
+	local_tax_modifier = -0.6			#60% penalty if different culture
+	local_manpower_modifier = -1.0			#100% penalty on manpower.
+	local_revolt_risk = 1				#1% revolt risk!
+}
+
+different_religion = {
+	local_tax_modifier = -0.3		#30% penalty if different religion and not in same group
+	stability_cost = 1			#5$ more expensive for each province
+	local_revolt_risk = 1			#1% revolt risk!
+	local_manpower_modifier = -0.1		#10% penalty on manpower, Mod
+}
+
+same_religion_group = {
+	local_tax_modifier = -0.1		#10% penalty if different religion but same group
+	stability_cost = 0.5			#2.5$ more expensive for each province
+	local_revolt_risk = 0.5			#0.5% revolt risk!
+	local_manpower_modifier = -0.05		#5% penalty on manpower, Mod
+}
+
+
+occupied = {
+	local_population_growth = -0.03		#3% penalty if occupied by enemies
+	local_revolt_risk = 2			#2% revolt risk!
+	garrison_growth = -0.05			#5% penalty on growth
+}
+
+under_siege = {
+	local_population_growth = -0.03		#3% penalty if occupied by enemies
+}
+
+looted = {
+	local_population_growth = -0.05		#5% penalty if looted
+	max_attrition = 5			#Maximum Attrition is increased by 5
+	local_tax_modifier = -0.5		#50% less tax income.
+}
+
+
+
+revolt_risk = {
+	local_tax_modifier = -0.02		#-2% for each rr
+	local_regiment_recruit_speed = 0.1		#10% longer time to build troops for each rr
+}
+
+nationalism = {
+	local_revolt_risk = 0.3			#0.3% for each year revolt risk!
+	minimum_revolt_risk = 0.3		#0.3% for each year revolt risk!
+}
+
+manpower = {
+	garrison_growth = 0.01			#1% increase from manpower.
+}
+
+foreign_rebels = {
+	local_revolt_risk = 6			#5% revolt risk
+	icon = 1
+}
+
+desecrated = {
+	local_religious_prestige = -0.5		#-50% religions prestige
+	icon = 1
+}
+
+# Values are multiplied with the number of regional cohorts in the region ( capped at 20.)
+regional_troops = {
+	local_revolt_risk = -0.25
+	minimum_revolt_risk = -0.125
+}
+
+# Multiplied by the land tech level
+land_tech_level = {
+	militia_discipline = 0.02
+	heavy_infantry_discipline = 0.02
+	archers_discipline = 0.02
+	cavalry_discipline = 0.02
+	horse_archers_discipline = 0.02
+	warelephant_discipline = 0.02
+}
+
+# Multiplied by the naval tech level
+naval_tech_level = {
+	trireme_discipline = 0.02
+}
+
+# Multiplied by the construction tech level
+construction_tech_level = {
+	civilization_spread = 0.02
+}
+
+# Multiplied by the civic tech level
+civic_tech_level = {
+	diplomatic_missions = 0.01
+}
+
+# Multiplied by the civic tech level
+religious_tech_level = {
+	stability_cost_modifier = -0.01
+}
+
+
+##########################################################################
+# Character Static Modifiers
+##########################################################################
+loyal_cohorts = {
+	monthly_character_loyalty = -0.15
+	monthly_character_popularity = 0.05
+	monthly_character_fam_prestige = 0.01
+}
+
+non_loyal_cohorts = {
+	monthly_character_loyalty = 0.05
+	monthly_character_fam_prestige = 0.01
+}
+
+same_family_as_ruler = {
+	monthly_character_prominence = 0.01
+}
+
+same_party_as_ruler = {
+	monthly_character_loyalty = 1
+}
+
+not_from_ruler_party = {
+	monthly_character_loyalty = -0.1
+}
+
+friend_of_ruler = {
+	monthly_character_loyalty = 1
+}
+
+rival_of_ruler = {
+	monthly_character_loyalty = -1
+}
+
+# Applied in Republics for unemployed adult males with an Ambition to get a job of some kind
+unemployed_adult_male = {
+	monthly_character_loyalty = -0.1
+	monthly_populist_conviction = 0.05
+}
+
+border_governor = {
+#	monthly_military_conviction = 0.05
+}
+
+core_governor = {
+#	monthly_mercantile_conviction = 0.05
+}
+
+has_holdings_mod = {
+#	mercantile_conviction = 5
+#	civic_conviction = 20
+#	monthly_civic_conviction = 0.5
+}
+
+# Applied for adults. Multiplied by current wealth / 100
+character_wealth_mod = {
+#	mercantile_conviction = 1
+}
+
+# Adults: Multiplied by Finesse - 5.
+static_finesse_mod = {
+}
+
+# Adults: Multiplied by Charisma - 5.
+static_charisma_mod = {
+	monthly_character_popularity = 0.05
+}
+
+# Adults: Multiplied by Martial - 5.
+static_martial_mod = {
+}
+
+##########################################################################
+# Global Static Modifiers
+##########################################################################
+
+base_values = {
+	omen_power = 1.0			#1.0 is base.
+	omen_chance = 0.30			#30% chance as base.
+	experience_decay = 0.03			#3% of current.
+	land_organisation = 0.2			#20% morale recovery.
+	naval_organisation = 0.2		#20% morale recovery.
+	max_friends = 2
+	max_rivals = 2
+	tribute_income_modifier = 0.6	#Base tribute modifier, 60%
+	badboy = -0.5					#reduce by about 0.5 each year
+	tyranny = -0.25					#reduce by about 0.25 each year
+}
+
+
+stability = {
+	global_revolt_risk = -1			#-1% revolt risk each step
+}
+
+positive_stability = {
+	global_tax_modifier = 0.1		#10% for each positive stab
+}
+
+negative_stability = {
+	global_revolt_risk = -1			#-1% EXTRA revolt risk each step
+}
+
+
+war = {
+	max_war_exhaustion = 10			#base max at war.
+	war_exhaustion = 0.041			#about 1/24 increase each month
+}
+
+# Used if in a civil war. Superceded by 'war' if also in a regular war.
+civil_war = {
+	max_war_exhaustion = 8			#base max at war.
+	war_exhaustion = 0.031			
+	ruler_popularity_gain = -0.15}
+
+peace = {
+	max_war_exhaustion = 10			#base max at peace.
+	war_exhaustion = -0.1			# -1.2 per year
+}
+
+war_exhaustion = {
+	global_revolt_risk = 1			#increase revolt risk with 1 for each warexhaust..
+}
+
+# Multiplied by the current Infamy value
+badboy = {
+	stability_cost_modifier = 0.01			# 1% more expensive for each.
+}
+
+# Multiplied by the current Tyranny value
+tyranny = {
+	global_revolt_risk = 0.2
+	research_points_modifier = -0.02
+	ruler_popularity_gain = -0.05
+}
+
+land_maintenance = {
+	land_morale = 2.0
+	military_influence = 4
+}
+
+naval_maintenance = {
+	naval_morale = 2.0
+	military_influence = 1
+	mercantile_influence = 3
+}
+
+# Modifiers for the five parties. Applied when the ruler belongs to the party. 
+# Balanced against the country modifiers from the four Minister titles for monarchies.
+ruler_party_military = {
+	naval_morale = 0.3
+	land_morale = 0.3
+	land_organisation = 0.3
+}
+
+ruler_party_mercantile = {
+	trade_income_modifier = 0.2
+	diplomatic_missions = 0.2
+                civilization_spread = 0.1
+}
+
+ruler_party_religious = {
+	stability_cost_modifier = -0.1
+                global_religious_prestige = 0.1
+	omen_chance = 0.1
+}
+
+ruler_party_civic = {
+	build_cost = -0.25
+	build_time = -0.25
+	global_tax_modifier= 0.25
+}
+
+ruler_party_populist = {
+	global_revolt_risk = 0.5
+	slaves_to_freedmen = 0.1
+	global_manpower_modifier = 0.2
+}
+
+#If the ruler's popularity is above 60,
+#Multiplied by: (Ruler Popularity - 60) / 10
+ruler_popularity_mod = {
+	global_revolt_risk = -0.2
+	monthly_character_loyalty = 0.01
+}
+
+#If the ruler's popularity is below 60,
+#Multiplied by: (Ruler Popularity - 60) / 10
+ruler_unpopularity_mod = {
+	global_revolt_risk = -1.0
+	monthly_character_loyalty = 0.1
+}
+
+# If a Councillor or Clan Chief has had an ambition for 5 years, this will start to apply.
+# DISABLED for now
+ignored_courtier_objective = {
+	monthly_character_loyalty = -0.2
+}
+
+# Applies for the second and third in line of succession in monarchies
+pretender_modifier = {
+	monthly_character_loyalty = -0.2
+}
+
+# name is a bit of a hack due to text freeze
+GIVE_FREE_HANDSTITLE = {
+	local_revolt_risk = 2
+}

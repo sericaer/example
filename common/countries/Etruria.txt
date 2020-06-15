@@ -1,0 +1,33 @@
+civil_war_faction = ET2
+graphical_culture = romangfx
+color = { 120 32 37 }
+color2 = { 255 223 240 }
+
+ship_names = {
+	Tin
+	Uni
+	Turan
+	Turms
+	Velchans
+	Menerva
+	Nethuns
+	Apulu
+	Aritimi
+	Charun
+	Herkle
+	Northia
+	Voltumna
+	Pomona
+	Ani
+	Fufluns
+	Aita
+	Tuchulka
+	Atunis
+	Evan
+	Vanth
+	Achle
+	Menle
+	Athrpa
+	Pesce
+	Larth
+}

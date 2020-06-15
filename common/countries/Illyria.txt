@@ -1,0 +1,16 @@
+civil_war_faction = IL2
+graphical_culture = greekgfx
+color = { 163  134  184 }
+color2 = { 21 155 250 }
+
+ship_names = {
+	Bardhylli Bato Broket
+	Genusus Glaukias
+	Mikon
+	Ou
+	Korrotos
+	Pleuratus
+	Redo
+	Shkumbe
+	Zeau
+}

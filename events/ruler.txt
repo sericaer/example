@@ -1,0 +1,940 @@
+country_event = {
+
+	id = 540 
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = dictatorship
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+		war = no 
+		has_civil_war = no
+		any_character = {
+			from_ruler_family = yes 
+			has_more_prestige_than_ruler = yes 
+			age = 16 
+		}
+	}
+
+	title = "EVTNAME540"
+	desc = "EVTDESC540"
+
+	option = {
+		name = "EVTOPTA540"
+		ruler = {
+			death = yes 
+		}
+		random_character = {
+			limit = {
+				from_ruler_family = yes 
+				has_more_prestige_than_ruler = yes 
+				age = 16 
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+
+country_event = {
+
+	id = 541
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = dictatorship
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+		war = no 
+		has_civil_war = no
+		any_character = {
+			NOT = { loyalty = 30 }
+			location = { 
+				owned_by = THIS 
+				controlled_by = THIS
+			}
+			sibling = yes 
+		}
+		num_of_cities = 15
+	}
+
+	title = "EVTNAME541"
+	desc = "EVTDESC541"
+
+	option = {
+		name = "EVTOPTA541"				# Crush them!
+		stability = -1
+		random_character = {
+			limit = {
+				NOT = { loyalty = 30 }
+				location = { 
+					owned_by = THIS 
+					controlled_by = THIS
+				}
+				sibling = yes 
+			}
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				owned_by = this
+				controlled_by = this
+				is_capital = no
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+			change_unit_allegiance = civil_war_faction
+		}
+	}
+}
+
+country_event = {
+
+	id = 542
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = military_republic
+			government = aristocratic_republic
+			government = oligarchic_republic
+			government = democratic_republic
+			government = republic_confederacy
+		}
+		war = no 
+		has_civil_war = no
+		any_character = {
+			wealth = 250
+			has_more_wealth_than_ruler = yes 
+			is_female = no 
+			age = 16 
+		}
+	}
+
+	title = "EVTNAME542"
+	desc = "EVTDESC542"
+
+	option = {
+		name = "EVTOPTA542"
+		random_character = {
+			limit = {
+				wealth = 250
+				has_more_wealth_than_ruler = yes 
+				is_female = no
+				age = 16 
+			}
+			set_ruler = yes 
+			random_list =  {
+				50 = {
+					wealth = -50
+				}
+				30 = {
+					wealth = -100
+				}
+				20 = {
+					wealth = -150 
+				} 
+			}
+		}
+	}
+}
+
+country_event = {
+
+	id = 543
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = military_republic
+			government = aristocratic_republic
+			government = oligarchic_republic
+			government = democratic_republic
+			government = republic_confederacy
+		}
+		war = no 
+		has_civil_war = no
+		num_of_cities = 15
+		any_character = {
+			any_rival = { is_ruler = yes }
+			in_command = yes
+			NOT = { loyalty = 50 }
+			traits = ambitious
+			num_of_loyal_cohorts = 2  
+			location = { 
+				owned_by = THIS 
+				controlled_by = THIS
+			}
+		}
+	}
+
+	title = "EVTNAME543"
+	desc = "EVTDESC543"
+
+	option = {
+		name = "EVTOPTA543"				# Crush them!
+		stability = -1
+		random_character = {
+			limit = {
+				any_rival = { is_ruler = yes }
+				in_command = yes
+				NOT = { loyalty = 50 }
+				num_of_loyal_cohorts = 2  
+				traits = ambitious
+				location = { 
+					owned_by = THIS 
+					controlled_by = THIS
+				}
+			}
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				owned_by = this
+				controlled_by = this
+				is_capital = no
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+			change_unit_allegiance = civil_war_faction
+		}
+	}
+}
+
+country_event = {
+
+	id = 544
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = dictatorship
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+		war = no 
+		has_civil_war = no
+		ruler = {
+			NOT = { age = 16 }
+		} 
+		any_character = {
+			from_ruler_family = yes
+			OR = { 
+				traits = ambitious
+				spouse = {
+					traits = ambitious
+				}
+			}
+			age = 16
+		}
+	}
+
+	title = "EVTNAME544"
+	desc = "EVTDESC544"
+
+	option = {
+		name = "EVTOPTA544"
+		ruler = {
+			loyalty = -20 
+		}
+		random_character = {
+			limit = {
+				from_ruler_family = yes 
+				OR = { 
+					traits = ambitious
+					spouse = {
+						traits = ambitious
+					}
+				}
+				age = 16
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+country_event = {
+
+	id = 545
+
+	is_triggered_only = yes 
+	
+	trigger = {
+		ai = yes 
+		OR = {
+			government = dictatorship
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+		war = no 
+		has_civil_war = no
+		previous_ruler = {
+			OR = {
+				from_ruler_family = yes
+				spouse = {
+					from_ruler_family = yes
+				}
+			}
+		}
+		NOT = { num_of_cities = 6 }
+		any_neighbor_country = {
+			num_of_cities = 15
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+	}
+	
+	title = "EVTNAME545"
+	desc = "EVTDESC545"
+
+	option = {
+		name = "EVTOPTA545"
+		random_country = {
+			limit = {
+				num_of_cities = 15
+				NOT = {
+					OR = {
+						government = military_tribe
+						government = religious_tribe
+						government = trade_tribe
+						government = civic_tribe
+					}
+				}
+			}
+			country_event = 546
+		}
+	}
+}
+
+country_event = {
+
+	id = 546
+
+	is_triggered_only = yes
+
+	title = "EVTNAME546"
+	desc = "EVTDESC546"
+
+	option = {
+		name = "EVTOPTA546"
+		inherit = FROM
+	}
+}	
+
+country_event = {
+
+	id = 547
+
+#	is_triggered_only = yes
+	trigger = {
+		government = dictatorship
+		NOT = {	ruler = {
+				or = {
+					traits = conqueror
+					traits = victorious
+					traits = ambitious
+					traits = tactician
+					traits = corrupt
+					traits = selfish
+				}
+			}
+                }
+
+	}
+
+	title = "EVTNAME547"
+	desc = "EVTDESC547"
+
+	option = {
+		name = "EVTOPTA547"
+		stability = 1
+		random_list = {
+			20 = {
+				government = military_republic
+			}
+			30 ={
+				government = aristocratic_republic
+			}
+			40 = {
+				government = oligarchic_republic
+			}
+			5 = {
+				government = democratic_republic
+			}
+			5 = {
+				government = republic_confederacy
+			}
+		}	
+	}
+}
+	
+country_event = {
+
+	id = 548
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = dictatorship
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+		war = no 
+		has_civil_war = no
+		previous_ruler = {
+			from_ruler_family = yes
+			NOT = { num_of_children = 1 }
+		}
+		any_character = {
+			from_ruler_family = yes
+			popularity = 50
+		}
+		num_of_cities = 15
+		
+	}
+
+	title = "EVTNAME548"
+	desc = "EVTDESC548"
+
+	option = {
+		name = "EVTOPTA548"
+		stability = -1
+		random_character = {
+			limit = {
+				from_ruler_family = yes
+				popularity = 50
+			}
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_character = {
+			limit = { is_ruler = no }
+			set_character_flag = rebel_side
+			move_character = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				owned_by = this
+				controlled_by = this
+				is_capital = no
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = this
+					controlled_by = this
+					is_capital = no
+				}
+				set_province_flag = rebel_side
+				secede_province = civil_war_faction
+				change_unit_allegiance = civil_war_faction
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+			change_unit_allegiance = civil_war_faction
+		}
+	}
+}	
+
+country_event = {
+
+	id = 549 
+	is_triggered_only = yes 
+	trigger = {
+		government = military_tribe
+		ruler = {
+			NOT = {
+				military = 4 
+			}
+		}
+		any_character = {
+			any_rival = { is_ruler = yes }
+			military = 4
+			age = 16 
+		}
+	}
+		
+	title = "EVTNAME549"
+	desc = "EVTDESC549"
+
+	option = {
+		name = "EVTOPTA549"
+		ruler = {
+			death = yes 
+		}
+		random_character = {
+			limit = {
+				any_rival = { is_ruler = yes }
+				military = 4 	
+				age = 16 	
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+country_event = {
+
+	id = 550 
+	is_triggered_only = yes 
+	trigger = {
+		government = religious_tribe
+		ruler = {
+			NOT = {
+				charisma = 4 
+			}
+		}
+		any_character = {
+			any_rival = { is_ruler = yes }
+			charisma = 4
+			age = 16 
+		}
+	}
+		
+	title = "EVTNAME550"
+	desc = "EVTDESC550"
+
+	option = {
+		name = "EVTOPTA550"
+		ruler = {
+			death = yes 
+		}
+		random_character = {
+			limit = {
+				any_rival = { is_ruler = yes }
+				charisma = 4 
+				age = 16 
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+country_event = {
+
+	id = 551 
+	is_triggered_only = yes 
+	trigger = {
+		government = trade_tribe
+		any_character = {
+			any_rival = { is_ruler = yes }
+			has_more_wealth_than_ruler = yes 
+			age = 16 
+		}
+	}
+		
+	title = "EVTNAME551"
+	desc = "EVTDESC551"
+
+	option = {
+		name = "EVTOPTA551"
+		ruler = {
+			death = yes 
+		}
+		random_character = {
+			limit = {
+				any_rival = { is_ruler = yes }
+				has_more_wealth_than_ruler = yes 
+				age = 16 
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+country_event = {
+
+	id = 552 
+	is_triggered_only = yes 
+	trigger = {
+		government = civic_tribe
+		ruler = {
+			NOT = {
+				finesse = 4 
+			}
+		}
+		any_character = {
+			any_rival = { is_ruler = yes }
+			finesse = 4
+			age = 16 
+		}
+	}
+		
+	title = "EVTNAME552"
+	desc = "EVTDESC552"
+
+	option = {
+		name = "EVTOPTA552"
+		ruler = {
+			death = yes 
+		}
+		random_character = {
+			limit = {
+				any_rival = { is_ruler = yes }
+				finesse = 4
+				age = 16  
+			}
+			set_ruler = yes 
+		}
+	}
+}
+
+# Player failed to assassinate one of his characters
+character_event = {
+	id = 560
+	
+	major_character = yes
+	
+	is_triggered_only = yes 
+	trigger = {
+		NOT = { traits = suspicious }
+	}
+		
+	title = "EVTNAME560"
+	desc = "EVTDESC560"
+
+	option = {
+		name = "EVTOPTA560"
+		add_trait = suspicious
+	}
+}
+
+# A female friend of the ruler gives birth to a royal bastard
+character_event = {
+	id = 561
+	
+	major_character = yes
+	
+	is_triggered_only = yes 
+	trigger = {
+		always = yes
+	}
+		
+	title = "EVTNAME561"
+	desc = "EVTDESC561"
+
+	option = {
+		name = "EVTOPTA561"
+		father = {
+			popularity = -5
+			spouse = {
+				add_trait = suspicious
+				loyalty = -20
+			}
+		}
+		mother = {
+			popularity = -20
+			spouse = {
+				add_trait = suspicious
+				loyalty = -20
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB561"
+		
+		family = father
+		
+		father = {
+			popularity = -10
+			spouse = {
+				random_list = {
+					50 = {
+						loyalty = -20
+						character_event = 562 # Blame the slut mother
+					}
+					50 = {
+						loyalty = -50 # Blame the king
+					}
+				}
+			}
+		}
+		mother = {
+			family_prestige = 20
+			popularity = -20
+			spouse = {
+				random_list = {
+					40 = {
+						character_event = 563 # Blame the king
+					}
+					40 = {
+						remove_spouse = yes # Blame the wife
+						loyalty = -20
+					}
+					20 = { # Forgive and forget
+						loyalty = -10
+					}
+				}
+			}
+		}
+	}
+}
+
+# The queen is pissed off
+character_event = {
+	id = 562
+	
+	major_character = yes
+	
+	is_triggered_only = yes 
+	
+	trigger = {
+		always = yes
+	}
+		
+	title = "EVTNAME562"
+	desc = "EVTDESC562"
+
+	option = {
+		name = "EVTOPTA562"
+		from = {
+			mother = {
+				remove_friend = THIS
+				add_rival = THIS
+			}
+		}
+	}
+}
+
+# The husband is pissed off
+character_event = {
+	id = 563
+	
+	major_character = yes
+	
+	is_triggered_only = yes 
+	trigger = {
+		always = yes
+	}
+		
+	title = "EVTNAME563"
+	desc = "EVTDESC563"
+
+	option = {
+		name = "EVTOPTA563"
+		loyalty = -50
+		country = {
+			ruler = {
+				remove_friend = THIS
+				add_rival = THIS
+			}
+		}
+	}
+}
+
+# A Bastard No More!
+character_event = {
+	id = 564
+	
+	major_character = yes
+	
+	trigger = {
+		has_title = title_bastard
+		is_ruler = yes
+		NOT = { father = { family = THIS } }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+		
+	title = "EVTNAME564"
+	desc = "EVTDESC564"
+
+	option = {
+		name = "EVTOPTA564"
+		family = father
+		popularity = 10
+		family_prestige = -20
+		any_child = {
+			family = this
+		}
+	}
+}

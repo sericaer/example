@@ -1,0 +1,20 @@
+civil_war_faction = BOS
+graphical_culture = greekgfx
+color = { 169  194  170 }
+color2 = { 78 35 5 }
+
+ship_names = {
+	"Ares Enualios" "Artemis Parthenos" "Artemis Tauria"
+	Borysthenes
+	"Dionysos Eubouleus" Doris
+	Gorgippia
+	Herakleotai Hermoca Hermonassa Hersones Hypanis
+	Kerkinitis Khersonesos Kimmericon
+	Leucon Lyncos
+	Nereus Nymphaion
+	Okyrhoe
+	Panticapeia Pairisades Perses Phanagoria "Poseidon Genethlios" Prytanis
+	Satyros Seleucos Spartokos
+	Tanais Theodosia
+	Tyras
+}

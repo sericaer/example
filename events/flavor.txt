@@ -1,0 +1,164 @@
+
+country_event = {
+		
+	id = 7050
+	
+	trigger = {
+		tag = EPI
+		exists = MAG
+		war_with = ROM
+		NOT = { has_country_flag = pyrrhus_ftw }
+	}	
+	
+	title = "EVTNAME7050"
+	desc = "EVTDESC7050"
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = pyrrhus_ftw
+	}
+
+	option = {
+		name = "EVTOPTA7050"
+		treasury = 100
+		stability = 1
+
+			warelephant = 98
+			cavalry = 98
+			cavalry = 98
+			heavy_infantry = 98
+			heavy_infantry = 98
+			heavy_infantry = 98
+			heavy_infantry = 98
+			heavy_infantry = 139
+			heavy_infantry = 139
+			archers = 98
+			archers = 98
+			archers = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+		trireme = 139
+	}
+}
+
+country_event = {
+		
+	id = 7051
+	
+	trigger = {
+		tag = TYL
+                year = 473
+		NOT = { year = 477 }
+		NOT = { has_country_flag = gallic_invasion }
+	}	
+	
+	title = "EVTNAME7051"
+	desc = "EVTDESC7051"
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = gallic_invasion
+	}
+
+	option = {
+		name = "EVTOPTA7051"
+		treasury = 100
+		stability = 1
+		ruler = {
+			cavalry = THIS
+			cavalry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+		 	heavy_infantry = THIS
+		 	heavy_infantry = THIS
+		 	heavy_infantry = THIS
+		 	heavy_infantry = THIS
+		 	heavy_infantry = THIS
+		 	heavy_infantry = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+		}
+	}
+}
+
+
+country_event = {
+		
+	id = 7052
+	
+	trigger = {
+		tag = TYL 
+                year = 473
+		NOT = { year = 480 }
+                war = no
+		NOT = { has_country_flag = gallic_invasion_1 }
+
+	}	
+	
+	title = "EVTNAME7052"
+	desc = "EVTDESC7052"
+	mean_time_to_happen = {
+		days = 72
+	}
+	
+	immediate = {
+		set_country_flag = gallic_invasion_1
+	}
+
+	option = {
+		name = "EVTNAME7052"
+		THIS = {
+			remove_core = 127
+		}
+		127 = { secede_province = DAR }
+		136 = { secede_province = DAR }
+		133 = { secede_province = ODR }
+		135 = { secede_province = ODR }
+	}
+}
+
+
+country_event = {
+		
+	id = 7053
+	
+	trigger = {
+		tag = CAR
+		ai = yes 
+		not = { owns = 101 }
+                war = no
+		NOT = { has_country_flag = car_invasion_1 }
+	}	
+	
+	title = "take_control_of_saguntum_title"
+	desc = "take_control_of_saguntum_desc"
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = car_invasion_1
+	}
+
+	option = {
+		name = "take_control_of_saguntum_title"
+		THIS = {
+			add_core = 14
+			add_core = 8
+		}
+	}
+}

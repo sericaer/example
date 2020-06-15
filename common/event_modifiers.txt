@@ -1,0 +1,498 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+
+lack_of_equipment = {
+	land_organisation = -0.1
+	icon = 4
+}
+
+blessed_by_the_gods = {
+	omen_chance = 0.15
+	icon = 5
+}
+
+raised_taxes = {
+	global_tax_modifier = 0.15
+	icon = 9
+}
+
+increased_morale = {
+	land_morale = 0.15
+	icon = 3
+}
+
+decreased_morale = {
+	land_morale = -0.15
+	icon = 4
+}
+
+demoralized_troops = {
+	discipline = -0.05
+	land_morale = -0.05	
+	icon = 4
+}
+
+high_tax_income = {
+	global_tax_modifier = 0.06
+	icon = 9
+}
+
+low_tax_income = {
+	global_tax_modifier = 0.03
+	icon = 9
+}
+
+renovated_temple = {
+	local_religious_prestige = 0.05
+	omen_chance = 0.1
+	icon = 5
+}
+
+damaged_temple = {
+	local_religious_prestige = -0.05
+	omen_chance = -0.1
+	icon = 6
+}
+
+small_military_reform = {
+	land_organisation = 0.1
+	global_regiment_recruit_speed = -0.1
+	icon = 3
+}
+
+salt_shortage = {
+	global_regiment_recruit_speed = 0.15
+	icon = 4
+}
+
+lack_of_iron = {
+	heavy_infantry_cost = 0.1
+	icon = 4
+}
+
+better_morale = {
+	cavalry_morale = 0.15
+	icon = 3
+}
+
+happy_citizens = {
+	global_revolt_risk = -1
+	icon = 1
+}
+
+cheaper_buildings = {
+	build_cost = -0.15
+	icon = 9
+}
+
+diminishing_trade = {
+	trade_income_modifier = -0.2
+	icon = 10
+}
+
+population_increase = {
+	global_population_growth = 0.1
+	icon = 9
+}
+
+trade_problems = {
+	trade_income_modifier = -0.15
+	icon = 10
+}
+
+elephant_charge = {
+	warelephant_morale = 0.15
+	icon = 9
+}
+
+strong_army = {
+	global_regiment_recruit_speed = -0.1
+	icon = 3
+}
+
+weak_army = {
+	global_regiment_recruit_speed = 0.1
+	icon = 4
+}
+
+excellent_commander = {
+	cavalry_morale = 0.1
+	icon = 3
+}
+
+incompetent_commander = {
+	cavalry_morale = -0.1
+	icon = 4
+}
+
+grand_fleet = {
+	global_ship_recruit_speed = -0.1
+	icon = 3
+}
+
+military_career = {
+	land_morale = 0.15
+	icon = 3
+}
+
+disorder_among_our_troops = {
+	land_morale = -0.15
+	icon = 4
+}
+
+better_organization = {
+	land_organisation = 0.1
+	icon = 3
+}
+
+recruitment_problems = {
+	global_regiment_recruit_speed = 0.1
+	icon = 4
+}
+
+successful_camps = {
+	regiment_reinforcement_speed = -0.1
+	icon = 3
+}
+
+unsuccessful_camps = {
+	land_morale = -0.08
+	icon = 4
+}
+
+military_prowess = {
+	cavalry_discipline = 0.08
+	icon = 3
+}
+
+obsolete_tactics = {
+	siege_speed = 0.2
+	icon = 4
+}
+
+invaluable_experience = {
+	discipline = 0.2
+	icon  = 3
+}
+
+imported_ideas = {
+	movement_cost = -0.2
+	icon = 3
+}
+
+neglected_navy = {
+	naval_morale = -0.08
+	land_morale = 0.04
+	icon = 4
+}
+
+changed_focus = {
+	land_morale = -0.08
+	naval_morale = 0.04
+	icon = 4
+}
+
+disorganized_troops = {
+	land_organisation = -0.08
+	icon = 4
+}
+
+superior_tactics = {
+	militia_offensive = 0.1
+	icon = 3
+}
+
+inferior_tactics = {
+	militia_offensive = -0.1
+	icon = 4
+}
+
+political_consensus = {
+	ruler_popularity_gain = 0.05
+	icon = 1
+}
+
+political_disagreements = {
+	global_revolt_risk = 1
+	icon = 2
+}
+
+political_unity = {
+	ruler_popularity_gain = 0.05
+	icon = 2
+}
+
+political_clash = {
+	global_revolt_risk = 1
+	icon = 2
+}
+
+deliberate_deceptiveness = {
+	diplomatic_missions = 0.08
+	icon = 1
+}
+
+philosophical_advancements = {
+	research_points_modifier = 0.15
+	icon = 1
+}
+
+political_chaos = {
+	research_points_modifier = -0.06
+	icon = 2
+}
+
+stability_increase = {
+	stability_cost_modifier = -0.2
+	icon = 1
+}
+
+angry_mob = {
+	global_revolt_risk = 0.01
+	icon = 2
+}
+
+increased_efficiency = {
+	blockade_efficiency = 0.1
+	icon = 3
+}
+
+high_inefficiency = {
+	militia_cost = 0.1
+	icon = 3
+}
+
+naval_advancements = {
+	naval_morale = 0.1
+	icon = 3
+}
+
+naval_focus = {
+	land_morale = -0.1
+	icon = 4
+}
+
+dishonest_tax_collectors = {
+	stability_cost_modifier = 0.2
+	icon = 2	
+}
+
+building_exceeds_expectations = {
+	build_cost = -0.04
+	build_time = -0.08	
+	icon = 9
+}
+
+responsible_leaders = {
+	research_points_modifier = 0.15
+	icon = 1
+}
+
+disagreements_between_leaders = {
+	stability_cost_modifier = 0.08
+	icon = 2
+}
+
+improved_trading_conditions = {
+	global_tax_modifier= 0.08
+	icon = 9
+}
+
+reduced_building_cost = {
+	build_cost = -0.1
+	icon = 9
+}
+
+lack_of_material = {
+	build_cost = 0.1
+	icon = 10
+}
+
+reduced_recruitment_cost = {
+	militia_cost = -0.1
+	icon = 3
+}
+
+increased_support = {
+	stability_cost_modifier = -0.2
+	icon = 1
+}
+
+ignored_omen = {
+	stability_cost_modifier = 0.2
+	icon = 2
+}
+
+social_unrest = {
+	global_revolt_risk = 0.01
+	icon = 2
+}
+
+trust_in_the_gods = {
+	global_tax_modifier = -0.05
+	icon = 5
+}
+
+failure_to_interpret_omen = {
+	omen_failure_penalty = -0.2
+	icon = 5
+}
+
+tolerant_society = {
+	research_points_modifier = 0.15
+	icon = 1
+}
+
+religious_superiority = {
+	research_points_modifier = 0.1
+	icon = 1
+}
+
+temple_in_ruins = {
+	omen_chance = -0.2
+	icon = 6
+}
+
+religious_minorities = {
+	global_revolt_risk = 0.01
+	icon = 2
+}
+
+new_philosophical_ideas = {
+	research_points_modifier = 0.15
+	icon = 1
+}
+
+religious_discussion = {
+	omen_chance = 0.1
+	icon = 5
+}
+
+one_priest_too_many = {
+	omen_chance = -0.1
+	icon = 6
+}
+
+new_followers = {
+	local_religious_prestige = 0.15
+	icon = 5
+}
+
+lack_of_followers = {
+	local_religious_prestige = -0.1
+	icon = 6
+}
+
+stick_to_old_ways = {
+	land_morale = 0.5
+	research_points_modifier = -0.25
+	icon = 1
+}
+
+outside_influences = {
+	land_morale = -0.5
+	research_points_modifier = 0.25
+	icon = 1
+}
+
+governor_tax_increase = {
+	local_tax_modifier = 0.5
+	local_revolt_risk = 3
+	icon = 10
+}
+
+disgruntled_freemen = {
+	local_revolt_risk = 5
+	icon = 2
+}
+
+via_aurelia_exists = {
+	land_organisation = 0.04
+	global_regiment_recruit_speed = -0.08
+	build_cost = 0.08
+	icon = 3
+}
+
+extended_road_network = {
+	land_organisation = 0.04
+	global_regiment_recruit_speed = -0.06
+	build_cost = 0.08
+	icon = 3
+}
+
+army_reforms = {
+	global_manpower_modifier = 0.05
+	land_organisation = 0.08
+	maintenance_cost = 0.08
+	icon = 3
+}
+
+the_lighthouse_of_alexandria = {
+	naval_morale = 0.1
+	stability_cost_modifier = -0.04
+	global_tax_modifier = -0.04
+	icon = 3
+}
+
+patronice_research = {
+	civilization_spread = 0.05
+	ruler_popularity_gain = 0.04
+	technology_cost = 0.06
+	icon = 1
+}
+
+embrace_the_egyptian_religion = {
+	omen_chance = 0.1
+	global_religious_prestige = 0.04
+	omen_power = -0.06
+	icon = 5
+}
+
+carthaginian_mercenary_armies = {
+# 	global_regiment_recruit_speed = -0.04
+	maintenance_cost = -0.1
+	land_organisation = -0.05
+	icon = 3
+}
+
+standardized_ship_production = {
+	global_ship_recruit_speed = -0.04
+	trireme_cost = -0.1
+	naval_organisation = -0.04
+	icon = 3
+}
+
+encourage_spread_of_greek_culture = {
+	civilization_spread = 0.05
+	global_religious_prestige = 0.04
+	stability_cost_modifier = 0.06
+	icon = 1
+}
+
+gladiatorial_games = {
+	global_revolt_risk = -2
+	global_tax_modifier = -0.05
+	icon = 1
+}
+
+#Army mutiny modifiers
+army_mutiny = {
+	global_revolt_risk = -2
+	land_morale = -0.2
+	movement_cost = 0.2
+	icon = 2
+}
+
+#Modifier to force a wait between diploannexation attempts
+diploannexation_declined = {
+	icon = 2
+}
+
+
+recently_migrated = {
+	land_organisation = -0.1
+	global_tax_modifier = -0.2
+	stability_cost_modifier = 0.3
+	icon = 2
+}

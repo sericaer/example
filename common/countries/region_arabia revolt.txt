@@ -1,0 +1,4 @@
+civil_war_faction = QAB
+region = region_arabia
+color = { 0 80 0 }
+color2 = { 255 255 255 }

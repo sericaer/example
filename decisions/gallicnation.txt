@@ -1,0 +1,51 @@
+country_decisions = {
+	gallic_nation = {
+		potential = {
+			or = {
+				tag = AED	# Aedui
+				tag = ARV	# Arverni
+				tag = ATR	# Atrebates
+				tag = AUL	# Aulerci
+				tag = CRN	# Carnutes
+				tag = HLV	# Helvetii
+				tag = LEM	# Lemovices
+				tag = NRV	# Nervii
+				tag = PRS	# Parisii
+				tag = SEQ	# Sequani
+				tag = EBU
+				tag = RYM
+				tag = sil	
+			}
+			not = { exists = GAU }
+			culture = celtic
+		}
+		allow = {
+			or = {
+				and = {
+					owns = 33		# Arverni
+					owns = 34		# Lemovices
+					owns = 43		# Carnutes
+					owns = 67		# Sequani
+					owns = 68		# Aedui
+				}
+				and = {
+					owns = 38		# Aulerci
+					owns = 43		# Carnutes
+					owns = 45		# Parisii
+					owns = 47		# Atrebates
+					owns = 68		# Aedui
+				}
+			}
+		}
+		effect = {
+			capital_scope = { civilization_value  = 5 }
+			change_tag = GAU
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

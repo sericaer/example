@@ -1,0 +1,20 @@
+civil_war_faction = LY2
+graphical_culture = greekgfx
+color = { 190  212  195 }
+color2 = { 49 156 75 }
+
+ship_names = {
+	Akalisseus Antiphellos Aperlai Apollonia "Apollo Patareus" Arneai Arycanda "Athena Chalinitis" "Athena Polias"
+	Balbura Bellerophontes Bubon
+	Calynda Candyba Choma Corydalla
+	"Hephaistos Olympios" Hieron
+	Khimaira Kragos Kyaneai
+	"Leto Koiogeneia" Limyra
+	Masikytes Myra
+	Oinoanda Olympos
+	Patara Pataros Pegasos Perikles Phaselis Phellos Pinara Podalia
+	Rhodiapolis
+	Telmessos Termessos Tlos Trabala Tymenos
+	Xanthos
+	"Zeus Olympios"
+}

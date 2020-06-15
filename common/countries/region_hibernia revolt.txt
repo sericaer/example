@@ -1,0 +1,4 @@
+civil_war_faction = QHI
+region = region_hibernia
+color = { 50 180 50 }
+color2 = { 0 80 0 }

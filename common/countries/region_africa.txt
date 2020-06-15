@@ -1,0 +1,4 @@
+civil_war_faction = QA4
+region = region_africa
+color = { 100 90 10 }
+color2 = { 50 30 0 }

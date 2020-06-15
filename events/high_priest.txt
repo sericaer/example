@@ -1,0 +1,1779 @@
+# Temple on fire!
+country_event = {
+
+	id = 2500
+
+	trigger = {
+		any_province = { has_building = temple }
+		any_character = {
+			has_office = religious_tech
+			not = { traits = corrupt }
+			or = {
+				traits = silver_tongued
+				traits = lapsed
+				traits = arbitrary
+				traits = incapable
+				traits = dumb
+				traits = generous
+				traits = selfish
+				traits = deceitful
+				traits = reckless
+				traits = shrewd
+				traits = foolish
+				traits = gluttonous
+				traits = ambitious
+				traits = rash
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = generous }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = pious }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = zealous }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = devout }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = benefactor }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = lapsed }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = selfish }
+		}
+	}
+
+	title = "EVTNAME2500"
+
+	desc = "EVTDESC2500"
+
+	option = {
+		name = "EVTOPTA2500"					# It's of the highest priority
+		treasury = -40
+		add_country_modifier = {
+			name = "renovated_temple"
+			duration = 730
+		}
+	}
+	option = {
+		name = "EVTOPTB2500"					# Our financial situation is a little stretched right now
+		add_country_modifier = {
+			name = "damaged_temple"
+			duration = 730
+		}
+	}
+}
+
+# Omen Interpretation
+country_event = {
+
+	id = 2501
+
+	trigger = {
+		has_omen = yes
+		is_omen_failure = no
+		stability = -2
+		any_character = {
+			has_office = religious_tech
+			not = { finesse = 3 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { finesse = 7 }
+		}
+	}
+
+	title = "EVTNAME2501"
+
+	desc = "EVTDESC2501"
+
+	option = {
+		name = "EVTOPTA2501"					# Do I have to do their job to?
+		stability = -1
+	}
+	option = {
+		name = "EVTOPTB2501"					# Declare that it's a good omen regardless
+		random_character = {
+			limit = {
+				has_office = religious_tech
+				not = { finesse = 3 }
+			}
+			popularity = -30
+		}		
+		random = {
+			chance = 30
+			stability = -1
+		}		
+	}
+}
+
+# Trust Issues
+country_event = {
+
+	id = 2502
+
+	trigger = {
+		has_omen = yes
+		is_omen_failure = yes
+		any_character = {
+			has_office = religious_tech
+			is_female = no
+			not = { loyalty = 50 }
+		}
+		any_character = {
+			not = { has_office = religious_tech }
+			can_hold_title = title_religious_tech
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = assertive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = proud }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = confident }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = steadfast }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = aggressive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = narrowminded }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { any_rival = { has_office = religious_tech } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = submissive }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = cautious }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = guileless }
+		}
+	}
+
+	title = "EVTNAME2502"
+
+	desc = "EVTDESC2502"
+
+	option = {
+		name = "EVTOPTA2502"					# Appoint a new high priest
+		random_character = {
+			limit = { has_office = religious_tech }
+			popularity = -20
+		}
+		random_character = {
+			limit = { can_hold_title = title_religious_tech }
+			assign_office = religious_tech
+		}
+	}
+	option = {
+		name = "EVTOPTB2502"					# I should never have doubted him
+		ruler = {
+			add_trait = honest
+			change_finesse = -1
+		}
+	}
+}
+
+# Trust Issues
+country_event = {
+
+	id = 2503
+
+	trigger = {
+		has_omen = yes
+		is_omen_failure = yes
+		any_character = {
+			has_office = religious_tech
+			is_female = yes
+			not = { loyalty = 50 }
+		}
+		any_character = {
+			not = { has_office = religious_tech }
+			can_hold_title = title_religious_tech
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = assertive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = proud }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = confident }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = steadfast }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = aggressive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = narrowminded }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { any_rival = { has_office = religious_tech } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = submissive }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = cautious }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = guileless }
+		}
+	}
+
+	title = "EVTNAME2503"
+
+	desc = "EVTDESC2503"
+
+	option = {
+		name = "EVTOPTA2503"					# Appoint a new high priest
+		random_character = {
+			limit = { has_office = religious_tech }
+			popularity = -20
+		}
+		random_character = {
+			limit = {  can_hold_title = title_religious_tech }
+			assign_office = religious_tech
+		}
+	}
+	option = {
+		name = "EVTOPTB2503"					# I should never have doubted her
+		ruler = {
+			add_trait = honest
+			change_finesse = -1
+		}
+	}
+}
+
+# Neglected Duties
+country_event = {
+
+	id = 2504
+
+	trigger = {
+		any_character = {
+			has_office = religious_tech
+			not = { popularity = 50 }
+			is_female = no
+		}
+		ruler = {
+			not = { traits = trusting }
+			not = { traits = suspicious }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = pious }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = devout }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = just }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = forgiving }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = guileless }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = lapsed }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = lazy }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = content }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 7 }
+		}
+	}
+
+	title = "EVTNAME2504"
+
+	desc = "EVTDESC2504"
+
+	option = {
+		name = "EVTOPTA2504"					# Give him a warning
+		random_character = {
+			limit = { has_office = religious_tech }
+			popularity = -20
+		}
+		ruler = { change_finesse = 1 }
+	}
+	option = {
+		name = "EVTOPTB2504"					# There's no need
+		ruler = {
+			add_trait = trusting
+			loyalty = 10
+		}
+	}
+}
+
+# Neglected Duties
+country_event = {
+
+	id = 2505
+
+	trigger = {
+		any_character = {
+			has_office = religious_tech
+			not = { popularity = 50 }
+			is_female = yes
+		}
+		ruler = {
+			not = { traits = trusting }
+			not = { traits = suspicious }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = pious }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = devout }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = just }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = forgiving }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = guileless }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = lapsed }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = lazy }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = content }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 7 }
+		}
+	}
+
+	title = "EVTNAME2505"
+
+	desc = "EVTDESC2505"
+
+	option = {
+		name = "EVTOPTA2505"					# Give her a warning
+		random_character = {
+			limit = { has_office = religious_tech }
+			popularity = -20
+		}
+		ruler = { change_finesse = 1 }
+	}
+	option = {
+		name = "EVTOPTB2505"					# There's no need
+		ruler = {
+			add_trait = trusting
+			loyalty = 10
+		}
+	}
+}
+
+# Inspiring Priest
+country_event = {
+
+	id = 2506
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		any_character = {
+			has_office = religious_tech
+			finesse = 9
+			is_female = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME2506"
+
+	desc = "EVTDESC2506"
+
+	option = {
+		name = "EVTOPTA2506"					# Our society wouldn't be the same without him
+		religious_tech = 500
+	}
+}
+
+# Inspiring Priest
+country_event = {
+
+	id = 2507
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		any_character = {
+			has_office = religious_tech
+			finesse = 9
+			is_female = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.9
+			charisma = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME2507"
+
+	desc = "EVTDESC2507"
+
+	option = {
+		name = "EVTOPTA2507"					# Our society wouldn't be the same without her
+		religious_tech = 500
+	}
+}
+
+character_event = {
+
+	id = 2508
+
+	trigger = {
+		has_office = religious_tech
+		country = {
+			ruler = {
+				NOT = { is_friend = THIS }
+			}
+			has_omen = no 
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60 
+		
+		modifier = {
+			country = {
+				ruler = {
+					is_rival = THIS
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 50 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 40 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 30 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 20 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { loyalty = 10 } 
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy
+			factor = 2
+		}
+		modifier = {
+			traits = ambitious
+			factor = 0.9
+		}
+	}
+
+
+	title = "EVTNAME2508"
+	desc = "EVTDESC2508"
+
+	option = {
+	
+		name  = "EVTOPTA2508"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				finesse = 7
+				factor = 1.1
+			}
+			modifier = {
+				finesse = 8 
+				factor = 1.1
+			}
+			modifier = {
+				finesse = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { finesse = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	finesse = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { finesse = 1 }
+				factor = 0.9
+			}
+		}
+		country = {
+			country_event = 2509
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTB2508"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 8 
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 0.9
+			}
+		}
+		country = {
+			country_event = 2510
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTC2508"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				traits = coward
+				factor = 1.1
+			}
+			modifier = {
+				traits = brave 
+				factor = 0.9
+			}	
+			modifier = {
+				country = {
+					war = yes
+				}
+				factor = 1.1
+			}
+			modifier = {
+				military = 7
+				factor = 1.1
+			}
+			modifier = {
+				military = 8 
+				factor = 1.1
+			}
+			modifier = {
+				military = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2511
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTD2508"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				traits = coward
+				factor = 1.1
+			}
+			modifier = {
+				traits = brave 
+				factor = 0.9
+			}	
+			modifier = {
+				country = {
+					war = yes
+				}
+				factor = 1.1
+			}
+			modifier = {
+				military = 7
+				factor = 1.1
+			}
+			modifier = {
+				military = 8 
+				factor = 1.1
+			}
+			modifier = {
+				military = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2512
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTE2508"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				finesse = 7
+				factor = 1.1
+			}
+			modifier = {
+				finesse = 8 
+				factor = 1.1
+			}
+			modifier = {
+				finesse = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { finesse = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	finesse = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { finesse = 1 }
+				factor = 0.9
+			}
+			modifier = {
+				traits = sceptical
+				factor = 1.1
+			}
+			modifier = {
+				traits = pious
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2513
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTF2508"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 8 
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 0.9
+			}
+			modifier = {
+				traits = chaste
+				factor = 1.1
+			}
+			modifier = {
+				traits = lustful
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2514
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTG2508"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				military = 7
+				factor = 1.1
+			}
+			modifier = {
+				military = 8 
+				factor = 1.1
+			}
+			modifier = {
+				military = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 0.9
+			}
+			modifier = {
+				traits = conqueror
+				factor = 1.1
+			}
+			modifier = {
+				traits = maimed
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2515
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTH2508"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 8 
+				factor = 1.1
+			}
+			modifier = {
+				charisma = 9 
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 0.9
+			}
+			modifier = {
+			country = {
+				ruler = {
+					is_rival = THIS
+				}
+			}
+			factor = 2
+		}
+		}
+		country = {
+			country_event = 2516
+		}
+	}
+}
+
+country_event = {
+
+	id = 2509
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME2509"
+	desc = "EVTDESC2509"
+
+	option = {
+		name = "EVTOPTA2509"
+		omen_bad = divine_trade
+	}
+}	
+ 
+country_event = {
+
+	id = 2510
+
+	is_triggered_only = yes
+	
+
+	title = "EVTNAME2510"
+	desc = "EVTDESC2510"
+
+	option = {
+	
+		name  = "EVTOPTA2510"
+		omen_bad = divine_calm
+	}
+}	
+
+country_event = {
+
+	id = 2511
+
+	is_triggered_only = yes
+
+
+	title = "EVTNAME2511"
+	desc = "EVTDESC2511"
+
+	option = {
+	
+		name  = "EVTOPTA2511"
+		omen_bad = divine_discipline
+	}
+}	
+
+country_event = {
+
+	id = 2512
+
+	is_triggered_only = yes 
+
+
+	title = "EVTNAME2512"
+	desc = "EVTDESC2512"
+
+	option = {
+	
+		name  = "EVTOPTA2512"
+		omen_bad = divine_morale
+	}
+}	
+
+country_event = {
+
+	id = 2513
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2513"
+	desc = "EVTDESC2513"
+
+	option = {
+	
+		name  = "EVTOPTA2513"
+		omen_bad = divine_research
+	}
+}	
+
+country_event = {
+
+	id = 2514
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2514"
+	desc = "EVTDESC2514"
+
+	option = {
+	
+		name  = "EVTOPTA2514"
+		omen_bad = divine_fertility
+	}
+}	
+
+country_event = {
+
+	id = 2515
+
+	is_triggered_only = yes 
+
+
+	title = "EVTNAME2515"
+	desc = "EVTDESC2515"
+
+	option = {
+	
+		name  = "EVTOPTA2515"
+		omen_bad = divine_defence
+	}
+}	
+
+country_event = {
+
+	id = 2516
+
+	is_triggered_only = yes 
+
+	title = "EVTNAME2516"
+	desc = "EVTDESC2516"
+
+	option = {
+	
+		name  = "EVTOPTA2516"
+		omen_bad = divine_ruler
+	}
+}
+
+character_event = {
+
+	id = 2517
+
+	trigger = {
+		has_office = religious_tech
+		country = {
+			ruler = {
+				NOT = { is_rival = THIS }
+			}
+			has_omen = no 
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60 
+		
+		modifier = {
+			country = {
+				ruler = {
+					is_rival = friend
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			loyalty = 50
+			factor = 0.9
+		}
+		modifier = {
+			loyalty = 60
+			factor = 0.9
+		}
+		modifier = {
+			loyalty = 70
+			factor = 0.9
+		}
+		modifier = {
+			loyalty = 80
+			factor = 0.9
+		}
+		modifier = {
+			loyalty = 90
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy
+			factor = 2
+		}
+		modifier = {
+			traits = content
+			factor = 0.9
+		}
+	}
+
+
+	title = "EVTNAME2517"
+	desc = "EVTDESC2517"
+
+	option = {
+	
+		name  = "EVTOPTA2517"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				finesse = 7
+				factor = 0.9
+			}
+			modifier = {
+				finesse = 8 
+				factor = 0.9
+			}
+			modifier = {
+				finesse = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { finesse = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	finesse = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { finesse = 1 }
+				factor = 1.1
+			}
+		}
+		country = {
+			country_event = 2518
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTB2517"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 8 
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 1.1
+			}
+		}
+		country = {
+			country_event = 2519
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTC2517"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				traits = coward
+				factor = 1.1
+			}
+			modifier = {
+				traits = brave 
+				factor = 0.9
+			}	
+			modifier = {
+				country = {
+					war = yes
+				}
+				factor = 0.9
+			}
+			modifier = {
+				military = 7
+				factor = 0.9
+			}
+			modifier = {
+				military = 8 
+				factor = 0.9
+			}
+			modifier = {
+				military = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 1.1
+			}	
+		}
+		country = {
+			country_event = 2520
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTD2517"
+		ai_chance = {
+			factor = 12.5
+			modifier = {
+				traits = coward
+				factor = 1.1
+			}
+			modifier = {
+				traits = brave 
+				factor = 0.9
+			}	
+			modifier = {
+				country = {
+					war = yes
+				}
+				factor = 0.9
+			}
+			modifier = {
+				military = 7
+				factor = 0.9
+			}
+			modifier = {
+				military = 8 
+				factor = 0.9
+			}
+			modifier = {
+				military = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 1.1
+			}	
+		}
+		country = {
+			country_event = 2521
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTE2517"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				finesse = 7
+				factor = 0.9
+			}
+			modifier = {
+				finesse = 8 
+				factor = 0.9
+			}
+			modifier = {
+				finesse = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { finesse = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	finesse = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { finesse = 1 }
+				factor = 1.1
+			}
+			modifier = {
+				traits = sceptical
+				factor = 1.1
+			}
+			modifier = {
+				traits = pious
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2522
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTF2517"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 8 
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 1.1
+			}
+			modifier = {
+				traits = chaste
+				factor = 1.1
+			}
+			modifier = {
+				traits = lustful
+				factor = 0.9
+			}	
+		}
+		country = {
+			country_event = 2523
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTG2517"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				military = 7
+				factor = 0.9
+			}
+			modifier = {
+				military = 8 
+				factor = 0.9
+			}
+			modifier = {
+				military = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { military = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	military = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { military = 1 }
+				factor = 1.1
+			}
+			modifier = {
+				traits = conqueror
+				factor = 0.9
+			}
+			modifier = {
+				traits = maimed
+				factor = 1.1
+			}	
+		}
+		country = {
+			country_event = 2524
+		}
+	}
+	option = {
+	
+		name  = "EVTOPTH2517"
+		ai_chance = {
+			factor = 12.5 
+			modifier = {
+				charisma = 7
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 8 
+				factor = 0.9
+			}
+			modifier = {
+				charisma = 9 
+				factor = 0.9
+			}
+			modifier = {
+				NOT = { charisma = 3 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {	charisma = 2 }
+				factor = 1.1
+			}
+			modifier = {
+				NOT = { charisma = 1 }
+				factor = 1.1
+			}
+			modifier = {
+			country = {
+				ruler = {
+					is_friend = THIS
+				}
+			}
+			factor = 2
+		}
+		}
+		country = {
+			country_event = 2525
+		}
+	}
+}
+
+country_event = {
+
+	id = 2518
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME2518"
+	desc = "EVTDESC2518"
+
+	option = {
+		name = "EVTOPTA2518"
+		omen_good = divine_trade
+	}
+}	
+ 
+country_event = {
+
+	id = 2519
+
+	is_triggered_only = yes
+	
+
+	title = "EVTNAME2519"
+	desc = "EVTDESC2519"
+
+	option = {
+	
+		name  = "EVTOPTA2519"
+		omen_good = divine_calm
+	}
+}	
+
+country_event = {
+
+	id = 2520
+
+	is_triggered_only = yes
+
+
+	title = "EVTNAME2520"
+	desc = "EVTDESC2520"
+
+	option = {
+	
+		name  = "EVTOPTA2520"
+		omen_good = divine_discipline
+	}
+}	
+
+country_event = {
+
+	id = 2521
+
+	is_triggered_only = yes 
+
+
+	title = "EVTNAME2521"
+	desc = "EVTDESC2521"
+
+	option = {
+	
+		name  = "EVTOPTA2521"
+		omen_good = divine_morale
+	}
+}	
+
+country_event = {
+
+	id = 2522
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2522"
+	desc = "EVTDESC2522"
+
+	option = {
+	
+		name  = "EVTOPTA2522"
+		omen_good = divine_research
+	}
+}	
+
+country_event = {
+
+	id = 2523
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2523"
+	desc = "EVTDESC2523"
+
+	option = {
+	
+		name  = "EVTOPTA2523"
+		omen_good = divine_fertility
+	}
+}	
+
+country_event = {
+
+	id = 2524
+
+	is_triggered_only = yes 
+
+
+	title = "EVTNAME2524"
+	desc = "EVTDESC2524"
+
+	option = {
+	
+		name  = "EVTOPTA2524"
+		omen_good = divine_defence
+	}
+}	
+
+country_event = {
+
+	id = 2525
+
+	is_triggered_only = yes 
+
+	title = "EVTNAME2525"
+	desc = "EVTDESC2525"
+
+	option = {
+	
+		name  = "EVTOPTA2525"
+		omen_good = divine_ruler
+	}
+}
+

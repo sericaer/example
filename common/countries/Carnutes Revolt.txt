@@ -1,0 +1,16 @@
+civil_war_faction = CRN
+graphical_culture = celticgfx
+color = { 167  206  182 }
+color2 = { 68 66 163 }
+
+ship_names = {
+	Acionna Agedincon Allauna Ambigatos Atura Autricon Avara
+	Bebros Belloveso
+	Carobriva Cenabo
+	Dunon Durocassion
+	Eburobriga Etnosos
+	Ioina
+	Magdunon
+	Orgos
+	Salera Salioclita
+}

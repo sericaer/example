@@ -1,0 +1,4 @@
+civil_war_faction = QB5
+region = region_baetica
+color = { 120 120 220 }
+color2 = { 40 40 90 }

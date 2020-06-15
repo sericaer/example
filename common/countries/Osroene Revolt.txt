@@ -1,0 +1,19 @@
+civil_war_faction = OSR
+graphical_culture = persiangfx
+color = { 195 195 131 }
+
+ship_names = {
+	Adar Amardad Aneran Ard "Arda-Fravash" Ardibehesht Ashtad Asman Avan
+	Bahman Barzo Behram
+	"Dae-pa-Adar" "Dae-pa-Din" Daham Din
+	Erman
+	Ghosh Govad
+	Hom
+	Khordad Korshed
+	Marespand Meher Mithra Mohor
+	Ormuzd
+	Ram Rashn
+	Shehrevar Sorush Spendarmad
+	Tir
+	Zamyad Zarathoustra
+}

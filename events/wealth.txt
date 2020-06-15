@@ -1,0 +1,492 @@
+# Business Venture Gone South - wealth > 300
+character_event = {
+
+	id = 7500
+
+	trigger = {
+		age = 16
+		not = { finesse = 3 }
+		not = { traits = sceptical }
+		not = { traits = intelligent }
+		not = { traits = cautious }
+		not = { traits = shrewd }
+		not = { traits = self_controlled }
+		not = { traits = modest }
+		not = { traits = suspicious }
+		not = { traits = content }
+		not = { traits = wise }
+		not = { traits = disciplined }
+		wealth = 300
+	}
+		
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = incapable
+		}
+		modifier = {
+			factor = 0.9
+			traits = selfish
+		}
+		modifier = {
+			factor = 0.9
+			traits = dumb
+		}
+		modifier = {
+			factor = 0.9
+			traits = reckless
+		}
+		modifier = {
+			factor = 0.9
+			traits = foolish
+		}
+		modifier = {
+			factor = 0.9
+			traits = ambitious
+		}
+		modifier = {
+			factor = 0.9
+			traits = trusting
+		}
+		modifier = {
+			factor = 0.9
+			traits = rash
+		}
+		modifier = {
+			factor = 0.9
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.9
+			traits = maniac
+		}
+	}
+
+	title = "EVTNAME7500"
+
+	desc = "EVTDESC7500"
+
+	option = {
+		name = "EVTOPTA7500"					# Sometimes you have to take your chances
+		ai_chance = { factor = 50 }
+		random_list = {
+			50 = { wealth = -50	}
+			50 = { wealth = -200 }
+		}
+	}
+	option = {
+		name = "EVTOPTB7500"					# Ahhh...why does this keep happening
+		ai_chance = { factor = 50 }
+		wealth = -100
+	}
+}
+
+# Drained Economy - wealth > 300
+character_event = {
+
+	id = 7501
+
+	trigger = {
+		country = { war = yes }
+		is_ruler = no
+		age = 16
+		wealth = 300
+	}
+		
+	mean_time_to_happen = {
+		months = 216
+
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 6 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7501"
+
+	desc = "EVTDESC7501"
+
+	option = {
+		name = "EVTOPTA7501"					# This has to end soon
+		wealth = -200
+	}
+}
+
+
+# Business Venture Gone South - wealth < 300
+character_event = {
+
+	id = 7502
+
+	trigger = {
+		age = 16
+		not = { finesse = 3 }
+		not = { traits = sceptical }
+		not = { traits = intelligent }
+		not = { traits = cautious }
+		not = { traits = shrewd }
+		not = { traits = self_controlled }
+		not = { traits = modest }
+		not = { traits = suspicious }
+		not = { traits = content }
+		not = { traits = wise }
+		not = { traits = disciplined }
+		not = { wealth = 300 }
+	}
+		
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			traits = incapable
+		}
+		modifier = {
+			factor = 0.9
+			traits = selfish
+		}
+		modifier = {
+			factor = 0.9
+			traits = dumb
+		}
+		modifier = {
+			factor = 0.9
+			traits = reckless
+		}
+		modifier = {
+			factor = 0.9
+			traits = foolish
+		}
+		modifier = {
+			factor = 0.9
+			traits = ambitious
+		}
+		modifier = {
+			factor = 0.9
+			traits = trusting
+		}
+		modifier = {
+			factor = 0.9
+			traits = rash
+		}
+		modifier = {
+			factor = 0.9
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.9
+			traits = maniac
+		}
+	}
+
+	title = "EVTNAME7500"
+
+	desc = "EVTDESC7500"
+
+	option = {
+		name = "EVTOPTA7500"					# Sometimes you have to take your chances
+		ai_chance = { factor = 50 }
+		random_list = {
+			50 = { wealth = -25 }
+			50 = { wealth = -75 }
+		}
+	}
+	option = {
+		name = "EVTOPTB7500"					# Ahhh...why does this keep happening
+		ai_chance = { factor = 50 }
+		wealth = -50
+	}
+}
+
+# Drained Economy - wealth < 300
+character_event = {
+
+	id = 7503
+
+	trigger = {
+		country = { war = yes }
+		is_ruler = no
+		age = 16
+		wealth = 300
+	}
+		
+	mean_time_to_happen = {
+		months = 216
+
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { war_exhaustion = 6 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			country = { stability = 3 }
+		}
+	}
+
+	title = "EVTNAME7501"
+
+	desc = "EVTDESC7501"
+
+	option = {
+		name = "EVTOPTA7501"					# This has to end soon
+		wealth = -50
+	}
+}
+
+character_event = {
+
+	id = 7504 
+
+	trigger = {
+		NOT = { wealth = 0 }
+		country = {
+			any_character = {
+				is_friend = THIS
+				wealth = 500
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 70
+		
+		modifier = {
+			traits = abrasive
+			factor = 1.1
+		}
+		modifier = {
+			traits = good_natured
+			factor = 0.95
+		}
+		modifier = {
+			traits = generous
+			factor = 0.95
+		}
+		modifier = {
+			traits = selfish
+			factor = 1.1
+		}
+		modifier = {
+			traits = honest
+			factor = 0.95
+		}
+		modifier = {
+			traits = deceitful
+			factor = 1.1
+		}
+		modifier = {
+			traits = arrogant
+			factor = 1.1
+		}
+		modifier = {
+			traits = modest
+			factor = 0.95
+		}
+	}
+
+	title = "EVTNAME7504"
+
+	desc = "EVTDESC7504"
+
+	option = {
+		name = "EVTOPTA7504"
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+					wealth = 500
+				}
+			character_event = 7505
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 7505
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME7505"
+	desc = "EVTDESC7505"
+	
+	option = {
+		name = "EVTOPTA7505"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				traits = generous 
+				factor = 1.1
+			}
+		}
+		wealth = -250 
+		FROM = {
+			character_event = 7506
+		}
+	}
+	option = {
+		name = "EVTOPTB7505"
+		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				traits = selfish  
+				factor = 5
+			}
+		}
+		FROM = {
+			character_event = 7507
+		}
+	}
+}
+
+character_event = {
+	
+	id = 7506
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7506"
+	desc = "EVTDESC7506"
+
+	option = {
+		name = "EVTOPTA7506"
+		wealth = 250
+	}
+}
+
+character_event = {
+
+	id = 7507
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7507"
+	desc = "EVTDESC7507"
+
+	option = {
+		name = "EVTOPTA7507"
+		remove_friend = FROM
+		add_rival = FROM
+	}
+}
+
+# Ruler in Need of Money
+character_event = {
+
+	id = 7508
+
+	trigger = {
+		is_ruler = yes
+		age = 16
+		not = { wealth = 150 }
+		not = { traits = proud }
+		not = { traits = humble }
+		not = { traits = shrewd }
+		not = { traits = foolish }
+		country = {
+			not = { has_country_flag = ruler_in_need_of_money }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			not = { wealth = 100 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { wealth = 50 }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { treasury = 50 } }
+		}
+		modifier = {
+			factor = 0.9
+			country = { not = { treasury = 25 } }
+		}
+		modifier = {
+			factor = 2.0
+			country = { treasury = 200 }
+		}
+		modifier = {
+			factor = 2.0
+			country = { treasury = 400 }
+		}
+		modifier = {
+			factor = 2.0
+			country = { treasury = 600 }
+		}
+	}
+
+	title = "EVTNAME7508"
+
+	desc = "EVTDESC7508"
+
+	option = {
+		name = "EVTOPTA7508"					# It doesn't seem that suspicious to me
+		ai_chance = { factor = 50 }
+		country = { set_country_flag = ruler_in_need_of_money }
+		random_list = {
+			70 = { wealth = 250	}
+			30 = { add_trait = foolish }
+		}
+	}
+	option = {
+		name = "EVTOPTB7508"					# I don't need his gifts
+		ai_chance = { factor = 50 }
+		country = { set_country_flag = ruler_in_need_of_money }
+		add_trait = proud
+	}
+}

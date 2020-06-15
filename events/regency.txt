@@ -1,0 +1,724 @@
+
+character_event = {
+
+	id = 4800
+	
+	major_character = yes
+
+	trigger = {
+		is_ruler = yes 
+		NOT = { age = 16 }
+		NOT = { finesse = 6 }
+		NOT = { traits = arbitrary }
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			treasury = 50
+			any_character = {
+				OR = {
+					has_office = land_tech
+					has_office = naval_tech
+					has_office = civic_tech
+					has_office = construction_tech
+					has_office = religious_tech
+				}
+				finesse = 5
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			age = 13
+			factor = 1.1
+		}
+		modifier = {
+			age = 14
+			factor = 1.1
+		}
+		modifier = {
+			age = 15
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { age = 5 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 5
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = just
+			factor = 1.1
+		}
+ 		modifier = {
+			traits = righteous
+			faCtor = 1.1
+		}
+	}
+
+	title = "EVTNAME4800"
+	desc = "EVTDESC4800"
+
+	option = {
+		
+		name = "EVTOPTA4800"
+		country = {
+			treasury = -25
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					finesse = 5
+					traits = corrupt
+				}
+				wealth = 25
+				loyalty = 10
+			}
+		}
+	}
+
+	option = {
+		
+		name = "EVTOPTB4800"
+		add_trait = arbitrary	
+		country = {
+			treasury = -25
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					finesse = 5
+					traits = corrupt
+				}
+				wealth = 25
+			}
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+				}
+				death = yes
+			}
+		}
+	}
+
+	option = {
+
+		name = "EVTOPTC4800"
+		add_trait = corrupt 
+		wealth = 25
+		country = {
+			treasury = -50
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					finesse = 5
+					traits = corrupt
+				}
+				wealth = 25
+				loyalty = 5
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4801 
+	
+	major_character = yes
+
+	trigger = {
+		is_ruler = yes 
+		NOT = { age = 16 }
+		NOT = { charisma = 6 }
+		NOT = { traits = selfish }
+		wealth = 100
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				OR = {
+					has_office = land_tech
+					has_office = naval_tech
+					has_office = civic_tech
+					has_office = construction_tech
+					has_office = religious_tech
+				}
+				finesse = 5
+				charisma = 5
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			age = 13
+			factor = 1.1
+		}
+		modifier = {
+			age = 14
+			factor = 1.1
+		}
+		modifier = {
+			age = 15
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { age = 5 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 5
+			factor = 1.1
+		}
+		modifier = {
+			charisma = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { charisma = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { charisma = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = wise
+			factor = 1.1
+		}
+		modifier = {
+			traits = stubborn  
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4801"
+	desc = "EVTDESC4801"
+
+	option = {
+		
+		name = "EVTOPTA4801"
+		wealth = -50
+		popularity = 5
+		country = {
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					finesse = 5
+					charisma = 5
+				}
+				popularity = 10
+			}
+		}
+	}
+
+	option = {
+
+		name = "EVTOPTB4801"
+		add_trait = selfish 
+		popularity = -5
+		country = {
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					finesse = 5
+					charisma = 5
+				}
+				death = yes 
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4802 
+	
+	major_character = yes
+
+	trigger = {
+		is_ruler = yes 
+		NOT = { age = 16 }
+		NOT = { charisma = 6 }
+		NOT = { traits = proud }
+		NOT = { popularity = 10 }
+		NOT = { family_prestige = 50 }
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				OR = {
+					has_office = land_tech
+					has_office = naval_tech
+					has_office = civic_tech
+					has_office = construction_tech
+					has_office = religious_tech
+				}
+				NOT = { loyalty = 40 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			age = 13
+			factor = 1.1
+		}
+		modifier = {
+			age = 14
+			factor = 1.1
+		}
+		modifier = {
+			age = 15
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { age = 5 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 5
+			factor = 1.1
+		}
+		modifier = {
+			charisma = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { charisma = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { charisma = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = intelligent
+			factor = 1.1
+		}
+		modifier = {
+			traits = shrewd
+			factor = 1.1
+		}
+		modifier = {
+			traits = humble
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4802"
+	desc = "EVTDESC4802"
+
+	option = {
+
+		name = "EVTOPTA4802"
+		popularity = -5
+		family_prestige = -10
+		add_trait = humble 
+	}
+
+	option = {
+
+		name = "EVTOPTB4802"
+		popularity = -5
+		family_prestige = -10
+		remove_trait = humble
+		country = {
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+					NOT = { loyalty = 40 }
+				}
+				popularity = -5
+				family_prestige = -10
+			}
+		}
+	}
+
+	option = {
+
+		name = "EVTOPTC4802"
+		popularity = -5
+		family_prestige = 10 
+		remove_trait = humble
+		add_trait = proud 
+		country = {
+			random_character = {
+				limit = {
+					OR = {
+						has_office = land_tech
+						has_office = naval_tech
+						has_office = civic_tech
+						has_office = construction_tech
+						has_office = religious_tech
+					}
+				}
+				death = yes
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4803 
+	
+	major_character = yes
+
+	trigger = {
+		is_ruler = yes 
+		NOT = { age = 16 }
+		NOT = { popularity = 50 }
+		traits = arbitrary
+		country = {
+			OR = {
+				government = dictatorship
+				government = theocracy
+				government = despotic_monarchy
+				government = federal_monarchy
+				government = aristocratic_monarchy
+			}
+			any_character = {
+				OR = {
+					has_office = land_tech
+					has_office = naval_tech
+					has_office = civic_tech
+					has_office = construction_tech
+					has_office = religious_tech
+				}
+				NOT = { loyalty = 40 }
+				finesse = 6
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+	
+		modifier = {
+			age = 13
+			factor = 1.1
+		}
+		modifier = {
+			age = 14
+			factor = 1.1
+		}
+		modifier = {
+			age = 15
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { age = 5 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 5
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4803"
+	desc = "EVTDESC4803"
+
+	option = {
+	
+		name = "EVTOPTA4803"
+		random_list = {
+			90 = {
+			}
+			5 = {
+				add_trait = wounded
+			}
+			4 = {
+				add_trait = maimed 
+			}
+			1 = {
+				death = yes 
+			}
+		}
+	}
+
+	option = {
+
+		name = "EVTOPTA4803"
+		random_list = {
+			70 = {
+			}
+			15 = {
+				add_trait = wounded
+			}
+			10 = {
+				add_trait = maimed 
+			}
+			5 = {
+				death = yes 
+			}
+		}
+		random_list = {
+			90 = {
+			}
+			10 = {
+				country = {
+					random_character = {
+						limit = {
+							OR = {
+								has_office = land_tech
+								has_office = naval_tech
+								has_office = civic_tech
+								has_office = construction_tech
+								has_office = religious_tech
+							}
+							NOT = { loyalty = 40 }
+							finesse = 6
+						}
+						death = yes
+					}
+				}
+			}
+		}
+	}
+}
+		
+character_event = {
+
+	id = 4804 
+
+	trigger = {
+		is_ruler = yes 
+		NOT = { age = 16 }
+		traits = arbitrary
+		country = {
+			government = monarchy
+			any_character = {
+				is_courtier = yes
+				is_primary_heir = no
+				NOT = { loyalty = 30 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+
+		modifier = {
+			age = 13
+			factor = 1.1
+		}
+		modifier = {
+			age = 14
+			factor = 1.1
+		}
+		modifier = {
+			age = 15
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { age = 5 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { age = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 5
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 50 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { popularity = 25 }
+			factor = 0.9
+		}
+			
+	}
+
+	title = "EVTNAME4804"
+	desc = "EVTDESC4804"
+
+	option = {
+		
+		name = "EVTOPTA4804"
+		random = {
+			chance = 10
+			random_character = { 
+				limit = { 
+					is_courtier = yes
+					is_primary_heir = no
+					NOT = { loyalty = 30 }
+				}
+				start_civil_war = yes
+			}
+		}
+	}
+
+	option = {
+		
+		name = "EVTOPTB4804"
+		remove_trait = arbitrary
+	}
+}

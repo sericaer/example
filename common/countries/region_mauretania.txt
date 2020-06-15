@@ -1,0 +1,4 @@
+civil_war_faction = QM6
+region = region_mauretania
+color = { 106 106 180 }
+color2 = { 15 70 70 }

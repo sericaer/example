@@ -1,0 +1,1613 @@
+#	grantable: Grantable by the player through the "grant title" interface.
+#	grant_limit: Max number of holders. Only applies for grantable titles.
+# 	courtier: Is this a courtier title, to be listed in the Council view?
+#	senatorial: Is this a senatorial title, to be shown in the Senate view?
+#	allow: conditions for the character to hold the title
+#	gain_trigger: specifies when the title should be automatically gained.
+#	gain_effect: fires when the title is granted
+# 	lose_trigger: specifies when the title should be naturally lost.
+# 	dismissal_trigger: evaluates if dismissal_effect should fire when a title is lost
+# 	dismissal_effect: fires when a title is lost if dismissal_trigger evaluates to true
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+# 	province: provincial modifiers when the character is a governor.
+#	country: global modifiers on the whole country when the character is the ruler.
+#	The other fields are all character modifiers.
+
+########################################
+# MAJOR TITLES - STATICALLY TIED TO JOBS
+# Do not alter the names of these!
+########################################
+
+title_ruler = {
+	allow = {
+		prisoner = no
+		OR = {
+			country = { government = monarchy }
+			country = { government = tribal }
+			age = 42
+		}
+		OR = {
+			country = { government = monarchy }
+			country = { gender_equality = yes }
+			is_female = no
+		}
+	}
+	lose_trigger = {
+		is_ruler = no
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 100
+		popularity = 20
+		family_prestige = 50
+	}
+	dismissal_trigger = {
+		NOT = { title_ruler = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -100
+		family_prestige = -50
+		give_title = title_pro_ruler
+	}
+	lose_effect = {
+		give_title = title_pro_ruler
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		badboy = -0.05
+		badboy_limit = 1
+		global_revolt_risk = -0.2
+	}
+
+	# Multiplied by Martial - 1
+	martial_modifier = {
+		land_morale = 0.05
+	}
+
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		trade_income_modifier = 0.025
+		global_tax_modifier = 0.0125
+	}
+	
+	monthly_character_wealth = 2
+	monthly_character_popularity = 0.1
+	monthly_character_prominence = 2
+	prominence = 90
+}
+
+title_general = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		age = 18
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		OR = {
+			country = { government = monarchy }
+			country = { government = tribal }
+			country = { government = republic }
+			is_ruler = yes
+			has_title = title_ex_general
+			has_title = title_ex_ruler
+			has_title = title_pro_ruler
+			has_title = title_ex_land_tech
+			has_title = title_pro_land_tech
+			has_title = title_ex_governor
+			has_title = title_ex_censor
+		}
+	}
+	lose_trigger = {
+		is_general = no
+		prisoner = yes
+	}
+	gain_effect = {
+	}
+	dismissal_trigger = {
+		NOT = { title_general = full_term }
+	}
+	dismissal_effect = {
+		give_title = title_ex_general
+	}
+	lose_effect = {
+		give_title = title_ex_general
+	}
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_admiral = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		age = 18
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		OR = {
+			country = { government = monarchy }
+			country = { government = republic }
+			country = { government = tribal }
+			is_ruler = yes
+			has_title = title_ex_admiral
+			has_title = title_ex_ruler
+			has_title = title_pro_ruler
+			has_title = title_ex_naval_tech
+			has_title = title_pro_naval_tech
+			has_title = title_ex_governor
+			has_title = title_ex_censor
+		}
+	}
+	lose_trigger = {
+		is_admiral = no
+		prisoner = yes
+	}
+	gain_effect = {
+	}
+	dismissal_trigger = {
+		NOT = { title_admiral = full_term }
+	}
+	dismissal_effect = {
+		give_title = title_ex_admiral
+	}
+	lose_effect = {
+		give_title = title_ex_admiral
+	}
+	monthly_character_wealth = 0.5
+	prominence = 20
+	monthly_character_prominence = 0.2
+}
+
+title_land_tech = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 30
+	}
+	lose_trigger = {
+		NOT = { has_office = land_tech }
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 10
+		family_prestige = 1
+	}
+	dismissal_trigger = {
+		NOT = { title_land_tech = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -10
+		family_prestige = -1
+		give_title = title_ex_land_tech
+	}
+	lose_effect = {
+		give_title = title_pro_land_tech
+	}
+	
+	# Multiplied by Finesse - 1
+	martial_modifier = {
+		land_organisation = 0.01
+		siege_speed = -0.03
+	}
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_naval_tech = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 30
+	}
+	lose_trigger = {
+		NOT = { has_office = naval_tech }
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 10
+		family_prestige = 1
+	}
+	dismissal_trigger = {
+		NOT = { title_naval_tech = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -10
+		family_prestige = -1
+		give_title = title_ex_naval_tech
+	}
+	lose_effect = {
+		give_title = title_pro_naval_tech
+	}
+	
+	# Multiplied by Finesse - 1
+	martial_modifier = {
+		naval_organisation = 0.01
+		blockade_efficiency = 0.013
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_construction_tech = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 27
+	}
+	lose_trigger = {
+		NOT = { has_office = construction_tech }
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 10
+		family_prestige = 1
+	}
+	dismissal_trigger = {
+		NOT = { title_construction_tech = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -10
+		family_prestige = -1
+		give_title = title_ex_construction_tech
+	}
+	lose_effect = {
+		give_title = title_ex_construction_tech
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		build_cost = -0.015
+		build_time = -0.015
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_civic_tech = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 35
+	}
+	lose_trigger = {
+		NOT = { has_office = civic_tech }
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 1
+	}
+	dismissal_trigger = {
+		NOT = { title_civic_tech = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -20
+		family_prestige = -1
+		give_title = title_ex_civic_tech
+	}
+	lose_effect = {
+		give_title = title_pro_civic_tech
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		research_points_modifier = 0.013
+		civilization_spread = 0.03
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 1.0
+	prominence = 50
+	monthly_character_prominence = 0.33
+}
+
+title_religious_tech = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 25
+	}
+	lose_trigger = {
+		NOT = { has_office = religious_tech }
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 10
+		family_prestige = 1
+	}
+	dismissal_trigger = {
+		NOT = { title_religious_tech = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -10
+		family_prestige = -1
+		give_title = title_ex_religious_tech
+	}
+	lose_effect = {
+		give_title = title_ex_religious_tech
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		omen_failure_penalty = -0.02
+		omen_chance = 0.013
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.7
+	prominence = 40
+	monthly_character_prominence = 0.25
+}
+
+title_governor = {
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		is_courtier = no
+		in_command = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+	}
+	lose_trigger = {
+		is_governor = no
+		prisoner = yes
+	}
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 15
+	}
+	dismissal_trigger = {
+		NOT = { title_governor = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -20
+	}
+	lose_effect = {
+		give_title = title_ex_governor
+	}
+	
+	monthly_character_wealth = 0.7
+	prominence = 40
+	monthly_character_prominence = 0.25
+
+}
+
+##########################
+# The Queen / Consort
+##########################
+title_consort = {
+
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+	}
+	
+	gain_trigger = {
+		is_married = yes
+		spouse = { is_ruler = yes }
+		country = { government = monarchy }
+	}
+
+	gain_effect = {
+		loyalty = 30
+		family_prestige = 20
+	}
+	lose_trigger = {
+		OR = {
+			is_married = no
+			spouse = { is_ruler = no }
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		always = no
+	}
+	lose_effect = {
+		give_title = title_ex_consort
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		ruler_popularity_gain = 0.04
+	}
+	
+	monthly_character_wealth = 0.2
+	prominence = 30
+	monthly_character_prominence = 0.2
+}
+
+
+##########################
+# The Crown Prince(ss)
+##########################
+title_crown_prince = {
+
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+	}
+	
+	gain_trigger = {
+		is_primary_heir = yes
+	}
+
+	gain_effect = {
+		loyalty = 50
+	}
+	lose_trigger = {
+		OR = {
+			is_primary_heir = no
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		always = no
+	}
+	lose_effect = {
+		loyalty = -30
+	}
+	
+	prominence = 40
+	monthly_character_wealth = 0.3
+	monthly_character_loyalty = 1
+	monthly_character_popularity = 0.05
+	monthly_character_prominence = 0.3
+}
+
+##########################
+# Courtier Titles
+##########################
+
+title_prime_minister = {
+	courtier = yes 	# Listed in the court screen
+	grantable = yes
+	grant_limit = 1
+	
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_courtier = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+	}
+	
+
+	gain_effect = {
+		loyalty = 30
+		family_prestige = 20
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		NOT = { title_prime_minister = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -30
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		max_war_exhaustion = -0.1
+	}
+
+	# Multiplied by Martial - 1
+	martial_modifier = {
+		global_regiment_recruit_speed = -0.025
+		global_ship_recruit_speed = -0.025
+	}
+
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		research_points_modifier = 0.02
+	}
+	
+	monthly_character_wealth = 0.7
+	prominence = 40
+	monthly_character_prominence = 0.33
+}
+
+title_foreign_minister = {
+	courtier = yes 	# Listed in the court screen
+	grantable = yes
+	grant_limit = 1
+	
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_courtier = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+	}
+	
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 15
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		NOT = { title_foreign_minister = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -20
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		badboy = -0.025
+		badboy_limit = 0.5
+	}
+	
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		diplomatic_missions = 0.03
+		intrigue_missions = 0.013
+	}
+
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_finance_minister = {
+	courtier = yes 	# Listed in the court screen
+	grantable = yes
+	grant_limit = 1
+	
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_courtier = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+	}
+	
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 15
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		NOT = { title_finance_minister = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -20
+	}
+	
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		trade_income_modifier = 0.025
+		global_tax_modifier = 0.0125
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_interior_minister = {
+	courtier = yes 	# Listed in the court screen
+	grantable = yes
+	grant_limit = 1
+	
+	allow = {
+		country = { government = monarchy }
+		is_ruler = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_courtier = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		age = 18
+	}
+	
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 15
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			country = { NOT = { government = monarchy } }
+		}
+	}
+	dismissal_trigger = {
+		NOT = { title_interior_minister = full_term }
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -20
+	}
+	
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		global_revolt_risk = -0.3
+		minimum_revolt_risk = -0.3
+		stability_cost_modifier = -0.03
+		global_population_growth = 0.001
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_censor = {
+	senatorial = yes
+	grantable = yes
+	grant_limit = 2
+	
+	allow = {
+		age = 18
+		country = { government = republic }
+		is_ruler = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_courtier = no
+		is_governor = no
+		has_tech_office = no
+		prisoner = no
+		
+		OR = {
+			has_title = title_pro_ruler
+			has_title = title_ex_ruler
+			has_title = title_ex_censor
+			has_title = title_pro_civic_tech
+			has_title = title_ex_civic_tech
+			has_title = title_ex_religious_tech
+		}
+	}
+	
+	gain_effect = {
+		loyalty = 20
+		family_prestige = 15
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	dismissal_trigger = {
+		NOT = { title_censor = full_term }
+	}
+	lose_effect = {
+		give_title = title_ex_censor
+	}
+	dismissal_effect = {
+		loyalty = -40
+		family_prestige = -20
+		give_title = title_ex_censor
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 2
+	}
+	
+	# Multiplied by Finesse - 1
+	finesse_modifier = {
+		stability_cost_modifier = -0.02
+		global_population_growth = 0.001
+	}
+	
+	monthly_character_wealth = 0.5
+	prominence = 30
+	monthly_character_prominence = 0.25
+}
+
+title_clan_chief = {
+	allow = {
+		prisoner = no
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		country = { government = tribal }
+	}
+	gain_trigger = {
+		is_clan_chief = yes
+	}
+	gain_effect = {
+		popularity = 20
+	}
+	lose_trigger = {
+		OR = {
+			is_clan_chief = no
+			prisoner = yes
+			country = { NOT = { government = tribal } }
+		}
+	}
+	
+	monthly_character_wealth = 0.5
+	monthly_character_popularity = 0.1
+	prominence = 40
+}
+
+##########################################
+# MINOR TITLES - TOTALLY MODABBLE
+# Characters can have any number of these
+##########################################
+
+##########################
+# "Ex" Titles
+##########################
+
+title_pro_ruler = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			is_ruler = yes
+			title_pro_ruler = 365
+			NOT = { tag = ROM }
+			NOT = { government = republic }
+		}
+	}
+	lose_effect = {
+		give_title = title_ex_ruler
+	}
+	province = {
+		local_revolt_risk = -1
+		local_tax_modifier = 0.2
+	}
+	loyalty_gain_chance = 0.1
+	monthly_character_wealth = 0.5
+	monthly_character_popularity = 0.5
+	monthly_character_prominence = 0.5
+	max_friends = 2
+	max_rivals = 2
+	prominence = 20
+}
+
+title_ex_ruler = {
+	allow = {
+		is_alive = yes
+	}
+	gain_trigger = {
+		is_previous_ruler = yes # Nice Auto-gain for new games
+		NOT = { has_title = title_pro_ruler }
+		is_ruler = no
+	}
+	lose_trigger = {
+		is_ruler = yes
+	}
+	monthly_character_wealth = 0.1
+	max_friends = 2
+	max_rivals = 2
+	prominence = 10
+}
+
+title_ex_consort = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		spouse = { is_ruler = yes }
+	}
+	monthly_character_wealth = 0.1
+	max_friends = 2
+	max_rivals = 2
+	prominence = 10
+}
+
+title_ex_general = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		is_general = yes
+	}
+	max_friends = 1
+	prominence = 5
+}
+
+title_ex_admiral = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		is_admiral = yes
+	}
+	max_friends = 1
+	prominence = 5
+}
+
+title_pro_land_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			has_office = land_tech
+			title_pro_land_tech = 365
+			NOT = { tag = ROM }
+			NOT = { government = republic }
+		}
+	}
+	lose_effect = {
+		give_title = title_ex_land_tech
+	}
+	monthly_character_wealth = 0.1
+	prominence = 10
+}
+
+title_ex_land_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_office = land_tech
+	}
+	prominence = 5
+}
+
+title_pro_naval_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			has_office = naval_tech
+			title_pro_naval_tech = 365
+			NOT = { tag = ROM }
+			NOT = { government = republic }
+		}
+	}
+	lose_effect = {
+		give_title = title_ex_naval_tech
+	}
+	monthly_character_wealth = 0.1
+	prominence = 10
+}
+
+title_ex_naval_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_office = naval_tech
+	}
+	prominence = 5
+}
+
+title_ex_construction_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_office = construction_tech
+	}
+	prominence = 5
+}
+
+title_pro_civic_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		OR = {
+			prisoner = yes
+			has_office = civic_tech
+			title_pro_civic_tech = 365
+			NOT = { tag = ROM }
+			NOT = { government = republic }
+		}
+	}
+	lose_effect = {
+		give_title = title_ex_civic_tech
+	}
+	monthly_character_wealth = 0.1
+	prominence = 10
+}
+
+title_ex_civic_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_office = civic_tech
+	}
+	prominence = 5
+}
+
+title_ex_religious_tech = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_office = religious_tech
+	}
+	prominence = 5
+}
+
+title_ex_governor = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		is_governor = yes
+	}
+	prominence = 5
+}
+
+title_ex_censor = {
+	allow = {
+		is_alive = yes
+	}
+	lose_trigger = {
+		has_title = title_censor
+	}
+	prominence = 10
+}
+
+title_plebeian_aedile = {
+
+	grantable = yes	
+	grant_limit = 2 	
+
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		country = { government = republic }
+		age = 18
+		prisoner = no
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		OR =  {
+			prisoner = yes
+			has_title = title_censor
+			is_governor = yes
+			has_office = religious_tech
+			has_office = civic_tech
+			has_office = construction_tech
+			has_office = naval_tech
+			has_office = land_tech
+			is_ruler = yes
+			is_general = yes
+			is_admiral = yes
+		 }
+	}
+
+	monthly_character_wealth = -0.01
+	monthly_character_popularity = 0.01
+	prominence = 5
+}
+
+title_tribune_of_the_soldiers = {
+
+	grantable = yes
+	grant_limit = 24 
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		country = { government = republic }
+		age = 18
+		prisoner = no
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		OR =  {
+			prisoner = yes
+			has_title = title_censor
+			is_governor = yes
+			has_office = religious_tech
+			has_office = civic_tech
+			has_office = construction_tech
+			has_office = naval_tech
+			has_office = land_tech
+			is_ruler = yes
+			is_general = yes
+			is_admiral = yes
+		 }
+	}
+
+	prominence = 5
+}
+
+title_tribune_of_the_treasury = {
+
+	grantable = yes
+	grant_limit = 6
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		country = { government = republic }
+		age = 18
+		prisoner = no
+		NOT = {
+			OR = {
+				has_title = title_censor
+				is_governor = yes
+				has_office = religious_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = naval_tech
+				has_office = land_tech
+				is_ruler = yes
+				is_general = yes
+				is_admiral = yes
+			}
+		}
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		OR =  {
+			prisoner = yes
+			has_title = title_censor
+			is_governor = yes
+			has_office = religious_tech
+			has_office = civic_tech
+			has_office = construction_tech
+			has_office = naval_tech
+			has_office = land_tech
+			is_ruler = yes
+			is_general = yes
+			is_admiral = yes
+		 }
+	}
+
+	prominence = 5
+}
+
+title_augur = {
+
+	grantable = yes
+	grant_limit = 15
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		age = 18
+		prisoner = no
+		country = { government = republic }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	prominence = 5
+}
+
+title_pontifex = {
+
+	grantable = yes
+	grant_limit = 15
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		age = 18
+		prisoner = no
+		country = { government = republic }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	prominence = 5
+}
+
+
+title_cupbearer = {
+	
+	grantable = yes
+	grant_limit = 5
+
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		age = 16
+		prisoner = no
+		country = { government = monarchy }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	monthly_character_wealth = 0.1
+	monthly_character_loyalty = 0.01
+	prominence = 5
+}
+
+
+title_huntsman = {
+
+	grantable = yes
+	grant_limit = 5
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		age = 16
+		prisoner = no
+		country = { government = monarchy }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	monthly_character_wealth = 0.1
+	monthly_character_loyalty = 0.01
+	prominence = 5
+}
+
+title_seneschal = {
+
+	grantable = yes
+	grant_limit = 5
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		age = 16
+		prisoner = no
+		country = { government = monarchy }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	monthly_character_wealth = 0.1
+	monthly_character_loyalty = 0.01
+	prominence = 5
+}
+
+title_physician = {
+
+	grantable = yes
+	grant_limit = 5
+
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		age = 16
+		prisoner = no
+		country = { government = monarchy }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+
+	monthly_character_wealth = 0.1
+	monthly_character_loyalty = 0.01
+	prominence = 5
+}
+
+title_bodyguard = {
+	
+	grantable = yes
+	grant_limit = 20
+	
+	allow = {
+		OR = {
+			is_female = no
+			country = { gender_equality = yes }
+		}
+		is_ruler = no
+		age = 18
+		prisoner = no
+		country = { government = tribal }
+	}
+		
+	gain_effect = {
+		loyalty = 5
+		family_prestige = 5
+	}
+	lose_trigger = {
+		prisoner = yes
+	}
+	
+	prominence = 5
+	
+}
+
+
+##########################
+# PARTY LEADERS
+##########################
+
+title_party_leader_mercantile = {
+	allow = {
+		prisoner = no
+		country = {government = republic }
+		OR = {
+			country = { gender_equality = yes }
+			is_female = no
+		}
+	}
+	gain_trigger = {
+		is_party_leader = mercantile_party
+	}
+	gain_effect = {
+		family_prestige = 10
+	}
+	lose_trigger = {
+		OR = {
+			NOT = { is_party_leader = mercantile_party }
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.5
+	monthly_character_popularity = 0.1
+	prominence = 10
+	mercantile_conviction = 1000
+	monthly_mercantile_conviction = 2
+}
+
+title_party_leader_military = {
+	allow = {
+		prisoner = no
+		OR = {
+			country = { gender_equality = yes }
+			is_female = no
+		}
+		country = {government = republic }
+	}
+	gain_trigger = {
+		is_party_leader = military_party
+	}
+	gain_effect = {
+		family_prestige = 10
+	}
+	lose_trigger = {
+		OR = {
+			NOT = { is_party_leader = military_party }
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.1
+	monthly_character_popularity = 0.5
+	prominence = 10
+	military_conviction = 1000
+	monthly_military_conviction = 2
+}
+
+title_party_leader_religious = {
+	allow = {
+		prisoner = no
+		OR = {
+			country = { gender_equality = yes }
+			is_female = no
+		}
+		country = {government = republic }
+	}
+	gain_trigger = {
+		is_party_leader = religious_party
+	}
+	gain_effect = {
+		family_prestige = 10
+	}
+	lose_trigger = {
+		OR = {
+			NOT = { is_party_leader = religious_party }
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.1
+	monthly_character_popularity = 0.5
+	prominence = 10
+	religious_conviction = 1000
+	monthly_religious_conviction = 2
+}
+
+title_party_leader_civic = {
+	allow = {
+		prisoner = no
+		OR = {
+			country = { gender_equality = yes }
+			is_female = no
+		}
+		country = {government = republic }
+	}
+	gain_trigger = {
+		is_party_leader = civic_party
+	}
+	gain_effect = {
+		family_prestige = 10
+	}
+	lose_trigger = {
+		OR = {
+			NOT = { is_party_leader = civic_party }
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 1
+	}
+	
+	monthly_character_wealth = 0.1
+	monthly_character_popularity = 0.5
+	prominence = 10
+	civic_conviction = 1000
+	monthly_civic_conviction = 2
+}
+
+title_party_leader_populist = {
+	allow = {
+		prisoner = no
+		OR = {
+			country = { gender_equality = yes }
+			is_female = no
+		}
+		country = {government = republic }
+	}
+	gain_trigger = {
+		is_party_leader = populist_party
+	}
+	gain_effect = {
+		family_prestige = 10
+	}
+	lose_trigger = {
+		OR = {
+			NOT = { is_party_leader = populist_party }
+			prisoner = yes
+			country = { NOT = { government = republic } }
+		}
+	}
+	
+	# Multiplied by Charisma - 1
+	charisma_modifier = {
+		senate_influence = 3
+	}
+	
+	monthly_character_wealth = 0.1
+	monthly_character_popularity = 1
+	monthly_character_loyalty = -0.05
+	prominence = 10
+	populist_conviction = 1000
+	monthly_populist_conviction = 2
+}
+
+# Royal Bastards
+title_bastard = {
+	allow = {
+		country = { government = monarchy }
+	}
+	
+	gain_trigger = {
+		is_bastard = yes
+		father = { 
+			NOT = {
+				family = THIS
+			}
+		}
+	}
+	
+	lose_trigger = {
+		father = { 
+			family = THIS
+		}
+	}
+	
+	dismissal_trigger = {
+		always = no
+	}
+	
+	monthly_character_loyalty = -0.01
+	prominence = 1
+}

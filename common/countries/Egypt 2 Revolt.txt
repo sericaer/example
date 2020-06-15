@@ -1,0 +1,16 @@
+civil_war_faction = EGN
+graphical_culture = egyptgfx
+color = { 88 0 0 }
+color2 = { 61 82 22 }
+
+ship_names = {
+	Cirta
+	"Hippo Regius"
+	Khamissa
+	Lambessa
+	Markuna
+	Partenia
+	Rusicada
+	Theveste Timgad
+	Verecunda
+}

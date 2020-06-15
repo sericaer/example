@@ -1,0 +1,17 @@
+civil_war_faction = TY1
+graphical_culture = celticgfx
+color = { 42  137  138 }
+color2 = { 20 20 20 }
+
+ship_names = {
+	Aballo Alisia Alisincon Amarcolitanos Anvalos Arar Axona
+	Baco Bibracta Bolvinnos Boxum Brivoduro
+	Cabillonon Cervidunon
+	Decetia Dunon
+	Evirno
+	Icauna Intaranon
+	Massava Matisco
+	Pocrinion
+	Sedioloco
+	Telonnon Tenurcio
+}

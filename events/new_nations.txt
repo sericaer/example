@@ -1,0 +1,6335 @@
+# Parthia
+country_event = {
+
+	id = 1050
+
+	trigger = {
+		not = { exists = PAR }
+                year = 500
+		owns = 208		# Parthia
+		208 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 9 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+	
+		months = 157
+
+
+		modifier = {
+			factor = 0.8
+		        208 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        208 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        208 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        208 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        208 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        208 = { units_in_province = 1 }
+		}
+		modifier = {		        208 = {
+			revolt_risk = 2		}
+			factor = 0.9
+		}
+		modifier = {		        208 = {
+			revolt_risk = 5		}
+			factor = 0.8
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = merciful
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = corrupt
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        208 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}			factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1050"
+	desc = "EVTDESC1050"
+
+	option = {
+		name = "EVTOPTA1050"					# I should have seen this coming
+		PAR = {
+			add_core = 200
+			add_core = 201
+			add_core = 202
+			add_core = 204
+			add_core = 205
+			add_core = 206
+			add_core = 207
+			add_core = 208
+			add_core = 209
+			add_core = 210
+			add_core = 211 
+			add_core = 212
+		}
+		THIS = {
+			remove_core = 207
+			remove_core = 208
+			remove_core = 209
+		}
+		207 = { population = 6
+			civilization_value  = 8
+			secede_province = PAR }
+		208 = { population = 5
+			civilization_value  = 8
+			secede_province = PAR }
+		209 = { population = 2
+			civilization_value  = 6
+			secede_province = PAR }
+		stability = -1
+	}
+}
+
+# Judea
+country_event = {
+
+	id = 1051
+
+	trigger = {
+		not = { exists = JUD }
+		owns = 221		# Judea
+		221 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 220
+	
+		modifier = {
+			factor = 0.8
+		        221 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        221 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        221 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        221 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        221 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        221 = { units_in_province = 1 }
+		}
+		modifier = {		        221 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        221 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = merciful
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = corrupt
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        221 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}			factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1051"
+	desc = "EVTDESC1051"
+
+	option = {
+		name = "EVTOPTA1051"					# Let them go then!		
+		221 = { secede_province = JUD }
+	}
+}
+# Numidia
+country_event = {
+
+	id = 1052
+
+	trigger = {
+		not = { exists = NUM }
+		owns = 252		# Massyli
+		252 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 220
+
+		modifier = {
+			factor = 0.8
+		        252 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        252 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        252 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        252 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        252 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        252 = { units_in_province = 1 }
+		}
+		modifier = {		        252 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        252 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = merciful
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = corrupt
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        252 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}			factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1052"
+	desc = "EVTDESC1052"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		252 = { secede_province = NUM }
+		253 = { secede_province = NUM }
+		254 = { secede_province = NUM }
+	}
+}
+
+country_event = {
+
+	id = 1053
+
+	trigger = {
+		ai = yes 
+		TAG = PAR
+#                war = yes
+		owns = 208		# Parthia
+		not = { num_of_cities = 18 }
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	title = "EVTNAME1053"
+	desc = "EVTDESC1053"
+
+
+
+	option = {
+		name = "EVTOPTA1053"
+		ruler = {
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			archers = THIS
+			archers = THIS
+		}
+		treasury = 100
+	}
+}
+
+country_event = {
+
+	id = 1054
+	trigger = {
+		NOT = { exists = CYR }
+		owns = 234
+		234 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 320
+
+		modifier = {
+			factor = 0.8
+		        234 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        234 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        234 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        234 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        234 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        234 = { units_in_province = 1 }
+		}
+		modifier = {		        234 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        234 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = merciful
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        234 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1054"
+	desc = "EVTDESC1054"
+
+
+	option = {
+		name = "EVTOPTA1054"					# Let them be for now...	
+		234 = { secede_province = CYR }
+		235 = { secede_province = CYR }
+	}
+}
+
+country_event = {
+
+	id = 1055
+	trigger = {
+		NOT = { exists = GAL }
+		owns = 154
+		154 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 314
+
+		modifier = {
+			factor = 0.8
+		        154 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        154 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        154 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        154 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        154 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        154 = { units_in_province = 1 }
+		}
+		modifier = {		        154 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        154 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        154 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1055"
+	desc = "EVTDESC1055"
+
+
+	option = {
+		name = "EVTOPTA1055"					# Let them be for now...	
+		154 = { secede_province = GAL }
+	}
+}
+
+country_event = {
+
+	id = 1056
+	trigger = {
+		NOT = { exists = CAP }
+		owns = 153
+		153 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        153 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        153 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        153 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        153 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        153 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        153 = { units_in_province = 1 }
+		}
+		modifier = {		        153 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        153 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        153 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1056"
+	desc = "EVTDESC1056"
+
+
+	option = {
+		name = "EVTOPTA1056"					# Let them be for now...
+		153 = { secede_province = CAP }
+	}
+}
+
+country_event = {
+
+	id = 1057
+	trigger = {
+		NOT = { exists = SOP }
+		owns = 188
+		188 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 169
+
+		modifier = {
+			factor = 0.8
+		        188 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        188 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        188 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        188 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        188 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        188 = { units_in_province = 1 }
+		}
+		modifier = {		        188 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        188 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        188 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1057"
+	desc = "EVTDESC1057"
+
+
+	option = {
+		name = "EVTOPTA1056"					# Let them be for now...		
+		188 = { secede_province = SOP }
+	}
+}
+
+
+country_event = {
+
+	id = 1058
+	trigger = {
+		NOT = { exists = COR }
+		owns = 194
+		194 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 220
+
+		modifier = {
+			factor = 0.8
+		        194 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        194 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        194 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        194 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        194 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        194 = { units_in_province = 1 }
+		}
+		modifier = {		        194 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        194 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        194 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1058"
+	desc = "EVTDESC1058"
+
+
+	option = {
+		name = "EVTOPTA1058"					# Let them be for now...
+		194 = { secede_province = COR }
+	}
+}
+
+country_event = {
+
+	id = 1059
+	trigger = {
+		NOT = { exists = PAP }
+		owns = 155
+		155 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 324
+
+		modifier = {
+			factor = 0.8
+		        155 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        155 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        155 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        155 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        155 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        155 = { units_in_province = 1 }
+		}
+		modifier = {		        155 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        155 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = just	
+			}
+			}				factor = 1.1
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = corrupt
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        155 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1059"
+	desc = "EVTDESC1059"
+
+
+	option = {
+		name = "EVTOPTA1059"					# Let them be for now...	
+		155 = { secede_province = PAP }
+		149 = { secede_province = PAP }
+	}
+}
+
+country_event = {
+
+	id = 1094
+	trigger = {
+		NOT = { exists = LYC }
+		owns = 159
+		159 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        159 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        159 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        159 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        159 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        159 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        159 = { units_in_province = 1 }
+		}
+		modifier = {		        159 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        159 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = merciful
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = corrupt
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        159 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}			factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1094"
+	desc = "EVTDESC1094"
+
+
+	option = {
+		name = "EVTOPTA1094"					# Let them be for now...
+		159 = { secede_province = LYC }
+	}
+}
+
+country_event = {
+
+	id = 1095
+	trigger = {
+		NOT = { exists = COM }
+		owns = 189
+        189 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 183
+
+		modifier = {
+			factor = 0.8
+		        189 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        189 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        189 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        189 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        189 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        189 = { units_in_province = 1 }
+		}
+		modifier = {		        189 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        189 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        189 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1095"
+	desc = "EVTDESC1095"
+
+
+	option = {
+		name = "EVTOPTA1095"					# Let them be for now...
+		189 = { secede_province = COM }
+	}
+}
+
+country_event = {
+
+	id = 1096
+	trigger = {
+		NOT = { exists = OSR }
+		owns = 193
+		193 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 379
+
+		modifier = {
+			factor = 0.8
+		        193 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        193 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        193 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        193 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        193 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        193 = { units_in_province = 1 }
+		}
+		modifier = {		        193 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        193 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        193 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+
+	option = {
+		name = "EVTOPTA1096"					# Let them be for now...	
+		193 = { secede_province = OSR }
+		195 = { secede_province = OSR }
+	}
+}
+
+country_event = {
+
+	id = 1097
+	trigger = {
+		NOT = { exists = ALB }
+		owns = 183
+		183 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			factor = 0.8
+		        183 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        183 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        183 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        183 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        183 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        183 = { units_in_province = 1 }
+		}
+		modifier = {		        183 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        183 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        183 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1097"
+	desc = "EVTDESC1097"
+
+
+	option = {
+		name = "EVTOPTA1097"					# Let them be for now...	
+		181 = { secede_province = ALB }
+		182 = { secede_province = ALB }
+		183 = { secede_province = ALB }
+	}
+}
+
+
+country_event = {
+
+	id = 1098
+	trigger = {
+		NOT = { exists = PON }		
+		owns = 151
+		151 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 366
+
+		modifier = {
+			factor = 0.8
+		        151 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        151 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        151 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        151 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        151 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        151 = { units_in_province = 1 }
+		}
+		modifier = {		        151 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        151 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        151 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1097"
+	desc = "EVTDESC1097"
+
+
+	option = {
+		name = "EVTOPTA1054"					# Let them be for now...
+		150 = { secede_province = PON }
+		151 = { secede_province = PON }
+	}
+}
+
+country_event = {
+
+	id = 1099
+
+	trigger = {
+		not = { exists = THA }
+		owns = 246		# Numidia
+		246 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 200
+
+		modifier = {
+			factor = 0.8
+		        246 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        246 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        246 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        246 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        246 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        246 = { units_in_province = 1 }
+		}
+		modifier = {		        246 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        246 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}	factor = 0.9
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        246 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1052"
+	desc = "EVTDESC1052"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		246 = { secede_province = THA }
+	}
+}
+
+country_event = {
+
+	id = 1100
+
+	trigger = {
+		not = { exists = MAU }
+		owns = 256
+		256 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 293
+	
+		modifier = {
+			factor = 0.8
+		        256 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        256 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        256 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        256 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        256 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        256 = { units_in_province = 1 }
+		}
+		modifier = {		        256 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        256 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        256 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1051"					# Let them go then!		
+		256 = { secede_province = MAU }
+		255 = { secede_province = MAU }
+	}
+}
+
+country_event = {
+
+	id = 1101
+	trigger = {
+		NOT = { exists = DAC }
+		not = { TAG = PAR }
+		owns = 205
+		205 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 550
+
+		modifier = {
+			factor = 0.8
+		        205 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        205 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        205 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        205 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        205 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        205 = { units_in_province = 1 }
+		}
+		modifier = {		        205 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        205 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = just	
+			}
+		}			factor = 1.1
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        205 = {
+			governor_scope = {
+				traits = righteous
+			}
+		}			factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+
+	option = {
+		name = "EVTOPTA1096"					# Let them be for now...	
+		205 = { secede_province = DAC }
+		206 = { secede_province = DAC }
+	}
+}
+
+country_event = {
+
+	id = 1102
+	trigger = {
+		NOT = { exists = MI1 }
+		not = { TAG = PAR }
+		owns = 212
+		212 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 330
+
+		modifier = {
+			factor = 0.8
+		        212 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        212 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        212 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        212 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        212 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        212 = { units_in_province = 1 }
+		}
+		modifier = {		        212 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        212 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        212 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+
+	option = {
+		name = "EVTOPTA1096"					# Let them be for now...	
+		212 = { secede_province = MI1 }
+		213 = { secede_province = MI1 }
+	}
+}
+
+
+country_event = {
+
+	id = 1103
+	trigger = {
+		NOT = { exists = BYZ }
+		not = { TAG = PAR }
+        owns = 211
+		211 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 189
+
+		modifier = {
+			factor = 0.8
+		        211 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        211 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        211 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        211 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        211 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        211 = { units_in_province = 1 }
+		}
+		modifier = {		        211 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        211 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        211 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+
+	option = {
+		name = "EVTOPTA1096"					# Let them be for now...
+		210 = { secede_province = BYZ }
+		211 = { secede_province = BYZ }
+	}
+}
+
+
+country_event = {
+
+	id = 1104
+
+	trigger = {
+		not = { exists = GAR }
+		owns = 242		# Massyli
+		242 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 174
+
+		modifier = {
+			factor = 0.8
+		        242 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        242 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        242 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        242 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        242 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        242 = { units_in_province = 1 }
+		}
+		modifier = {		        242 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        242 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        242 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		243 = { secede_province = GAR }
+		242 = { secede_province = GAR }
+		239 = { secede_province = GAR }
+	}
+}
+
+country_event = {
+
+	id = 1105
+
+	trigger = {
+		not = { exists = NAS }
+		owns = 236		# Taladusii
+		236 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 165
+
+		modifier = {
+			factor = 0.8
+		        236 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        236 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        236 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        236 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        236 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        236 = { units_in_province = 1 }
+		}
+		modifier = {		        236 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        236 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        236 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		236 = { secede_province = NAS }
+		238 = { secede_province = NAS }
+	}
+
+}
+
+country_event = {
+
+	id = 1106
+	trigger = {
+		NOT = { exists = NAB }
+		owns = 223
+		223 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+	
+	mean_time_to_happen = {
+
+		months = 165
+
+		modifier = {
+			factor = 0.8
+		        223 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        223 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        223 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        223 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        223 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        223 = { units_in_province = 1 }
+		}
+		modifier = {		        223 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        223 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        223 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+
+	option = {
+		name = "EVTOPTA1097"					# Let them be for now...	
+		218 = { secede_province = NAB }
+		222 = { secede_province = NAB }
+		223 = { secede_province = NAB }
+	}
+}
+
+country_event = {
+
+	id = 1107
+
+	trigger = {
+		not = { exists = PLM }
+		owns = 215		
+		215 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 347
+
+		modifier = {
+			factor = 0.8
+		        215 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        215 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        215 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        215 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        215 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        215 = { units_in_province = 1 }
+		}
+		modifier = {		215 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		215 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		215 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...		
+		215 = { secede_province = PLM }
+		217 = { secede_province = PLM }
+	}
+}
+
+country_event = {
+
+	id = 1108
+
+	trigger = {
+		not = { exists = MAE }
+		owns = 172		
+		172 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 287
+
+		modifier = {
+			factor = 0.8
+		        172 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        172 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        172 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        172 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        172 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        172 = { units_in_province = 1 }
+		}
+		modifier = {		        172 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        172 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        172 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		172 = { secede_province = MAE }
+		174 = { secede_province = MAE }
+	}
+}
+
+country_event = {
+
+	id = 1109
+
+	trigger = {
+		not = { exists = RHX }
+		167 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+		owns = 167		
+
+	}
+
+	mean_time_to_happen = {
+
+		months = 200
+
+		modifier = {
+			factor = 0.8
+		        167 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        167 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        167 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        167 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        167 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        167 = { units_in_province = 1 }
+		}
+		modifier = {		        167 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        167 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}	factor = 1.1
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        167 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		167 = { secede_province = RHX }
+		168 = { secede_province = RHX }
+	}
+}
+
+country_event = {
+
+	id = 1110
+
+	trigger = {
+		not = { exists = SCY }
+		owns = 164		
+		164 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 440
+
+		modifier = {
+			factor = 0.8
+		        164 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        164 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        164 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        164 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        164 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        164 = { units_in_province = 1 }
+		}
+		modifier = {		        164 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        164 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        164 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		164 = { secede_province = SCY }
+		166 = { secede_province = SCY }
+	}
+}
+
+country_event = {
+
+	id = 1111
+
+	trigger = {
+		not = { exists = MAS }
+		owns = 71		
+		71 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 338
+
+		modifier = {
+			factor = 0.8
+		        71 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        71 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        71 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        71 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        71 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        71 = { units_in_province = 1 }
+		}
+		modifier = {		        71 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        71 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        71 = {
+			governor_scope = {
+				traits = righteous
+			}
+				}	factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		71 = { secede_province = MAS }
+		28 = { secede_province = MAS }
+	}
+}
+
+country_event = {
+
+	id = 1112
+
+	trigger = {
+		not = { exists = SYR }
+		owns = 100		
+		100 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 189
+
+		modifier = {
+			factor = 0.8
+		        100 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        100 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        100 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        100 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        100 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        100 = { units_in_province = 1 }
+		}
+		modifier = {		100 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		100 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = merciful
+			}
+				}	factor = 1.1
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		100 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		100 = { secede_province = SYR }
+	}
+}
+
+country_event = {
+
+	id = 1113
+
+	trigger = {
+		not = { exists = EPI }
+		owns = 139		
+		139 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 147
+
+		modifier = {
+			factor = 0.8
+		        139 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        139 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        139 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        139 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        139 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        139 = { units_in_province = 1 }
+		}
+		modifier = {		        139 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        139 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        139 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+
+		139 = { secede_province = EPI }
+	}
+}
+
+country_event = {
+
+	id = 1114
+
+	trigger = {
+		not = { exists = SIN }
+		owns = 220		
+		220 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        220 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        220 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        220 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        220 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        220 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        220 = { units_in_province = 1 }
+		}
+		modifier = {		220 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		220 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		220 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		220 = { secede_province = SIN }
+	}
+}
+
+country_event = {
+
+	id = 1115
+
+	trigger = {
+		not = { exists = AET }
+		owns = 141		
+		141 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        141 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        141 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        141 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        141 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        141 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        141 = { units_in_province = 1 }
+		}
+		modifier = {		        141 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        141 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = merciful
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        141 = {
+			governor_scope = {
+				traits = righteous
+			}
+				}	factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		141 = { secede_province = AET }
+	}
+}
+
+country_event = {
+
+	id = 1116
+
+	trigger = {
+		not = { exists = CRT }
+		owns = 147		
+		147 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        147 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        147 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        147 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        147 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        147 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        147 = { units_in_province = 1 }
+		}
+		modifier = {		        147 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        147 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        147 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...	
+		147 = { secede_province = CRT }
+	}
+}
+
+country_event = {
+
+	id = 1117
+
+	trigger = {
+		not = { exists = RHO }
+		owns = 145		
+		145 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 147
+
+
+		modifier = {
+			factor = 0.8
+		        145 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        145 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        145 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        145 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        145 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        145 = { units_in_province = 1 }
+		}
+		modifier = {		        145 = {
+			revolt_risk = 2
+		}			factor = 0.9
+		}
+		modifier = {		        145 = {
+			revolt_risk = 5
+		}			factor = 0.8
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = cruel
+			}
+		}			factor = 0.9
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        145 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		145 = { secede_province = RHO }
+	}
+}
+
+country_event = {
+
+	id = 1118
+
+	trigger = {
+		not = { exists = ACH }
+		owns = 143		
+		143 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 147
+
+		modifier = {
+			factor = 0.8
+		        143 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        143 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        143 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        143 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        143 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        143 = { units_in_province = 1 }
+		}
+		modifier = {		        143 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        143 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = merciful
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        143 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...		
+		143 = { secede_province = ACH }
+	}
+}
+
+country_event = {
+
+	id = 1119
+
+	trigger = {
+		not = { exists = BIT }
+		owns = 148		
+		148 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 157
+
+		modifier = {
+			factor = 0.8
+		        148 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        148 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        148 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        148 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        148 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        148 = { units_in_province = 1 }
+		}
+		modifier = {		        148 = {
+			revolt_risk = 2
+				}	factor = 0.9
+		}
+		modifier = {		        148 = {
+			revolt_risk = 5
+				}	factor = 0.8
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = cruel
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = merciful
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = just	
+			}
+				}	factor = 1.1
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        148 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		148 = { secede_province = BIT }
+	}
+}
+
+country_event = {
+
+	id = 1120
+
+	trigger = {
+		not = { exists = ATH }
+		owns = 142		
+		142 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 130
+
+		modifier = {
+			factor = 0.8
+		        142 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        142 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        142 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        142 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        142 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        142 = { units_in_province = 1 }
+		}
+		modifier = {		        142 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        142 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        142 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		142 = { secede_province = ATH }
+	}
+}
+
+country_event = {
+
+	id = 1121
+
+	trigger = {
+		not = { exists = SPA }
+		owns = 144		
+		144 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 157
+
+
+		modifier = {
+			factor = 0.8
+		        144 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        144 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        144 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        144 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        144 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        144 = { units_in_province = 1 }
+		}
+		modifier = {		        144 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        144 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        144 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		144 = { secede_province = SPA }
+	}
+}
+
+country_event = {
+
+	id = 1122
+
+	trigger = {
+		not = { exists = SIP }
+		owns = 152		
+		152 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 169
+
+		modifier = {
+			factor = 0.8
+		        152 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        152 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        152 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        152 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        152 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        152 = { units_in_province = 1 }
+		}
+		modifier = {		        152 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        152 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        152 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		152 = { secede_province = SIP }
+	}
+}
+
+country_event = {
+
+	id = 1123
+
+	trigger = {
+		not = { exists = IBR }
+                owns = 180	
+		180 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 579
+
+		modifier = {
+			factor = 0.8
+		        180 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        180 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        180 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        180 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        180 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        180 = { units_in_province = 1 }
+		}
+		modifier = {		        180 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        180 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        180 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		176 = { secede_province = IBR }
+		180 = { secede_province = IBR }
+	}
+}
+
+country_event = {
+
+	id = 1124
+
+	trigger = {
+		not = { exists = MAG }
+        owns = 98
+		98 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 314
+
+
+		modifier = {
+			factor = 0.8
+		        98 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        98 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        98 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        98 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        98 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        98 = { units_in_province = 1 }
+		}
+		modifier = {		        98 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        98 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        98 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...	
+
+		99 = { secede_province = MAG }
+		98 = { secede_province = MAG }
+	}
+}
+
+country_event = {
+
+	id = 1125
+
+	trigger = {
+		not = { exists = PER }
+		owns = 156		
+		156 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 147
+
+		modifier = {
+			factor = 0.8
+		        156 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        156 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        156 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        156 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        156 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        156 = { units_in_province = 1 }
+		}
+		modifier = {		        156 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        156 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = corrupt
+			}
+				}	factor = 0.9
+		}
+		modifier = {		        156 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...	
+		156 = { secede_province = PER }
+	}
+}
+
+
+country_event = {
+
+	id = 1126
+
+	trigger = {
+		not = { exists = ILY }
+        owns = 126	
+		126 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 720
+
+		modifier = {
+			factor = 0.8
+		        126 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        126 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        126 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        126 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        126 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        126 = { units_in_province = 1 }
+		}
+		modifier = {		        126 = {
+			revolt_risk = 2
+				}	factor = 0.9
+		}
+		modifier = {		        126 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        126 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		116 = { secede_province = ILY }
+		126 = { secede_province = ILY }
+		137 = { secede_province = ILY }
+	}
+}
+
+
+country_event = {
+
+	id = 1127
+
+	trigger = {
+		not = { exists = MAC }
+		owns = 138	
+		138 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 471
+
+		modifier = {
+			factor = 0.8
+		        138 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        138 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        138 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        138 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        138 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        138 = { units_in_province = 1 }
+		}
+		modifier = {		        138 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        138 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        138 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		138 = { secede_province = MAC }
+		140 = { secede_province = MAC }
+		146 = { secede_province = MAC }
+	}
+}
+
+
+country_event = {
+
+	id = 1128
+
+	trigger = {
+		not = { exists = MED }
+		not = { TAG = PAR }
+        owns = 198	
+		198 = {	or = {
+						has_governor = no
+						and = {
+							has_governor = yes
+							governor_scope = { not = { military = 5 } } }
+	                     } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 785
+
+		modifier = {
+			factor = 0.8
+		        198 = { not = { culture_group = this } }
+		}
+		modifier = {
+			factor = 0.9
+		        198 = { not = { religion_group = this } }
+		}
+		modifier = {
+			factor = 1.2
+		        198 = { primary_culture = this }
+		}
+		modifier = {
+			factor = 1.1
+		        198 = { religion = this }
+		}
+		modifier = {
+			factor = 0.8
+		        198 = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 1.2
+		        198 = { units_in_province = 1 }
+		}
+		modifier = {		        198 = {
+			revolt_risk = 2
+			}		factor = 0.9
+		}
+		modifier = {		        198 = {
+			revolt_risk = 5
+			}		factor = 0.8
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = cruel
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = merciful
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = just	
+			}
+			}		factor = 1.1
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = corrupt
+			}
+			}		factor = 0.9
+		}
+		modifier = {		        198 = {
+			governor_scope = {
+				traits = righteous
+			}
+			}		factor = 1.1
+		}	
+		modifier = {
+			factor = 0.9
+		        war = yes 
+		}
+		modifier = {
+			factor = 0.8
+		        has_civil_war = yes 
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 60 }
+		}
+	}
+
+	title = "EVTNAME1096"
+	desc = "EVTDESC1096"
+
+	option = {
+		name = "EVTOPTA1052"					# Let them be for now...
+		198 = { secede_province = MED }
+		199 = { secede_province = MED }
+		200 = { secede_province = MED }
+	}
+}
+
+
+country_event = {
+
+	id = 1129
+
+	trigger = {
+		ai = no 
+		TAG = PAR
+        war = yes
+		owns = 207		# Hyrcania
+		owns = 208		# Parthia
+		owns = 209		# Tabae
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	title = "EVTNAME1053"
+	desc = "EVTDESC1053"
+
+
+
+	option = {
+		name = "EVTOPTA1053"
+		ruler = {
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			horse_archers = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+		}
+		treasury = 100
+		land_tech = 300
+		naval_tech = 300
+		construction_tech = 300
+		civic_tech = 300
+		religious_tech = 300
+	}
+}
+
+country_event = {
+
+	id = 1130
+
+	trigger = {
+		ai = yes
+		TAG = PON
+#                war = yes
+		owns = 151	
+		not = { num_of_cities = 12 }	
+		not = { year = 700 }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	title = "EVTNAME1091"
+	desc = "EVTDESC1053"
+
+
+
+	option = {
+		name = "EVTOPTA1053"
+		ruler = {
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+		}
+		treasury = 100
+	}
+}
+
+country_event = {
+
+	id = 1131
+
+	trigger = {
+		ai = yes
+		TAG = ARM
+#                war = yes
+		owns = 186	
+		not = { num_of_cities = 12 }	
+		not = { year = 700 }
+	}
+
+	mean_time_to_happen = {
+		months = 750
+	}
+
+	title = "EVTNAME1091"
+	desc = "EVTDESC1053"
+
+
+
+	option = {
+		name = "EVTOPTA1053"
+		ruler = {
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			heavy_infantry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			cavalry = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+			archers = THIS
+		}
+		treasury = 100
+	}
+}

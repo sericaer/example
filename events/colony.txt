@@ -1,0 +1,1050 @@
+
+province_event = {
+
+	id = 4001 
+
+	trigger = {
+		barbarian_power = 0.1
+		has_governor = yes
+		governor_scope = {
+			finesse = 1
+		} 
+	}
+
+	mean_time_to_happen = {
+		
+		months = 90
+
+		modifier = {
+			NOT = { barbarian_power = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { barbarian_power = 3 }
+			factor = 0.9 
+		}	
+		modifier = {
+			NOT = { barbarian_power = 4 }
+			factor = 0.9
+		}
+		modifier = {
+			barbarian_power = 7
+			factor = 1.1
+		}
+		modifier = {
+			barbarian_power = 8
+			factor = 1.1
+		}
+		modifier = {
+			barbarian_power = 9 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { finesse = 2 }
+			}
+			factor = 2.0
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { finesse = 3 }
+			}
+			factor = 1.5
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { finesse = 4 }
+			}
+			factor = 1.2
+		} 	
+		modifier = {
+			governor_scope = {
+				finesse = 7
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				finesse = 8
+			}
+			factor = 0.8
+		}
+		modifier = {
+			governor_scope = {
+				finesse = 9
+			}
+			factor = 0.7
+		}
+		modifier = {
+			factor = 0.85
+			has_building = temple
+		}
+		modifier = {
+			factor = 0.9
+			has_building = forum
+		}
+		modifier = {
+			factor = 0.85
+			has_building = aqueduct
+		}
+		modifier = {
+			factor = 0.9
+			has_building = arena
+		}
+		modifier = {
+			factor = 0.9
+			has_building = roads
+		}
+		modifier = {
+			factor = 0.85
+			has_building = academy
+		}
+		
+		modifier = {
+			civilization_value = 90
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 80
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 0.9
+		}
+		modifier = {
+			civilization_value = 60
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 50 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 1.1
+		}	
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4001"
+	desc = "EVTDESC4001"
+
+	option = {
+		name = "EVTOPTA4001"
+		barbarian_power = -1
+		population = 1
+		governor_scope = {
+			popularity = 5
+		}
+#		province_event = 4010
+	}
+	
+#	option = {
+#		name = "EVTOPTB4001"
+#		ruler = {
+#			popularity = 5
+#		}
+#		governor_scope = {
+#			loyalty = -5
+#		}
+#	}
+}
+
+province_event = {
+	id = 4010
+	
+#	is_triggered_only = yes
+	trigger = {
+		colony = yes
+		has_building = temple
+		NOT = { barbarian_power = 0.1 }
+	}
+	
+	title = "EVTNAME4010"
+	desc = "EVTDESC4010"
+
+	option = {
+		name = "EVTOPTA4010"
+		colony = no
+		culture = THIS
+		religion = THIS
+	}
+	
+}
+
+province_event = {
+
+	id = 4002
+
+	trigger = {
+		NOT = { barbarian_power = 0.1 }
+		has_governor = yes
+		governor_scope = {
+			charisma = 1
+		} 
+		owner = {
+			NOT = { primary_culture = THIS }
+		}
+		NOT = { civilization_value = 90 }
+	}
+
+	mean_time_to_happen = {
+		
+		months = 1200
+
+		modifier = {
+			owner = { religion = THIS }
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				idea = citizenship
+			}
+			factor = 0.8
+		}
+		modifier = {
+			owner = {
+				idea = emancipation
+			}
+			factor = 0.8
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 9
+			}
+			factor = 0.8
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 8
+			}
+			factor = 0.8
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 7
+			}
+			factor = 0.8
+		}
+		
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 2 }
+			}
+			factor = 2
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 3 }
+			}
+			factor = 1.5
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 4 }
+			}
+			factor = 1.2
+		} 	
+		
+		modifier = {
+			NOT = { civilization_value = 50 }
+			factor = 0.8
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 0.9
+		}	
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { NOT = { religion_group = THIS } }
+			factor = 1.5
+		}
+		modifier = {
+			population = 8 
+			factor = 0.9
+		}
+		modifier = { 
+			population = 16
+			factor = 1.1	
+		}
+		modifier = {
+			population = 24
+			factor = 1.3
+		}
+		modifier = {
+			population = 32
+			factor = 1.5
+		}
+	}
+
+	title = "EVTNAME4002"
+	desc = "EVTDESC4002"
+
+	option = {
+		name = "EVTOPTA4002"
+		culture = THIS
+		governor_scope = {
+			popularity = 5
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB4002"
+		ruler = {
+			popularity = 5
+		}
+		governor_scope = {
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 4003
+
+	trigger = {
+		barbarian_power = 1
+	}
+
+	mean_time_to_happen = {
+		
+		months = 60 
+
+		modifier = {
+			NOT = { barbarian_power = 2 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { barbarian_power = 3 }
+			factor = 1.1
+		}	
+		modifier = {
+			NOT = { barbarian_power = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			barbarian_power = 7
+			factor = 0.9
+		}
+		modifier = {
+			barbarian_power = 8
+			factor = 0.9
+		}
+		modifier = {
+			barbarian_power = 9 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 2 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 3 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { charisma = 4 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			regional_cohorts = 2
+			factor = 1.5
+		}
+		modifier = {
+			regional_cohorts = 4
+			factor = 1.5
+		}
+		modifier = {
+			regional_cohorts = 6
+			factor = 1.5
+		}
+		modifier = {
+			regional_cohorts = 10
+			factor = 2
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				charisma = 9
+			}
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 90
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 80
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 60
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 50 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 0.9
+		}	
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 0.9
+		}
+		modifier = {
+			religion = THIS
+			factor = 0.5
+		}
+		modifier = {
+			NOT = { religion = THIS }
+			factor = 2
+		}
+		modifier = {
+			NOT = { primary_culture = yes }
+			factor = 2
+		}
+		modifier =  {
+			has_governor = no 
+			factor = 0.5
+		}
+	}
+
+	title = "EVTNAME4003"
+	desc = "EVTDESC4003"
+
+	option = {
+		name = "EVTOPTA4003"
+		spawn_horde = 2
+		governor_scope = {
+			popularity = -20
+		}
+		owner = {
+			ruler = {
+				popularity = -10
+			}
+		}
+	}
+	
+}
+
+province_event = {
+
+	id = 4004
+
+	trigger = {
+		controlled_by = BAR
+		has_siege = no
+		last_control_change = 90 
+	}
+
+	mean_time_to_happen = {
+
+		months = 24
+
+		modifier = {
+			civilization_value = 90
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 80
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 70
+			factor = 1.1
+		}
+		modifier = {
+			civilization_value = 60
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { civilization_value = 50 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 40 }
+			factor = 0.9
+		}	
+		modifier = {
+			NOT = { civilization_value = 30 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { civilization_value = 20 }
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4004"
+	desc = "EVTDESC4004"
+
+	option = {
+		
+		name = "EVTOPTA4004"
+		ruler = {
+			popularity = -30
+		}
+		barbarian_create_client = yes
+	}
+}
+
+province_event = {
+
+	id = 4009
+
+	trigger = {
+		owner = {
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+		NOT = { barbarian_power = 7 }
+		OR = { 
+			province_id = 232
+			province_id = 233
+			province_id = 238
+			province_id = 239
+			province_id = 242
+			province_id = 243
+			province_id = 249
+			province_id = 251
+			province_id = 252
+			province_id = 254
+			province_id = 256
+		}
+		NOT = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			has_building = fort1
+			factor = 1.1
+		}
+		modifier = {
+			has_building = fort2 
+			factor = 1.2
+		}
+		modifier = {
+			has_building = fort3
+			factor = 1.3
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				military = 7 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 9 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { 
+					military = 1
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 2
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 3
+				}
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4009"
+	desc = "EVTDESC4009"
+
+	option = {
+		name = "EVTOPTA4009"
+		barbarian_power = 5
+	}
+}	
+
+province_event = {
+
+	id = 4005
+
+	trigger = {
+		owner = {
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+		NOT = { barbarian_power = 7 }
+		OR = { 
+			province_id = 228
+			province_id = 229
+			province_id = 230
+		}
+		NOT = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			has_building = fort1
+			factor = 1.1
+		}
+		modifier = {
+			has_building = fort2 
+			factor = 1.2
+		}
+		modifier = {
+			has_building = fort3
+			factor = 1.3
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				military = 7 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 9 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { 
+					military = 1
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 2
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 3
+				}
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4005"
+	desc = "EVTDESC4005"
+
+	option = {
+		name = "EVTOPTA4005"
+		barbarian_power = 5
+	}
+}		
+
+province_event = {
+
+	id = 4006
+
+	trigger = {
+		owner = {
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+		NOT = { barbarian_power = 7 }
+		OR = { 
+			province_id = 213
+			province_id = 214
+			province_id = 216
+			province_id = 217
+			province_id = 218
+			province_id = 222
+			province_id = 223
+		}
+		NOT = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			has_building = fort1
+			factor = 1.1
+		}
+		modifier = {
+			has_building = fort2 
+			factor = 1.2
+		}
+		modifier = {
+			has_building = fort3
+			factor = 1.3
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				military = 7 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 9 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { 
+					military = 1
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 2
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 3
+				}
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4006"
+	desc = "EVTDESC4006"
+
+	option = {
+		name = "EVTOPTA4006"
+		barbarian_power = 5
+	}
+}		
+
+province_event = {
+
+	id = 4007
+
+	trigger = {
+		owner = {
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+		NOT = { barbarian_power = 7 }
+		OR = { 
+			province_id = 166
+			province_id = 167
+			province_id = 168
+			province_id = 169
+			province_id = 172
+			province_id = 174
+			province_id = 178
+			province_id = 179
+			province_id = 207
+			province_id = 208
+			province_id = 209
+			province_id = 210
+		}
+		NOT = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			has_building = fort1
+			factor = 1.1
+		}
+		modifier = {
+			has_building = fort2 
+			factor = 1.2
+		}
+		modifier = {
+			has_building = fort3
+			factor = 1.3
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				military = 7 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 9 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { 
+					military = 1
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 2
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 3
+				}
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4007"
+	desc = "EVTDESC4007"
+
+	option = {
+		name = "EVTOPTA4007"
+		barbarian_power = 5
+	}
+}
+
+province_event = {
+
+	id = 4008
+
+	trigger = {
+		owner = {
+			NOT = {
+				OR = {
+					government = military_tribe
+					government = religious_tribe
+					government = trade_tribe
+					government = civic_tribe
+				}
+			}
+		}
+		NOT = { barbarian_power = 7 }
+		OR = { 
+			province_id = 81
+			province_id = 82
+			province_id = 83
+			province_id = 108
+			province_id = 109
+		}
+		NOT = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+
+		modifier = {
+			has_building = fort1
+			factor = 1.1
+		}
+		modifier = {
+			has_building = fort2 
+			factor = 1.2
+		}
+		modifier = {
+			has_building = fort3
+			factor = 1.3
+		}
+		modifier = {
+			has_governor = no
+			factor = 0.5
+		}
+		modifier = {
+			governor_scope = {
+				military = 7 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				military = 9 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				NOT = { 
+					military = 1
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 2
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				NOT = {
+					military = 3
+				}
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4008"
+	desc = "EVTDESC4008"
+
+	option = {
+		name = "EVTOPTA4008"
+		barbarian_power = 5
+	}
+}		

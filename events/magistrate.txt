@@ -1,0 +1,372 @@
+# Your magistrate is turning your friends against you
+character_event = {
+
+	id = 2800
+
+	trigger = {
+		is_ruler = yes
+		num_of_friends = 1
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				has_office = civic_tech
+				can_get_rivals = yes
+				not = { is_friend = this }
+				not = { is_rival = this }
+				not = { loyalty = 50 }
+			}
+			any_character = {
+				not = { has_office = civic_tech }
+				can_hold_title = title_civic_tech
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 40 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 1
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 2
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 3
+		}
+	}
+
+	title = "EVTNAME2800"
+
+	desc = "EVTDESC2800"
+
+	option = {
+		name = "EVTOPTA2800"					# I think it would be best to find a replacement
+		country = {
+			random_character = {
+				limit = { has_office = civic_tech }
+				add_rival = this
+			}			
+			random_character = {
+				limit = { can_hold_title = title_civic_tech }
+				assign_office = civic_tech
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2800"					# Discuss the matter with your friends
+		random = {
+			chance = 50
+			random_friend = {
+				remove_friend = this
+			}
+			country = {
+				random_character = {
+					limit = { has_office = civic_tech }
+					loyalty = -10
+				}
+			}
+		}
+	}
+}
+
+# Your magistrate is stealing from the treasury
+character_event = {
+
+	id = 2801
+	
+	major_character = yes
+
+	trigger = {
+		is_ruler = yes
+		can_get_rivals = yes
+		country = {
+			any_character = {
+				has_office = civic_tech
+				is_female = no
+				not = { is_friend = this }
+				not = { is_rival = this }
+				can_get_rivals = yes
+				not = { traits = wounded }
+				not = { traits = vengeful }
+				or = {
+					traits = lapsed
+					traits = corrupt
+					traits = vengeful
+					traits = selfish
+					traits = deceitful
+					traits = shrewd
+					traits = foolish
+					traits = arrogant
+					traits = ambitious
+					traits = rash
+					traits = jealous
+					traits = weak_willed
+					traits = stressed
+					traits = maniac
+				}
+			}
+			any_character = {
+				not = { has_office = civic_tech }
+				can_hold_title = title_civic_tech
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 1.2
+			traits = generous
+		}
+		modifier = {
+			factor = 1.2
+			traits = good_natured
+		}
+		modifier = {
+			factor = 1.2
+			traits = just
+		}
+	}
+
+	title = "EVTNAME2801"
+
+	desc = "EVTDESC2801"
+
+	option = {
+		name = "EVTOPTA2801"					# This won't go unpunished
+		random_list = {
+			50 = {
+				country = {
+					random_character = {
+						limit = { has_office = civic_tech }
+						add_trait = wounded
+					}
+				}
+			}
+			50 = {
+				country = {
+					random_character = {
+						limit = { has_office = civic_tech }
+						death = yes
+					}
+				}
+			}
+		}	
+	}
+	option = {
+		name = "EVTOPTB2801"					# Just find me a replacement!
+		country = {
+			random_character = {
+				limit = { has_office = civic_tech }
+				add_trait = vengeful
+				add_rival = this
+			}
+			random_character = {
+				limit = { can_hold_title = title_civic_tech }
+				assign_office = civic_tech
+			}	
+		}
+	}
+}
+
+# Your magistrate's financial skills has brought the economy to new heights.
+country_event = {
+
+	id = 2802
+
+	trigger = {
+		any_character = {
+			has_office = civic_tech
+			finesse = 8
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 1.2
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { stability = -2 }
+		}
+	}
+
+	title = "EVTNAME2802"
+
+	desc = "EVTDESC2802"
+
+	option = {
+		name = "EVTOPTA2802"					# Ahh...more money
+		treasury = 50
+	}
+}
+
+# Questinable methods
+country_event = {
+
+	id = 2803
+
+	trigger = {
+		any_character = {
+			has_office = civic_tech
+			not = { finesse = 4 }
+			not = { traits = good_natured }
+			not = { traits = merciful }
+			not = { traits = loving }
+			not = { traits = incapable }
+			not = { traits = forgiving }
+			not = { traits = generous }
+			not = { traits = self_controlled }
+			not = { traits = weak_willed }
+			or = {
+				traits = cruel
+				traits = aggressive
+				traits = disciplined
+				traits = abrasive
+				traits = crafty
+				traits = zealous
+				traits = tactically_inflexible
+				traits = narrowminded
+				traits = assertive
+				traits = arrogant
+				traits = cold
+				traits = rash
+				traits = stubborn
+				traits = stressed
+				traits = maniac
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 1.2
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { stability = -2 }
+		}
+	}
+
+	title = "EVTNAME2803"
+
+	desc = "EVTDESC2803"
+
+	option = {
+		name = "EVTOPTA2803"					# That can't be helped
+		add_country_modifier = {
+			name = "high_tax_income"
+			duration = 730
+		}
+		random = {
+			chance = 40
+			random_owned = {
+				change_controller = REB
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2803"					# Hmm..there might be better ways
+		add_country_modifier = {
+			name = "low_tax_income"
+			duration = 730
+		}		
+	}
+}
+
+# Suggestions regarding our economy
+country_event = {
+
+	id = 2804
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		any_character = {
+			has_office = civic_tech
+			finesse = 8
+			loyalty = 70
+		}
+		treasury = 0
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			military = 8
+		}
+		modifier = {
+			factor = 0.9
+			military = 7
+		}
+	}
+
+	title = "EVTNAME2804"
+
+	desc = "EVTDESC2804"
+
+	option = {
+		name = "EVTOPTA2804"					# What are we waiting for?
+		civic_tech = 500
+	}
+}

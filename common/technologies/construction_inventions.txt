@@ -1,0 +1,354 @@
+forum_invention = {
+	trigger = {
+		construction_tech = 1
+		capital_scope = { civilization_value = 5 }
+	}
+	effect = {
+		forum = yes
+	}
+}
+
+fort1_invention = {
+	trigger = {
+		construction_tech = 1
+		capital_scope = { civilization_value = 5 }
+	}
+	effect = {
+		fort1 = yes
+	}
+}
+
+irrigation_invention = {
+	trigger = {
+		construction_tech = 1
+		capital_scope = { civilization_value = 5 }
+	}
+	effect = {
+		irrigation = yes
+	}
+}
+
+mining_invention = {
+	trigger = {
+		construction_tech = 5
+		capital_scope = { civilization_value = 15 } 
+	}
+	effect = {
+		mine = yes
+	}
+}
+
+forestry_invention = {
+
+	trigger = {
+		construction_tech = 9
+		capital_scope = { civilization_value = 10 }
+	}
+	effect = {
+		forestry = yes
+	}
+}
+
+fort2_invention = {
+	trigger = {
+		construction_tech = 10
+		capital_scope = { civilization_value = 25 }
+	}
+	effect = {
+		fort2 = yes
+	}
+}
+
+academy_invention = {
+	trigger = {
+		construction_tech = 12
+		capital_scope = { civilization_value = 30 }
+	}
+	effect = {
+		academy = yes
+	}
+}
+
+road_building = {
+	trigger = {
+		construction_tech = 15
+		invention = civic_planning
+		capital_scope = { civilization_value = 40 }
+	}
+	effect = {
+		roads = yes
+	}
+}
+
+the_value_of_functionality = {
+	trigger = {
+		has_country_flag = funcionality 
+		construction_tech = 10 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_time = -0.02
+}
+
+revolt_against_decadence = {
+	trigger = {
+		has_country_flag = functionality 
+		construction_tech = 12
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_cost = -0.02
+}
+
+standardised_designs = {
+	trigger = {
+		has_country_flag = functionality 
+		construction_tech = 14
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_time = -0.02
+}
+
+concrete = {
+	trigger = {
+		construction_tech = 16
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_cost = -0.02			# Reduces cost (slightly) of existing buildings
+}
+
+outlawing_guilds = {
+	trigger = {
+		construction_tech = 20 
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_cost = -0.02
+}
+
+fort3_invention = {
+	trigger = {
+		construction_tech = 20
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+		fort3 = yes
+	}
+}
+	
+competition = {
+	trigger = {
+		construction_tech = 22
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_time = -0.02
+}
+
+standardisation_of_materials = {
+	trigger = {
+		construction_tech = 24
+		has_country_flag = functionality
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_cost = -0.02
+}
+
+specialist_construction_tools = {
+	trigger = {
+		construction_tech = 26
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_time = -0.02
+}
+
+low_building_standards = {
+	trigger = { 
+		construction_tech = 28 
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_time = -0.02
+}
+
+low_material_standards = {
+	trigger = {
+		construction_tech = 30 
+		has_country_flag = functionality 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_cost = -0.02
+}	
+
+the_value_of_form = {
+	trigger = {
+		construction_tech = 10
+		has_country_flag = form 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_time = 0.02
+	monthly_character_loyalty = 0.01
+}	
+
+the_pursuit_of_decadence = {
+	trigger = {
+		construction_tech = 12
+		has_country_flag = form 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_cost = 0.02
+	global_religious_prestige = 0.01
+}
+
+internal_decoration = {
+	trigger = {
+		construction_tech = 14
+		has_country_flag = form 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_cost = 0.02
+	omen_chance = 0.05
+}
+
+decorative_enhancement = {
+	trigger = {
+		construction_tech = 16
+		has_country_flag = form 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	build_time = 0.02
+	tribute_income_modifier = 0.2
+}
+
+colonnades = {
+	trigger = {
+		construction_tech = 20
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_cost = 0.02
+	omen_power = 0.05
+}
+
+specialist_guilds = {
+	trigger = {
+		construction_tech = 22
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_cost = 0.02
+	monthly_character_loyalty = 0.01
+}
+
+master_craftsmen = {
+	trigger = {
+		construction_tech = 24
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_time = 0.02
+	global_religious_prestige = 0.01
+}
+
+high_standard-buildings = {
+	trigger = { 	
+		construction_tech = 26
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_time = 0.02
+	tribute_income_modifier = 0.2
+}
+
+additional_external_decoration = {
+	trigger = {
+		construction_tech = 28
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect =  {
+	}
+	build_time = 0.02
+	omen_power =  0.05
+}
+
+gilt_interior = {
+	trigger = {
+		construction_tech = 30 
+		has_country_flag = form 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	build_cost = 0.02
+	omen_chance = 0.05
+}  
+
+large_scale_building = {
+	trigger = {
+		construction_tech = 20
+		OR = {
+			invention = concrete
+			invention = decorative_enhancement
+		}
+	}
+	effect = {
+	}
+}
+
+archs_and_domes = {
+	trigger = {
+		construction_tech = 22
+		invention = large_scale_building
+	}
+	effect = {
+	}
+}
+
+
+aqueduct_invention = {
+	trigger = {
+		construction_tech = 24
+		invention = civic_planning
+		invention = archs_and_domes
+	}
+	effect = {
+		aqueduct = yes
+	}
+}

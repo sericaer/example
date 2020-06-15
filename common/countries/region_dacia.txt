@@ -1,0 +1,4 @@
+civil_war_faction = QD3
+region = region_dacia
+color = { 125 125 50 }
+color2 = { 50 50 0 }

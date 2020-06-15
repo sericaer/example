@@ -1,0 +1,22 @@
+civil_war_faction = CO4
+graphical_culture = scythiangfx
+color = { 0  198 107 }
+color2 = { 232 177 110 }
+
+ship_names = {
+	Acastos Admetos Aethalides Aietes Aiolos Amphion Ankaios Argo Argos Askalaphos Atalanta "Athena Asia" Autolycus
+	Bellerophontes Butes
+	Calais Canthos Cytisoros
+	Echion Erginos Euphemos Euryalos
+	Herakles Hylas
+	Iason Idas Idmon Iolaos
+	Kastor Khalkiope Khrysomallos Kirke
+	Laertes
+	Melas Meleager
+	Nestor
+	Oedipous Oileus Orpheus
+	Palaemon Pasiphae Peleus Perseis Phasis Philoctetes Phrixos Phrontis Poeas Pollux Polyphemos
+	Poriclymenus "Poseidon Pelagaios" Presbon
+	Talaus Telamon Tiphys
+	Zetes
+}

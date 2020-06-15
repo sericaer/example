@@ -1,0 +1,4 @@
+civil_war_faction = QM4
+region = region_moesia_superior
+color = { 175 175 100 }
+color2 = { 70 70 20 }

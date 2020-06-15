@@ -1,0 +1,4 @@
+civil_war_faction = QGS
+region = region_gallia_cisalpina
+color = { 70 190 70 }
+color2 = { 255 255 255 }

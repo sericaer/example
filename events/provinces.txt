@@ -1,0 +1,280 @@
+##########################################
+#  	   Province Production 	 	 #
+##########################################
+
+province_event = {
+
+	id = 7000
+	
+	trigger = {
+		trade_goods = grain 
+		max_manpower = no
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7000"
+	desc = "EVTDESC7000"
+
+	option = {
+		name = "EVTOPTA7000"
+		owner = { manpower = 2 }
+	}
+}
+
+province_event = {
+		
+	id = 7001
+
+	trigger = {
+		trade_goods = salt
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7001"
+	desc = "EVTDESC7001"
+
+	option = {
+		name = "EVTOPTA7001"
+		owner = {
+			add_country_modifier = {
+				name = "salt_shortage"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7002
+
+	trigger = {
+		trade_goods = iron
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7002"
+	desc = "EVTDESC7002"
+
+	option = {
+		name = "EVTOPTA7002"
+		owner = {
+			add_country_modifier = {
+				name = "lack_of_iron"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7003
+
+	trigger = {
+		trade_goods = horses 
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7003"
+	desc = "EVTDESC7003"
+
+	option = {
+		name = "EVTOPTA7003"
+		owner = {
+			add_country_modifier = {
+				name = "better_morale"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7004
+
+	trigger = {
+		trade_goods = wine 
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7004"
+	desc = "EVTDESC7004"
+
+	option = {
+		name = "EVTOPTA7004"
+		owner = {
+			add_country_modifier = {
+				name = "happy_citizens"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7005
+
+	trigger = {
+		trade_goods = wood 
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7005"
+	desc = "EVTDESC7005"
+
+	option = {
+		name = "EVTOPTA7005"
+		owner = {
+			add_country_modifier = {
+				name = "diminishing_trade"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7006
+
+	trigger = {
+		trade_goods = amber 
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7006"
+	desc = "EVTDESC7006"
+
+	option = {
+		name = "EVTOPTA7006"
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+		
+	id = 7007
+
+	trigger = {
+		trade_goods = stone
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7007"
+	desc = "EVTDESC7007"
+
+	option = {
+		name = "EVTOPTA7007"
+		owner = {
+			add_country_modifier = {
+				name = "cheaper_buildings"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7008
+
+	trigger = {
+		trade_goods = fish 
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7008"
+	desc = "EVTDESC7008"
+
+	option = {
+		name = "EVTOPTA7008"
+		owner = {
+			add_country_modifier = {
+				name = "population_increase"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7009
+
+	trigger = {
+		trade_goods = spices
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7009"
+	desc = "EVTDESC7009"
+
+	option = {
+		name = "EVTNAME7009"
+		owner = {
+			add_country_modifier = {
+				name = "trade_problems"
+				duration = 360
+			}
+		}
+	}
+}
+
+province_event = {
+		
+	id = 7010
+
+	trigger = {
+		trade_goods = elephants
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7010"
+	desc = "EVTDESC7010"
+
+	option = {
+		name = "EVTNAME7010"
+		owner = {
+			add_country_modifier = {
+				name = "elephant_charge"
+				duration = 360
+			}
+		}
+	}
+}

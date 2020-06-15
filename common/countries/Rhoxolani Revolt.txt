@@ -1,0 +1,15 @@
+civil_war_faction = RHX
+graphical_culture = scythiangfx
+color = { 201  167  64 }
+
+ship_names = {
+	Anahars Api Argipp Ariant Ariapit Arimasp Arginpaza
+	Ditagoia
+	Gnur
+	Idantir
+	Kaizos Kolaksay
+	Oitosuros
+	Papay Rha
+	Sag Skilur Spargapit
+	Tabiti Targitay Tagimasadas Tour Traetaona
+}

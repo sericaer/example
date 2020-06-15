@@ -1,0 +1,4 @@
+civil_war_faction = QMU
+region = region_mauretania
+color = { 136 136 180 }
+color2 = { 15 50 50 }

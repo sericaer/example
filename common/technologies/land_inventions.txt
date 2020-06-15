@@ -1,0 +1,482 @@
+mass_charge = {
+	trigger = {
+		land_tech = 1
+		capital_scope = { civilization_value = 5 }
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	militia_offensive = 0.12				# Militia shock bonus
+	militia_discipline = -0.05			# Militia discipline penalty
+	land_organisation = -0.02		# Militia infantry land_organisation penalty
+}
+
+elite_contigents = {
+	trigger = {
+		land_tech = 2
+		capital_scope = {civilization_value = 10}
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	militia_discipline = 0.02
+}
+
+throwing_spears = {
+	trigger = {
+		land_tech = 3
+		capital_scope = {civilization_value = 15}
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	militia_offensive = 0.02
+}
+
+tribal_divisions = {
+	trigger = {
+		land_tech = 4
+		capital_scope = { civilization_value = 20}
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	battle_event_chance = 0.04
+}
+
+inv_reserves = {
+	trigger = {
+		land_tech = 5
+		capital_scope = {civilization_value = 25}
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	militia_offensive = 0.02
+	militia_discipline = 0.02
+}
+
+armour = {
+	trigger = {
+		land_tech = 1
+		capital_scope = {civilization_value = 35}
+	}
+	effect = {
+		lose_invention = mass_charge
+		lose_invention = elite_contigents
+		lose_invention = throwing_spears
+		lose_invention = tribal_divisions
+		lose_invention = inv_reserves
+	}
+	heavy_infantry_defensive = 0.04
+}
+
+basic_drill = {
+	trigger = {
+		land_tech = 3
+		capital_scope = {civilization_value = 35}
+	}
+	effect = {
+	}
+	heavy_infantry_discipline = 0.02
+}
+
+
+standardised_equipment = {
+	trigger = {
+		land_tech = 6
+		capital_scope = {civilization_value = 35}
+	}
+	effect = {
+	}
+	heavy_infantry_offensive = 0.04
+	heavy_infantry_defensive = 0.04
+}
+
+officers = {
+	trigger = {
+		land_tech = 8
+		capital_scope = {civilization_value = 35}
+	}
+	effect = {
+	}
+	heavy_infantry_discipline = 0.04
+}
+
+defensive_formation = {
+	trigger = {
+		land_tech = 10
+		capital_scope = {civilization_value = 35}
+	}
+	effect = {
+	}
+	heavy_infantry_defensive = 0.06
+	heavy_infantry_offensive = -0.02
+}
+
+elephant_warfare =  {
+	trigger = {
+		land_tech = 14
+		capital_scope = {civilization_value = 60}
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	warelephant_offensive = 0.1	
+}
+
+phalanx_charge = {
+	trigger = {
+		land_tech = 18
+		capital_scope = {civilization_value = 60}
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_offensive = 0.06
+}
+
+phalanx_deeping = {
+	trigger = {
+		land_tech = 20
+		capital_scope = {civilization_value = 60}
+		invention = phalanx_charge 
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_defensive = 0.06	
+}
+
+mixed_phalanx = {
+	trigger = {
+		land_tech = 24
+		capital_scope = {civilization_value = 60}
+		invention = phalanx_deeping 
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_defensive = 0.1
+}
+
+sword_equiped_troops = {
+	trigger = {
+		land_tech = 27
+		capital_scope = {civilization_value = 60}
+		invention = mixed_phalanx 
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_discipline = 0.04
+}
+
+
+maniple_system = {
+	trigger = {
+		land_tech = 14
+		capital_scope = {civilization_value = 60}
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_offensive = 0.06			
+	heavy_infantry_defensive = 0.06			
+	global_manpower = -0.04				
+}
+
+pillium = {
+	trigger = {
+		land_tech = 17
+		capital_scope = {civilization_value = 60}
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_offensive = 0.1	
+}
+
+veteran_centurions = {
+	trigger = {
+		land_tech = 20
+		capital_scope = {civilization_value = 60}
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	heavy_infantry_discipline = 0.1
+}
+
+cohort_system = {
+	trigger = {
+		land_tech = 24
+		capital_scope = {civilization_value = 60}
+		invention = maniple_system
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	global_manpower = 0.1
+	heavy_infantry_offensive = 0.1
+	heavy_infantry_defensive = 0.1
+}
+
+marian_reforms = {
+	trigger = {
+		land_tech = 27
+		capital_scope = {civilization_value = 60}
+		invention = maniple_system
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	global_manpower = 0.06
+	heavy_infantry_cost = -0.02
+}
+
+inv_horse_archers = {
+	trigger = {
+		land_tech = 1
+		capital_scope = { civilization_value = 5 }
+		capital_scope = { trade_goods = horses }
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	horse_archers_offensive = 0.04
+}
+
+disciplined_missile_troops = {
+	trigger = {
+		land_tech = 1
+		capital_scope = { civilization_value = 35 }	
+	}
+	effect = {
+	}
+	archers_discipline = 0.04
+}
+
+equipment_standardisation = {
+	trigger = {
+		land_tech = 5
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	archers_offensive = 0.06
+}
+
+basic_armour = {
+	trigger = {
+		land_tech = 10 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	archers_defensive = 0.04
+}
+
+missile_support_troops = {
+	trigger = {
+		land_tech = 15
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+		lose_invention = inv_horse_archers 
+	}
+	archers_defensive = 0.08
+}
+
+field_fortifications = {
+	trigger = {
+		land_tech = 20
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	archers_defensive = 0.08
+}
+
+field_artillery_tactics = {
+	trigger = {
+		land_tech = 25
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	archers_offensive = 0.04
+}
+
+missile_disruption = {
+	trigger = {
+		land_tech = 15
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	archers_offensive = 0.08
+}
+
+elite_archer_units = {
+	trigger = {
+		land_tech = 20
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	archers_offensive = 0.08
+}
+
+parthian_shot = {
+	trigger = {
+		land_tech = 25
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	horse_archers_offensive = 0.1
+	horse_archers_defensive = 0.1	
+}
+
+steppe_cavalry = {
+	trigger = {
+		land_tech = 1
+		capital_scope = { civilization_value = 5 }
+		capital_scope = { trade_goods = horses }
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	cavalry_offensive = 0.04
+}
+
+noble_cavalry = {
+	trigger = {
+		land_tech = 1
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	cavalry_discipline = 0.2			# Increases Cavalry discipline
+	cavalry_cost = 0.1
+}
+
+mercenary_skirmisher_cavalry = {
+	trigger = {
+		land_tech = 7
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+		lose_invention = noble_cavalry
+	}
+	cavalry_defensive = 0.08
+}
+
+cavalry_support = {
+	trigger = {
+		land_tech = 14
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	cavalry_defensive = 0.08
+}
+
+heavy_cavalry = {
+	trigger = {
+		land_tech = 21
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = roman_warfare
+	}
+	effect = {
+	}
+	cavalry_offensive = 0.06
+}
+
+mercenary_cavalry = {
+	trigger = {
+		land_tech = 7
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+		lose_invention = noble_cavalry
+	}
+	cavalry_offensive = 0.04
+}
+
+cavalry_charge = {
+	trigger = {
+		land_tech = 14
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+		invention = mixed_phalanx
+	}
+	effect = {
+	}
+	cavalry_offensive = 0.04
+}
+
+armoured_cavalry = {
+	trigger = {
+		land_tech = 21
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = hellenistic_warfare
+	}
+	effect = {
+	}
+	cavalry_defensive = 0.04
+}
+		
+
+career_generals = {
+	trigger = {
+		land_tech = 12
+	}
+	effect = {
+	}
+	battle_event_chance = 0.04
+}
+
+political_generals = {
+
+	trigger = {
+		land_tech = 14
+		invention = career_generals
+	}
+	effect = {
+	}
+	battle_event_chance = 0.04
+	loyalty_gain_chance = 0.04
+}
+
+loyal_veterans = {
+	trigger = {
+		land_tech = 16
+	}
+	effect = {
+	}
+	heavy_infantry_discipline = 0.1
+	loyalty_gain_chance = 0.04
+}
+
+
+
+foundry_invention = {
+	trigger = {
+		land_tech = 26
+		invention = civic_planning
+	}
+	effect = {
+		foundry = yes
+	}
+}

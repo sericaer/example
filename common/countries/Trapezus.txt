@@ -1,0 +1,22 @@
+civil_war_faction = SI3
+graphical_culture = greekgfx
+color = { 133 174 208 }
+color2 = { 103 144 178 }
+
+ship_names = {
+	Aello Ainia Akmonion Alcibie Alcippe Andromache Antandre Antianeira Antibrote Antiope
+	"Ares Stratios" "Artemis Upis" Asteria
+	Bremusa
+	Clete
+	Deianeira Derimacheia Derinoe
+	Eriobea
+	Glauke
+	Harmothoe Hippo Hippolyteia Hippothoe
+	Lampado Lysippeia
+	Marpe Marpesia Melanippe Molpadia Myrina
+	Orithia
+	"Ornithes Areos" Otrere
+	"Parthenikos Areion" Penthesileia Phillipis Polemusa Prothoe
+	Sinope
+	Tanais Tecmessa Thalestris Thermodon Thermodosa Themiscyra
+}

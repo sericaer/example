@@ -1,0 +1,4 @@
+civil_war_faction = QB3
+region = region_britannia
+color = { 170 20 20 }
+color2 = { 50 0 0 }

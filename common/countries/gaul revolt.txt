@@ -1,0 +1,16 @@
+civil_war_faction = GAU
+graphical_culture = celticgfx
+color = { 147  153  173 }
+
+ship_names = {
+	Anderiton Anicio
+	Bannaciacon Bibracte Bormo Borvo Briva
+	Gabales Gergovia
+	Icioduron Iciomagos
+	Mediocantos
+	Randosatis Rigomagos Rodumna Ruessio
+	Segeta Segodunon Segusiaves Sitillia
+	Tritullos
+	Ubrivon
+	Vellaves Vorogio
+}

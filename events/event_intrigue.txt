@@ -1,0 +1,438 @@
+character_event = {
+
+	id = 4700
+
+	trigger = {
+		NOT = { finesse = 4 }
+		age = 16
+		country = {
+			any_character = {
+				is_friend = THIS
+				finesse = 7
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 1.1
+		}
+		modifier = {
+			traits = energetic 
+			factor = 1.1
+		}
+		modifier = {
+			traits = lazy
+			factor = 0.9
+		}
+		modifier = {
+			traits = shrewd
+			factor = 1.1
+		}
+		modifier = {
+			traits = weak_willed
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4700"
+	desc = "EVTDESC4700"
+	
+	option = {
+
+		name = "EVTOPTA4700"
+		popularity = -20
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+					finesse = 7
+					age = 16
+				}
+				remove_friend = THIS
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4701
+
+	trigger = {
+		traits = ambitious
+		traits = reckless
+		NOT = { finesse = 4 }
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 1.1
+		}
+		modifier = {
+			traits = energetic 
+			factor = 1.1
+		}
+		modifier = {
+			traits = lazy
+			factor = 0.9
+		}
+		modifier = {
+			traits = shrewd
+			factor = 1.1
+		}
+		modifier = {
+			traits = weak_willed
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4701"
+	desc = "EVTDESC4701"
+	
+	option = {
+
+		name = "EVTOPTA4701"
+		popularity = -20
+	}
+}
+
+character_event = {
+	
+	id = 4702
+
+	trigger = {
+		age = 16
+		is_female = no
+		NOT = { finesse = 4 }
+		country = {
+			any_character = {
+				age = 16
+				is_friend = THIS
+				is_female = yes
+				finesse = 7
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+		
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 1.1
+		}
+		modifier = {
+			traits = energetic 
+			factor = 1.1
+		}
+		modifier = {
+			traits = lazy
+			factor = 0.9
+		}
+		modifier = {
+			traits = shrewd
+			factor = 1.1
+		}
+		modifier = {
+			traits = weak_willed
+			factor = 0.9
+		}
+	}
+
+	
+	title = "EVTNAME4702"
+	desc = "EVTDESC4702"
+	
+	option = {
+
+		name = "EVTOPTA4702"
+		popularity = -20
+		remove_trait = lustful
+		add_trait = chaste
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+					is_female = yes
+					finesse = 7
+					age = 16
+				}
+				remove_friend = THIS
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4703
+
+	trigger = {
+		can_get_friends = yes
+		NOT = { traits = corrupt }
+		NOT = { traits = righteous }
+		wealth = 750
+		age = 16 
+		NOT = { finesse = 4 }	
+		country = {
+			any_character = {
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				can_get_friends = yes
+				traits = corrupt
+				finesse = 7
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+		
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 2 }
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { finesse = 1 }
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 1.1
+		}
+		modifier = {
+			traits = energetic 
+			factor = 1.1
+		}
+		modifier = {
+			traits = lazy
+			factor = 0.9
+		}
+		modifier = {
+			traits = shrewd
+			factor = 1.1
+		}
+		modifier = {
+			traits = weak_willed
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME4703"
+	desc = "EVTDESC4703"
+	
+	option = {
+
+		name = "EVTOPTA4703"
+		wealth = -100
+		add_trait = corrupt
+		country = {
+			random_character = {
+				limit = {
+					NOT = { is_friend = THIS }
+					NOT = { is_rival = THIS }
+					can_get_friends = yes
+					traits = corrupt
+					finesse = 7
+					age = 16
+				}
+				add_friend = THIS
+				wealth = 100
+			}
+		}
+	}
+}
+
+
+character_event = {
+
+	id = 4704
+
+	trigger = {
+		finesse = 6
+		age = 16 
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 60 
+		
+		modifier = {
+			finesse = 7
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 8
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 0.9
+		}
+		modifier = {
+			traits = energetic 
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy
+			factor = 1.1
+		}
+		modifier = {
+			traits = shrewd
+			factor = 0.9
+		}
+		modifier = {
+			traits = weak_willed 
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4704"
+	desc = "EVTDESC4704"
+
+	option = {
+
+		name = "EVTOPTA4704"
+		country = {
+			random_character = {
+				limit = {
+					is_rival = THIS
+				}
+				popularity = -20
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 4705
+
+	trigger = {
+		finesse = 6
+		age = 16 
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+			any_character = {
+				is_friend = THIS
+				NOT = { finesse = 4 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60 
+		modifier = {
+			finesse = 7
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 8
+			factor = 0.9
+		}
+		modifier = {
+			finesse = 9
+			factor = 0.9
+		}
+		modifier = {
+			traits = vengeful 
+			factor = 0.9
+		}
+		modifier = {
+			traits = energetic 
+			factor = 0.9
+		}
+		modifier = {
+			traits = lazy
+			factor = 1.1
+		}
+		modifier = {
+			traits = shrewd
+			factor = 0.9
+		}
+		modifier = {
+			traits = weak_willed 
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME4705"
+	desc = "EVTDESC4705"
+
+	option = {
+		name = "EVTOPTA4705"
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+					NOT = { finesse = 4 }
+				}
+				remove_friend = THIS
+			}
+		}
+	}
+}

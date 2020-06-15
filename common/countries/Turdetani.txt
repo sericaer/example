@@ -1,0 +1,18 @@
+civil_war_faction = TU2
+graphical_culture = iberiangfx
+color = { 255 236 130 }
+color2 = { 230 20 20 }
+
+ship_names = {
+	Alisa Arar Ariolica Aturona
+	Bebrona Beleno
+	Cosantia
+	Divoduro Dubis
+	Epomanduoduron Epona
+	Gramaton
+	Isarnodoron
+	Luxsa Luxovion
+	Odoanna
+	Segobodion Sequana
+	Varcia Velatuduro Vellosimos Vesontio
+}

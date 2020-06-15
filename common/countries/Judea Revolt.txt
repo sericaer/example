@@ -1,0 +1,11 @@
+civil_war_faction = JUD
+graphical_culture = persiangfx
+color = { 213  158  113 }
+
+ship_names = {
+	Emmaus Ephraim
+	Hebron
+	Jamnia Jericho
+	Lachish Lydda
+	Samaria Shechem Sepphoris
+}

@@ -1,0 +1,4 @@
+civil_war_faction = QSC
+region = region_scandza
+color = { 120 120 200 }
+color2 = { 30 30 100 }

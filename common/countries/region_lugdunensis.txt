@@ -1,0 +1,4 @@
+civil_war_faction = QL2
+region = region_lugdunensis
+color = { 50 50 150 }
+color2 = { 100 100 250 }

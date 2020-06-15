@@ -1,0 +1,401 @@
+religious_organisation = {
+	trigger = {
+		civic_tech = 1
+	}
+	effect = {
+		temple = yes
+	}
+}
+
+double_dealing = {
+	trigger = {
+		civic_tech = 2
+		capital_scope = { civilization_value = 15 }
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	diplomatic_missions = 0.02
+}
+
+underhand_diplomacy = {
+	trigger = {
+		civic_tech = 4
+		capital_scope = {civilization_value = 25 }
+		NOT = { capital_scope = { civilization_value = 35 } }
+	}
+	effect = {
+	}
+	intrigue_missions = 0.02
+}
+
+patronage = {
+	trigger = {
+		civic_tech = 1
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+		lose_invention = double_dealing 
+		lose_invention = underhand_diplomacy 
+	}
+	monthly_character_loyalty = 0.03
+} 
+
+regularised_tribute = {
+	trigger = {
+		civic_tech = 2
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	tribute_income_modifier = 0.1
+}
+
+open_courts = {
+	trigger = {
+		civic_tech = 3
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	monthly_character_loyalty = 0.03
+}
+
+classical_greek_philiosphy = {
+	trigger = {
+		civic_tech = 4
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	research_points_modifier = 0.1
+}
+
+formal_embassies = {
+	trigger = {
+		civic_tech = 5
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	diplomatic_missions = 0.05
+}
+
+improved_contacts = {
+	trigger = {
+		civic_tech = 6
+		capital_scope = { civilization_value = 35 }
+		invention = formal_embassies
+	}
+	effect = {
+	}
+	intrigue_missions = 0.05
+}	
+
+small_scale_corruption = {
+	trigger = {
+		civic_tech = 7 
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+	corruption = 0.05
+}
+
+political_prosecution = {
+	trigger = {
+		civic_tech = 8
+		capital_scope = { civilization_value = 60 }
+		invention = open_courts
+	}
+	effect = {	
+		lose_invention = open_courts 
+	}
+	monthly_character_popularity = 0.03
+}
+
+divine_favour = {
+	trigger = {
+		civic_tech = 10 
+		capital_scope = { civilization_value = 60  }
+	}
+	effect = {
+	}
+	ruler_popularity_gain = 0.05
+}
+
+educational_status = {
+	trigger = {
+		civic_tech = 12
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	research_points_modifier = 0.1
+}
+
+province_exploitation = {
+	trigger = { 
+		civic_tech = 14 
+		capital_scope = { civilization_value = 60 }
+		invention = small_scale_corruption
+	}
+	effect = {
+	}
+	corruption = 0.05
+}
+
+philosphical_heroes = {
+	trigger = {
+		civic_tech = 20 
+		capital_scope = { civilization_value = 60 }
+	}
+	effect = {
+	}
+	research_points_modifier = 0.1
+}
+
+endemic_corruption = {
+	trigger = {
+		civic_tech = 24
+		capital_scope = { civilization_value = 60 }
+		invention = province_exploitation
+	}
+	effect = {
+	}
+	corruption = 0.1
+}
+		 
+closed_nobility = {
+	trigger = {
+		civic_tech = 10 
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility
+	}
+	effect = {
+	}
+	tribute_income_modifier = 0.1
+}
+
+noble_plotting = {
+	trigger = {
+		civic_tech = 11
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility 
+		invention = closed_nobility
+		invention = patronage
+	}
+	effect = {
+		lose_invention = patronage
+	}
+}
+	
+
+dissatisfied_plebs = {
+	trigger = {
+		civic_tech = 12
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility
+		invention = closed_nobility 
+	}
+	effect = {
+	}
+	global_revolt_risk = 0.5
+}
+
+natural_intrigue = {
+	trigger = {
+		civic_tech = 13
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility
+		invention = closed_nobility
+		invention = noble_plotting
+	}
+	effect = {
+	}
+	intrigue_missions = 0.05
+}
+
+improved_tribute = {	
+	trigger = {
+		civic_tech = 20 
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility
+		invention = closed_nobility
+	}
+	effect = {
+	}
+	tribute_income_modifier = 0.1
+}
+
+restless_outsiders = {
+	trigger = {
+		civic_tech = 22
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility 
+		invention = closed_nobility
+	}
+	effect = {
+	}
+	global_revolt_risk = 0.5
+}
+
+rulership_via_strength = {
+	trigger = {
+		civic_tech = 24
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility 
+		invention = closed_nobility 
+	}
+	effect = {
+	}
+	monthly_character_loyalty = -0.05
+}
+
+extrenal_plotting = {
+	trigger = {
+		civic_tech = 26 
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = closed_nobility 
+		invention = closed_nobility 
+	}
+	effect = {
+	}
+	intrigue_missions = 0.05
+}
+
+open_nobility = {
+	trigger = {
+		civic_tech = 10 
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+	}
+	effect = {
+	}
+	global_revolt_risk = -0.5
+}
+
+
+plebeian_nobility = {
+	trigger = {
+		civic_tech = 11
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility
+		invention = open_nobility 
+	}
+	effect = {
+	}
+	max_friends = 1				# max_friends +1
+	max_rivals = 1
+}
+
+citizenship_on_emancipation = {
+	trigger = {
+		civic_tech = 12
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+		invention = open_nobility
+	}
+	effect = {
+	}
+	slaves_to_freedmen = 0.01
+}		
+
+natural_diplomacy = {
+	trigger = {
+		civic_tech = 13
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+		invention = open_nobility 
+	}
+	effect = {
+	}
+	diplomatic_missions = 0.05
+}
+
+	
+
+factional_politics = {
+	trigger = {
+		civic_tech = 20
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility
+		invention = open_nobility  
+	}
+	effect = {
+	}
+	max_rivals = 1				# max_rivals +1
+	max_friends = 1
+}
+
+social_mobility = {
+	trigger = {
+		civic_tech = 22
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+		invention = open_nobility 
+	}
+	effect = {
+	}
+	freedmen_to_citizen = 0.01
+}
+
+social_contentment = {
+	trigger = {
+		civic_tech = 24
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+		invention = open_nobility 
+	}
+	effect = {
+	}
+	global_revolt_risk = -0.5
+}
+
+renowned_diplomacy = {
+	trigger = {
+		civic_tech = 26
+		capital_scope = { civilization_value = 60 }
+		has_country_flag = open_nobility 
+		invention = open_nobility
+		invention = natural_diplomacy
+	}
+	effect = {
+	}
+	diplomatic_missions = 0.05
+}
+
+the_mob = {
+	trigger = {
+		civic_tech = 13
+		invention = political_prosecution
+		OR = {
+			invention = plebeian_nobility
+			invention = dissatisfied_plebs
+		}
+	}
+	effect = {
+	}
+	monthly_character_popularity = 0.03			# Increases change in popularity 
+}
+
+civic_planning = {
+	trigger = {
+		civic_tech = 14
+		capital_scope = { civilization_value = 35 }
+	}
+	effect = {
+	}
+}
+
+arena_invention = {
+	trigger = {
+		civic_tech = 18
+		invention = the_mob
+		invention = civic_planning
+		invention = archs_and_domes
+	}
+	effect = {
+		arena = yes
+	}
+}

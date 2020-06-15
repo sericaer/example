@@ -1,0 +1,3170 @@
+#####Banckruptcy######
+
+country_event = {
+
+	id = 3700
+
+	trigger = {
+		
+		NOT = { treasury = 0 }
+		war = yes
+		NOT = { land_maintenance = 0 }
+		NOT = { has_country_modifier = lack_of_equipment }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			ruler = {
+				military = 2
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				military = 1
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				military = 0
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				military = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 7
+	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 } 
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 } 
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 } 
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME3700"
+	desc = "EVTDESC3700"
+
+	option = {
+		name = "EVTOPTA3700"
+		add_country_modifier = {
+			name = "lack_of_equipment"
+			duration = 120
+		}
+		treasury = 50 
+	}
+}
+
+province_event = {
+
+	id = 3701
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = aqueduct 
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 2
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 1
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 0
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 7
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 2
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 1
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 0
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 9
+				}			
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 7
+				}
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3701"
+	desc = "EVTDESC3701"
+
+	option = {
+		name = "EVTOPTA3701"
+		remove_building = aqueduct
+		owner = { treasury = 25 }
+	}
+}
+
+
+province_event = {
+
+	id = 3702
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = forum
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 2
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 1
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 0
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 7
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 2
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 1
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 0
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 9
+				}			
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 7
+				}
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3702"
+	desc = "EVTDESC3702"
+
+	option = {
+		name = "EVTOPTA3702"
+		remove_building = forum
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3703
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = temple
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 2
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 1
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 0
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 7
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 2
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 1
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 0
+					NOT = { charisma = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 7
+				}
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3703"
+	desc = "EVTDESC3703"
+
+	option = {
+		name = "EVTOPTA3703"
+		remove_building = temple
+		owner = { treasury = 25 }
+	}
+}
+province_event = {
+
+	id = 3704
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = arena
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 2
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 1
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 0
+					NOT = { finesse = 5 }
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					finesse = 7
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 2
+					NOT =  { charisma = 5 } 
+				}
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 1
+					NOT =  { charisma = 5 } 
+				}
+			}
+			factor = 0.9
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 0
+					NOT =  { charisma = 5 } 
+				}
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 9
+				}
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 8
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				ruler = {
+					charisma = 7
+				}
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3704"
+	desc = "EVTDESC3704"
+
+	option = {
+		name = "EVTOPTA3704"
+		remove_building = arena
+		owner = { treasury = 25 }
+	}
+}
+
+
+province_event = {
+
+	id = 3705
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = academy
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3705"
+	desc = "EVTDESC3705"
+
+	option = {
+		name = "EVTOPTA3705"
+		remove_building = academy
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3706
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = foundry
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT =  { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT =  { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT =  { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3706"
+	desc = "EVTDESC3706"
+
+	option = {
+		name = "EVTOPTA3706"
+		remove_building = foundry
+		owner = { treasury = 25 }	
+	}
+}
+
+province_event = {
+
+	id = 3707
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = irrigation
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3707"
+	desc = "EVTDESC3707"
+
+	option = {
+		name = "EVTOPTA3707"
+		remove_building = irrigation
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3708
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = mine
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3708"
+	desc = "EVTDESC3708"
+
+	option = {
+		name = "EVTOPTA3708"
+		remove_building = mine
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3709
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = forestry
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3709"
+	desc = "EVTDESC3709"
+
+	option = {
+		name = "EVTOPTA3709"
+		remove_building = forestry
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3710
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = roads
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+ 			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3710"
+	desc = "EVTDESC3710"
+
+	option = {
+		name = "EVTOPTA3710"
+		remove_building = roads
+		owner = { treasury = 25 }
+	}
+}
+
+
+province_event = {
+
+	id = 3711
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = harbour
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3711"
+	desc = "EVTDESC3711"
+
+	option = {
+		name = "EVTOPTA3711"
+		remove_building = harbour
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3712
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = fort1
+		NOT = { has_building = fort2 }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				military = 2
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				military = 1
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				military = 0
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				military = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 7
+	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3712"
+	desc = "EVTDESC3712"
+
+	option = {
+		name = "EVTOPTA3712"
+		remove_building = fort1
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3713
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = fort2
+		NOT = { has_building = fort3 }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				military = 2
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				military = 1
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				military = 0
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				military = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 7
+	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3713"
+	desc = "EVTDESC3713"
+
+	option = {
+		name = "EVTOPTA3713"
+		remove_building = fort2
+		owner = { treasury = 25 }
+	}
+}
+
+province_event = {
+
+	id = 3714
+
+	trigger = {
+		owner = { NOT = { treasury = 0 } }
+		has_building = fort3
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			ruler = {
+				military = 2
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				military = 1
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				military = 0
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				military = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 7
+	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   
+		modifier = {
+			stability = 1 
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 3 
+			factor = 1.1
+		}
+		modifier = {
+			stability = -1 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3 
+			NOT = { stability = 0 }
+			factor = 0.9
+		}
+		modifier = {
+			num_of_cities = 10 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 20 
+			factor = 1.1
+		}	
+		modifier = {
+			num_of_cities = 30 
+			factor = 1.1
+		}
+		modifier = {
+			num_of_cities = 40 
+			factor = 1.1
+		}
+	} 
+
+	title = "EVTNAME3714"
+	desc = "EVTDESC3714"
+
+	option = {
+		name = "EVTOPTA3714"
+		remove_building = fort3
+		owner = { treasury = 25 }
+	}
+}
+
+country_event = {
+
+	id = 3715
+
+	trigger= {
+		NOT = { treasury = 0 }
+		stability = -2
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			stability = 3
+			factor = 0.9
+		}
+		modifier = {
+			stability = 2
+			factor = 0.9
+		}
+		modifier = {
+			stability = 1
+			factor = 0.9
+		}
+		modifier = {
+			stability = -1
+			NOT = { stability = 0 }
+			factor = 1.1
+		}
+		modifier = {
+			stability = -2
+			NOT = { stability = 0 }
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 2
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				military = 1
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				military = 0
+				NOT = { military = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				military = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				military = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				military = 7
+	
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 1.1
+		}   			
+		modifier = {
+			ruler = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 0.9
+		}  
+		modifier = {
+			ruler = {
+				finesse = 9
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				finesse = 8
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				finesse = 7
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME3715"
+	desc = "EVTDESC3715"
+	
+	option = {
+		name = "EVTOPTA3715"
+		stability = -1
+		treasury = 50 
+	}		
+}
+
+country_event = {
+	
+	id = 3716 
+
+	trigger = {
+		NOT = { treasury = 0 }
+		ruler = {
+			popularity = 50
+		}
+		any_neighbor_country = {
+			war = no
+			treasury = 30
+			OR = { 
+				relation = { who = THIS value = 100 }
+				ruler = {
+					is_friend = THIS
+					is_ruler = yes 	
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			badboy = 0.05
+			factor = 1.1
+		}
+		modifier = {
+			badboy = 0.10
+			factor = 1.1
+		}
+		modifier = {
+			badboy = 0.15
+			factor = 1.1
+		}			
+		modifier = {
+			badboy = 0.20
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 2
+				NOT = { charisma = 5 }
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			ruler = {
+				charisma = 1
+				NOT = { charisma = 5 }
+			}
+			factor = 1.1
+		}
+		modifier = {
+			ruler = {
+				charisma = 0
+				NOT = { charisma = 5 }
+			}
+			factor = 1.1
+		}  
+		modifier = {
+			ruler = {
+				charisma = 9
+			}			
+			factor = 0.9
+		}	
+		modifier = {
+			ruler = {
+				charisma = 8
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				charisma = 7
+			}
+			factor = 0.9
+		}   	
+	}
+
+	title = "EVTNAME3716"
+	desc = "EVTDESC3716"
+
+	option = {
+		name = "EVTOPTA3716"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = crafty
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = corrupt
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = humble
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = submissive
+				}
+				factor = 1.1
+			}
+		}
+		any_neighbor_country = {
+			limit = {
+				war = no
+				treasury = 30
+				OR = {
+					relation = 100
+					ruler = {
+						is_friend = THIS
+						is_ruler = yes 	
+					}
+				}
+			}
+			country_event = 3717
+		}
+		ruler = {
+			popularity = -50
+		}
+	}
+
+	option = {
+		name = "EVTOPTA3171"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = guileless
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = righteous
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = proud
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = cautious
+				}
+				factor = 1.1
+			}
+		}
+		ruler = {
+			popularity = 10
+		}
+	}
+}
+
+country_event = {
+
+	id = 3717
+		
+	is_triggered_only = yes
+
+	title = "EVTNAME3717"
+	desc = "EVTDESC3717"
+
+	option = {
+		name = "EVTOPTA3717"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = good_natured 
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = just
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = merciful
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = benefactor
+				}
+				factor = 1.1
+			}
+		}	
+		treasury = -25
+		relation = { who = FROM value = 25 }
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			country_event = 3718
+		}
+	}
+
+	option = {
+		name = "EVTOPTB3717"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = abrasive 
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = arbitrary
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = cruel
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = selfish
+				}
+				factor = 1.1
+			}
+		}
+		relation = { who = FROM value = -25 }
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			country_event = 3719
+		}
+	}
+}
+
+country_event = {
+
+	id = 3718
+
+	is_triggered_only = yes 
+
+	title = "EVTNAME3718"
+	desc = "EVTDESC3718"
+
+	option = {
+		name = "EVTOPTA3718"
+		treasury = 25
+		ruler = {
+			popularity = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 3719
+
+	is_triggered_only = yes
+
+	title = "EVTNAME3719"
+	desc = "EVTDESC3719"
+
+	option = {
+		name = "EVTOPTA3719"
+		ruler = {
+			popularity = -20
+		}
+	}
+}
+
+country_event = {
+
+	id = 3720
+
+	trigger = {
+		treasury = 30 
+		any_neighbor_country = {
+			NOT = { treasury = 0 }
+			war = no 
+			OR = {
+				relation = { who = THIS value = 100 }
+				ruler = {
+					is_friend = THIS
+					is_ruler = yes 	
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	title = "EVTNAME3720"
+	desc = "EVTDESC3720"
+
+	option = {
+		name = "EVTOPTA3720"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = good_natured 
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = just
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = merciful
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = benefactor
+				}
+				factor = 1.1
+			}
+		}
+		treasury = -25
+		any_neighbor_country = {
+			limit = {
+				NOT = { treasury = 0 }
+				war = no 
+				OR = {
+					relation = { who = THIS value = 100 }
+					ruler = {
+						is_friend = THIS
+						is_ruler = yes 	
+					}
+				}
+			}
+			country_event = 3721
+		}
+	}
+
+	option = {
+		name = "EVTOPTB3720"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				ruler = {
+					traits = abrasive
+				}
+				factor = 1.1
+			}
+			modifier = {
+				ruler = {
+					traits = blunt
+				}
+				factor = 1.1
+			}
+			modifier= {
+				ruler = {
+					traits = cruel
+				}
+				factor = 1.1
+			}
+		 	modifier = {
+				ruler = {
+					traits = vengeful
+				}
+				factor = 1.1
+			}
+		}
+		any_neighbor_country = {
+			limit = {
+				NOT = { treasury = 0 }
+				war = no 
+				OR = {
+					relation = { who = THIS value = 100 }
+					ruler = {
+						is_friend = THIS
+						is_ruler = yes 	
+					}
+				}
+			}
+			country_event = 3722
+		}
+	}
+}
+
+country_event = {
+
+	id = 3721
+
+	is_triggered_only = yes 
+
+	title = "EVTNAME3721"
+	desc = "EVTDESC3721"
+
+	option = {
+		name = "EVTOPTA3721"
+		treasury = 25
+		relation = { who = FROM value = 25 }
+	}
+}
+
+country_event = {
+	
+	id = 3722
+
+	is_triggered_only = yes
+
+	title = "EVTNAME3722"
+	desc = "EVTDESC3722"
+
+	option = {
+		name = "EVTOPTA3722"
+		relation = { who = FROM value = -25 }
+	}
+}
+
+province_event = {
+
+	id = 3723
+
+	trigger = {
+		owner = { 
+			NOT = { 
+				treasury = 0 
+			} 
+		}
+		has_governor = yes
+		freedmen = 2.5
+		NOT = {
+			governor_scope = {
+				traits = righteous
+			} 
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			governor_scope = {
+				finesse = 2
+				NOT = { finesse = 5 }
+			}
+			factor = 1.1
+		}	
+		modifier = {
+			governor_scope = {
+				finesse = 1
+				NOT = { finesse = 5 }
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				finesse = 0
+				NOT = { finesse = 5 }
+			}
+			factor = 1.1
+		}  
+		modifier = {
+			governor_scope = {
+				finesse = 9
+			}
+			factor = 0.9
+		}	
+		modifier = {
+			governor_scope = {
+				finesse = 8
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				finesse = 7
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = crafty
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = guileless
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = tolerant
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = zealous
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = corrupt
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = honest
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = deceitful
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME3723"
+	desc = "EVTDESC3723"
+
+	option = {
+		name = "EVTOPTA3723"
+		owner = { 
+			treasury = 20 
+		}
+		governor_scope = { 
+			wealth = 5 
+		}
+		citizens = 2.5
+		freedmen = -2.5	
+		governor_scope = { 
+			popularity = -30
+		}
+	}
+}
+
+character_event = {
+	
+	id = 3724
+	
+	trigger = {
+		is_ruler = yes
+		wealth = 1000 
+		country = {
+			NOT = {
+				treasury = 0 
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			NOT = { charisma = 2 }
+			factor = 1.1
+		}	
+		modifier = {
+			NOT = { charisma = 1 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { charisma = 0 }
+			factor = 1.1
+		}  
+		modifier = {
+			charisma = 9			
+			factor = 0.9
+		}	
+		modifier = {
+			charisma = 8			
+			factor = 0.9
+		}
+		modifier = {
+			charisma = 7			
+			factor = 0.9
+		}    
+	}
+
+	title = "EVTNAME3724"
+	desc = "EVTDESC3724"
+
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				traits = merciful 
+				factor = 1.1
+			}
+			modifier = {
+				traits = just
+				factor = 1.1
+			}
+			modifier= {
+				traits = intelligent
+				factor = 1.1
+			}
+		 	modifier = {
+				traits = generous
+				factor = 1.1
+			}
+		}
+		name = "EVTOPTA3724"
+		wealth = -100
+		country = {
+			treasury = 25
+		}
+		popularity = 10 
+	}
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				traits = cruel
+				factor = 1.1
+			}
+			modifier = {
+				traits = arbitrary
+				factor = 1.1
+			}
+			modifier= {
+				traits = dumb 
+				factor = 1.1
+			}
+		 	modifier = {
+				traits = selfish
+				factor = 1.1
+			}
+		}
+		name = "EVTOPTB3724"
+	}
+}
+
+#新增事件军队哗变
+country_event = {
+	id = 3725
+	
+	trigger = {
+		NOT = { treasury = -60 }
+		NOT = { has_country_flag = army_Mutined }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			stability = 3		#Takes about 4 years to trigger at +3 stab
+			factor = 1.1
+		}
+		modifier = {
+			stability = 2
+			factor = 1.1
+		}
+		modifier = {
+			stability = 1
+			factor = 1.0
+		}
+		modifier = {
+			stability = -1
+			factor = 1.0
+		}
+		modifier = {
+			stability = -2
+			factor = 0.9
+		}
+		modifier = {
+			stability = -3		#Takes a little over 2 years to trigger at -3 stab
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				NOT = { popularity = 50 }
+			}
+			factor = 1.0
+		}
+		modifier = {
+			ruler = {
+				NOT = { popularity = 40 }
+			}
+			factor = 1.0
+		}
+		modifier = {
+			ruler = {
+				NOT = { popularity = 30 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				NOT = { popularity = 20 }
+			}
+			factor = 0.9
+		}
+		modifier = {
+			ruler = {
+				NOT = { popularity = 10 }
+			}
+			factor = 0.8
+		}
+		modifier = {
+			is_omen_failure = yes		#Takes only 7 months to trigger with worst 
+			factor = 0.8
+		}
+	}
+	
+	title = "军队哗变"
+	desc = "国家出现了财政困难，有谣言说政府将要倒台，虽然这不一定是事实，但其他因素可能有助于这种情绪。"
+	
+	option = {
+		name = "军队哗变！"
+		add_country_modifier = {
+			name = army_mutiny
+			duration = 180
+		}
+		set_country_flag = army_Mutined
+	}
+}

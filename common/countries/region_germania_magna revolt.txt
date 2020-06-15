@@ -1,0 +1,4 @@
+civil_war_faction = QGM
+region = region_germania_magna
+color = { 50 50 120 }
+color2 = { 0 0 20 }

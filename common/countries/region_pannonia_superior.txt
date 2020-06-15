@@ -1,0 +1,4 @@
+civil_war_faction = QP2
+region = region_pannonia_superior
+color = { 170 100 170 }
+color2 = { 70 10 70 }

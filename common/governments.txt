@@ -1,0 +1,168 @@
+military_republic = {
+	military_ideas = 2
+	civic_ideas = 1
+	republic = yes
+	
+	war_exhaustion = -0.03
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 10
+	
+}
+
+aristocratic_republic = {
+	civic_ideas = 2
+	military_ideas = 1
+	monthly_character_loyalty = 0.02		# + to monthly loyalty on characters
+	republic = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 10
+	
+}
+
+oligarchic_republic = {
+	civic_ideas = 1
+	military_ideas = 1
+	economical_ideas = 1
+	monthly_character_wealth = 0.1 				# + to characters wealth gain
+	republic = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 10
+	
+}
+
+democratic_republic = {
+	civic_ideas = 2
+	economical_ideas = 1
+	monthly_character_popularity = 0.01			#+ to character popularity.
+	republic = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 10
+	
+}
+
+republic_confederacy = {
+	economical_ideas = 1
+	civic_ideas = 1
+        civilization_spread = 0.03
+	global_revolt_risk = -0.5
+	republic = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 10
+
+}
+
+dictatorship = {
+	military_ideas = 1
+	civic_ideas = 1
+	economical_ideas = 1
+	religious_ideas = 1
+
+	ruler_popularity_gain = 0.1
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+theocracy = {
+	religious_ideas = 3
+	omen_chance = 0.1				#10% better omens.
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+despotic_monarchy = {
+	military_ideas = 1
+	economical_ideas = 1
+        religious_ideas = 1
+	build_cost = -0.15				#20% cheaper buildings.
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+}
+
+federal_monarchy = {
+        military_ideas = 1
+	civic_ideas = 1
+	economical_ideas = 1
+	maintenance_cost = -0.15			
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+aristocratic_monarchy = {
+	military_ideas = 2
+	civic_ideas = 1
+	experience_decay = -0.05			# 5% less experience decay
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+military_tribe = {
+	military_ideas = 1
+	discipline = 0.1				# +10% Discipline on all units
+	tribal = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+religious_tribe = {
+	religious_ideas = 1
+	global_revolt_risk = -1				# -1 on Revolt Risk
+	tribal = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+trade_tribe = {
+	economical_ideas = 1
+	global_trade_routes = 1				# +1 Trade Routes
+	tribal = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+
+}
+
+civic_tribe = {
+	civic_ideas = 1
+	research_points_modifier = 0.1				#+ to research.
+	tribal = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+	
+}
+
+imperium = {
+	military_ideas = 2
+	civic_ideas = 1
+	economical_ideas = 1
+	religious_ideas = 1
+
+	global_revolt_risk = -1				# -1 on Revolt Risk
+	monarchy = yes
+	
+	# Years until the same candidate can be re-elected
+	election_delay = 0
+}

@@ -1,0 +1,389 @@
+# Military Reform
+country_event = {
+
+	id = 2700
+
+	trigger = {
+		not = { traits = narrowminded }
+		not = { traits = inventor }
+		any_character = {
+			has_office = land_tech
+			military = 9
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			military = 8
+		}
+		modifier = {
+			factor = 0.9
+			military = 7
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { military = 1 }
+		}
+	}
+
+	title = "EVTNAME2700"
+
+	desc = "EVTDESC2700"
+
+	option = {
+		name = "EVTOPTA2700"					# It sounds very interesting actually
+		treasury = -30
+		add_country_modifier = {
+			name = "small_military_reform"
+			duration = 1095
+		}
+	}
+	option = {
+		name = "EVTOPTB2700"					# It doesn't really seem that interesting at all
+		ruler = { add_trait = narrowminded }
+	}
+}
+
+# Crazy Legate
+country_event = {
+
+	id = 2701
+
+	trigger = {
+		any_character = {
+			has_office = land_tech
+			not = { military = 3 }
+			not = { finesse = 3 }
+		}
+		any_character = {
+			is_female = no
+			not = { has_office = land_tech }
+			can_hold_title = title_land_tech
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+	}
+
+	title = "EVTNAME2701"
+
+	desc = "EVTDESC2701"
+
+	option = {
+		name = "EVTOPTB2701"					# Try to get him some help
+		treasury = -20
+	}
+	option = {
+		name = "EVTOPTA2701"					# There's no point, he's hopeless
+		random = {
+			chance = 20
+			random_character = {
+				limit = { has_office = land_tech }
+				add_trait = maniac
+			}
+		}
+		random_character = {
+			limit = { can_hold_title = title_land_tech }
+			assign_office = land_tech
+		}
+	}
+}
+
+# Disloyal Legate
+country_event = {
+
+	id = 2702
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		any_character = {
+			has_office = land_tech
+			not = { loyalty = 50 }
+			not = { traits = deceitful }
+			not = { traits = honest }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { military = 7 }
+		}
+	}
+
+	title = "EVTNAME2702"
+
+	desc = "EVTDESC2702"
+
+	option = {
+		name = "EVTOPTA2702"					# We don't need him!
+		random_character = {
+			limit = {
+				has_office = land_tech
+				not = { loyalty = 50 }
+			}
+			add_trait = deceitful
+			move_character = civil_war_faction
+		}
+	}
+}
+
+# Legate takes care of all the war spoils
+country_event = {
+
+	id = 2703
+
+	trigger = {
+		ruler = {
+			not = { traits = selfish }
+			not = { traits = generous }
+		}
+		war = yes
+		any_character = {
+			has_office = land_tech
+			military = 7
+			not = { traits = vengeful }
+			not = { traits = forgiving }
+		}
+		any_character = {
+			location = {
+				not = { owned_by = this }
+				has_siege = yes
+			}
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+	}
+
+	title = "EVTNAME2703"
+
+	desc = "EVTDESC2703"
+
+	option = {
+		name = "EVTOPTA2703"					# He must be joking
+		treasury = 50
+		random_character = {
+			limit = { has_office = land_tech }
+			add_trait = vengeful
+		}
+		ruler = {
+			add_trait = selfish
+			wealth = 500
+		}
+	}
+	option = {
+		name = "EVTOPTB2703"					# Half is rightfully his
+		treasury = 50
+		random_character = {
+			limit = { has_office = land_tech }
+			wealth = 250
+			add_trait = vengeful
+		}
+		ruler = { wealth = 250 }
+	}
+	option = {
+		name = "EVTOPTC2703"					# Let him have it all, he has deserved it
+		treasury = 50
+		random_character = {
+			limit = { has_office = land_tech }
+			wealth = 500
+		}
+		ruler = { add_trait = generous }
+	}
+}
+
+# Siege Craft and Defensive Fortification
+country_event = {
+
+	id = 2704
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		any_character = {
+			has_office = land_tech
+			finesse = 5
+			military = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			military = 8
+		}
+		modifier = {
+			factor = 0.9
+			military = 7
+		}
+	}
+
+	title = "EVTNAME2704"
+
+	desc = "EVTDESC2704"
+
+	option = {
+		name = "EVTOPTA2704"					# Very interestig indeed
+		land_tech = 500
+	}
+}

@@ -1,0 +1,4 @@
+civil_war_faction = QAC
+region = region_achaia
+color = { 120 60 60 }
+color2 = { 50 0 0 }

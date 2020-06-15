@@ -1,0 +1,10 @@
+type = warelephant
+
+maneuver = 2
+
+militia = 1.8
+heavy_infantry = 1.3
+cavalry = 1.4
+warelephant = 1.0
+horse_archers = 0.5
+archers = 1.5

@@ -1,0 +1,4 @@
+civil_war_faction = QT3
+region = region_tarraconensis
+color = { 56 156 170 }
+color2 = { 35 70 70 }

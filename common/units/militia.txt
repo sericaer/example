@@ -1,0 +1,10 @@
+type = militia
+
+maneuver = 3
+
+militia = 1.0
+heavy_infantry = 0.7
+cavalry = 0.8
+warelephant = 0.7
+horse_archers = 0.8
+archers = 1.2

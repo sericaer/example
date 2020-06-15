@@ -1,0 +1,15 @@
+civil_war_faction = HLV
+graphical_culture = celticgfx
+color = { 146  174  144 }
+
+ship_names = {
+	Abgatiacos Artio Aturava Aventico Axima
+	Benacos Brigantina
+	Cathubodua Catorix
+	Eburodunon
+	Isara Isarco
+	Obrincas Octoduros
+	Rauraques
+	Tauredunon Tigernos Tougenos
+	Veragres Verbigenos Vindonissa Viromagos Virotutis Vivisco
+}

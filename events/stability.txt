@@ -1,0 +1,935 @@
+# Great Feast
+country_event = {
+
+	id = 1080
+
+	trigger = {
+		not = { stability = 1 }
+		treasury = 50
+		ruler = {
+			not = { traits = sceptical }
+			not = { traits = pious }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.8
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = stability_great_feast
+		}
+	}
+
+	title = "EVTNAME1080"
+	desc = "EVTDESC1080"
+
+	option = {
+		name = "EVTOPTA1080"					# What a great idea
+		ai_chance = { factor = 40 }
+		treasury = -50
+		stability = 1
+		ruler = { popularity = 10 }
+	}
+	option = {
+		name = "EVTOPTB1080"					# It seems a bit expensive
+		ai_chance = { factor = 60 }
+		ruler = { add_trait = sceptical }
+	}
+}
+
+# Untiring Devotion
+country_event = {
+
+	id = 1081
+
+	trigger = {
+		not = { stability = 1 }
+		ruler = {
+			or = {
+				traits = crafty
+				traits = devout
+				traits = righteous
+				traits = benefactor
+				traits = inventor
+				traits = energetic
+				traits = generous
+				traits = loving
+				traits = steadfast
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.8
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 1 } }
+		}
+	}
+
+	title = "EVTNAME1081"
+	desc = "EVTDESC1081"
+
+	option = {
+		name = "EVTOPTA1081"					# We are lucky to have him
+		stability = 1
+	}
+}
+
+# Blessed by the Gods
+country_event = {
+
+	id = 1082
+
+	trigger = {
+		not = { stability = 3 }
+		has_omen = yes
+		is_omen_failure = no
+		ruler = {
+			or = {
+				traits = pious
+				traits = zealous
+				traits = devout
+				traits = righteous
+				traits = brave
+				traits = confident
+				traits = secure
+				traits = wise
+				traits = trusting
+				traits = self_controlled
+				traits = intelligent
+				traits = humble
+				traits = benefactor
+				traits = founder
+				traits = merciful
+				traits = just
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			war = no
+		}
+		modifier = {
+			factor = 0.9
+			num_of_allies = 1
+		}
+		modifier = {
+			factor = 0.9
+			num_of_allies = 2
+		}
+		modifier = {
+			factor = 0.9
+			num_of_allies = 3
+		}
+		modifier = {
+			factor = 1.3
+			badboy = 0.15
+		}
+		modifier = {
+			factor = 1.4
+			badboy = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			badboy = 0.45
+		}
+	}
+
+	title = "EVTNAME1082"
+	desc = "EVTDESC1082"
+
+	option = {
+		name = "EVTOPTA1082"					# Absolutely
+		ai_chance = { factor = 40 }
+		stability = 1
+		treasury = -20
+		add_country_modifier = {
+			name = "blessed_by_the_gods"
+			duration = 730
+		}
+	}
+	option = {
+		name = "EVTOPTB1082"					# That's not necessary
+		ai_chance = { factor = 60 }
+		stability = 1
+	}
+}
+
+# Share some wealth to increase your stability
+country_event = {
+
+	id = 1083
+
+	trigger = {
+		treasury = 30
+		not = { stability = 0 }
+		ruler = { not = { popularity = 60 } }
+	}
+
+	mean_time_to_happen = {
+
+		months = 144
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { charisma = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { charisma = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { charisma = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.15
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.3
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.45
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { charisma = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { charisma = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { charisma = 7 }
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { num_of_friends = 2 }
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { num_of_friends = 4 }
+		}
+		modifier = {
+			factor = 1.3
+			ruler = { num_of_friends = 6 }
+		}
+	}
+
+	title = "EVTNAME1083"
+	desc = "EVTDESC1083"
+
+	option = {
+		name = "EVTOPTA1083"					# Share some of your wealth
+		ai_chance = { factor = 40 }
+		treasury = -30
+		stability = 1
+		random = {
+			chance = 80
+			ruler = { popularity = 10 }
+		}
+	}
+	option = {
+		name = "EVTOPTB1083"					# Rely on your own charm
+		ai_chance = { factor = 60 }
+		random = {
+			chance = 20
+			ruler = { popularity = 5 }
+			stability = 1
+		}
+	}
+}
+
+# Good Harvest
+country_event = {
+
+	id = 1084
+
+	trigger = {
+		not = { stability = 3 }
+		any_province = { has_building = irrigation }
+		war = no
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.5
+			war = yes
+		}
+		modifier = {
+			factor = 1.1
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 1.1
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 1.1
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 1.1
+			war_exhaustion = 8
+		}
+	}
+
+	title = "EVTNAME1084"
+	desc = "EVTDESC1084"
+
+	option = {
+		name = "EVTOPTA1084"					# Good!
+		stability = 1
+	}
+}
+
+# Lack of Resources
+country_event = {
+
+	id = 1085
+
+	trigger = {
+		war = yes
+		war_exhaustion = 2
+		treasury = 30
+		stability = -2
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.15
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.3
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.45
+		}
+		modifier = {
+			factor = 0.9
+			any_province = {
+				has_siege = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			has_omen = yes
+			is_omen_failure = yes
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			has_omen = yes
+			is_omen_failure = no
+		}
+	}
+
+	title = "EVTNAME1085"
+	desc = "EVTDESC1085"
+
+	option = {
+		name = "EVTOPTA1085"					# Do what you can to improve the situation
+		ai_chance = { factor = 40 }
+		treasury = -30
+		random = {
+			chance = 25
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1085"					# It's no use, everything is lost
+		ai_chance = { factor = 60 }
+		stability = -1
+	}
+}
+
+# Incapable Ruler
+country_event = {
+
+	id = 1086
+
+	trigger = {
+		stability = -2
+		ruler = {
+			or = {
+				traits = invalid
+				traits = schizophrenic
+				traits = stressed
+				traits = pneumonia
+				traits = leper
+				traits = plague
+				traits = unhealthy
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 360
+
+		modifier = {
+			factor = 0.8
+			ruler = { not = { health = 0.6 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { health = 0.4 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { health = 0.2 } }
+		}
+		modifier = {
+			factor = 0.8
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { is_married = no }
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.1
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.2
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.3
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			has_omen = yes
+			is_omen_failure = yes
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { badboy = 0.01 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { age = 30 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { age = 20 } }
+		}
+	}
+
+	title = "EVTNAME1086"
+	desc = "EVTDESC1086"
+
+	option = {
+		name = "EVTOPTA1086"					# There has to be something we can do
+		ai_chance = { factor = 30 }
+		treasury = -25
+		random = {
+			chance = 60
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1086"					# No, it's hopeless...
+		ai_chance = { factor = 70 }
+		stability = -1
+	}
+}
+
+# Bad Harvests
+country_event = {
+
+	id = 1087
+
+	trigger = {
+		stability = -2
+		treasury = 30
+		has_omen = yes
+		is_omen_failure = yes
+	}
+
+	mean_time_to_happen = {
+
+		months = 120
+
+		modifier = {
+			factor = 0.8
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.1
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.2
+		}
+		modifier = {
+			factor = 0.9
+			revolt_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.3
+			num_of_ports = 1
+		}
+		modifier = {
+			factor = 1.3
+			num_of_ports = 2
+		}
+		modifier = {
+			factor = 1.3
+			num_of_ports = 3
+		}
+	}
+
+	title = "EVTNAME1087"
+	desc = "EVTDESC1087"
+
+	option = {
+		name = "EVTOPTA1087"					# Hand out some bread
+		ai_chance = { factor = 30 }
+		treasury = -30
+		ruler = { popularity = 5 }
+		random = {
+			chance = 25
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1087"					# Keep it all for yourself
+		ai_chance = { factor = 70 }
+		stability = -1
+	}
+}
+
+# Prosperous Times
+country_event = {
+
+	id = 1088
+
+	trigger = {
+		stability = 1
+		war = no
+		ruler = {
+			finesse = 7
+			not = { traits = good_natured }
+			not = { traits = abrasive }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			badboy = 0.15
+		}
+		modifier = {
+			factor = 1.1
+			badboy = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			badboy = 0.45
+		}
+		modifier = {
+			factor = 1.1
+			has_omen = yes
+			is_omen_failure = no
+		}
+	}
+
+	title = "EVTNAME1088"
+	desc = "EVTDESC1088"
+
+	option = {
+		name = "EVTOPTA1088"					# It's best to be careful
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			name = "raised_taxes"
+			duration = 365
+		}
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1088"					# Just raise them, they won't mind
+		ai_chance = { factor = 30 }
+		add_country_modifier = {
+			name = "raised_taxes"
+			duration = 730
+		}
+		random = {
+			chance = 60
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTC1088"					# It's probably not such a good idea
+		ai_chance = { factor = 30 }
+		ruler = { add_trait = good_natured }
+	}
+}
+
+# Incompetent Ruler
+country_event = {
+
+	id = 1089
+
+	trigger = {
+		badboy = 0.3
+		not = { stability = 2 }
+		stability = -2
+		ruler = {
+			not = { military = 3 }
+			not = { popularity = 50 }
+			not = { traits = incapable }
+			not = { traits = conqueror }
+			not = { traits = tactician }
+			not = { traits = founder }
+			not = { traits = victorious }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 40 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			badboy = 0.45
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { military = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { military = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { military = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { num_of_rivals = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { num_of_rivals = 4 }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { num_of_rivals = 6 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = crafty }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = original_thinker }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = inventor }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = intelligent }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = wise }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = shrewd }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = prominent }
+		}
+	}
+
+	title = "EVTNAME1089"
+	desc = "EVTDESC1089"
+
+	option = {
+		name = "EVTOPTA1089"					# He just need some time to figure things out
+		ai_chance = { factor = 70 }
+		ruler = { add_trait = incapable }
+		random_list = {
+			50 = { stability = 1 }
+			50 = { stability = -1 }
+		}
+	}
+	option = {
+		name = "EVTOPTB1089"					# No, no everything is under control
+		ai_chance = { factor = 30 }
+		stability = -1
+	}
+}

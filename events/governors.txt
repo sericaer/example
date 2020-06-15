@@ -1,0 +1,2267 @@
+# Governor is Embezzling Money 
+province_event = {
+
+	id = 1060
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = {
+			or = {
+				traits = corrupt
+				corruption = 0.05
+			}
+		}
+		owner = {
+			ruler = {
+				not = { traits = just }
+				not = { traits = arbitrary }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 1920
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 40 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 10 } }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 500 }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 600 }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 700 }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 800 }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 900 }
+		}
+		modifier = {
+			factor = 0.85
+			governor_scope = { wealth = 1000 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.15
+			governor_scope = { not = { wealth = 100 } }
+		}
+		modifier = {
+			factor = 1.15
+			governor_scope = { not = { wealth = 50 } }
+		}
+		modifier = {
+			factor = 1.15
+			governor_scope = { not = { wealth = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { finesse = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { finesse = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { finesse = 70 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1060"
+	desc = "EVTDESC1060"
+
+	option = {
+		name = "EVTOPTA1060"					# It may be time to find a new governor
+		ai_chance = { factor = 40 }
+		governor_scope = {
+			corruption = 0.15
+			family_prestige = -10
+		}
+		owner = { ruler = { add_trait = just } }
+		random = {
+			chance = 50
+			governor_scope = { popularity = -20 }
+		}
+	}
+	option = {
+		name = "EVTOPTB1060"					# See if you can come to some agreement
+		ai_chance = { factor = 60 }
+		governor_scope = { corruption = 0.15 }
+		owner = {
+			ruler = {
+				corruption = 0.1
+				wealth = 200
+			}
+		}
+	}
+}
+
+# Governor Enslaves his People
+province_event = {
+
+	id = 1061
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		population = 8
+		governor_scope = {
+			or = {
+				traits = cruel
+				traits = aggressive
+				traits = abrasive
+				traits = vengeful
+				traits = selfish
+				traits = arrogant
+				traits = maniac
+				traits = schizophrenic
+				traits = conqueror
+				not = { popularity = 20 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 2400
+
+		modifier = {
+			factor = 0.8
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 1 } }
+		}
+		modifier = {
+			factor = 0.8
+			governor_scope = { military = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { military = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { military = 7 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 9 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 8 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { not = { military = 6 } }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { not = { military = 4 } }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { num_of_friends = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { num_of_friends = 4 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { num_of_friends = 6 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1061"
+	desc = "EVTDESC1061"
+
+	option = {
+		name = "EVTOPTA1061"					# I think we have to make some changes
+		ai_chance = { factor = 40 }
+		population = -1
+		random_list = {
+			45 = { governor_scope = { remove_governor = yes } }
+			45 = { governor_scope = { wealth = -500 } }
+			10 = { governor_scope = { death = yes } }
+		}
+	}
+	option = {
+		name = "EVTOPTB1061"					# I don't think that will be necessary
+		ai_chance = { factor = 60 }
+		population = -2
+	}
+}
+
+# High Taxation
+province_event = {
+
+	id = 1062
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = {
+			or = {
+				traits = shrewd
+				traits = selfish
+				traits = gluttonous
+				traits = cruel
+			}
+			not = { finesse = 3 }
+			not = { traits = loving }
+			not = { traitS = wounded }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 960
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { charisma = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = cold }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = wise }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = intelligent }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = good_natured }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = cautious }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = self_controlled }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 9 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 8 }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { charisma = 7 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1062"
+	desc = "EVTDESC1062"
+
+	option = {
+		name = "EVTOPTA1062"					# Take care of it
+		ai_chance = { factor = 40 }
+		random_list = {
+			65 = { governor_scope = { remove_governor = yes } }
+			35 = { governor_scope = { death = yes } }
+		}
+	}
+	option = {
+		name = "EVTOPTB1062"					# It can't be that bad
+		ai_chance = { factor = 60 }
+		random_list = {
+			40 = { governor_scope = { popularity = -20 } }
+			30 = { governor_scope = { add_trait = foolish } }
+			30 = { governor_scope = { add_trait = wounded } }
+		}
+	}
+}
+
+
+# Incompetent Governor
+province_event = {
+
+	id = 1064
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = { 
+			not = { popularity = 40 }
+			or = {
+				traits = guileless
+				traits = lapsed
+				traits = incapable
+				traits = submissive
+				traits = dumb
+				traits = lazy
+				traits = foolish
+				traits = unnoticeable
+				traits = weak_willed
+				traits = unhealthy
+				traits = leper
+				traits = plague
+				traits = pneumonia
+				traits = stressed
+				traits = schizophrenic
+				traits = invalid
+				traits = wounded
+				traits = maimed
+			}
+			not = { traits = tactician }
+			not = { traits = conqueror }
+			not = { traits = victorious }
+			not = { traits = wise }
+			not = { traits = prominent }
+			not = { traits = intelligent }
+			not = { traits = inventor }
+			not = { traits = founder }
+			not = { traits = crafty }
+			not = { traits = vengeful }
+			not = { traits = forgiving }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { num_of_friends = 1 } }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { num_of_friends = 3 }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { num_of_friends = 4 }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { num_of_friends = 5 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1064"
+	desc = "EVTDESC1064"
+
+	option = {
+		name = "EVTOPTA1064"					# Try to find someone better
+		ai_chance = { factor = 70 }
+		random_list = {
+			50 = { governor_scope = { add_trait = vengeful } }
+			50 = { governor_scope = { add_trait = forgiving } }
+		}
+		governor_scope = {
+			popularity = -40
+			remove_governor = yes
+		}
+	}
+	option = {
+		name = "EVTOPTB1064"					# That won't be necessary
+		ai_chance = { factor = 30 }
+		random_list = {
+			30 = { civilization_value = -15 }
+			50 = { civilization_value = -5 }
+			20 = { civilization_value = 5 }
+		}
+	}
+}
+
+# Impeccable Administration
+province_event = {
+
+	id = 1065
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = { 
+			finesse = 8
+			not = { num_of_rivals = 1 }
+			not = { traits = pneumonia }
+			not = { traits = schizophrenic }
+			not = { traits = invalid }
+			not = { traits = maniac }
+			not = { traits = leper }
+			not = { traits = plague }
+			not = { traits = unhealthy }
+		}		
+		not = { civilization_value = 95 }
+	}
+
+	mean_time_to_happen = {
+
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { popularity = 90 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { popularity = 80 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { popularity = 70 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { loyalty = 90 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { loyalty = 80 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { loyalty = 70 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = crafty }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = original_thinker }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = righteous }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = benefactor }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = inventor }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = intelligent }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = energetic }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = prominent }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = wise }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = confident }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { loyalty = 30 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { loyalty = 20 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { loyalty = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = guileless }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = lapsed }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = tactically_inflexible }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = arbitrary }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = corrupt }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = incapable }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = submissive }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = dumb }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = deceitful }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = lazy }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = reckless }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = foolish }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = unnoticeable }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = rash }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1065"
+	desc = "EVTDESC1065"
+
+	option = {
+		name = "EVTOPTA1065"					# That's terrific
+		civilization_value = 2
+		owner = { treasury = 20 }
+	}
+}
+
+# Improved Conditions
+province_event = {
+
+	id = 1066
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = { 
+			military = 7
+			location = {
+				any_neighbor_province = {
+					barbarian_power = 5
+				}
+			}
+			not = { traits = coward }
+			not = { traits = submissive }
+			not = { traits = incapable }
+			not = { traits = plague }
+			not = { traits = leper }
+			not = { traits = pneumonia }
+			not = { traits = invalid }
+			not = { traits = maimed }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { military = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { military = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { finesse = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { finesse = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = victorious }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = conqueror }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = brave }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = aggressive }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = stubborn }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = energetic }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = original_thinker }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = crafty }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = arbitrary }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = guileless }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = tactically_inflexible }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = dumb }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = lazy }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = foolish }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = unnoticeable }
+		}
+		modifier = {
+			factor = 1.2
+			governor_scope = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1066"
+	desc = "EVTDESC1066"
+
+	option = {
+		name = "EVTOPTA1066"					# Such bravery should be rewarded
+		ai_chance = { factor = 40 }
+		random_neighbor_province = {
+			barbarian_power = -2
+		}
+		governor_scope = { wealth = 100 }
+	}
+	option = {
+		name = "EVTOPTB1066"					# Let's not get too carried away
+		ai_chance = { factor = 60 }
+		random_neighbor_province = {
+			barbarian_power = -1
+		}
+		governor_scope = { wealth = 50 }
+	}
+}
+
+# Questionable Character
+province_event = {
+
+	id = 1067
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		governor_scope = { 
+			not = { military = 3 }
+			location = {
+				any_neighbor_province = {
+					barbarian_power = 5
+					not = { barbarian_power = 8 }
+				}
+			}
+			not = { traits = victorious }
+			not = { traits = conqueror }
+			not = { traits = brave }
+			or = {
+				traits = arbitrary
+				traits = guileless
+				traits = tactically_inflexible
+				traits = dumb
+				traits = lazy
+				traits = foolish
+				traits = unnoticeable
+				traits = weak_willed
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 480
+
+		modifier = {
+			factor = 1.5
+			governor_scope = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.4
+			governor_scope = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { finesse = 7 }
+		}
+		modifier = {
+			factor = 1.5
+			governor_scope = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.4
+			governor_scope = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.3
+			governor_scope = { popularity = 70 }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1067"
+	desc = "EVTDESC1067"
+
+	option = {
+		name = "EVTOPTA1067"					# It shouldn't be a problem
+		ai_chance = { factor = 60 }
+		random_neighbor_province = {
+			barbarian_power = 2
+		}
+	}
+	option = {
+		name = "EVTOPTB1067"					# Send some help
+		ai_chance = { factor = 40 }
+		random_neighbor_province = {
+			barbarian_power = 1
+		}
+		owner = { treasury = -20 } 
+	}
+}
+
+# Treacherous Governor
+province_event = {
+
+	id = 1068
+
+	trigger = {
+		has_governor = yes
+		is_capital_region = no
+		any_neighbor_province = { has_siege = yes }
+		governor_scope = {
+			not = { loyalty = 40 }
+			country = { war = yes }
+			not = { traits = wounded }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { not = { loyalty = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = silver_tongued }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = lapsed }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = original_thinker }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = corrupt }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = selfish }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = deceitful }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = shrewd }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = tactician }
+		}
+		modifier = {
+			factor = 0.9
+			governor_scope = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 0.8
+			governor_scope = { badboy = 0.15 }
+		}
+		modifier = {
+			factor = 0.8
+			governor_scope = { badboy = 0.3 }
+		}
+		modifier = {
+			factor = 0.8
+			governor_scope = { badboy = 0.45 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = steadfast }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = honest }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = proud }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = righteous }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = just }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { traits = devout }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { stability = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			governor_scope = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 30 }
+		}
+	}
+
+	title = "EVTNAME1068"
+	desc = "EVTDESC1068"
+
+	option = {
+		name = "EVTOPTA1068"					# Such treachery won't go unpunished
+		ai_chance = { factor = 60 }
+		random_list = {
+			40 = { governor_scope = { add_trait = wounded } }
+			60 = { governor_scope = { death = yes } }
+		}
+		governor_scope = { remove_governor = yes }
+	}
+	option = {
+		name = "EVTOPTB1068"					# Just find someone else
+		ai_chance = { factor = 40 }
+		governor_scope = {
+			popularity = -50
+			wealth = -200
+			remove_governor = yes
+		}
+	}
+}
+
+character_event = {
+	id = 1069
+
+	trigger = {
+		has_job = no
+		popularity = 75
+		is_female = no
+		prisoner = no
+		employer = {
+			any_character = {
+				in_command = yes 
+				is_ruler = no
+				NOT = { popularity = 50  }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		
+		months = 120 
+
+		modifier = {
+			factor = 0.5
+			war = yes 
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 7
+			}
+		}
+		modifier = {
+			factor = 0.9 
+			ruler = {
+				NOT = { military = 3 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				charisma = 7
+			}
+		}
+		modifier = {
+			factor = 0.9 
+			ruler = {
+				NOT = { charisma = 3 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				finesse = 7
+			}
+		}
+		modifier = {
+			factor = 0.9 
+			ruler = {
+				NOT = { finesse = 3 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { popularity = 60 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { family_prestige = 50 }
+			}
+		}
+	}
+
+	title = "EVTNAME1069"
+	desc = "EVTDESC1069"
+
+	option = {
+		
+		name = "EVTOPTA1069"
+		employer = {
+			country_event = 1070
+		}
+	}
+}
+
+country_event = {
+
+	id = 1070
+
+	is_triggered_only = yes 
+
+	title = "EVTNAME1070"
+	desc = "EVTDESC1070"
+
+	option = { 
+		name = "EVTOPTA1070"
+		FROM = {
+			loyalty = -10
+		}
+	}
+
+	option = {
+
+		name = "EVTOPTB1070"
+		random_character = {
+			limit = {
+				in_command = yes 
+				is_ruler = no
+				NOT = { popularity = 50  }
+			}
+			loyalty = -10
+			assign_to_unit = FROM
+		}
+	}
+}
+
+
+character_event = {
+
+	id = 1071
+
+	trigger = {
+		has_job = no
+		is_ruler = no
+		is_female = no
+		prisoner = no
+		age = 16
+		
+		any_friend = {
+			has_job = yes
+			popularity = 50 
+			NOT = { is_ruler = yes }
+		}
+		employer = {
+			any_province = {
+				has_governor = no
+				controlled_by = owner
+				is_capital_region = no
+			} 
+		}
+	}
+
+ 	mean_time_to_happen = {
+		
+		months = 6
+	
+		modifier = {
+			factor = 0.9
+			popularity = 60
+		}
+		modifier = {
+			factor = 0.9
+	  		popularity = 70
+		}
+		modifier = {
+			factor = 0.9 
+			popularity = 80
+		}
+		modifier = {
+			factor = 2
+			ruler = {
+				is_rival = THIS
+			}
+		}
+ 	}
+
+	title = "EVTNAME1071"
+	desc = "EVTDESC1071"
+	
+	option = {
+		
+		name = "EVTOPTA1071"
+		employer = {
+			random_owned = {
+				limit = {
+					has_governor = no
+					is_capital_region = no
+					controlled_by = owner
+				}
+				province_event = 1072
+			}
+		}
+	}
+}
+
+province_event = {
+	
+	id = 1072
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME1072"
+	desc = "EVTDESC1072"
+
+	option = {
+		name = "EVTOPTA1072"
+		governor = FROM
+	}
+
+	option = {
+		name = "EVTOPTB1072"
+		FROM = {
+			loyalty = -10
+		}
+		owner = {
+			random_character = {
+				limit = {
+					is_friend = FROM
+					has_job = yes
+					popularity = 50 
+					NOT = { is_ruler = yes }
+				}					
+			loyalty = -5
+			}
+		}
+	}
+}	
+
+province_event = {
+
+	id = 1073
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = aqueduct
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1073"
+	desc = "EVTDESC1073"
+
+	option = {
+		name = "EVTOPTA1073"
+		add_building = aqueduct
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1074
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = forum
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1074"
+	desc = "EVTDESC1074"
+
+	option = {
+		name = "EVTOPTA1074"
+		add_building = forum
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1075
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = temple
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1075"
+	desc = "EVTDESC1075"
+
+	option = {
+		name = "EVTOPTA1075"
+		add_building = temple
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1076
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = arena
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1076"
+	desc = "EVTDESC1076"
+
+	option = {
+		name = "EVTOPTA1076"
+		add_building = arena
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1077
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = academy
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+	title = "EVTNAME1077"
+	desc = "EVTDESC1077"
+
+	option = {
+		name = "EVTOPTA1077"
+		add_building = academy
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1078
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = foundry
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1078"
+	desc = "EVTDESC1078"
+
+	option = {
+		name = "EVTOPTA1078"
+		add_building = foundry
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1079
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = irrigation
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1079"
+	desc = "EVTDESC1079"
+
+	option = {
+		name = "EVTOPTA1079"
+		add_building = irrigation
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+
+province_event = {
+
+	id = 1090
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = mine
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME1090"
+	desc = "EVTDESC1090"
+
+	option = {
+		name = "EVTOPTA1090"
+		add_building = mine
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1091
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		can_build = forestry
+		governor_scope = {
+			NOT = {
+				traits = corrupt
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = righteous
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = founder
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = incapable
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 1.1
+		}
+	}
+	title = "EVTNAME1091"
+	desc = "EVTDESC1091"
+
+	option = {
+		name = "EVTOPTA1091"
+		add_building = forestry
+		governor_scope = {
+			popularity = 10
+			loyalty = -5
+		}
+	}
+}
+
+province_event = {
+
+	id = 1092
+
+	trigger = {
+		NOT = { has_province_modifier = governor_tax_increase }
+		governor_scope = {
+			NOT = {
+				traits = righteous 
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 600
+		 
+		modifier = {
+			governor_scope = {
+				traits = just
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = arbitrary
+			}
+		 	factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = cruel
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = merciful
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = corrupt
+			} 
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = deceitful
+			}
+			factor = 0.9
+		}
+		modifier = {
+			governor_scope = {
+				traits = honest
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = generous
+			}
+			factor = 1.1
+		}
+		modifier = {
+			governor_scope = {
+				traits = selfish
+			}
+			factor = 0.9
+		}
+	}
+
+	title = "EVTNAME1092"
+	desc = "EVTDESC1092"
+
+	option = {
+		name = "EVTOPTA1092"
+		add_province_modifier = {
+			name = "governor_tax_increase"
+			duration = 730
+		}
+		governor_scope = {
+			popularity = -20
+			loyalty = 5
+			wealth = 500
+		}
+	}
+}

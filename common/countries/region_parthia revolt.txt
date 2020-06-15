@@ -1,0 +1,4 @@
+civil_war_faction = QPT
+region = region_parthia
+color = { 155 155 155 }
+color2 = { 0 0 0 }

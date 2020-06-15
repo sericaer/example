@@ -1,0 +1,4 @@
+civil_war_faction = QNA
+region = region_narbonensis
+color = { 180 180 70 }
+color2 = { 255 255 100 }

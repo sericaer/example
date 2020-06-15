@@ -1,0 +1,15 @@
+civil_war_faction = PL2
+graphical_culture = persiangfx
+color = { 50 182  50 }
+color2 { 231 0 200 }
+
+ship_names = {
+	Advat Aretas
+	Chuldu
+	Gamilath
+	Malichus
+	Nitzana
+	Pharan
+	Rabbel
+	Shaqilath Shivta
+}

@@ -1,0 +1,92 @@
+##########################################
+# Barbarian prisoner ransom 			 #
+##########################################
+
+character_event = {
+
+	id = 5500
+
+	trigger = {
+		prisoner = yes
+		country = {
+			tag = BAR
+		}
+		employer = {
+			NOT = { tag = BAR }
+			treasury = 50
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+
+		modifier = {
+			factor = 0.5
+			charisma = 6
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { charisma = 4 }
+		}
+	}
+
+	title = "EVTNAME5500"
+	desc = "EVTDESC5500"
+
+	option = {
+		name = "EVTOPTA5500"	# Ask for ransom
+		employer = {
+			country_event = 5501
+		}
+	}
+}
+
+country_event = {
+
+	id = 5501
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME5501"
+	desc = "EVTDESC5501"
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "EVTOPTA5501"	# Pay up
+		treasury = -50
+		FROM = { prisoner = no }
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "EVTOPTB5501"	# No
+		FROM = { death = yes }
+	}
+}
+
+# Return of the King
+character_event = {
+
+	id = 5502
+	
+	major_character = yes
+	is_triggered_only = yes
+
+	title = "EVTNAME5502"
+	desc = "EVTDESC5502"
+
+	option = {
+		name = "EVTOPTA5502"	# Restore him to the Throne
+		set_ruler = yes
+	}
+	option = {
+		name = "EVTOPTB5502"	# No, his time is past
+		random_list = {
+			60 = { start_civil_war = yes }
+			40 = { loyalty = -80 }
+		}
+	}
+}

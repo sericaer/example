@@ -1,0 +1,310 @@
+character_event = {
+	id = 500
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { traits = victorious }
+	}
+
+	title = "EVTNAME500"
+	desc = "EVTDESC500"
+	
+	option = {
+		name = "EVTOPTA500"
+		add_trait = victorious
+	}
+}
+
+character_event = {
+	id = 501
+	
+	is_triggered_only = yes
+	trigger = {
+		traits = victorious
+	}
+
+	title = "EVTNAME501"
+	desc = "EVTDESC501"
+	
+	option = {
+		name = "EVTOPTA501"
+		remove_trait = victorious
+	}
+}
+
+
+character_event = {
+	id = 502
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { traits = conqueror }
+	}
+
+	title = "EVTNAME502"
+	desc = "EVTDESC502"
+	
+	option = {
+		name = "EVTOPTA502"
+		add_trait = conqueror
+	}
+}
+
+
+character_event = {
+	id = 503
+	
+	major_character = yes
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = brave 
+			traits = coward 
+			}
+	}
+
+	title = "EVTNAME503"
+	desc = "EVTDESC503"
+	
+	option = {
+		name = "EVTOPTA503"
+		random_list = {
+			40 = { add_trait = brave }
+			40 = { popularity = 10 }
+			20 = { death = yes }
+		}
+	}
+	option = {
+		name = "EVTOPTB503"
+		add_trait = coward
+	}
+}
+
+
+character_event = {
+	id = 504
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = confident
+			traits = tactician 
+			traits = disciplined
+			traits = steadfast 
+			traits = aggressive 
+			}
+	}
+
+	title = "EVTNAME504"
+	desc = "EVTDESC504"
+	
+	option = {
+		name = "EVTOPTA504"
+		add_trait = confident
+	}
+}
+
+character_event = {
+	id = 505
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = confident
+			traits = tactician 
+			traits = disciplined
+			traits = steadfast 
+			traits = aggressive 
+			}
+	}
+
+	title = "EVTNAME505"
+	desc = "EVTDESC505"
+	
+	option = {
+		name = "EVTOPTA505"
+		add_trait = tactician 
+	}
+}
+
+
+character_event = {
+	id = 506
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = confident
+			traits = tactician 
+			traits = disciplined
+			traits = steadfast 
+			traits = aggressive 
+			}
+	}
+
+	title = "EVTNAME506"
+	desc = "EVTDESC506"
+	
+	option = {
+		name = "EVTOPTA506"
+		add_trait = disciplined
+	}
+}
+
+
+
+character_event = {
+	id = 507
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = confident
+			traits = tactician 
+			traits = disciplined
+			traits = steadfast 
+			traits = aggressive 
+			}
+	}
+
+	title = "EVTNAME507"
+	desc = "EVTDESC507"
+	
+	option = {
+		name = "EVTOPTA507"
+		add_trait = steadfast 
+	}
+}
+
+
+character_event = {
+	id = 508
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			traits = confident
+			traits = tactician 
+			traits = disciplined
+			traits = steadfast 
+			traits = aggressive 
+		}
+	}
+
+	title = "EVTNAME508"
+	desc = "EVTDESC508"
+	
+	option = {
+		name = "EVTOPTA508"
+		add_trait = aggressive 
+	}
+}
+
+
+character_event = {
+	id = 509
+	
+	major_character = yes
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	title = "EVTNAME509"
+	desc = "EVTDESC509"
+	
+	option = {
+		name = "EVTOPTA509"
+		death = yes
+	}
+}
+
+
+character_event = {
+	id = 510
+	
+	is_triggered_only = yes
+	trigger = {
+		not = { traits = wounded }
+	}
+
+	title = "EVTNAME510"
+	desc = "EVTDESC510"
+	
+	option = {
+		name = "EVTOPTA510"
+		add_trait = wounded
+	}
+}
+
+
+character_event = {
+	id = 511
+	
+	major_character = yes
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	title = "EVTNAME511"
+	desc = "EVTDESC511"
+	
+	option = {
+		name = "EVTOPTA511"
+		death = yes
+	}
+}
+
+
+character_event = {
+	id = 512
+	
+	is_triggered_only = yes
+	trigger = {
+		not = { traits = wounded }
+	}
+
+	title = "EVTNAME512"
+	desc = "EVTDESC512"
+	
+	option = {
+		name = "EVTOPTA512"
+		add_trait = wounded
+	}
+}
+
+character_event = {
+	id = 513
+	
+	is_triggered_only = yes
+	trigger = {
+		not = { traits = maimed }
+	}
+
+	title = "EVTNAME513"
+	desc = "EVTDESC513"
+	
+	option = {
+		name = "EVTOPTA513"
+		add_trait = maimed
+	}
+}
+
+character_event = {
+	id = 514
+	
+	is_triggered_only = yes
+	trigger = {
+		not = { traits = maimed }
+	}
+
+	title = "EVTNAME514"
+	desc = "EVTDESC514"
+	
+	option = {
+		name = "EVTOPTA514"
+		add_trait = maimed
+	}
+}

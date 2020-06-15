@@ -1,0 +1,23 @@
+civil_war_faction = CR2
+graphical_culture = greekgfx
+color = { 199  160  139 }
+color2 = { 152 205 238 }
+
+ship_names = {
+	Adrasta Adrasteia Akakallis Akalle Althaea Amnisiades Amnisos Androgeus Apemosyne Ariadne
+	"Artemis Rhokkaia" Asterios
+	Britomartis
+	Daktyloi Deukalion
+	Eropea Europa
+	Glaukos
+	Ida Idomenea Idothea
+	Katreus Klymene Kouretes Kres Krete Kydon Kynosura
+	Lailaps
+	Melisseus Minos Minotauros Molos
+	Olympos
+	Pasiphae Phaidra Rhadamanthys
+	Rhea
+	Talos Titanes
+	Xenodice
+	"Zeus Diktaios"
+}

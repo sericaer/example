@@ -1,0 +1,804 @@
+# Instability
+country_event = {
+
+	id = 2080
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 0 }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2080"
+	desc = "EVTDESC2080"
+
+	option = {
+		name = "EVTOPTA2080"					# Absolutely
+		treasury = -20
+		ruler = { popularity = 10 } 
+	}
+	option = {
+		name = "EVTOPTB2080"					# No, no, there's no need
+		random = {
+			chance = 20
+			stability = -1
+		}
+	}
+}
+
+# Failed Omen
+country_event = {
+
+	id = 2081
+	
+	trigger = {
+		any_province = { has_building = arena }
+		has_omen = yes
+		is_omen_failure = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}	
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2081"
+	desc = "EVTDESC2081"
+
+	option = {
+		name = "EVTOPTA2081"					# That should get everyone on our side
+		treasury = -20
+		ruler = { popularity = 10 } 
+	}
+	option = {
+		name = "EVTOPTB2081"					# It's nothing to worry about
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Jupiter
+country_event = {
+
+	id = 2082
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = roman_pantheon
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2082"
+	desc = "EVTDESC2082"
+
+	option = {
+		name = "EVTOPTA2082"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2082"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Zeus
+country_event = {
+
+	id = 2083
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = greek_pantheon
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2083"
+	desc = "EVTDESC2083"
+
+	option = {
+		name = "EVTOPTA2083"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2083"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Amun
+country_event = {
+
+	id = 2084
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = egyptian_pantheon
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2084"
+	desc = "EVTDESC2084"
+
+	option = {
+		name = "EVTOPTA2084"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2084"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour El
+country_event = {
+
+	id = 2085
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = carthaginian_pantheon
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2085"
+	desc = "EVTDESC2085"
+
+	option = {
+		name = "EVTOPTA2085"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2085"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Ra'al
+country_event = {
+
+	id = 2086
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = phoenician_pantheon
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2086"
+	desc = "EVTDESC2086"
+
+	option = {
+		name = "EVTOPTA2086"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2086"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour the Lion
+country_event = {
+
+	id = 2087
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = shamanism
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2087"
+	desc = "EVTDESC2087"
+
+	option = {
+		name = "EVTOPTA2087"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2087"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Segomo
+country_event = {
+
+	id = 2088
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = druidism
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2088"
+	desc = "EVTDESC2088"
+
+	option = {
+		name = "EVTOPTA2088"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2088"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Odin
+country_event = {
+
+	id = 2089
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = animism
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2089"
+	desc = "EVTDESC2089"
+
+	option = {
+		name = "EVTOPTA2089"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2089"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games in Gods Honour
+country_event = {
+
+	id = 2090
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = judaism
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2090"
+	desc = "EVTDESC2090"
+
+	option = {
+		name = "EVTOPTA2090"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2090"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}
+
+# Games to Honour Ahura Mazda
+country_event = {
+
+	id = 2091
+	
+	trigger = {
+		any_province = { has_building = arena }
+		not = { stability = 3 }
+		stability = 0
+		religion = zoroaster
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+	}
+	title = "EVTNAME2091"
+	desc = "EVTDESC2091"
+
+	option = {
+		name = "EVTOPTA2091"					# Yes we should
+		treasury = -20
+		stability = 1
+		ruler = { popularity = 5 }
+	}
+	option = {
+		name = "EVTOPTB2091"					# I see no need
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+}

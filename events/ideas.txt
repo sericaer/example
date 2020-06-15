@@ -1,0 +1,2024 @@
+##########################################
+############ MILITARY IDEAS ##############
+##########################################
+
+
+##########################################
+#  		Martial Ethos		 #
+##########################################
+country_event = {
+
+	id = 7200
+	trigger = {
+		idea = martial_ethos
+		not = { has_country_modifier = strong_army }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7200"
+	desc = "EVTDESC7200"
+		
+	option = {
+		name = "EVTOPTA7200"
+		add_country_modifier = {
+			name = "strong_army"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7201
+	trigger = {
+		idea = martial_ethos
+		not = { has_country_modifier = weak_army }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7201"
+	desc = "EVTDESC7201"
+		
+	option = {
+		name = "EVTOPTA7201"
+		add_country_modifier = {
+			name = "weak_army"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Horse Lords		 #
+##########################################
+country_event = {
+
+	id = 7202
+	trigger = {
+		idea = horse_lords
+		not = { has_country_modifier = excellent_commander }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7202"
+	desc = "EVTDESC7202"
+		
+	option = {
+		name = "EVTOPTA7202"
+		add_country_modifier = {
+			name = "excellent_commander"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7203
+	trigger = {
+		idea = horse_lords
+		not = { has_country_modifier = incompetent_commander }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7203"
+	desc = "EVTDESC7203"
+		
+	option = {
+		name = "EVTOPTA7203"
+		add_country_modifier = {
+			name = "incompetent_commander"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Naval Ethos		 #
+##########################################
+country_event = {
+
+	id = 7204
+	trigger = {
+		idea = naval_ethos
+		not = { has_country_modifier = grand_fleet }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7204"
+	desc = "EVTDESC7204"
+		
+	option = {
+		name = "EVTOPTA7204"
+		add_country_modifier = {
+			name = "grand_fleet"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7205
+	trigger = {
+		idea = naval_ethos
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7205"
+	desc = "EVTDESC7205"
+		
+	option = {
+		name = "EVTOPTA7205"
+		treasury = -40
+	}
+}
+
+##########################################
+#  	  Professional Soldiers		 #
+##########################################
+country_event = {
+
+	id = 7206
+	trigger = {
+		idea = professional_soldiers
+		not = { has_country_modifier = military_career }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7206"
+	desc = "EVTDESC7206"
+		
+	option = {
+		name = "EVTOPTA7206"
+		add_country_modifier = {
+			name = "military_career"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7207
+	trigger = {
+		idea = professional_soldiers
+		not = { has_country_modifier = disorder_among_our_troops }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7207"
+	desc = "EVTDESC7207"
+		
+	option = {
+		name = "EVTOPTA7207"
+		add_country_modifier = {
+			name = "disorder_among_our_troops"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  	   Tribal Recruitment		 #
+##########################################
+country_event = {
+
+	id = 7208
+	trigger = {
+		idea = tribal_recruitment
+		not = { has_country_modifier = better_organization }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7208"
+	desc = "EVTDESC7208"
+		
+	option = {
+		name = "EVTOPTA7208"
+		add_country_modifier = {
+			name = "better_organization"
+			duration = 120
+		}
+	}
+}
+
+# I knew this was a bad idea
+country_event = {
+
+	id = 7209
+	trigger = {
+		idea = tribal_recruitment
+		not = { has_country_modifier = recruitment_problems }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7209"
+	desc = "EVTDESC7209"
+		
+	option = {
+		name = "EVTOPTA7209"
+		add_country_modifier = {
+			name = "recruitment_problems"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Military Camps		 #
+##########################################
+country_event = {
+
+	id = 7210
+	trigger = {
+		idea = military_camps
+		not = { has_country_modifier = successful_camps }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7210"
+	desc = "EVTDESC7210"
+		
+	option = {
+		name = "EVTOPTA7210"
+		add_country_modifier = {
+			name = "successful_camps"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7211
+	trigger = {
+		idea = military_camps
+		not = { has_country_modifier = unsuccessful_camps }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7211"
+	desc = "EVTDESC7211"
+		
+	option = {
+		name = "EVTOPTA7211"
+		add_country_modifier = {
+			name = "unsuccessful_camps"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Cataphracts		 #
+##########################################
+country_event = {
+
+	id = 7212
+	trigger = {
+		idea = cataphracts
+		not = { has_country_modifier = military_prowess }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7212"
+	desc = "EVTDESC7212"
+		
+	option = {
+		name = "EVTOPTA7212"
+		add_country_modifier = {
+			name = "military_prowess"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7213
+	trigger = {
+		idea = cataphracts
+		not = { has_country_modifier = disorganized_troops }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7213"
+	desc = "EVTDESC7213"
+		
+	option = {
+		name = "EVTOPTA7213"
+		add_country_modifier = {
+			name = "disorganized_troops"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  	Legionary Military System	 #
+##########################################
+country_event = {
+
+	id = 7214
+	trigger = {
+		idea = legionary_military_system
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7214"
+	desc = "EVTDESC7214"
+		
+	option = {
+		name = "EVTOPTA7214"
+		treasury = 40
+	}
+}
+
+country_event = {
+
+	id = 7215
+	trigger = {
+		idea = legionary_military_system
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7215"
+	desc = "EVTDESC7215"     
+		
+	option = {
+		name = "EVTOPTA7215"
+		treasury = -40
+	}
+}
+
+##########################################
+#  	    Militarized Society		 #
+##########################################
+country_event = {
+
+	id = 7216
+	trigger = {
+		idea = militarized_society
+		not = { has_country_modifier = invaluable_experience }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7216"
+	desc = "EVTDESC7216"
+
+	option = {
+		name = "EVTOPTA7216"
+		add_country_modifier = {
+			name = "invaluable_experience"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7217
+	trigger = {
+		idea = militarized_society
+		not = { has_country_modifier = obsolete_tactics }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7217"
+	desc = "EVTDESC7217"
+
+	option = {
+		name = "EVTOPTA7217"
+		add_country_modifier = {
+			name = "obsolete_tactics"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Siege Train		 #
+##########################################
+country_event = {
+
+	id = 7218
+	trigger = {
+		idea = siege_train
+		not = { has_country_modifier = imported_ideas }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7218"
+	desc = "EVTDESC7218"     
+		
+	option = {
+		name = "EVTOPTA7218"
+		add_country_modifier = {
+			name = "imported_ideas"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7219
+	trigger = {
+		idea = siege_train
+		not = { has_country_modifier = neglected_navy }
+		not = { has_country_modifier = changed_focus }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7219"
+	desc = "EVTDESC7219"
+
+	option = {
+		name = "EVTOPTA7219"
+		add_country_modifier = {
+			name = "neglected_navy"
+			duration = 120
+		}		
+	}
+	option = {
+		name = "EVTOPTB7219"
+		add_country_modifier = {
+			name = "changed_focus"
+			duration = 120
+		}		
+	}
+}
+
+##########################################
+############## CIVIC IDEAS ###############
+##########################################
+
+
+##########################################
+#  		Civic Duty		 #
+##########################################
+country_event = {
+
+	id = 7220
+	trigger = {
+		idea = civic_duty
+		not = { has_country_modifier = superior_tactics }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7220"
+	desc = "EVTDESC7220"
+		
+	option = {
+		name = "EVTOPTA7220"
+		add_country_modifier = {
+			name = "superior_tactics"
+			duration = 120
+		}		
+	}
+}
+
+country_event = {
+
+	id = 7221
+	trigger = {
+		idea = civic_duty
+		not = { has_country_modifier = inferior_tactics }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7221"
+	desc = "EVTDESC7221"     
+		
+	option = {
+		name = "EVTOPTA7221"
+		add_country_modifier = {
+			name = "inferior_tactics"
+			duration = 120
+		}		
+	}
+}
+
+##########################################
+#  		Citizenship		 #
+##########################################
+country_event = {
+
+	id = 7222
+	trigger = {
+		idea = citizenship
+		not = { has_country_modifier = political_consensus }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7222"
+	desc = "EVTDESC7222"     
+		
+	option = {
+		name = "EVTOPTA7222"
+		add_country_modifier = {
+			name = "political_consensus"
+			duration = 120
+		}
+	}
+}
+
+# That's nonsense
+country_event = {
+
+	id = 7223
+	trigger = {
+		idea = citizenship
+		not = { has_country_modifier = political_disagreements }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7223"
+	desc = "EVTDESC7223"     
+		
+	option = {
+		name = "EVTOPTA7223"
+		add_country_modifier = {
+			name = "political_disagreements"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Emancipation		 #
+##########################################
+country_event = {
+
+	id = 7224
+	trigger = {
+		idea = emancipation
+		not = { has_country_modifier = political_unity }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7224"
+	desc = "EVTDESC7224"     
+		
+	option = {
+		name = "EVTOPTA7224"
+		add_country_modifier = {
+			name = "political_unity"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7225
+	trigger = {
+		idea = emancipation
+		not = { has_country_modifier = political_clash }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7225"
+	desc = "EVTDESC7225"     
+		
+	option = {
+		name = "EVTOPTA7225"
+		add_country_modifier = {
+			name = "political_clash"
+			duration = 120
+		}		
+	}
+}
+
+##########################################
+#  		Diplomatic		 #
+##########################################
+country_event = {
+
+	id = 7226
+	trigger = {
+		idea = diplomatic
+		ruler = {
+			not = { traits = silver_tongued }
+			not = { traits = blunt }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7226"
+	desc = "EVTDESC7226"     
+		
+	option = {
+		name = "EVTOPTA7226"
+		ruler = { add_trait = silver_tongued }		
+	}
+}
+
+country_event = {
+
+	id = 7227
+	trigger = {
+		idea = diplomatic
+		ruler = {
+			not = { traits = blunt }
+			not = { traits = silver_tongued }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7227"
+	desc = "EVTDESC7227"     
+		
+	option = {
+		name = "EVTOPTA7227"
+		ruler = { add_trait = blunt }	
+	}
+}
+
+##########################################
+#  		Duplicity		 #
+##########################################
+country_event = {
+
+	id = 7228
+	trigger = {
+		idea = duplicity
+		not = { has_country_modifier = deliberate_deceptiveness }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7228"
+	desc = "EVTDESC7228"     
+		
+	option = {
+		name = "EVTOPTA7228"
+		add_country_modifier = {
+			name = "deliberate_deceptiveness"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7229
+	trigger = {
+		idea = duplicity
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7229"
+	desc = "EVTDESC7229"     
+		
+	option = {
+		name = "EVTOPTA7229"
+		treasury = -30
+	}
+}
+
+##########################################
+#  		Loyal Politics		 #
+##########################################
+country_event = {
+
+	id = 7230
+	trigger = {
+		idea = loyal_politics
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7230"
+	desc = "EVTDESC7230"     
+		
+	option = {
+		name = "EVTOPTA7230"
+		ruler = { popularity = 5 }	
+	}
+}
+
+country_event = {
+
+	id = 7231
+	trigger = {
+		idea = loyal_politics
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7231"
+	desc = "EVTDESC7231"     
+		
+	option = {
+		name = "EVTOPTA7231"
+		ruler = { popularity = -10 }		
+	}
+}
+
+##########################################
+#  		Philosophies		 #
+##########################################
+country_event = {
+
+	id = 7232
+	trigger = {
+		idea = philosophies
+		not = { has_country_modifier = philosophical_advancements }
+		ruler = {
+			not = { traits = original_thinker }
+			not = { traits = tactically_inflexible }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7232"
+	desc = "EVTDESC7232"     
+		
+	option = {
+		name = "EVTOPTA7232"
+		add_country_modifier = {
+			name = "philosophical_advancements"
+			duration = 120
+		}
+		random = {
+			chance = 30
+			ruler = { add_trait = original_thinker }
+		}
+	}
+}
+
+country_event = {
+
+	id = 7233
+	trigger = {
+		idea = philosophies
+		ruler = {
+			not = { traits = narrowminded }
+			not = { traits = inventor }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7233"
+	desc = "EVTDESC7233"     
+		
+	option = {
+		name = "EVTOPTA7233"
+		random = {
+			chance = 30
+			ruler = { add_trait = narrowminded }
+		}		
+	}
+}
+
+##########################################
+#  		Higher Duty		 #
+##########################################
+country_event = {
+
+	id = 7234
+	trigger = {
+		idea = higher_duty
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7234"
+	desc = "EVTDESC7234"     
+		
+	option = {
+		name = "EVTOPTA7234"
+		stability = 1
+	}
+}
+
+country_event = {
+
+	id = 7235
+	trigger = {
+		idea = higher_duty
+		ruler = { finesse = 2 }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7235"
+	desc = "EVTDESC7235"     
+		
+	option = {
+		name = "EVTOPTA7235"
+		ruler = { change_finesse = -1 }
+	}
+}
+
+##########################################
+#  		Rule of Law		 #
+##########################################
+
+country_event = {
+
+	id = 7238
+	trigger = {
+		idea = rule_of_law
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7238"
+	desc = "EVTDESC7238"     
+		
+	option = {
+		name = "EVTOPTA7238"
+		random_list = {
+			50 = { stability = 1 }
+			50 = { treasury = 30 }
+		}		
+	}
+}
+
+country_event = {
+
+	id = 7239
+	trigger = {
+		idea = rule_of_law
+		not = { has_country_modifier = political_chaos }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7239"
+	desc = "EVTDESC7239"     
+		
+	option = {
+		name = "EVTOPTA7239"
+		add_country_modifier = {
+			name = "political_chaos"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  	Populist Politics		 #
+##########################################
+country_event = {
+
+	id = 7236
+	trigger = {
+		idea = populist_politics
+		not = { has_country_modifier = stability_increase }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7236"
+	desc = "EVTDESC7236"     
+		
+	option = {
+		name = "EVTOPTA7236"
+		add_country_modifier = {
+			name = "stability_increase"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7237
+	trigger = {
+		idea = populist_politics
+		not = { has_country_modifier = angry_mob }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7237"
+	desc = "EVTDESC7237"     
+		
+	option = {
+		name = "EVTOPTA7237"
+		add_country_modifier = {
+			name = "angry_mob"
+			duration = 120
+		}
+	}
+}
+
+
+##########################################
+############ ECONOMIC IDEAS ##############
+##########################################
+
+##########################################
+#  	Organized Recruitment		 #
+##########################################
+country_event = {
+
+	id = 7240
+	trigger = {
+		idea = organized_recruitment
+		not = { has_country_modifier = increased_efficiency }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7240"
+	desc = "EVTDESC7240"
+		
+	option = {
+		name = "EVTOPTA7240"
+		add_country_modifier = {
+			name = "increased_efficiency"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7241
+	trigger = {
+		idea = organized_recruitment
+		not = { has_country_modifier = high_inefficiency }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7241"
+	desc = "EVTDESC7241"     
+	option = {
+		name = "EVTOPTA7241"
+		treasury = -20
+	}
+	option = {
+		name = "EVTOPTB7241"
+		add_country_modifier = {
+			name = "high_inefficiency"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  			Naval Blockades	 			 #
+##########################################
+country_event = {
+
+	id = 7242
+	trigger = {
+		idea = naval_blockades
+		not = { has_country_modifier = naval_advancements }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7242"
+	desc = "EVTDESC7242"     
+		
+	option = {
+		name = "EVTOPTA7242"
+		add_country_modifier = {
+			name = "naval_advancements"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7243
+	trigger = {
+		idea = naval_blockades
+		not = { has_country_modifier = naval_focus }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7243"
+	desc = "EVTDESC7243"     
+		
+	option = {
+		name = "EVTOPTA7243"
+		add_country_modifier = {
+			name = "naval_focus"
+			duration = 120
+		}		
+	}
+}
+
+##########################################
+#  			National Prestige			 #
+##########################################
+country_event = {
+
+	id = 7244
+	trigger = {
+		idea = national_prestige
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7244"
+	desc = "EVTDESC7244"     
+		
+	option = {
+		name = "EVTOPTA7244"
+		treasury = 40
+	}
+}
+
+country_event = {
+
+	id = 7245
+	trigger = {
+		idea = national_prestige
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7245"
+	desc = "EVTDESC7245"     
+		
+	option = {
+		name = "EVTOPTA7245"
+		ruler = { change_finesse = -1 }
+	}
+}
+
+##########################################
+#  			Tariffs			 #
+##########################################
+country_event = {
+
+	id = 7246
+	trigger = {
+		idea = tariffs
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7246"
+	desc = "EVTDESC7246"     
+		
+	option = {
+		name = "EVTOPTA7246"
+		treasury = 30
+	}
+}
+
+country_event = {
+
+	id = 7247
+	trigger = {
+		idea = tariffs
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7247"
+	desc = "EVTDESC7247"     
+		
+	option = {
+		name = "EVTOPTA7247"
+		random = {
+			chance = 40
+			stability = -1
+		}
+	}
+}
+
+##########################################
+#  			Tax Farming		 #
+##########################################
+country_event = {
+
+	id = 7248
+	trigger = {
+		idea = tax_farming
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7248"
+	desc = "EVTDESC7248"     
+		
+	option = {
+		name = "EVTOPTA7248"
+		treasury = 30
+		random = {
+			chance = 30
+			stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB7248"
+		treasury = 15
+	}
+}
+
+country_event = {
+
+	id = 7249
+	trigger = {
+		idea = tax_farming
+		not = { has_country_modifier = dishonest_tax_collectors }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7249"
+	desc = "EVTDESC7249"     
+		
+	option = {
+		name = "EVTOPTA7249"
+		add_country_modifier = {
+			name = "dishonest_tax_collectors"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  			Improved Construction		 #
+##########################################
+country_event = {
+
+	id = 7250
+	trigger = {
+		idea = improved_construction
+		not = { has_country_modifier = building_exceeds_expectations }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7250"
+	desc = "EVTDESC7250"     
+		
+	option = {
+		name = "EVTOPTA7250"
+		add_country_modifier = {
+			name = "building_exceeds_expectations"
+			duration = 120
+		}
+	}
+} 
+
+country_event = {
+
+	id = 7251
+	trigger = {
+		idea = improved_construction
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7251"
+	desc = "EVTDESC7251"     
+
+	option = {
+		name = "EVTOPTA7251"
+		ruler = { popularity = -10 }
+	}	
+	option = {
+		name = "EVTOPTB7251"
+		treasury = -30
+	}
+}
+
+##########################################
+#  		Tradition of Service	 #
+##########################################
+country_event = {
+
+	id = 7252
+	trigger = {
+		idea = tradition_of_service
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7252"
+	desc = "EVTDESC7252"
+
+	option = {
+		name = "EVTOPTA7252"
+		add_country_modifier = {
+			name = "responsible_leaders"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7253
+	trigger = {
+		idea = tradition_of_service
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7253"
+	desc = "EVTDESC7253"
+
+	option = {
+		name = "EVTOPTA7253"
+		add_country_modifier = {
+			name = "disagreements_between_leaders"
+			duration = 120
+		}		
+	}
+}
+
+##########################################
+#  			Regulated Markets		 #
+##########################################
+country_event = {
+
+	id = 7254
+	trigger = {
+		idea = regulated_markets
+		not = { has_country_modifier = improved_trading_conditions }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7254"
+	desc = "EVTDESC7254"     
+
+	option = {
+		name = "EVTOPTA7254"
+		add_country_modifier = {
+			name = "improved_trading_conditions"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7255
+	trigger = {
+		idea = regulated_markets
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7255"
+	desc = "EVTDESC7255"     
+
+	option = {
+		name = "EVTOPTA7255"
+		civic_tech = -50
+	}
+	option = {
+		name = "EVTOPTB7255"
+		stability = -1
+	}
+}
+
+##########################################
+#  			Industry		 #
+##########################################
+country_event = {
+
+	id = 7256
+	trigger = {
+		idea = industry
+		not = { has_country_modifier = reduced_building_cost }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7256"
+	desc = "EVTDESC7256"     
+
+	option = {
+		name = "EVTOPTA7256"
+		add_country_modifier = {
+			name = "reduced_building_cost"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7257
+	trigger = {
+		idea = industry
+		not = { has_country_modifier = lack_of_material }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7257"
+	desc = "EVTDESC7257"     
+
+	option = {
+		name = "EVTOPTA7257"
+		add_country_modifier = {
+			name = "lack_of_material"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Bureaucratic Traditions		 #
+##########################################
+country_event = {
+
+	id = 7258
+	trigger = {
+		idea = bureaucratic_traditions
+		not = { has_country_modifier = reduced_recruitment_cost }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7258"
+	desc = "EVTDESC7258"     
+
+	option = {
+		name = "EVTOPTA7258"
+		add_country_modifier = {
+			name = "reduced_recruitment_cost"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7259
+	trigger = {
+		idea = bureaucratic_traditions
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7259"
+	desc = "EVTDESC7259"     
+
+	option = {
+		name = "EVTOPTA7259"
+		treasury = -20
+	}
+}
+
+##########################################
+########### RELIGIOUS IDEAS ##############
+##########################################
+
+
+##########################################
+#  		Deification		 #
+##########################################
+
+country_event = {
+
+	id = 7260
+	trigger = {
+		idea = deification
+		not = { stability = 3 }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7260"
+	desc = "EVTDESC7260"     
+		
+	option = {
+		name = "EVTOPTA7260"
+		stability = 1
+	}
+}
+
+country_event = {
+
+	id = 7261
+	trigger = {
+		idea = deification
+		stability = -2
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7261"
+	desc = "EVTDESC7261"     
+		
+	option = {
+		name = "EVTOPTA7261"
+		stability = -1
+	}
+}
+
+##########################################
+#  		National Faith		 #
+##########################################
+country_event = {
+
+	id = 7262
+	trigger = {
+		idea = national_faith
+		not = { has_country_modifier = increased_support }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7262"
+	desc = "EVTDESC7262"     
+		
+	option = {
+		name = "EVTOPTA7262"
+		add_country_modifier = {
+			name = "increased_support"
+			duration = 120
+		}		
+	}
+}
+
+country_event = {
+
+	id = 7263
+	trigger = {
+		idea = national_faith
+		not = { has_country_modifier = ignored_omen }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7263"
+	desc = "EVTDESC7263"     
+		
+	option = {
+		name = "EVTOPTA7263"
+		add_country_modifier = {
+			name = "ignored_omen"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		National Oracle		 #
+##########################################
+country_event = {
+
+	id = 7264
+	trigger = {
+		idea = national_oracle
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7264"
+	desc = "EVTDESC7264"     
+		
+	option = {
+		name = "EVTOPTA7264"
+		ruler = { popularity = 5 }
+	}
+}
+
+country_event = {
+
+	id = 7265
+	trigger = {
+		idea = national_oracle
+		not = { has_country_modifier = social_unrest }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7265"
+	desc = "EVTDESC7265"     
+		
+	option = {
+		name = "EVTOPTA7265"
+		add_country_modifier = {
+			name = "social_unrest"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Divine Right		 #
+##########################################
+country_event = {
+
+	id = 7266
+	trigger = {
+		idea = divine_right
+		not = { finesse = 9 }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7266"
+	desc = "EVTDESC7266"     
+		
+	option = {
+		name = "EVTOPTA7266"
+		ruler = { change_finesse = 1 }
+	}
+}
+
+country_event = {
+
+	id = 7267
+	trigger = {
+		idea = divine_right
+		charisma = 4
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7267"
+	desc = "EVTDESC7267"     
+		
+	option = {
+		name = "EVTOPTA7267"
+		ruler = { change_charisma = -1 }
+	}
+}
+
+##########################################
+#  		Religious State		 #
+##########################################
+country_event = {
+
+	id = 7268
+	trigger = {
+		idea = religious_state
+		has_civil_war = no
+		not = { stability = 3 }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7268"
+	desc = "EVTDESC7268"     
+		
+	option = {
+		name = "EVTOPTA7268"
+		stability = 1
+	}
+}
+
+country_event = {
+
+	id = 7269
+	trigger = {
+		idea = religious_state
+		not = { has_country_modifier = failure_to_interpret_omen }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7269"
+	desc = "EVTDESC7269"     
+		
+	option = {
+		name = "EVTOPTA7269"
+		add_country_modifier = {
+			name = "trust_in_the_gods"
+			duration = 120
+		}
+	}
+	option = {
+		name = "EVTOPTB7269"
+		add_country_modifier = {
+			name = "failure_to_interpret_omen"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  		Tolerance		 #
+##########################################
+country_event = {
+
+	id = 7270
+	trigger = {
+		idea = tolerance
+		not = { has_country_modifier = tolerant_society }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7270"
+	desc = "EVTDESC7270"     
+		
+	option = {
+		name = "EVTOPTA7270"
+		add_country_modifier = {
+			name = "tolerant_society"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7271
+	trigger = {
+		idea = tolerance
+		not = { has_country_modifier = religious_minorities }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7271"
+	desc = "EVTDESC7271"     
+		
+	option = {
+		name = "EVTOPTA7271"
+		add_country_modifier = {
+			name = "religious_minorities"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  				Pantheon	 	 		 #
+##########################################
+
+country_event = {
+
+	id = 7272
+	trigger = {
+		idea = pantheon
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7272"
+	desc = "EVTDESC7272"     
+		
+	option = {
+		name = "EVTOPTA7272"
+		add_country_modifier = {
+			name = "religious_superiority"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7273
+	trigger = {
+		idea = pantheon
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7273"
+	desc = "EVTDESC7273"     
+		
+	option = {
+		name = "EVTOPTA7273"
+		add_country_modifier = {
+			name = "temple_in_ruins"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  	Philosophical Advances	 	 #
+##########################################
+country_event = {
+
+	id = 7274
+	trigger = {
+		idea = philosophical_advances
+		not = { has_country_modifier = new_philosophical_ideas }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7274"
+	desc = "EVTDESC7274"     
+		
+	option = {
+		name = "EVTOPTA7274"
+		treasury = -20
+		add_country_modifier = {
+			name = "new_philosophical_ideas"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7275
+	trigger = {
+		idea = philosophical_advances
+		ruler = { popularity = 5 }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7275"
+	desc = "EVTDESC7275"     
+		
+	option = {
+		name = "EVTOPTA7275"
+		ruler = { popularity = -10 }
+	}
+}
+
+##########################################
+#  	College of Pontifices	 	 #
+##########################################
+country_event = {
+
+	id = 7276
+	trigger = {
+		idea = college_of_pontifices
+		not = { has_country_modifier = religious_discussion }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7276"
+	desc = "EVTDESC7276"     
+		
+	option = {
+		name = "EVTOPTA7276"
+		add_country_modifier = {
+			name = "religious_discussion"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7277
+	trigger = {
+		idea = college_of_pontifices
+		not = { has_country_modifier = one_priest_too_many }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7277"
+	desc = "EVTDESC7277"     
+		
+	option = {
+		name = "EVTOPTA7277"
+		add_country_modifier = {
+			name = "one_priest_too_many"
+			duration = 120
+		}
+	}
+}
+
+##########################################
+#  	Evangelical Faith	 	 #
+##########################################
+country_event = {
+
+	id = 7278
+	trigger = {
+		idea = evangelical_faith
+		not = { has_country_modifier = new_followers }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7278"
+	desc = "EVTDESC7278"     
+		
+	option = {
+		name = "EVTOPTA7278"
+		add_country_modifier = {
+			name = "new_followers"
+			duration = 120
+		}
+	}
+}
+
+country_event = {
+
+	id = 7279
+	trigger = {
+		idea = evangelical_faith
+		not = { has_country_modifier = lack_of_followers }
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+	}
+
+	title = "EVTNAME7279"
+	desc = "EVTDESC7279"
+		
+	option = {
+		name = "EVTOPTA7279"
+		add_country_modifier = {
+			name = "lack_of_followers"
+			duration = 120
+		}
+	}
+}

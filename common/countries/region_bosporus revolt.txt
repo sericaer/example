@@ -1,0 +1,4 @@
+civil_war_faction = QBO
+region = region_bosporus
+color = { 150 145 120 }
+color2 = { 80 80 50 }

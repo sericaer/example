@@ -1,0 +1,48 @@
+country_decisions = {
+	deify_ruler = {
+		potential = {
+			government = monarchy
+			ruler = { not = { has_character_flag = deified_ruler } }
+		}
+		allow = {
+			capital_scope = { civilization_value = 50 }
+			ruler = { finesse = 6 martial = 4 charisma = 8 }
+		}
+		effect = {
+			ruler = { 
+				set_character_flag = deified_ruler 
+				prominence = 10
+				popularity = 50
+			} 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	enact_gladiatorial_games = {
+		potential = {
+			OR = { 
+				government = republic
+				government = monarchy
+			}
+			NOT = { has_country_modifier = gladiatorial_games }
+			capital_scope = { civilization_value = 70 }
+		}
+		allow = {
+			ruler = { popularity = 90 martial = 7 }
+			invention = arena_invention
+		}
+		effect = {
+			add_country_modifier = {
+				name = "gladiatorial_games"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

@@ -1,0 +1,242 @@
+Country_event = {
+
+	id = 1001
+	
+	trigger = {
+		capital_scope = { civilization_value = 60 }
+		land_tech = 13
+		NOT = {
+			OR = {
+				has_country_flag = roman_warfare
+				has_country_flag = hellenistic_warfare
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 12
+
+	}
+
+	title = "EVTNAME1001"
+	desc = "EVTDESC1001"
+	
+
+	option = {
+		name = "EVTOPTA1001"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				NOT =  {
+					OR = {
+						tag = ROM
+						religion_group = pagan
+					}
+				}
+			}
+		}
+		set_country_flag = hellenistic_warfare 
+	}
+
+	option = {
+		name = "EVTOPTB1001"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				OR = {
+					tag = ROM
+					religion_group = pagan
+				}
+			}
+		}
+		set_country_flag = roman_warfare
+	}
+}	
+
+country_event = {
+	
+	id = 1002
+	
+	trigger = {
+		capital_scope = { civilization_value = 60 }
+		civic_tech = 9
+		NOT = {
+			OR = {
+				has_country_flag = open_nobility
+				has_country_flag = closed_nobility	
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	title = "EVTNAME1002"
+	desc = "EVTDESC1002"
+
+	option = {
+		name = "EVTOPTA1002"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				OR = {
+					government = military_republic
+					government = oligarchic_republic
+					government = democratic_republic
+					government = republic_confederacy
+					government = dictatorship
+					government = military_tribe
+					government = trade_tribe
+				}
+			}
+		}	
+		set_country_flag = open_nobility
+	}	 
+
+
+	option = {
+		name = "EVTOPTB1002"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				NOT = {
+					OR = {
+						government = military_republic
+						government = oligarchic_republic
+						government = democratic_republic
+						government = republic_confederacy
+						government = dictatorship
+						government = military_tribe
+						government = trade_tribe
+					}
+				}
+			}
+		}
+		set_country_flag = closed_nobility
+	}	 
+}
+
+country_event = {
+	
+	id = 1003
+
+	trigger = {
+		capital_scope = { civilization_value = 60 }
+		construction_tech = 9 
+		NOT = {
+			OR = {
+				has_country_flag = form
+				has_country_flag = functionality 
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	title = "EVTNAME1003"
+	desc = "EVTDESC1003"
+
+	option = {
+		name = "EVTOPTA1003"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				OR = {
+					government = military_republic
+					government = dictatorship
+					government = despotic_monarchy
+					government = military_tribe
+				}
+			}
+		}
+		set_country_flag = form 
+	}
+
+	option = {
+		name = "EVTOPTB1003"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				NOT = {
+					OR = {
+						government = military_republic
+						government = dictatorship
+						government = despotic_monarchy
+						government = military_tribe
+					}
+				}
+			}
+		}
+		set_country_flag = functionality 
+	}
+}
+
+country_event = {
+		
+	id = 1004
+
+	trigger = {
+		capital_scope = { civilization_value = 60 }
+		naval_tech = 14
+		num_of_ports = 1
+		NOT = {
+			OR = {
+				has_country_flag = big_ships	
+				has_country_flag = small_ships
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	title = "EVTNAME1004"
+	desc = "EVTDESC1004"
+
+	option = {
+		name = "EVTOPTA1004"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				OR = {
+					government = military_republic
+					government = dictatorship
+					government = despotic_monarchy
+					government = military_tribe
+				}
+			}
+		}
+		set_country_flag = big_ships
+	}
+
+		option = {
+		name = "EVTOPTB1004"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				NOT = {
+					OR = {
+						government = military_republic
+						government = dictatorship
+						government = despotic_monarchy
+						government = military_tribe
+					}
+				}
+			}
+		}
+		set_country_flag = small_ships
+	}
+}

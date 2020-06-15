@@ -1,0 +1,4 @@
+civil_war_faction = QM5
+region = region_moesia_inferior
+color = { 70 195 70 }
+color2 = { 30 90 30 }

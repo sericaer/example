@@ -1,0 +1,751 @@
+############################################
+#   Religious Conversion for Characters	   #
+############################################
+
+# Religous Disagreements
+character_event = {
+
+	id = 7400
+
+	trigger = {
+		or = {
+			traits = zealous
+			traits = devout
+			traits = pious
+			traits = righteous
+			traits = narrowminded
+		}
+		not = { traits = tolerant }
+		not = { traits = sceptical }
+		not = { traits = lapsed }
+		not = { traits = weak_willed }
+		any_friend = {
+			not = { character_religion = this }
+			not = { traits = zealous }
+			not = { traits = devout }
+			not = { traits = pious }
+			not = { traits = righteous }
+			not = { traits = narrowminded }
+			not = { traits = proud }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 96
+
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			traits = stubborn
+		}
+		modifier = {
+			factor = 0.9
+			traits = silver_tongued
+		}
+		modifier = {
+			factor = 0.9
+			traits = assertive
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			traits = incapable
+		}
+		modifier = {
+			factor = 1.1
+			traits = submissive
+		}
+		modifier = {
+			factor = 1.1
+			traits = unnoticeable
+		}
+	}
+
+	title = "EVTNAME7400"
+
+	desc = "EVTDESC7400"
+
+	option = {
+		name = "EVTOPTA7400"					# That's about to change
+		ai_chance = { factor = 70 }
+		random_list = {
+			80 = {
+				random_friend = {
+					limit = {
+						not = { character_religion = this }
+						not = { traits = zealous }
+						not = { traits = devout }
+						not = { traits = pious }
+						not = { traits = righteous }
+						not = { traits = narrowminded }
+						not = { traits = proud }
+					}
+					character_religion = this
+				}
+			}
+			20 = {
+				random_friend = {
+					limit = {
+						not = { character_religion = this }
+						not = { traits = zealous }
+						not = { traits = devout }
+						not = { traits = pious }
+						not = { traits = righteous }
+						not = { traits = narrowminded }
+						not = { traits = proud }
+					}
+					remove_friend = this
+					add_rival = this
+				}			
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7400"					# Perhaps I should leave them alone
+		ai_chance = { factor = 30 }
+		random_list = {
+			55 = { popularity = 5 }
+			45 = { change_finesse = -1 }
+		}
+	}
+}
+
+# Religious Names
+character_event = {
+
+	id = 7401
+
+	trigger = {
+		is_state_religion = no
+		is_envoy = no
+		prisoner = no
+		not = { traits = zealous }
+		not = { traits = devout }
+		not = { traits = pious }
+		not = { traits = righteous }
+		not = { traits = narrowminded }
+		not = { traits = proud }
+	}
+		
+	mean_time_to_happen = {
+		months = 96
+
+		modifier = {
+			factor = 0.9
+			traits = tolerant
+		}
+		modifier = {
+			factor = 0.9
+			traits = submissive
+		}
+		modifier = {
+			factor = 0.9
+			traits = sceptical
+		}
+		modifier = {
+			factor = 0.9
+			traits = lapsed
+		}
+		modifier = {
+			factor = 0.9
+			traits = reckless
+		}
+		modifier = {
+			factor = 0.9
+			traits = reckless
+		}
+		modifier = {
+			factor = 0.9
+			traits = weak_willed
+		}
+		modifier = {
+			factor = 1.1
+			traits = content
+		}
+		modifier = {
+			factor = 1.1
+			traits = suspicious
+		}
+		modifier = {
+			factor = 1.1
+			traits = stubborn
+		}
+		modifier = {
+			factor = 1.1
+			traits = assertive
+		}
+	}
+
+	title = "EVTNAME7401"
+
+	desc = "EVTDESC7401"
+
+	option = {
+		name = "EVTOPTA7401"					# It's just semantics
+		character_religion = state
+	}
+}
+
+############################################
+#    Religious Conversion for Provinces	   #
+############################################
+# Roman Pantheon
+province_event = {
+
+	id = 7402
+	
+	trigger = {
+		owner = {
+			religion = roman_pantheon
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = roman_pantheon }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = roman_pantheon
+	}
+}
+
+# Greek Pantheon
+province_event = {
+
+	id = 7403
+	
+	trigger = {
+		owner = {
+			religion = greek_pantheon
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = greek_pantheon }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = greek_pantheon
+	}
+}
+
+# Egyptian Pantheon
+province_event = {
+
+	id = 7404
+	
+	trigger = {
+		owner = {
+			religion = egyptian_pantheon
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = egyptian_pantheon }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = egyptian_pantheon
+	}
+}
+
+# Carthaginian Pantheon
+province_event = {
+
+	id = 7405
+	
+	trigger = {
+		owner = {
+			religion = carthaginian_pantheon
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = carthaginian_pantheon }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = carthaginian_pantheon
+	}
+}
+
+# Phoenician Pantheon
+province_event = {
+
+	id = 7406
+	
+	trigger = {
+		owner = {
+			religion = phoenician_pantheon
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = phoenician_pantheon }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = phoenician_pantheon
+	}
+}
+
+# Judaism
+province_event = {
+
+	id = 7407
+	
+	trigger = {
+		owner = {
+			religion = judaism
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = judaism }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = judaism
+	}
+}
+
+# Zoroaster
+province_event = {
+
+	id = 7408
+	
+	trigger = {
+		owner = {
+			religion = zoroaster
+			not = { religion = this }
+			any_character = {
+				has_office = religious_tech
+				finesse = 6
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+
+		modifier = {
+			factor = 0.7
+			any_neighbor_province = { religion = zoroaster }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = pious } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = zealous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = devout } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { ruler = { traits = righteous } }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 0.85
+			owner = { government = religious_tribe }
+		}
+		modifier = {
+			factor = 1.6
+			owner = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { num_of_cities = 35 }
+		}
+		modifier = {
+			factor = 1.0
+			owner = { num_of_cities = 45 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { num_of_cities = 55 }
+		}
+	}
+	
+	title = "EVTNAME7402"
+	desc = "EVTDESC7402"
+	
+	option = {
+		name = "EVTOPTA7402"					# That is good to hear
+		religion = zoroaster
+	}
+}

@@ -1,0 +1,560 @@
+country_decisions = {
+	become_military_republic = {
+		potential = {
+			government = military_tribe
+		}
+		allow = {
+			stability = 1
+			NOT = { num_of_cities = 3 }
+			capital_scope = { civilization_value = 48 }
+			ruler = { 
+                         military = 5
+                         finesse = 3 
+                }
+		}
+		effect = {
+			government = military_republic
+			stability = -3
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				always = yes
+			}
+		}
+	}
+	become_despotic_monarchy = {
+		potential = {
+			government = military_tribe
+		}
+		allow = {
+			stability = 1
+			capital_scope = { civilization_value = 48 }
+			ruler = { 
+                         military = 5
+                        finesse = 3 
+                }
+		}
+		effect = {
+			government = despotic_monarchy
+			stability = -3
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				always = yes
+			}
+		}
+	}
+	
+	become_theocracy = {
+		potential = {
+			government = religious_tribe
+		}
+		allow = {
+			stability = 1
+			capital_scope = { civilization_value = 48 }
+			ruler = {
+                        charisma = 5
+                        finesse = 3 
+                    }
+		}
+		effect = {
+			stability = -3
+			government = theocracy
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	become_confederacy = {
+		potential = {
+			government = trade_tribe
+		}
+		allow = {
+			stability = 1
+			NOT = { num_of_cities = 3 }
+			capital_scope = { civilization_value = 48 }
+			ruler = { 
+                        finesse = 5
+                        charisma = 3
+ }
+		}
+		effect = {
+			stability = -3
+			government = republic_confederacy
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	become_federal_monarchy = {
+		potential = {
+			government = trade_tribe
+		}
+		allow = {
+			stability = 1
+			capital_scope = { civilization_value = 48 }
+			ruler = {                         
+                        charisma = 5	
+                        finesse = 3 
+                }
+		}
+		effect = {
+			stability = -3
+			government = federal_monarchy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				always = yes
+			}
+		}
+	}	
+	
+	become_democracy = {
+		potential = {
+			government = civic_tribe
+		}
+		allow = {
+			stability = 1
+			NOT = { num_of_cities = 3 }
+			capital_scope = { civilization_value = 48 }
+			ruler = { finesse = 6 }
+		}
+		effect = {
+			stability = -3
+			government = democratic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				always = yes
+			}
+		}
+	}	
+	
+	become_aristocratic_monarchy = {
+		potential = {
+			government = civic_tribe
+		}
+		allow = {
+			stability = 1
+			capital_scope = { civilization_value = 48 }
+			ruler = {                          
+                         military = 5
+                         finesse = 3  
+                }
+		}
+		effect = {
+			stability = -3
+			government = aristocratic_monarchy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				always = yes
+			}
+		}
+	}	
+	
+	proclaim_dictatorship = {
+		potential = {
+			government = republic
+		}
+		allow = {
+			stability = 1
+			ruler = {
+				popularity = 80
+				age = 16
+				or = {
+					traits = conqueror
+					traits = victorious
+					traits = ambitious
+					traits = tactician
+					traits = corrupt
+					traits = selfish
+				}
+			}
+			tyranny = 10
+		}			
+		effect = {
+			stability = -3
+			government = dictatorship
+			tyranny = 10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_the_military_republic = {
+		potential = {
+			government = dictatorship
+		}
+		allow = {
+			stability = 1
+			ruler = {
+				age = 16
+				or = {
+					traits = content
+					traits = righteous
+					traits = generous
+					traits = humble
+					traits = submissive
+				}
+				martial = 5
+			}
+			NOT = { tyranny = 5 }
+		}			
+		effect = {
+			stability = -3
+			government = military_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				always = yes
+			}
+		}
+	}
+	
+	restore_the_oligarchic_republic = {
+		potential = {
+			government = dictatorship
+		}
+		allow = {
+			stability = 1
+			ruler = {
+				age = 16
+				or = {
+					traits = content
+					traits = righteous
+					traits = generous
+					traits = humble
+					traits = submissive
+				}
+				finesse = 5
+			}
+			NOT = { tyranny = 5 }
+		}			
+		effect = {
+			stability = -3
+			government = oligarchic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				always = yes
+			}
+		}
+	}
+	
+	proclaim_theocracy = {
+		potential = {
+			government = monarchy
+			NOT = { government = theocracy }
+		}
+		allow = {
+			or = {
+				religion = egyptian_pantheon
+				religion = judaism
+                religion = zoroaster
+			}
+			or = {
+				idea = religious_state
+				idea = divine_right
+			}
+			stability = 1
+			or = {
+				ruler = { traits = devout }
+				ruler = { traits = zealous }
+				ruler = { has_character_flag = deified_ruler }
+			}
+		}
+		effect = {
+			stability = -3
+			government = theocracy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				NOT = { tag = EGY }
+			}
+		}
+	}	
+
+	create_empire = {
+		potential = {
+			stability = 1
+			government = monarchy
+			NOT = { government = imperium }
+		}
+		allow = {
+			num_of_cities = 50
+		}
+		effect = {
+			stability = -3
+			government = imperium
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	create_empire_c = {
+		potential = {
+			stability = 1
+			culture_group = gallic
+			NOT = { government = imperium }
+		}
+		allow = {
+			owns = 89
+			owns = 257
+			owns = 262
+			owns = 154
+			num_of_cities = 50
+		}
+		effect = {
+			stability = -2
+			ruler = { popularity = 20 }
+			government = imperium
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+
+	create_empire_p = {
+		potential = {
+			stability = 1
+			culture_group = north_levantine
+			NOT = { government = imperium }
+		}
+		allow = {
+			owns = 248
+			owns = 247
+			owns = 245
+			owns = 141
+			owns = 220
+			owns = 192
+			owns = 219
+			num_of_cities = 50
+		}
+		effect = {
+			stability = -2
+			ruler = { popularity = 20 }
+			government = imperium
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	create_empire_h = {
+		potential = {
+			stability = 1
+			culture_group = hellenic
+			NOT = { government = imperium }
+		}
+		allow = {
+			owns = 190
+			owns = 225
+			owns = 216
+			owns = 139
+			owns = 138
+			num_of_cities = 50
+		}
+		effect = {
+			stability = -2
+			ruler = { popularity = 20 }
+			government = imperium
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	proclaim_oligarchic_republic = {
+		potential = {
+			government = republic
+			NOT = { government = oligarchic_republic }
+		}
+		allow = {
+			stability = 0
+			biggest_party = mercantile_party
+			ruler = { party = mercantile_party  }
+		}			
+		effect = {
+			stability = -2
+			government = oligarchic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				always = yes
+			}
+		}
+	}
+	
+	proclaim_military_republic = {
+		potential = {
+			government = republic
+			NOT = { government = military_republic }
+		}
+		allow = {
+			stability = 0
+			biggest_party = military_party
+			ruler = { party = military_party  }
+		}			
+		effect = {
+			stability = -2
+			government = military_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				always = yes
+			}
+		}
+	}
+	
+	proclaim_aristocratic_republic = {
+		potential = {
+			government = republic
+			NOT = { government = aristocratic_republic }
+		}
+		allow = {
+			stability = 0
+			biggest_party = religious_party
+			ruler = { party = religious_party  }
+		}			
+		effect = {
+			stability = -2
+			government = aristocratic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				always = yes
+			}
+		}
+	}
+	
+	proclaim_democratic_republic = {
+		potential = {
+			government = republic
+			NOT = { government = democratic_republic }
+		}
+		allow = {
+			stability = 0
+			biggest_party = populist_party
+			ruler = { party = populist_party  }
+		}			
+		effect = {
+			stability = -2
+			government = democratic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.02
+				always = yes
+			}
+		}
+	}
+	
+	proclaim_republic_confederacy = {
+		potential = {
+			government = republic
+			NOT = { government = republic_confederacy }
+		}
+		allow = {
+			stability = 0
+			biggest_party = civic_party # Does not quite fit the government, but...
+			ruler = { party = civic_party  }
+		}			
+		effect = {
+			stability = -2
+			government = republic_confederacy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				always = yes
+			}
+		}
+	}
+
+
+#come from TCM2.2
+#Diploannexation Decision
+country_decisions = { 
+	diploannex_vassal = {
+		potential = {
+#			NOT = { has_country_flag = annexing_vassal }
+			tribute = no
+#			num_of_vassals = 1
+			ally = {
+				tribute = yes
+				NOT = { num_of_cities = 3 }
+#				NOT = { has_country_modifier = diploannexation_declined }
+                                                                relation = { who = THIS value = 195 } 
+				war = no
+			}
+		}
+		allow = {
+			stability = 1
+			war = no
+			treasury = 30
+		}
+		
+		effect = { 	treasury = -20
+			ally = {     	country_event = 10060
+#				limit = { 
+#					tribute = yes
+#					NOT = { num_of_cities = 2 }
+#					NOT = { has_country_modifier = diploannexation_declined }
+#				}
+				
+			}
+#			set_country_flag = annexing_vassal
+		}
+	}
+}	

@@ -1,0 +1,1317 @@
+################################################
+#		 Civil War 		       #
+################################################
+
+################################################
+#	Rebels gain increased support	       #
+################################################
+country_event = {
+
+	id = 2014
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		or = {
+			ruler = { any_rival = { not = { has_character_flag = rebel_side } } }
+			any_character = {
+				is_ruler = no
+				any_friend = { has_character_flag = rebel_side }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 2
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = character_distribution
+		}
+	}
+
+	title = "EVTNAME2014"
+
+	desc = "EVTDESC2014"
+
+	option = {
+		name = "EVTOPTA2014"				# Give them some incentive to keep supporting you
+		set_country_flag = character_distribution
+		treasury = -50
+		random = {
+			chance = 30
+			ruler = {
+				any_rival = {
+					limit = { not = { has_character_flag = rebel_side } }	
+					set_character_flag = rebel_side
+					move_character = civil_war_faction
+				}
+			}
+			any_character = {
+				limit = {
+					is_ruler = no
+					any_friend = { has_character_flag = rebel_side }
+				}
+				set_character_flag = rebel_side
+				move_character = civil_war_faction
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2014"				# I shouldn't really have to
+		set_country_flag = character_distribution
+		ruler = {
+			any_rival = {
+				limit = { not = { has_character_flag = rebel_side } }
+				set_character_flag = rebel_side
+				move_character = civil_war_faction
+			}
+			random_friend = {
+				set_character_flag = rebel_side
+				move_character = civil_war_faction			
+			}
+		}
+		any_character = {
+			limit = {
+				any_friend = { has_character_flag = rebel_side }
+				is_ruler = no
+			}
+			set_character_flag = rebel_side
+			move_character = civil_war_faction				
+		}
+	}
+}
+
+# Number of cities: < 5
+country_event = {
+
+	id = 2015
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		not = { num_of_cities = 5 }
+		any_province = {
+			any_neighbor_province = {
+				has_province_flag = rebel_side
+				
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = province_distribution
+		}
+	}
+
+	title = "EVTNAME2015"
+
+	desc = "EVTDESC2015"
+
+	option = {
+		name = "EVTOPTA2015"				# They'll be begging for mercy soon enough
+		set_country_flag = province_distribution
+		random_owned = {
+			limit = {
+				is_capital = no
+				controlled_by = this
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+	}
+}
+
+# Number of cities: < 10
+country_event = {
+
+	id = 2016
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		num_of_cities = 5
+		not = { num_of_cities = 20 }
+		any_province = {
+			any_neighbor_province = {
+				has_province_flag = rebel_side
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = province_distribution
+		}
+	}
+
+	title = "EVTNAME2015"
+
+	desc = "EVTDESC2015"
+
+	option = {
+		name = "EVTOPTA2015"				# They'll be begging for mercy soon enough
+		set_country_flag = province_distribution
+		random_owned = {
+			limit = {
+				is_capital = no
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				is_capital = no
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+	}
+}
+
+# Number of cities: < 20
+country_event = {
+
+	id = 2017
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		num_of_cities = 20
+		any_province = {
+			any_neighbor_province = {
+				has_province_flag = rebel_side
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 5
+			has_country_flag = province_distribution
+		}
+	}
+
+	title = "EVTNAME2015"
+
+	desc = "EVTDESC2015"
+
+	option = {
+		name = "EVTOPTA2015"				# They'll be begging for mercy soon enough
+		set_country_flag = province_distribution
+		random_owned = {
+			limit = {
+				is_capital = no
+				controlled_by = this
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				is_capital = no
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+		random_owned = {
+			limit = {
+				is_capital = no
+				controlled_by = this
+				any_neighbor_province = {
+					has_province_flag = rebel_side
+				}
+			}
+			set_province_flag = rebel_side
+			secede_province = civil_war_faction
+		}
+	}
+}
+
+#################################################
+# Good Omen Increases the Morale of Your Troops	#
+#################################################
+country_event = {
+
+	id = 2018
+
+	trigger = {
+		has_civil_war = yes
+		has_omen = yes
+		is_omen_failure = no
+	}
+
+	mean_time_to_happen = {
+		months = 6
+
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			capital_scope = {
+				not = { has_province_flag = rebel_side }
+			}
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = {  military = 2 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { not = { military = 1 } } 
+		}
+		modifier = {
+			factor = 5
+			has_country_flag = omen_increases_morale
+		}
+	}
+
+	title = "EVTNAME2018"
+
+	desc = "EVTDESC2018"
+
+	option = {
+		name = "EVTOPTA2018"				# This will soon be over
+		set_country_flag = omen_increases_morale
+		add_country_modifier = {
+			name = "increased_morale"
+			duration = 365
+		}
+	}
+}
+
+#################################################
+# Bad Omen Decreases the Morale of Your Troops	#
+#################################################
+country_event = {
+
+	id = 2019
+
+	trigger = {
+		has_civil_war = yes
+		has_omen = yes
+		is_omen_failure = yes
+	}
+
+	mean_time_to_happen = {
+		months = 6
+
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = {  military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } } 
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 5
+			has_country_flag = omen_decreases_morale
+		}
+	}
+
+	title = "EVTNAME2019"
+
+	desc = "EVTDESC2019"
+
+	option = {
+		name = "EVTOPTA2019"				# Ohh noo...
+		set_country_flag = omen_decreases_morale
+		add_country_modifier = {
+			name = "decreased_morale"
+			duration = 365
+		}
+	}
+}
+
+#################################################
+#		Deserting Troops		#
+#################################################
+country_event = {
+
+	id = 2020
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		any_character = {
+			in_command = yes
+			not = { military = 3 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = deserting_troops
+		}
+	}
+
+	title = "EVTNAME2020"
+
+	desc = "EVTDESC2020"
+
+	option = {
+		name = "EVTOPTA2020"					# Let them run, we'll get them later
+		set_country_flag = deserting_troops
+		change_unit_allegiance = civil_war_faction
+		random = {
+			chance = 70
+			add_country_modifier = {
+				name = "demoralized_troops"
+				duration = 365
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2020"					# Set an example
+		set_country_flag = deserting_troops
+		change_unit_allegiance = civil_war_faction
+		ruler = { popularity = -20 }
+	}
+}
+
+# Rebel side
+country_event = {
+
+	id = 2021
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = yes
+		any_character = {
+			in_command = yes
+			not = { military = 3 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { military = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = deserting_troops
+		}
+	}
+
+	title = "EVTNAME2020"
+
+	desc = "EVTDESC2020"
+
+	option = {
+		name = "EVTOPTA2020"					# Let them run, we'll get them later
+		set_country_flag = deserting_troops
+		random = {
+			chance = 70
+			add_country_modifier = {
+				name = "demoralized_troops"
+				duration = 365
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2020"					# Set an example
+		set_country_flag = deserting_troops
+		ruler = { popularity = -20 }
+	}
+}
+
+# Deserters join your cause, either side
+province_event = {
+
+	id = 2022
+
+	trigger = {
+		owner = {
+			has_civil_war = yes
+			any_character = {
+				in_command = yes
+				military = 7
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { military = 9 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { military = 8 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { military = 7 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { popularity = 90 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { popularity = 80 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = {ruler = { popularity = 70 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { military = 3 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { military = 2 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { military = 1 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { popularity = 30 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { popularity = 20 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {ruler = { not = { popularity = 10 } } }
+		}
+	}
+
+	title = "EVTNAME2022"
+
+	desc = "EVTDESC2022"
+
+	option = {
+		name = "EVTOPTA2022"					# Of course
+		owner = { militia = this }
+	}
+	option = {
+		name = "EVTOPTB2022"					# I think not!
+		owner = { ruler = { family_prestige = 20 } }
+	}
+}
+
+#################################################
+#	In Desperate Need of Money		#
+#################################################
+country_event = {
+
+	id = 2023
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		not = { has_country_flag = financial_help }
+		not = { treasury = 30 }
+		any_neighbor_country = {
+			relation = { who = this value = 50 }
+		}
+		any_province = {
+			controller = { not = { tag = this } }
+		}
+		ruler = {
+			not = { traits = cautious }
+			not = { traits = reckless }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+	}
+
+	title = "EVTNAME2023"
+
+	desc = "EVTDESC2023"
+
+	option = {
+		name = "EVTOPTA2023"					# Yes, let's ask them
+		set_country_flag = financial_help
+		any_country = {
+			limit = {
+				neighbour = this
+				relation = { who = this value = 50 }
+			}
+			country_event = 2024
+		}
+	}
+	option = {
+		name = "EVTOPTB2023"					# I rather not
+		set_country_flag = financial_help
+		ruler = { add_trait = cautious }
+	}
+}
+
+# Neighbour asks for financial help
+country_event = {
+
+	id = 2024
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2024"
+
+	desc = "EVTDESC2024"
+
+	option = {
+		name = "EVTOPTA2024"					# Give them some support
+		treasury = -25
+		from = {
+			relation = { who = this value = 25 }
+			country_event = 2025
+		}
+	}
+	option = {
+		name = "EVTOPTB2024"					# Give them your full support
+		treasury = -50
+		from = {
+			relation = { who = this value = 50 }
+			country_event = 2026
+		}
+	}
+	option = {
+		name = "EVTOPTC2024"					# Ignore their pleas
+		from = {
+			relation = { who = this value = -25 }
+			country_event = 2027
+		}
+	}
+}
+
+# A neighbour agrees to help you
+country_event = {
+
+	id = 2025
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2025"
+
+	desc = "EVTDESC2025"
+
+	option = {
+		name = "EVTOPTA2025"					# Let's hope
+		treasury = 25
+	}
+}
+
+# A neighbour agrees to help you
+country_event = {
+
+	id = 2026
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2024"
+
+	desc = "EVTDESC2024"
+
+	option = {
+		name = "EVTOPTA2024"					# Let's hope
+		treasury = 50
+	}
+}
+
+# Your neighbour refuses to help you
+country_event = {
+
+	id = 2027
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2027"
+
+	desc = "EVTDESC2027"
+
+	option = {
+		name = "EVTOPTA2027"					# We don't need their help anyway
+		stability = -1
+	}
+}
+
+#################################################
+#		Military Help			#
+#################################################
+# Ask neighbour for help
+country_event = {
+
+	id = 2028
+
+	trigger = {
+		has_civil_war = yes
+		is_civil_war_faction = no
+		not = { has_country_flag = military_help }
+		ruler = { not = { military = 4 } }
+		any_neighbor_country = {
+			relation = { who = this value = 50 }
+		}
+		any_province = {
+			controller = { not = { tag = this } }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { military = 1 } }
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 2.5
+			has_country_flag = military_help
+		}
+	}
+
+	title = "EVTNAME2028"
+
+	desc = "EVTDESC2028"
+
+	option = {
+		name = "EVTOPTA2028"					# The sooner this is over, the better
+		set_country_flag = military_help
+		any_country = {
+			limit = {
+				neighbour = this
+				relation = { who = this value = 50 }
+			}
+			country_event = 2029
+		}
+	}
+	option = {
+		name = "EVTOPTB2028"					# I think we can handle this ourselves
+		set_country_flag = military_help
+		ruler = { family_prestige = 50 }
+	}
+}
+
+# Neighbour asks for some Help
+country_event = {
+
+	id = 2029
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2029"
+
+	desc = "EVTDESC2029"
+
+	option = {
+		name = "EVTOPTA2029"					# I suppose we could send some help
+		treasury = -25
+		from = {
+			relation = { who = this value = 25 }
+			random_owned = {
+				province_event = 2030
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2029"					# We have got enough problems of our own
+		from = {
+			relation = { who = this value = -25 }
+			country_event = 2031
+		}
+	}
+}
+
+# A neighbour agrees to help you
+province_event = {
+
+	id = 2030
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2030"
+
+	desc = "EVTDESC2030"
+
+	option = {
+		name = "EVTOPTA2030"					# Let's not waste any time
+		owner = {
+			militia = this
+			militia = this
+		}
+	}
+}
+
+# your neighbour refuses to help You
+country_event = {
+
+	id = 2031
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2031"
+
+	desc = "EVTDESC2031"
+
+	option = {
+		name = "EVTOPTA2031"					# We should never have asked...
+		stability = -1
+	}
+}
+
+#################################################
+#		End of Civil War		#
+#################################################
+# The rebels have been defeated
+country_event = {
+
+	id = 2032
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2032"
+
+	desc = "EVTDESC2032"
+
+	option = {
+		name = "EVTOPTA2032"				# Finally!
+		stability = 1
+		ruler = { popularity = 50 }
+		clr_country_flag = province_distribution
+		clr_country_flag = omen_increases_morale
+		clr_country_flag = omen_decreases_morale
+		clr_country_flag = deserting_troops
+		clr_country_flag = financial_help
+		clr_country_flag = military_help
+		any_owned = {
+			limit = { has_province_flag = rebel_side  }
+			clr_province_flag = rebel_side
+		}
+		any_character = {
+			limit = { has_character_flag = rebel_side }
+			clr_character_flag = rebel_side
+		}
+		
+	}
+}
+
+# The old government has fallen
+country_event = {
+
+	id = 2033
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2033"
+
+	desc = "EVTDESC2033"
+
+	option = {
+		name = "EVTOPTA2033"				# Finally!
+		stability = 1
+		ruler = { popularity = 25 }
+		clr_country_flag = province_distribution
+		clr_country_flag = omen_increases_morale
+		clr_country_flag = omen_decreases_morale
+		clr_country_flag = deserting_troops
+		clr_country_flag = financial_help
+		clr_country_flag = military_help
+		any_owned = {
+			limit = { has_province_flag = rebel_side  }
+			clr_province_flag = rebel_side
+		}
+		any_character = {
+			limit = { has_character_flag = rebel_side }
+			clr_character_flag = rebel_side
+		}
+	}
+}
+
+
+# Recruitment of a New Regiment
+province_event = {
+
+	id = 2039
+
+	trigger = {
+		owner = {
+			has_civil_war = yes
+			is_civil_war_faction = yes
+			any_character = { in_command = yes wealth = 100 }
+			NOT = { army_size_percentage = 1.2 }
+		}
+		
+		is_land = yes
+	}
+
+	mean_time_to_happen = {
+		months = 30
+
+		modifier = {
+			factor = 0.8
+			owner = { not = { treasury = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { not = { treasury = 0 } }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { not = { stability = -1 } }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { not = { stability = -2 } }
+		}
+		modifier = {
+			factor = 6.0
+			owner = { has_country_flag = recruited_regiments }
+		}
+	}
+
+	title = "EVTNAME2039"
+
+	desc = "EVTDESC2039"
+
+	option = {
+		name = "EVTOPTA2039"				# We could really need a few more
+		ai_chance = { factor = 80 }
+		owner = {
+			set_country_flag = recruited_regiments
+			random_character = {
+				limit = { is_general = yes wealth = 100 }
+				wealth = -50
+			}
+			militia = this
+			militia = this
+		}
+	}
+	option = {
+		name = "EVTOPTB2039"				# I think we can manage without them
+		ai_chance = { factor = 20 }
+		owner = {
+			set_country_flag = recruited_regiments
+			ruler = { add_trait = proud }
+		}
+	}
+}

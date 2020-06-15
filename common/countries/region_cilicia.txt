@@ -1,0 +1,4 @@
+civil_war_faction = QC3
+region = region_cilicia
+color = { 80 80 140 }
+color2 = { 0 0 40 }

@@ -1,0 +1,4 @@
+civil_war_faction = QG3
+region = region_germania_inferior
+color = { 150 150 150 }
+color2 = { 10 10 10 }

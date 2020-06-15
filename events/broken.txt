@@ -1,0 +1,125 @@
+country_event = {
+	id = 530
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = military_republic
+			government = aristocratic_republic
+			government = oligarchic_republic
+			government = democratic_republic
+			government = republic_confederacy
+		}
+	
+	}
+
+	title = "EVTNAME530"
+	desc = "EVTDESC530"
+	
+	option = {
+		name = "EVTOPTA530"
+		stability = 3 
+		war_exhaustion = -10
+		random_list = {
+			10 = { government = despotic_monarchy }
+			10 = { government = theocracy }
+			10 = { government = federal_monarchy }
+			10 = { government = aristocratic_monarchy }
+		}
+		ruler = { death = yes }
+		
+	}
+}
+
+
+country_event = {
+	id = 531
+	
+	is_triggered_only = yes
+	trigger = {
+		government = dictatorship
+	}
+
+	title = "EVTNAME531"
+	desc = "EVTDESC531"
+	
+	option = {
+		name = "EVTOPTA531"
+		stability = 3 
+		war_exhaustion = -10
+
+		random_list = {
+			10 = { government = aristocratic_republic }
+			10 = { government = oligarchic_republic }
+		}
+		ruler = { death = yes }
+		
+	}
+}
+
+
+country_event = {
+	id = 532
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = theocracy
+			government = despotic_monarchy
+			government = federal_monarchy
+			government = aristocratic_monarchy
+		}
+	}
+
+	title = "EVTNAME532"
+	desc = "EVTDESC532"
+	
+	option = {
+		name = "EVTOPTA532" 
+		stability = 3 
+		war_exhaustion = -10
+
+		random_list = {
+			10 = { government = aristocratic_republic }
+			10 = { government = oligarchic_republic }
+			10 = { government = military_republic }
+			10 = { government = democratic_republic }
+			10 = { government = republic_confederacy }
+		}
+		ruler = { death = yes }
+		
+	}
+}
+
+
+country_event = {
+	id = 533
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			government = military_tribe
+			government = religious_tribe
+			government = trade_tribe
+			government = civic_tribe
+		}
+	}
+
+	title = "EVTNAME533"
+	desc = "EVTDESC533"
+	
+	option = {
+		name = "EVTOPTA533"
+		stability = 3 
+		war_exhaustion = -10
+
+		random_list = {
+			10 = { government = military_tribe }
+			10 = { government = religious_tribe }
+			10 = { government = trade_tribe }
+			10 = { government = civic_tribe }
+		}
+		ruler = { death = yes }
+		
+	}
+}

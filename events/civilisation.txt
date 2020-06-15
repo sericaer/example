@@ -1,0 +1,522 @@
+##### Civilising series 
+
+character_event = {
+
+	id = 3900
+
+	trigger = {
+		is_ruler = yes
+		wealth = 4000
+		country = {
+			NOT = { capital_scope = { civilization_value = 100 } } 
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 60 } }
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 50 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 40 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 30 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 20 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 10 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			traits = zealous
+			factor = 1.1
+		}
+		modifier = {
+			traits = tolerant
+			factor = 0.9
+		}
+		modifier = {
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous
+			factor = 0.9
+		}
+		modifier = {
+			traits = selfish
+			factor = 1.1
+		}
+		modifier = {
+			traits = generous
+			factor = 0.9
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "outside_influences"
+			}
+			factor = 0.75
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "stick_to_old_ways"
+			}
+			factor = 1.25
+		}
+	}
+
+	title = "EVTNAME3900"
+	desc = "EVTDESC3900"
+
+	option = {
+		name = "EVTOPTA3900"
+		wealth = -2000
+		country = {
+			capital_scope = { civilization_value  = 5 }
+		}
+		popularity = -20
+	}
+
+	option = {
+		name = "EVTOPTB3900"
+		popularity =  10
+	}
+}
+
+character_event = {
+
+	id = 3901
+
+	trigger = {
+		is_ruler = yes
+		wealth = 3000
+		traits = prominent
+		country = {
+			NOT = { capital_scope = { civilization_value = 100 } } 
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 60 } }
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 50 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 40 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 30 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 20 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 10 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			traits = zealous
+			factor = 1.1
+		}
+		modifier = {
+			traits = tolerant
+			factor = 0.9
+		}
+		modifier = {
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous
+			factor = 0.9
+		}
+		modifier = {
+			traits = selfish
+			factor = 1.1
+		}
+		modifier = {
+			traits = generous
+			factor = 0.9
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "outside_influences"
+			}
+			factor = 0.75
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "stick_to_old_ways"
+			}
+			factor = 1.25
+		}
+	}
+
+	title = "EVTNAME3901"
+	desc = "EVTDESC3901"
+
+	option = {
+		name = "EVTOPTA3901"
+		wealth = -1000
+		country = {
+			capital_scope = { civilization_value  = 5 }
+		}
+		popularity = -20
+	}
+
+	option = {
+		name = "EVTOPTB3901"
+		popularity =  10
+	}
+}
+
+character_event = {
+
+	id = 3902
+
+	trigger = {
+		is_ruler = yes
+		wealth = 3000
+		traits = victorious
+		country = {
+			NOT = { capital_scope = { civilization_value = 100 } } 
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 60 } }
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 50 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 40 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 30 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 20 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 10 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			traits = zealous
+			factor = 1.1
+		}
+		modifier = {
+			traits = tolerant
+			factor = 0.9
+		}
+		modifier = {
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous
+			factor = 0.9
+		}
+		modifier = {
+			traits = selfish
+			factor = 1.1
+		}
+		modifier = {
+			traits = generous
+			factor = 0.9
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "outside_influences"
+			}
+			factor = 0.75
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "stick_to_old_ways"
+			}
+			factor = 1.25
+		}
+	}
+
+	title = "EVTNAME3902"
+	desc = "EVTDESC3902"
+
+	option = {
+		name = "EVTOPTA3902"
+		wealth = -1000
+		country = {
+			capital_scope = { civilization_value  = 5 }
+		}
+		popularity = -20
+	}
+
+	option = {
+		name = "EVTOPTB3902"
+		popularity =  10
+	}
+}
+
+character_event = {
+
+	id = 3903
+
+	trigger = {
+		is_ruler = yes
+		wealth = 3000
+		traits = conqueror
+		country = {
+			NOT = { capital_scope = { civilization_value = 100 } } 
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 60 } }
+			} 
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 50 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 40 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 30 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 20 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			country = {
+				NOT = { capital_scope = { civilization_value = 10 } } 
+			}
+			factor = 1.1
+		}
+		modifier = {
+			traits = zealous
+			factor = 1.1
+		}
+		modifier = {
+			traits = tolerant
+			factor = 0.9
+		}
+		modifier = {
+			traits = tactically_inflexible
+			factor = 1.1
+		}
+		modifier = {
+			traits = original_thinker
+			factor = 0.9
+		}
+		modifier = {
+			traits = corrupt
+			factor = 1.1
+		}
+		modifier = {
+			traits = righteous
+			factor = 0.9
+		}
+		modifier = {
+			traits = selfish
+			factor = 1.1
+		}
+		modifier = {
+			traits = generous
+			factor = 0.9
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "outside_influences"
+			}
+			factor = 0.75
+		}
+		modifier = {
+			country = {
+				has_country_modifier = "stick_to_old_ways"
+			}
+			factor = 1.25
+		}
+	}
+
+	title = "EVTNAME3903"
+	desc = "EVTDESC3903"
+
+	option = {
+		name = "EVTOPTA3903"
+		wealth = -1000
+		country = {
+			capital_scope = { civilization_value  = 5 }
+		}
+		popularity =  -20
+	}
+
+	option = {
+		name = "EVTOPTB3903"
+		popularity =  10
+	}
+}
+
+
+country_event = {
+
+	id = 3904
+
+	trigger = {
+		NOT = { capital_scope = { civilization_value = 50 } } 
+		NOT = { has_country_modifier = "outside_influences"  }		
+		NOT = { has_country_modifier = "stick_to_old_ways"  }
+		OR = {
+			government = religious_tribe
+			government = military_tribe
+			government = civic_tribe
+			government = trade_tribe
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	title = "EVTNAME3904"
+	desc = "EVTDESC3904"
+
+	option = {
+		name = "EVTOPTA3904"
+		capital_scope = { civilization_value  = 1 }
+		ruler = {
+			popularity =  -30
+		}
+		any_character = {
+			limit = { has_job = yes }
+			loyalty = -10
+		}
+		
+		add_country_modifier = {
+			name = "outside_influences"
+			duration = 730
+		}		
+	}
+
+	option = {
+		name = "EVTOPTB3904"
+		ruler = {
+			popularity =  10
+		}
+		any_character = {
+			limit = { has_job = yes }
+			loyalty = 10
+		}		
+		add_country_modifier = {
+			name = "stick_to_old_ways"
+			duration = 730
+		}		
+	}
+}

@@ -1,0 +1,16 @@
+civil_war_faction = SC2
+graphical_culture = scythiangfx
+color = { 246 187 28 }
+color2 = { 171 0 0 }
+
+ship_names = {
+	Anahars Api Argipp Ariant Ariapit Arimasp Arginpaza
+	Ditagoia
+	Gnur
+	Idantir
+	Kaizos Kolaksay
+	Oitosuros
+	Papay Rha
+	Sag Skilur Spargapit
+	Tabiti Targitay Tagimasadas Tour Traetaona
+}

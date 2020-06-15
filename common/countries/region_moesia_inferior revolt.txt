@@ -1,0 +1,4 @@
+civil_war_faction = QMI
+region = region_moesia_inferior
+color = { 50 145 50 }
+color2 = { 30 70 30 }

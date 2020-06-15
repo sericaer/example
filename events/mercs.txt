@@ -1,0 +1,635 @@
+### Merc events, to make life more interesting for merc lovers
+
+country_event = {
+
+	id = 9000
+
+	trigger = {
+		
+		NOT = { land_maintenance = 1.0 }
+		any_garrisoned_province = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 144
+		
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.9 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.8 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.7 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.6 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.5 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.4 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.3 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.2 }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { land_maintenance = 0.1 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 7
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 8
+			}	
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 9
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 3 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 2 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 1 }
+			}	
+		}
+	}
+		
+	title = "EVTNAME9000"
+	desc = "EVTDESC9000"
+
+	option = {
+	
+		name = "EVTOPTA9000"
+		random_garrisoned_province = {
+			limit = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+			}	
+			disband_non_loyal_mercenaries  = 1.0
+		}
+	}
+
+	option = {
+	
+		name = "EVTOPTB9000"
+		treasury = -10 
+	}
+}
+
+country_event = {
+
+	id = 9001
+
+	trigger = {
+		
+		war = yes
+		war_exhaustion = 2
+		any_garrisoned_province = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 144
+		
+		modifier = {
+			factor = 0.95
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 0.95
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.95
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.95
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 7
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 8
+			}	
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 9
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 3 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 2 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 1 }
+			}	
+		}
+	}
+		
+	title = "EVTNAME9001"
+	desc = "EVTDESC9001"
+
+	option = {
+	
+		name = "EVTOPTA9001"
+		random_garrisoned_province = {
+			limit = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+			}	
+			disband_non_loyal_mercenaries  = 1.0
+		}
+	}
+
+	option = {
+	
+		name = "EVTOPTB9001"
+		treasury = -10 
+	}
+}
+
+
+country_event = {
+
+	id = 9002
+
+	trigger = {
+		
+		war = no
+		has_civil_war = no
+		NOT = { war_exhaustion = 0.01 }
+		any_garrisoned_province = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 144
+
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 7
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 8
+			}	
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				military = 9
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 3 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 2 }
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			ruler = {
+				NOT = { military = 1 }
+			}	
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = aggressive
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = steadfast
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = disciplined 
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = tactician
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = confident
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = brave
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = conqueror
+			}
+		}
+		modifier = {
+			factor = 1.1
+			ruler = {
+				traits = victorious
+			}
+		}
+		modifier = {
+			factor = 0.5
+			ruler = {
+				traits = coward
+			}
+		}
+	}
+
+	title = "EVTNAME9002"
+	desc = "EVTDESC9002"
+
+	option = {
+	
+		name = "EVTOPTA9002"
+		random_garrisoned_province = {
+			limit = {
+				mercenary_fraction = 0.1
+				NOT = { num_of_loyal_merc_cohorts = 1.0 }
+			}	
+			disband_non_loyal_mercenaries  = 0.1
+		}
+	}
+}
+
+
+### Raise mercs during a civil war 
+
+character_event = {
+
+	id = 9003
+
+	trigger = {
+
+		age = 16
+		is_female = no
+		wealth = 500 
+		is_land = yes
+		country = {
+			has_civil_war = yes
+			NOT = { army_size_percentage = 1.2 }
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 240
+		
+		modifier = {
+			NOT = { wealth = 200 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { wealth = 300 }
+			factor = 1.1
+		}	
+		modifier = {
+			wealth = 400 
+			factor = 0.9
+		}
+		modifier = {
+			wealth = 500 
+			factor = 0.9
+		}
+		modifier = {
+			military = 9
+			factor = 0.9
+		}	
+		modifier = {
+			military = 8
+			factor = 0.9
+		}
+		modifier = {
+			NOT = { military = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { military = 2 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME9003"
+	desc = "EVTDESC9003"
+
+	option = {
+		
+		name = "EVTOPTA9003"
+		wealth = -500
+		country = {
+			country_event = 9004
+		}
+	}
+}	
+
+country_event = {
+		
+	id = 9004
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME9004"
+	desc = "EVTDESC9004"
+
+	option = {
+	
+		name = "EVTOPTA9004"
+		from = { 
+			merc_heavy_infantry = FROM
+			merc_heavy_infantry = FROM
+		 	merc_heavy_infantry = FROM
+			merc_heavy_infantry = FROM
+			merc_archers = FROM
+			merc_cavalry = FROM
+		}
+	}
+}
+
+country_event = {
+
+	id = 9005
+
+	trigger = {
+		has_civil_war = no
+		num_of_cities = 50
+		
+		any_character = {
+			is_female = no
+			is_ruler = no
+			wealth = 1000
+			traits = ambitious
+			not = { loyalty = 50 }
+			location = { owned_by = THIS }
+			is_ruler = no 
+			is_primary_heir = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.8
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.8
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.15
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.3
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.45
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = guileless }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = tactically_inflexible }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = incapable }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = submissive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = dumb }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = foolish }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = plague }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = leper }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = schizophrenic }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = maniac }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = invalid }
+		}
+		modifier = {
+			factor = 1.2
+			stability = 2
+		}
+		modifier = {
+			factor = 1.2
+			stability = 3
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { traits = tactician }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { traits = victorious }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { traits = conqueror }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { traits = prominent }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = wise }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = generous }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = intelligent }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = benefactor }
+		}
+		modifier = {
+			factor = 0.7
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 0.7
+			num_of_cities = 40
+		}
+	}
+
+	title = "EVTNAME9005"
+
+	desc = "EVTDESC9005"
+
+	option = {
+		name = "EVTOPTA9005"				# Crush them!
+		stability = -1
+		random_character = {
+			limit = {
+				is_female = no
+				is_ruler = no
+				wealth = 1000
+				traits = ambitious
+				not = { loyalty = 50 }
+				location = { 
+					owned_by = THIS 
+					controlled_by = THIS
+				}
+				is_ruler = no 
+				is_primary_heir = no
+			}
+			start_civil_war = yes
+			set_character_flag = rebel_side
+			wealth = -500
+			character_event = 9006
+		}
+	}
+}
+
+character_event = {
+	
+	id = 9006
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME9006"
+	desc = "EVTDESC9006"
+
+	option = {
+	
+		name = "EVTOPTA9006"
+			merc_heavy_infantry = THIS
+			merc_heavy_infantry = THIS
+		 	merc_heavy_infantry = THIS
+			merc_archers = THIS 
+			merc_archers = THIS 
+			merc_archers = THIS 
+			merc_cavalry = THIS
+			merc_cavalry = THIS
+			merc_cavalry = THIS
+	}
+}

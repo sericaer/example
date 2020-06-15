@@ -1,0 +1,20 @@
+civil_war_faction = CT2
+graphical_culture = celticgfx
+color = { 53  214  255 }
+color2 = { 226 251 255 }
+
+gender_equality = yes
+
+ship_names = {
+	Arxoialo Axiona Axona
+	Bratuspantio Brivisara
+	Divoduro
+	Iantinon Isara
+	Litanobriga Lutetia
+	Matrona Medanta Mediolanon Meldes Metlosedon
+	Nemetoduron
+	Petromantalo
+	Ritumagos Rotoialum
+	Savara Secoanas Silvanectes
+	Veliocasses
+}

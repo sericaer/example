@@ -1,0 +1,4 @@
+civil_war_faction = QM2
+region = region_magna_graecia
+color = { 155 152 0 }
+color2 = { 55 52 0 }

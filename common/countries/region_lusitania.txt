@@ -1,0 +1,4 @@
+civil_war_faction = QL3
+region = region_lusitania
+color = { 66 66 210 }
+color2 = { 35 35 90 }

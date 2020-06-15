@@ -1,0 +1,192 @@
+laws = {
+
+	retreat_is_dishonour = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			ruler = {
+				military = 7
+			}
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				NOT = { military = 7 }
+				traits = coward
+			}
+		}
+		
+		retreat_delay = 3
+		land_morale = 0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+
+	to_get_rich_glorious = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			NOT = {
+				has_law = to_get_rich_raid
+			}
+			ruler = {
+				finesse = 7
+			}
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				NOT = {	finesse = 7}
+				traits = rash
+			}
+		}
+		global_regiment_recruit_speed = 0.1
+		diplomatic_missions = 0.2
+		trade_income_modifier = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+			
+	we_dont_like_outsiders = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			ruler = {
+				NOT = { charisma = 4 }
+			}
+		}
+		effect = {
+			stability = -1
+		}
+		revoke_allowed = {
+			ruler = {
+				charisma = 5
+				traits = silver_tongued
+			}
+		}
+
+		land_organisation = 0.4
+		diplomatic_missions = -0.2
+		intrigue_missions = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+	
+	let_people_solve_their_own_disputes = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			ruler = {
+				NOT = { num_of_rivals = 1 }
+			}
+		}		
+		effect = {
+		}
+		revoke_allowed = {
+			ruler = {
+				num_of_rivals = 3
+			}
+		}
+
+		max_rivals = 1
+		monthly_character_loyalty  = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}	
+
+	druids_are_special_snowflakes = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			ruler = {
+				traits = pious 
+			}
+		}
+		effect = {
+			stability = 6
+		}
+		revoke_allowed = {
+			ruler = {
+				traits = lapsed
+			}
+		}
+
+		omen_power = 0.1
+		omen_chance = 0.1
+		research_points_modifier = -0.4
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}	
+
+	to_get_rich_raid = {
+		potential = {
+			government = tribal
+		}
+		allow = {
+			NOT = {
+				has_law = to_get_rich_glorious
+			}
+			ruler = {
+				military = 6
+			}
+		}
+		effect = {
+			stability = -1
+			ruler = {	
+				popularity = 10
+			}
+		}
+		revoke_allowed = {
+			ruler = {
+				NOT = {	military = 7}
+				traits = coward
+			}
+		}
+
+		global_tax_modifier = 0.1
+		experience_decay = -0.01
+		diplomatic_missions = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+	}
+
+}

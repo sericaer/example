@@ -1,0 +1,5361 @@
+character_event = {
+
+	id = 5200
+
+	trigger = {
+		traits = abrasive 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5200"
+	desc = "EVTDESC5200"
+
+	option = {
+		name = "EVTOPTA5200"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5201
+
+	trigger = {
+		traits = abrasive 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5201"
+	desc = "EVTDESC5201"
+
+	option = {
+		name = "EVTOPTA5201"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5202
+
+	trigger = {
+		traits = good_natured 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5202"
+	desc = "EVTDESC5202"
+
+	option = {
+		name = "EVTOPTA5202"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5203
+
+	trigger = {
+		traits = good_natured 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5203"
+	desc = "EVTDESC5203"
+
+	option = {
+		name = "EVTOPTA5203"
+		wealth = -5
+	}
+}
+
+character_event = {
+
+	id = 5204
+
+	trigger = {
+		traits = silver_tongued
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5204"
+	desc = "EVTDESC5204"
+
+	option = {
+		name = "EVTOPTA5204"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5205
+
+	trigger = {
+		traits = silver_tongued
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5205"
+	desc = "EVTDESC5205"
+
+	option = {
+		name = "EVTOPTA5205"
+		loyalty = -1
+	}
+}
+
+character_event = {
+
+	id = 5206
+
+	trigger = {
+		traits = blunt
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5206"
+	desc = "EVTDESC5206"
+
+	option = {
+		name = "EVTOPTA5206"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5207
+
+	trigger = {
+		traits = blunt
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5207"
+	desc = "EVTDESC5207"
+
+	option = {
+		name = "EVTOPTA5207"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5208
+
+	trigger = {
+		traits = crafty
+		NOT = { finesse = 9 }
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 5
+			factor  = 1.1
+		}
+		modifier = {
+			finesse = 6
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 7
+			factor = 1.1
+		}
+		modifier = {
+			finesse = 8
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5208"
+	desc = "EVTDESC5208"
+
+	option = {
+		name = "EVTOPTA5208"
+		change_finesse = 1
+	}
+}
+
+character_event = {
+
+	id = 5209
+
+	trigger = {
+		traits = crafty
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5209"
+	desc = "EVTDESC5209"
+
+	option = {
+		name = "EVTOPTA5209"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5210
+
+	trigger = {
+		traits = guileless
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5210"
+	desc = "EVTDESC5210"
+
+	option = {
+		name = "EVTOPTA5210"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5211
+
+	trigger = {
+		traits = guileless
+		finesse = 1
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 2}
+			factor  = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 3 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 4 }
+			factor = 1.1
+		}
+		modifier = {
+			NOT = { finesse = 5 }
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5211"
+	desc = "EVTDESC5211"
+
+	option = {
+		name = "EVTOPTA5211"
+		change_finesse = -1
+	}
+}
+
+character_event = {
+
+	id = 5212
+
+	trigger = {
+		traits = original_thinker
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5212"
+	desc = "EVTDESC5212"
+
+	option = {
+		name = "EVTOPTA5212"
+		popularity = 1
+	}
+}
+
+
+character_event = {
+
+	id = 5213
+
+	trigger = {
+		traits = original_thinker
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5213"
+	desc = "EVTDESC5213"
+
+	option = {
+		name = "EVTOPTA5213"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5214
+
+	trigger = {
+		traits = tactically_inflexible
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5214"
+	desc = "EVTDESC5214"
+
+	option = {
+		name = "EVTOPTA5214"
+		popularity = 1
+	}
+}
+
+
+character_event = {
+
+	id = 5215
+
+	trigger = {
+		traits = tactically_inflexible
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5215"
+	desc = "EVTDESC5215"
+
+	option = {
+		name = "EVTOPTA5215"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5216
+
+	trigger = {
+		traits = just
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5216"
+	desc = "EVTDESC5216"
+
+	option = {
+		name = "EVTOPTA5216"
+		popularity = 1
+		wealth = -10
+	}
+}
+
+character_event = {
+
+	id = 5217
+
+	trigger = {
+		traits = just
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5217"
+	desc = "EVTDESC5217"
+
+	option = {
+		name = "EVTOPTA5217"
+		popularity = -1
+		wealth = 10 
+	}
+}
+
+character_event = {
+
+	id = 5218
+
+	trigger = {
+		traits = arbitrary
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5218"
+	desc = "EVTDESC5218"
+
+	option = {
+		name = "EVTOPTA5218"
+		country = {
+			random_character = {
+				loyalty = 1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5219
+
+	trigger = {
+		traits = arbitrary
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5219"
+	desc = "EVTDESC5219"
+
+	option = {
+		name = "EVTOPTA5219"
+		country = {
+			random_character = {
+				loyalty = -1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5220
+
+	trigger = {
+		traits = cruel
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5220"
+	desc = "EVTDESC5220"
+
+	option = {
+		name = "EVTOPTA5220"
+		country = {
+			random_character = {
+				loyalty = 1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5221
+
+	trigger = {
+		traits = cruel
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5221"
+	desc = "EVTDESC5221"
+
+	option = {
+		name = "EVTOPTA5221"
+		country = {
+			random_character = {
+				loyalty = -1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5222
+
+	trigger = {
+		traits = merciful
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5222"
+	desc = "EVTDESC5222"
+
+	option = {
+		name = "EVTOPTA5222"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5223
+
+	trigger = {
+		traits = merciful
+		is_ruler = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5223"
+	desc = "EVTDESC5223"
+
+	option = {
+		name = "EVTOPTA5223"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5224
+
+	trigger = {
+		traits = righteous
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5224"
+	desc = "EVTDESC5224"
+
+	option = {
+		name = "EVTOPTA5224"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5225
+
+	trigger = {
+		traits = righteous
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5225"
+	desc = "EVTDESC5225"
+
+	option = {
+		name = "EVTOPTA5225"
+		popularity = -1
+		wealth = 5
+	}
+}
+
+character_event = {
+
+	id = 5226
+
+	trigger = {
+		traits = corrupt
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5226"
+	desc = "EVTDESC5226"
+
+	option = {
+		name = "EVTOPTA5226"
+		popularity = 1
+		wealth = 5
+	}
+}
+
+character_event = {
+
+	id = 5227
+
+	trigger = {
+		traits = corrupt
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5227"
+	desc = "EVTDESC5227"
+
+	option = {
+		name = "EVTOPTA5227"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5228
+
+	trigger = {
+		traits = founder
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5228"
+	desc = "EVTDESC5228"
+
+	option = {
+		name = "EVTOPTA5228"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5229
+	trigger = {
+		traits = founder
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5229"
+	desc = "EVTDESC5229"
+
+	option = {
+		name = "EVTOPTA5229"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5230
+
+	trigger = {
+		traits = incapable
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5230"
+	desc = "EVTDESC5230"
+
+	option = {
+		name = "EVTOPTA5230"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5231
+	trigger = {
+		traits = incapable
+		is_governor = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5231"
+	desc = "EVTDESC5231"
+
+	option = {
+		name = "EVTOPTA5231"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5232
+	trigger = {
+		traits = inventor
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5232"
+	desc = "EVTDESC5232"
+
+	option = {
+		name = "EVTOPTA5232"
+		wealth = 10 
+	}
+}
+
+character_event = {
+
+	id = 5233
+	trigger = {
+		traits = inventor
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5233"
+	desc = "EVTDESC5233"
+
+	option = {
+		name = "EVTOPTA5233"
+		wealth = -10
+	}
+}
+
+character_event = {
+
+	id = 5234
+	trigger = {
+		traits = narrowminded
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5234"
+	desc = "EVTDESC5234"
+
+	option = {
+		name = "EVTOPTA5234"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5235
+	trigger = {
+		traits = narrowminded
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5235"
+	desc = "EVTDESC5235"
+
+	option = {
+		name = "EVTOPTA5235"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5236
+
+	trigger = {
+		traits = lustful
+		is_female = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5236"
+	desc = "EVTDESC5236"
+
+	option = {
+		name = "EVTOPTA5236"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5237
+
+	trigger = {
+		traits = lustful
+		is_female = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5237"
+	desc = "EVTDESC5237"
+
+	option = {
+		name = "EVTOPTA5237"
+		wealth = -10 
+	}
+}
+
+character_event = {
+
+	id = 5238
+
+	trigger = {
+		traits = chaste
+		is_female = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5238"
+	desc = "EVTDESC5238"
+
+	option = {
+		name = "EVTOPTA5238"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5239
+
+	trigger = {
+		traits = chaste
+		is_female = no
+		age = 16
+		NOT = { traits = stressed } 
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5239"
+	desc = "EVTDESC5239"
+
+	option = {
+		name = "EVTOPTA5239"
+		random = {
+			chance = 1
+			add_trait = stressed 
+		}
+	}
+}
+
+character_event = {
+
+	id = 5240
+	trigger = {
+		traits = proud
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5240"
+	desc = "EVTDESC5240"
+
+	option = {
+		name = "EVTOPTA5240"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5241
+	trigger = {
+		traits = proud
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5241"
+	desc = "EVTDESC5241"
+
+	option = {
+		name = "EVTOPTA5241"
+		loyalty = -1
+	}
+}
+
+character_event = {
+
+	id = 5242
+	trigger = {
+		traits = humble
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5242"
+	desc = "EVTDESC5242"
+
+	option = {
+		name = "EVTOPTA5242"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5243
+	trigger = {
+		traits = humble
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5243"
+	desc = "EVTDESC5243"
+
+	option = {
+		name = "EVTOPTA5243"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5244
+	trigger = {
+		traits = sceptical
+		is_state_religion = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5244"
+	desc = "EVTDESC5244"
+
+	option = {
+		name = "EVTOPTA5244"
+		character_religion = random
+	}
+}
+
+character_event = {
+
+	id = 5245
+	trigger = {
+		traits = sceptical
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5245"
+	desc = "EVTDESC5245"
+
+	option = {
+		name = "EVTOPTA5245"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5246
+	trigger = {
+		traits = pious
+		is_state_religion = no 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5246"
+	desc = "EVTDESC5246"
+
+	option = {
+		name = "EVTOPTA5246"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5247
+	trigger = {
+		traits = pious
+		is_state_religion = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5247"
+	desc = "EVTDESC5247"
+
+	option = {
+		name = "EVTOPTA5247"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5248
+	trigger = {
+		traits = zealous
+		is_state_religion = yes 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5248"
+	desc = "EVTDESC5248"
+
+	option = {
+		name = "EVTOPTA5248"
+		popularity = 1
+	}
+}
+
+
+character_event = {
+
+	id = 5249
+	trigger = {
+		traits = zealous
+		is_state_religion = no 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+	
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5249"
+	desc = "EVTDESC5249"
+
+	option = {
+		name = "EVTOPTA5249"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5250
+
+	trigger = {
+		traits = tolerant
+		is_state_religion = yes
+		can_get_friends = yes
+		age = 16
+		country = {
+			any_character = {
+				can_get_friends = yes 
+				NOT = { is_friend = THIS }
+				NOT = { is_rival = THIS }
+				is_state_religion = no
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5250"
+	desc = "EVTDESC5250"
+
+	option = {
+		name = "EVTOPTA5250"
+		country = {
+			random_character = {
+				limit = {
+					can_get_friends = yes 
+					NOT = { is_friend = THIS }
+					NOT = { is_rival = THIS }
+					is_state_religion = no
+					age = 16
+				}
+				add_friend = THIS
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5251
+
+	trigger = {
+		traits = tolerant
+		is_state_religion = yes
+		num_of_friends = 1
+		age = 16
+		country = {
+			any_character = {
+				is_friend = THIS
+				is_state_religion = no
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5251"
+	desc = "EVTDESC5251"
+
+	option = {
+		name = "EVTOPTA5251"
+		popularity = -1
+	}
+}
+
+character_event = {
+	
+	id = 5252
+
+	trigger = {
+		traits = devout 
+		is_state_religion = yes 
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5252"
+	desc = "EVTDESC5252"
+
+	option = {
+		name = "EVTOPTA5252"
+		popularity = 1
+	}
+}
+
+character_event = {
+	
+	id = 5253
+
+	trigger = {
+		traits = devout 
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5253"
+	desc = "EVTDESC5253"
+
+	option = {
+		name = "EVTOPTA5253"
+		loyalty = -1
+	}
+}
+
+character_event = {
+	
+	id = 5254
+
+	trigger = {
+		traits = lapsed
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5254"
+	desc = "EVTDESC5254"
+
+	option = {
+		name = "EVTOPTA5254"
+		loyalty = 1
+	}
+}
+
+character_event = {
+	
+	id = 5255
+
+	trigger = {
+		traits = lapsed 
+		is_state_religion = yes 
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5255"
+	desc = "EVTDESC5255"
+
+	option = {
+		name = "EVTOPTA5255"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5256
+
+	trigger = {
+		traits = vengeful 
+		num_of_rivals = 1
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5256"
+	desc = "EVTDESC5256"
+
+	option = {
+		name = "EVTOPTA5256"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5257
+
+	trigger = {
+		traits = vengeful 
+		NOT = { num_of_rivals = 1 }
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5257"
+	desc = "EVTDESC5257"
+
+	option = {
+		name = "EVTOPTA5257"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5258
+
+	trigger = {
+		traits = forgiving 
+		NOT = { num_of_rivals = 1 }
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5258"
+	desc = "EVTDESC5258"
+
+	option = {
+		name = "EVTOPTA5258"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5259
+
+	trigger = {
+		traits = forgiving
+		num_of_rivals = 1
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5259"
+	desc = "EVTDESC5259"
+
+	option = {
+		name = "EVTOPTA5259"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5260
+
+	trigger = {
+		traits = assertive
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5260"
+	desc = "EVTDESC5260"
+
+	option = {
+		name = "EVTOPTA5260"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5261
+
+	trigger = {
+		traits = assertive
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5261"
+	desc = "EVTDESC5261"
+
+	option = {
+		name = "EVTOPTA5261"
+		loyalty = -1
+	}
+}
+
+character_event = {
+
+	id = 5262
+
+	trigger = {
+		traits = submissive 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5262"
+	desc = "EVTDESC5262"
+
+	option = {
+		name = "EVTOPTA5262"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5263
+
+	trigger = {
+		traits = submissive 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5263"
+	desc = "EVTDESC5263"
+
+	option = {
+		name = "EVTOPTA5263"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5264
+
+	trigger = {
+		traits = intelligent
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5264"
+	desc = "EVTDESC5264"
+
+	option = {
+		name = "EVTOPTA5264"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5265
+
+	trigger = {
+		traits = intelligent
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5265"
+	desc = "EVTDESC5265"
+
+	option = {
+		name = "EVTOPTA5265"
+		popularity = -1
+	}
+}
+
+character_event = {
+
+	id = 5266
+
+	trigger = {
+		traits = dumb
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5266"
+	desc = "EVTDESC5266"
+
+	option = {
+		name = "EVTOPTA5266"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5267
+
+	trigger = {
+		traits = dumb
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5267"
+	desc = "EVTDESC5267"
+
+	option = {
+		name = "EVTOPTA5267"
+		loyalty = -1
+	}
+}
+
+
+character_event = {
+
+	id = 5268
+
+	trigger = {
+		traits = generous
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5268"
+	desc = "EVTDESC5268"
+
+	option = {
+		name = "EVTOPTA5268"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5269
+
+	trigger = {
+		traits = generous
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5269"
+	desc = "EVTDESC5269"
+
+	option = {
+		name = "EVTOPTA5269"
+		wealth = -10
+	}
+}	
+
+character_event = {
+
+	id = 5270
+
+	trigger = {
+		traits = selfish
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5270"
+	desc = "EVTDESC5270"
+
+	option = {
+		name = "EVTOPTA5270"
+		wealth = 10 
+	}
+}
+
+character_event = {
+
+	id = 5271
+
+	trigger = {
+		traits = selfish
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5271"
+	desc = "EVTDESC5271"
+
+	option = {
+		name = "EVTOPTA5271"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5272
+
+	trigger = {
+		traits = honest
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5272"
+	desc = "EVTDESC5272"
+
+	option = {
+		name = "EVTOPTA5272"
+		popularity = 1 
+	}
+}
+
+character_event = {
+
+	id = 5273
+
+	trigger = {
+		traits = honest
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5273"
+	desc = "EVTDESC5273"
+
+	option = {
+		name = "EVTOPTA5273"
+		wealth = -10
+	}
+}	
+
+character_event = {
+
+	id = 5274
+
+	trigger = {
+		traits = deceitful
+		country = {
+			any_character = { 
+				is_rival = THIS
+			}
+		} 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5274"
+	desc = "EVTDESC5274"
+
+	option = {
+		name = "EVTOPTA5274"
+		popularity = 1 
+	}
+}
+
+character_event = {
+
+	id = 5275
+
+	trigger = {
+		traits = deceitful
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5275"
+	desc = "EVTDESC5275"
+
+	option = {
+		name = "EVTOPTA5275"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5276
+
+	trigger = {
+		traits = energetic
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5276"
+	desc = "EVTDESC5276"
+
+	option = {
+		name = "EVTOPTA5276"
+		popularity = 1 
+	}
+}
+
+character_event = {
+
+	id = 5277
+
+	trigger = {
+		traits = energetic
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5277"
+	desc = "EVTDESC5277"
+
+	option = {
+		name = "EVTOPTA5277"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5278
+
+	trigger = {
+		traits = lazy
+		NOT = {
+			OR = {
+				is_ruler = yes
+				is_governor = yes
+				in_command = yes
+				has_office = land_tech
+				has_office = naval_tech
+				has_office = civic_tech
+				has_office = construction_tech
+				has_office = religious_tech
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5278"
+	desc = "EVTDESC5278"
+
+	option = {
+		name = "EVTOPTA5278"
+		popularity = 1 
+	}
+}
+
+character_event = {
+
+	id = 5279
+
+	trigger = {
+		traits = energetic
+		OR = {
+			is_ruler = yes
+			is_governor = yes
+			in_command = yes
+			has_office = land_tech
+			has_office = naval_tech
+			has_office = civic_tech
+			has_office = construction_tech
+			has_office = religious_tech
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5279"
+	desc = "EVTDESC5279"
+
+	option = {
+		name = "EVTOPTA5279"
+		random = {
+			chance = 5
+			add_trait = stressed 
+		}
+	}
+}	
+
+character_event = {
+
+	id = 5280
+
+	trigger = {
+		traits = cautious
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5280"
+	desc = "EVTDESC5280"
+
+	option = {
+		name = "EVTOPTA5280"
+		wealth = 10 
+	}
+}
+
+character_event = {
+
+	id = 5281
+	trigger = {
+		traits = cautious
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5281"
+	desc = "EVTDESC5281"
+
+	option = {
+		name = "EVTOPTA5281"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5282
+
+	trigger = {
+		traits = reckless
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5282"
+	desc = "EVTDESC5282"
+
+	option = {
+		name = "EVTOPTA5282"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5283
+	trigger = {
+		traits = reckless
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5283"
+	desc = "EVTDESC5283"
+
+	option = {
+		name = "EVTOPTA5283"
+		wealth = -10
+	}
+}	
+
+character_event = {
+
+	id = 5284
+
+	trigger = {
+		traits = shrewd
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5284"
+	desc = "EVTDESC5284"
+
+	option = {
+		name = "EVTOPTA5284"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5285
+	trigger = {
+		traits = shrewd
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5285"
+	desc = "EVTDESC5285"
+
+	option = {
+		name = "EVTOPTA5285"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5286
+
+	trigger = {
+		traits = foolish
+		OR = {
+			has_office = land_tech
+			has_office = naval_tech
+			has_office = civic_tech
+			has_office = construction_tech
+			has_office = religious_tech
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5286"
+	desc = "EVTDESC5286"
+
+	option = {
+		name = "EVTOPTA5286"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5287
+	trigger = {
+		traits = foolish
+		age = 16
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5287"
+	desc = "EVTDESC5287"
+
+	option = {
+		name = "EVTOPTA5287"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5288
+
+	trigger = {
+		traits = gluttonous
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5288"
+	desc = "EVTDESC5288"
+
+	option = {
+		name = "EVTOPTA5288"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5289
+	trigger = {
+		traits = gluttonous
+		age = 16
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5289"
+	desc = "EVTDESC5289"
+
+	option = {
+		name = "EVTOPTA5289"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5290
+
+	trigger = {
+		traits = self_controlled
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5290"
+	desc = "EVTDESC5290"
+
+	option = {
+		name = "EVTOPTA5290"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5291
+	trigger = {
+		traits = self_controlled
+		age = 16
+		country = {
+			any_character = {
+				is_rival = THIS
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5291"
+	desc = "EVTDESC5291"
+
+	option = {
+		name = "EVTOPTA5291"
+		popularity = -1
+	}
+}	
+
+
+character_event = {
+
+	id = 5292
+
+	trigger = {
+		traits = arrogant
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5292"
+	desc = "EVTDESC5292"
+
+	option = {
+		name = "EVTOPTA5292"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5293
+	trigger = {
+		traits = arrogant
+		is_ruler = no 
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5293"
+	desc = "EVTDESC5293"
+
+	option = {
+		name = "EVTOPTA5293"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5294
+	trigger = {
+		traits = modest
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5294"
+	desc = "EVTDESC5294"
+
+	option = {
+		name = "EVTOPTA5294"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5295
+	trigger = {
+		traits = modest
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5295"
+	desc = "EVTDESC5295"
+
+	option = {
+		name = "EVTOPTA5295"
+		popularity = -1
+	}
+}	
+
+character_event = {
+
+	id = 5296
+	trigger = {
+		traits = prominent
+		is_ruler = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5296"
+	desc = "EVTDESC5296"
+
+	option = {
+		name = "EVTOPTA5296"
+		country = {
+			capital_scope = {
+				civilization_value = 1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5297
+	trigger = {
+		traits = prominent
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5297"
+	desc = "EVTDESC5297"
+
+	option = {
+		name = "EVTOPTA5297"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5298
+	trigger = {
+		traits = unnoticeable
+		is_ruler = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5298"
+	desc = "EVTDESC5298"
+
+	option = {
+		name = "EVTOPTA5298"
+		country = {
+			capital_scope = {
+				civilization_value = -1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5299
+	trigger = {
+		traits = unnoticeable
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5299"
+	desc = "EVTDESC5299"
+
+	option = {
+		name = "EVTOPTA5299"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5300
+	trigger = {
+		traits = loving
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5300"
+	desc = "EVTDESC5300"
+
+	option = {
+		name = "EVTOPTA5300"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5301
+	trigger = {
+		traits = loving
+		is_married = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5301"
+	desc = "EVTDESC5301"
+
+	option = {
+		name = "EVTOPTA5301"
+		popularity  = -1
+	}
+}	
+
+character_event = {
+
+	id = 5302
+	trigger = {
+		traits = cold
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5302"
+	desc = "EVTDESC5302"
+
+	option = {
+		name = "EVTOPTA5302"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5303
+	trigger = {
+		traits = cold
+		is_married = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5303"
+	desc = "EVTDESC5303"
+
+	option = {
+		name = "EVTOPTA5303"
+		popularity  = -1
+	}
+}	
+
+character_event = {
+
+	id = 5304
+	trigger = {
+		traits = ambitious
+		is_governor = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5304"
+	desc = "EVTDESC5304"
+
+	option = {
+		name = "EVTOPTA5304"
+		wealth = 10
+	}
+}
+
+character_event = {
+
+	id = 5305
+	trigger = {
+		traits = ambitious
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5305"
+	desc = "EVTDESC5305"
+
+	option = {
+		name = "EVTOPTA5305"
+		loyalty  = -1
+	}
+}	
+
+character_event = {
+
+	id = 5306
+	trigger = {
+		traits = content
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5306"
+	desc = "EVTDESC5306"
+
+	option = {
+		name = "EVTOPTA5306"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5307
+	trigger = {
+		traits = content
+		is_ruler = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5307"
+	desc = "EVTDESC53057"
+
+	option = {
+		name = "EVTOPTA5307"
+		country = {
+			random_character = {
+				loyalty  = -1
+			}
+		}
+	}
+}	
+
+character_event = {
+
+	id = 5308
+	trigger = {
+		traits = suspicious
+		is_ruler = yes 
+		country = {
+			any_character = {		
+				is_rival = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5308"
+	desc = "EVTDESC5308"
+
+	option = {
+		name = "EVTOPTA5308"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5309
+	trigger = {
+		traits = suspicious
+		country = {
+			any_character = {		
+				NOT = { is_rival = THIS }
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5309"
+	desc = "EVTDESC5309"
+
+	option = {
+		name = "EVTOPTA5309"
+		random = {
+			chance = 1
+			add_trait = stressed 
+		}
+	}
+}	
+
+character_event = {
+
+	id = 5310
+	trigger = {
+		traits = trusting
+		is_ruler = yes 
+		country = {
+			any_character = {		
+				is_rival = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5310"
+	desc = "EVTDESC5310"
+
+	option = {
+		name = "EVTOPTA5310"
+		country = {
+			random_character = {
+				limit = {		
+					is_rival = THIS
+				}
+				loyalty = -1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5311
+	trigger = {
+		traits = trusting
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5311"
+	desc = "EVTDESC5311"
+
+	option = {
+		name = "EVTOPTA5311"
+		loyalty = 1
+	}
+}	
+
+character_event = {
+
+	id = 5312
+	trigger = {
+		traits = wise
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5312"
+	desc = "EVTDESC5312"
+
+	option = {
+		name = "EVTOPTA5312"
+		wealth = 10
+	}
+}
+
+character_event = {
+
+	id = 5313
+	trigger = {
+		traits = wise
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5313"
+	desc = "EVTDESC5313"
+
+	option = {
+		name = "EVTOPTA5313"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5314
+	trigger = {
+		traits = rash
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5314"
+	desc = "EVTDESC5314"
+
+	option = {
+		name = "EVTOPTA5314"
+		wealth = -10
+	}
+}
+
+character_event = {
+
+	id = 5315
+	trigger = {
+		traits = rash
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5315"
+	desc = "EVTDESC5315"
+
+	option = {
+		name = "EVTOPTA5315"
+		loyalty = 1
+	}
+}	
+
+character_event = {
+
+	id = 5316
+	trigger = {
+		traits = jealous
+		is_ruler = yes
+		country = {
+			any_character = {
+				is_friend = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5316"
+	desc = "EVTDESC5316"
+
+	option = {
+		name = "EVTOPTA5316"
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+				}
+				loyalty = -1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5317
+	trigger = {
+		traits = jealous
+		is_ruler = yes
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5317"
+	desc = "EVTDESC5317"
+
+	option = {
+		name = "EVTOPTA5317"
+		wealth = 5
+	}
+}	
+
+character_event = {
+
+	id = 5318
+	trigger = {
+		traits = secure
+		is_ruler = yes
+		country = {
+			any_character = {
+				is_friend = THIS
+			}
+		}
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5318"
+	desc = "EVTDESC5318"
+
+	option = {
+		name = "EVTOPTA5318"
+		country = {
+			random_character = {
+				limit = {
+					is_friend = THIS
+				}
+				loyalty = 1
+			}
+		}
+	}
+}
+
+character_event = {
+
+	id = 5319
+	trigger = {
+		traits = secure
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5319"
+	desc = "EVTDESC5319"
+
+	option = {
+		name = "EVTOPTA5319"
+		wealth = -5
+	}
+}	
+
+character_event = {
+
+	id = 5320
+	trigger = {
+		traits = sarcastic
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5320"
+	desc = "EVTDESC5320"
+
+	option = {
+		name = "EVTOPTA5320"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5321
+	trigger = {
+		traits = sarcastic
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5321"
+	desc = "EVTDESC5321"
+
+	option = {
+		name = "EVTOPTA5321"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5322
+	trigger = {
+		traits = plain_speaking
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5322"
+	desc = "EVTDESC5322"
+
+	option = {
+		name = "EVTOPTA5322"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5323
+	trigger = {
+		traits = plain_speaking
+		is_ruler = yes
+		age = 16
+		country = {
+			any_character = {
+				age = 16
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5323"
+	desc = "EVTDESC5323"
+
+	option = {
+		name = "EVTOPTA5323"
+		country = {
+			random_character = {
+				limit = {
+					age = 16
+				}
+				loyalty = -1
+			}
+		}
+	}
+}	
+
+character_event = {
+
+	id = 5324
+	trigger = {
+		traits = stubborn
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5324"
+	desc = "EVTDESC5324"
+
+	option = {
+		name = "EVTOPTA5324"
+		popularity = 1
+	}
+}
+
+character_event = {
+
+	id = 5325
+	trigger = {
+		traits = stubborn
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5325"
+	desc = "EVTDESC5325"
+
+	option = {
+		name = "EVTOPTA5325"
+		loyalty = -1
+	}
+}	
+
+character_event = {
+
+	id = 5326
+	trigger = {
+		traits = weak_willed
+		is_ruler = no
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5326"
+	desc = "EVTDESC5326"
+
+	option = {
+		name = "EVTOPTA5326"
+		loyalty = 1
+	}
+}
+
+character_event = {
+
+	id = 5327
+	trigger = {
+		traits = weak_willed
+		age = 16
+	}
+
+	mean_time_to_happen = {
+
+		months = 7200
+
+		modifier = {
+			num_of_traits = 1
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 2
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 3
+			factor = 1.1
+		}
+		modifier = {
+			num_of_traits = 4
+			factor = 1.1
+		}
+	}
+
+	title = "EVTNAME5327"
+	desc = "EVTDESC5327"
+
+	option = {
+		name = "EVTOPTA5327"
+		popularity = -1
+	}
+}	

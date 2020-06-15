@@ -1,0 +1,361 @@
+# Architectural Greatness
+country_event = {
+
+	id = 2600
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		war = no
+		any_character = {
+			has_office = construction_tech
+			finesse = 9
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { finesse = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			traits = crafty
+		}
+		modifier = {
+			factor = 0.9
+			traits = benefactor
+		}
+		modifier = {
+			factor = 0.9
+			traits = inventor
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			traits = guileless
+		}
+		modifier = {
+			factor = 1.1
+			traits = narrowminded
+		}
+	}
+
+	title = "EVTNAME2600"
+
+	desc = "EVTDESC2600"
+
+	option = {
+		name = "EVTOPTA2600"					# Sush craftmanship should be greatly rewarded
+		random_character = {
+			limit = { has_office = construction_tech }
+			popularity = 20
+		}
+		treasury = -30
+		construction_tech = 500
+	}
+	option = {
+		name = "EVTOPTB2600"					# I can't understand what all the fuss is about
+		random_character = {
+			limit = { has_office = construction_tech }
+			popularity = 5
+		}
+		construction_tech = 500
+	}
+}
+
+# Architectural Disaster
+country_event = {
+
+	id = 2601
+
+	trigger = {
+		any_character = {
+			has_office = construction_tech
+			not = { finesse = 3 }
+			not = { popularity = 50 }
+		}
+		any_character = {
+			not = { has_office = construction_tech }
+			can_hold_title = title_construction_tech
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	
+		modifier = {
+			factor = 0.9
+			not = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 3 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 2 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { finesse = 1 } }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = 2 }
+		}
+		modifier = {
+			factor = 1.1
+			not = { stability = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 8 }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { finesse = 7 }
+		}
+	}
+
+	title = "EVTNAME2601"
+
+	desc = "EVTDESC2601"
+
+	option = {
+		name = "EVTOPTA2601"					# We should probabaly have done so long ago
+		random_character = {
+			limit = { has_office = construction_tech }
+			popularity = -30
+		}
+		random_character = {
+			limit = { can_hold_title = title_construction_tech }
+			assign_office = construction_tech
+		}
+	}
+	option = {
+		name = "EVTOPTB2601"					# It doesn't look that bad
+		random = {
+			chance = 50
+			treasury = -20
+		}
+	}
+}
+
+# Lack of Money
+country_event = {
+
+	id = 2602
+
+	trigger = {
+		treasury = 40
+		any_character = {
+			has_office = construction_tech
+			or = {
+				traits = ambitious
+				traits = silver_tongued
+				traits = devout
+				traits = original_thinker
+				traits = inventor
+				traits = energetic
+				traits = rash
+				traits = stubborn
+				traits = stressed
+				traits = maniac
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.9
+			ruler = { traits = weak_willed }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = guileless }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = lapsed }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = submissive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = dumb }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = foolish }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = shrewd }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = cautious }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = sceptical }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = assertive }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = intelligent }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = suspicious }
+		}		
+	}
+
+	title = "EVTNAME2602"
+
+	desc = "EVTDESC2602"
+
+	option = {
+		name = "EVTOPTA2602"					# I suppose we could invest some more
+		treasury = -40
+		ruler = { family_prestige = 50 }
+		random_character = {
+			limit = { has_office = construction_tech }
+			family_prestige = 50
+		}
+		random = {
+			chance = 80
+			random_character = {
+				limit = { has_office = construction_tech }
+				popularity = 10
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2602"					# We don't have anymore money to invest
+		random = {
+			chance = 30
+			ruler = { family_prestige = -25 }
+		}
+	}
+}
+
+# Unflattering Sculpture
+character_event = {
+
+	id = 2603
+
+	trigger = {
+		country = {
+			any_character = {
+				has_office = construction_tech
+				not = { is_friend = this }
+			}
+		}
+		any_rival = { finesse = 9 }
+		not = { has_character_flag = unflattering_sculpture }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 2
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 4
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 6
+		}
+		modifier = {
+			factor = 1.2
+			popularity = 90
+		}
+		modifier = {
+			factor = 1.2
+			popularity = 80
+		}
+		modifier = {
+			factor = 1.2
+			popularity = 70
+		}
+		modifier = {
+			factor = 1.1
+			num_of_friends = 2
+		}
+		modifier = {
+			factor = 1.1
+			num_of_friends = 4
+		}
+		modifier = {
+			factor = 1.1
+			num_of_friends = 6
+		}
+	}
+
+	title = "EVTNAME2603"
+
+	desc = "EVTDESC2603"
+
+	option = {
+		name = "EVTOPTA2603"					# I'll be the laughingstock for ages to come
+		set_character_flag = unflattering_sculpture
+		family_prestige = -50
+	}
+}

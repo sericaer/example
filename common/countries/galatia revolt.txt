@@ -1,0 +1,19 @@
+civil_war_faction = GAL
+graphical_culture = celticgfx
+region = region_galatia
+color = { 189  177  163 }
+color2 = { 134 96 54 }
+
+ship_names = {
+	Abrostola Aliassos Ambitutes Ankyros "Apollo Belenos" "Ares Ogmios" "Artemis Arduinna" Aspona "Athena Belisama"
+	Blucion
+	Dagania Danala
+	Eccobriga
+	Godion
+	Halys "Herakles Sucellos" "Hermes Esus"
+	"Kybele Agdistis" "Kybele Dyndimene"
+	Peion Pessenos
+	Tavion Tectosages Teutobodiaces Tolistoboges Tosiopes Trocmes
+	Vindia Votures
+	"Zeus Taranis" "Zeus Teutates"
+}

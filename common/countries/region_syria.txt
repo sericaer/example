@@ -1,0 +1,4 @@
+civil_war_faction = QS5
+region = region_syria
+color = { 50 180 189 }
+color2 = { 50 80 80 }

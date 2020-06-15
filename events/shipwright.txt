@@ -1,0 +1,428 @@
+# Delayed Delivery
+province_event = {
+
+	id = 2900
+
+	trigger = {
+		has_building = harbour
+		owner = {
+			any_character = {
+				has_office = naval_tech
+				not = { traits = incapable }
+				or = {
+					traits = lazy
+					traits = sceptical
+					traits = lapsed
+					traits = arbitrary
+					traits = incapable
+					traits = dumb
+					traits = reckless
+					traits = foolish
+					traits = rash
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 3 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 2 } } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { ruler = { not = { finesse = 1 } } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 9 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 8 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { ruler = { finesse = 7 } }
+		}
+	}
+
+	title = "EVTNAME2900"
+
+	desc = "EVTDESC2900"
+
+	option = {
+		name = "EVTOPTA2900"					# Invest some more money
+		owner = {
+			treasury = -20
+			trireme = this
+			trireme = this
+		}
+	}
+	option = {
+		name = "EVTOPTB2900"					# There's plenty of time
+		random = {
+			chance = 50
+			owner = {
+				random_character = {
+					limit = {
+						has_office = naval_tech
+						or = {
+							traits = lazy
+							traits = sceptical
+							traits = lapsed
+							traits = arbitrary
+							traits = incapable
+							traits = dumb
+							traits = reckless
+							traits = foolish
+							traits = rash
+						}
+					}
+				add_trait = incapable
+				}
+			}
+		}
+	}
+}
+
+# Lost Cargo
+country_event = {
+
+	id = 2901
+
+	trigger = {
+		num_of_ports = 1
+		any_character = {
+			has_office = naval_tech
+			not = { finesse = 4 }
+			not = { military = 4 }
+		}
+		ruler = {
+			not = { traits = merciful }
+			not = { traits = weak_willed }
+			not = { traits = vengeful }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.9
+			ruler = { traits = schizophrenic }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = stressed }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = unhealthy }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = unnoticeable }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = dumb }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = submissive }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = incapable }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { traits = tolerant }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = assertive }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = cruel }
+		}
+		modifier = {
+			factor = 1.1
+			ruler = { traits = aggressive }
+		}
+	}
+
+	title = "EVTNAME2901"
+
+	desc = "EVTDESC2901"
+
+	option = {
+		name = "EVTOPTA2901"					# Give that cargo some company
+		ruler = { add_trait = vengeful }
+		random_character = {
+			limit = { has_office = naval_tech }
+			death = yes
+		}
+	}
+	option = {
+		name = "EVTOPTB2901"					# Maybe I wasn't very clear
+		ruler = {
+			add_trait = merciful
+			add_trait = weak_willed
+		}
+	}
+}
+
+# Stolen Cargo
+country_event = {
+
+	id = 2902
+
+	trigger = {
+		ruler = { not = { traits = foolish } }
+		num_of_ports = 1
+		any_character = {
+			has_office = naval_tech
+			not = { traits = wounded }
+			or = {
+				traits = stressed
+				traits = jealous
+				traits = rash
+				traits = ambitious
+				traits = cold
+				traits = arrogant
+				traits = shrewd
+				traits = deceitful
+				traits = selfish
+				traits = vengeful
+				traits = corrupt
+				traits = lapsed
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.9
+			ruler = { wealth = 1000 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { wealth = 500 }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 30 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			ruler = { not = { popularity = 10 } }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 90 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 80 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { popularity = 70 }
+		}
+		modifier = {
+			factor = 1.2
+			ruler = { traits = generous }
+		}
+	}
+
+	title = "EVTNAME2902"
+
+	desc = "EVTDESC2902"
+
+	option = {
+		name = "EVTOPTA2902"					# I'll be needing a new shipwright very soon
+		random_list = {
+			65 = {
+				random_character = {
+					limit = { has_office = naval_tech }
+					death = yes
+				}
+			}
+			35 = {
+				random_character = {
+					limit = { has_office = naval_tech }
+					add_trait = wounded
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB2902"					# I'm pretty sure it was someone else
+		random = {
+			chance = 70
+			ruler = {
+				add_trait = foolish
+				add_trait = trusting
+			}
+			random_character = {
+				limit = { has_office = naval_tech }
+				wealth = 500
+			}
+		}
+	}
+}
+
+# Spoils from Shipwreck
+country_event = {
+
+	id = 2903
+
+	trigger = {
+		num_of_ports = 1
+		any_character = {
+			has_office = naval_tech
+			not = { wealth = 100 }
+			not = { popularity = 50 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.9
+			num_of_ports = 2
+		}
+		modifier = {
+			factor = 0.9
+			num_of_ports = 4
+		}
+		modifier = {
+			factor = 0.9
+			num_of_ports = 6
+		}
+	}
+
+	title = "EVTNAME2903"
+
+	desc = "EVTDESC2903"
+
+	option = {
+		name = "EVTOPTA2903"					# Let the spoils go to the one who finds them
+		random_character = {
+			limit = { has_office = naval_tech }
+			wealth = 600
+		}
+	}
+	option = {
+		name = "EVTOPTB2903"					# Those spoils belong to the state
+		treasury = 60
+		ruler = { popularity = -10 }
+	}
+	option = {
+		name = "EVTOPTC2903"					# Divide the spoils evenly
+		random_character = {
+			limit = { has_office = naval_tech }
+			wealth = 300
+		}		
+		treasury = 30
+		ruler = { popularity = -5 }
+	}
+}
+
+# Organization of the Fleet
+country_event = {
+
+	id = 2904
+
+	trigger = {
+		capital_scope = { civilization_value = 50 }
+		num_of_ports = 1
+		any_character = {
+			has_office = naval_tech
+			finesse = 5
+			military = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.9
+			finesse = 9
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 8
+		}
+		modifier = {
+			factor = 0.9
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			military = 9
+		}
+		modifier = {
+			factor = 0.9
+			military = 8
+		}
+		modifier = {
+			factor = 0.9
+			military = 7
+		}
+	}
+
+	title = "EVTNAME2904"
+
+	desc = "EVTDESC2904"
+
+	option = {
+		name = "EVTOPTA2904"					# Well, that is all about to change 
+		naval_tech = 500
+	}
+}
+
+country_event = {
+
+	id = 2905
+
+	trigger = {
+		any_sea_province = {
+			units_in_province = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3600
+	}
+	
+	title = "EVTNAME2905"
+	desc = "EVTDESC2905"
+	
+	option = {
+		name = "EVTOPTA2905"
+		random_sea_province = {
+			limit = {
+				units_in_province = 1
+			}
+			remove_fleet
+		}
+	}
+} 

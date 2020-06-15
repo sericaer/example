@@ -1,0 +1,4 @@
+civil_war_faction = QGP
+region = region_germania_superior
+color = { 200 200 100 }
+color2 = { 0 0 0 }

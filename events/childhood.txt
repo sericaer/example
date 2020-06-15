@@ -1,0 +1,1695 @@
+#################################################
+#		Extremely Spoiled		#
+#################################################
+character_event = {
+
+	id = 2050
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = no
+			age = 4
+			not = { age = 16 }
+			not = { num_of_traits = 2 }
+			not = { traits = selfish }
+			not = { traits = cruel }
+			not = { traits = assertive }
+			not = { traits = generous }
+			not = { traits = merciful }
+			not = { traits = submissive }
+		}
+		or = {
+			traits = selfish
+			traits = guileless
+			traits = tolerant
+			traits = lapsed
+			traits = incapable
+			traits = arbitrary
+			traits = forgiving
+			traits = submissive
+			traits = generous
+			traits = lazy
+			traits = gluttonous
+			traits = loving
+			traits = weak_willed
+			traits = maniac
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 500
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 800
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 1000
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 3 } }
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 2 } }
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 1 } }
+		}
+		modifier = {
+			factor = 1.2
+			not = { wealth = 100 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { wealth = 50 }
+		}
+	}
+
+	title = "EVTNAME2050"
+
+	desc = "EVTDESC2050"
+
+	option = {
+		name = "EVTOPTA2050"					# Of course it is, he deserves nothing but the best
+		random_list = {
+			34 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = selfish } }
+			33 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = cruel } }
+			33 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = assertive } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2050"					# I may have to set some rules
+		random_list = {
+			34 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = generous } }
+			33 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = merciful } }
+			33 = { random_child = { limit = { is_female = no age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = submissive } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2051
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = yes
+			age = 4
+			not = { age = 16 }
+			not = { num_of_traits = 2 }
+			not = { traits = selfish }
+			not = { traits = cruel }
+			not = { traits = assertive }
+			not = { traits = generous }
+			not = { traits = merciful }
+			not = { traits = submissive }
+		}
+		or = {
+			traits = good_natured
+			traits = guileless
+			traits = tolerant
+			traits = lapsed
+			traits = incapable
+			traits = arbitrary
+			traits = forgiving
+			traits = submissive
+			traits = generous
+			traits = lazy
+			traits = gluttonous
+			traits = loving
+			traits = weak_willed
+			traits = maniac
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			any_child = { charisma = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 500
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 800
+		}
+		modifier = {
+			factor = 0.9
+			wealth = 1000
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 3 } }
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 2 } }
+		}
+		modifier = {
+			factor = 1.1
+			any_child = { not = { charisma = 1 } }
+		}
+		modifier = {
+			factor = 1.2
+			not = { wealth = 100 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { wealth = 50 }
+		}
+	}
+
+	title = "EVTNAME2051"
+
+	desc = "EVTDESC2051"
+
+	option = {
+		name = "EVTOPTA2051"					# Of course it is, she deserves nothing but the best
+		random_list = {
+			34 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = selfish } }
+			33 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = cruel } }
+			33 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = assertive } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2051"					# I may have to set some rules
+		random_list = {
+			34 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = generous } }
+			33 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = merciful } }
+			33 = { random_child = { limit = { is_female = yes age = 4 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = submissive } }
+		}
+	}
+}
+
+#################################################
+#		A Slow Learner			#
+#################################################
+character_event = {
+
+	id = 2052
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = no
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = dumb }
+			not = { traits = abrasive }
+			not = { traits = crafty }
+			not = { traits = blunt }
+			not = { traits = good_natured }
+			not = { traits = guileless }
+			not = { traits = stutter }
+			not = { traits = intelligent }
+			not = { traits = stressed }
+			not = { traits = silver_tongued }
+		}
+		not = { traits = loving }
+		or = {
+			traits = unhealthy
+			traits = leper
+			traits = incapable
+			traits = abrasive
+			traits = schizophrenic
+			traits = plague
+			traits = inbred
+			traits = stutter
+			traits = cold
+			traits = cruel
+			traits = aggressive
+			traits = dumb
+			traits = arbitrary
+			traits = stressed
+			traits = abrasive
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME2052"
+
+	desc = "EVTDESC2052"
+
+	option = {
+		name = "EVTOPTA2052"					# I have other things to do
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = dumb } }
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = abrasive } }
+			30 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = crafty } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2052"					# He just needs some more time
+		random_list = {
+			40 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = blunt } }
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = good_natured } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = guileless } }
+		}
+	}
+	option = {
+		name = "EVTOPTC2052"					# He's not even making an effort!
+		random_list = {
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = intelligent } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = stressed } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = stutter } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = silver_tongued } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2053
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = yes
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = dumb }
+			not = { traits = abrasive }
+			not = { traits = crafty }
+			not = { traits = blunt }
+			not = { traits = good_natured }
+			not = { traits = guileless }
+			not = { traits = stutter }
+			not = { traits = intelligent }
+			not = { traits = stressed }
+			not = { traits = silver_tongued }
+		}
+		not = { traits = loving }
+		or = {
+			traits = unhealthy
+			traits = leper
+			traits = incapable
+			traits = abrasive
+			traits = schizophrenic
+			traits = plague
+			traits = inbred
+			traits = stutter
+			traits = cold
+			traits = cruel
+			traits = aggressive
+			traits = dumb
+			traits = arbitrary
+			traits = stressed
+			traits = abrasive
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.1
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME2053"
+
+	desc = "EVTDESC2053"
+
+	option = {
+		name = "EVTOPTA2053"					# I have other things to do
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = dumb } }
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = abrasive } }
+			30 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = crafty } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2053"					# She just needs some more time
+		random_list = {
+			40 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = blunt } }
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = good_natured } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = guileless } }
+		}
+	}
+	option = {
+		name = "EVTOPTC2053"					# She's not even making an effort!
+		random_list = {
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = intelligent } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = stressed } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = stutter } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = silver_tongued } }
+		}
+	}
+}
+#################################################
+#		Rules the Playground		#
+################################################# 
+character_event = {
+
+	id = 2054
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = no
+			age = 5
+			not = { age = 10 }
+			not = { num_of_traits = 2 }
+			not = { traits = arrogant }
+			not = { traits = proud }
+			not = { traits = ambitious }
+			not = { traits = modest }
+			not = { traits = humble }
+			not = { traits = content }
+		}
+		popularity = 70
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			popularity = 80
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 90
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 500
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 800
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 1000
+		}
+	}
+
+	title = "EVTNAME2054"
+
+	desc = "EVTDESC2054"
+
+	option = {
+		name = "EVTOPTA2054"					# Encurage him further
+		random_list = {
+			40 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = arrogant } }
+			40 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = proud } }
+			30 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = ambitious } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2054"					# No, this has gone too far
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = modest } }
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = humble } }
+			30 = { random_child = { limit = { is_female = no age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = content } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2055
+
+	trigger = {	
+		is_female = no
+		any_child = {
+			is_female = yes
+			age = 5
+			not = { age = 10 }
+			not = { num_of_traits = 2 }
+			not = { traits = arrogant }
+			not = { traits = proud }
+			not = { traits = ambitious }
+			not = { traits = modest }
+			not = { traits = humble }
+			not = { traits = content }
+		}
+		popularity = 70
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			popularity = 80
+		}
+		modifier = {
+			factor = 0.9
+			popularity = 90
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 500
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 800
+		}
+		modifier = {
+			factor = 0.9
+			family_prestige = 1000
+		}
+	}
+
+	title = "EVTNAME2055"
+
+	desc = "EVTDESC2055"
+
+	option = {
+		name = "EVTOPTA2055"					# Encurage her further
+		random_list = {
+			40 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = arrogant } }
+			40 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = proud } }
+			30 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = ambitious } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2055"					# No, this has gone too far
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = modest } }
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = humble } }
+			30 = { random_child = { limit = { is_female = yes age = 5 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = content } }
+		}
+	}
+}
+
+#################################################
+#		Lack of Friends			#
+#################################################
+character_event = {
+
+	id = 2056
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = no
+			age = 5
+			not = { age = 16 }
+			not = { num_of_traits = 2 }
+			not = { traits = lustful }
+			not = { traits = prominent }
+			not = { traits = stubborn }
+			not = { traits = chaste }
+			not = { traits = unnoticeable }
+			not = { traits = weak_willed }
+		}
+		not = { popularity = 50 }
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 40 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			traits = prominent
+		}
+		modifier = {
+			factor = 1.2
+			traits = victorious
+		}
+	}
+
+	title = "EVTNAME2056"
+
+	desc = "EVTDESC2056"
+
+	option = {
+		name = "EVTOPTA2056"					# Try to cheer him up
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = lustful } }
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = prominent } }
+			30 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = stubborn } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2056"					# Try to help him
+		random_list = {
+			50 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } popularity = 5 } }
+			50 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } popularity = -10 } }
+		}
+	}
+	option = {
+		name = "EVTOPTC2056"					# Frankly, there's nothing you can do
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = chaste } }
+			35 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = unnoticeable } }
+			30 = { random_child = { limit = { is_female = no age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = weak_willed } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2057
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = yes
+			age = 5
+			not = { age = 16 }
+			not = { num_of_traits = 2 }
+			not = { traits = lustful }
+			not = { traits = prominent }
+			not = { traits = stubborn }
+			not = { traits = chaste }
+			not = { traits = unnoticeable }
+			not = { traits = weak_willed }
+		}
+		not = { popularity = 50 }
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { popularity = 40 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 20 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { popularity = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			traits = prominent
+		}
+		modifier = {
+			factor = 1.2
+			traits = victorious
+		}
+	}
+
+	title = "EVTNAME2057"
+
+	desc = "EVTDESC2057"
+
+	option = {
+		name = "EVTOPTA2057"					# Try to cheer her up
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = lustful } }
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = prominent } }
+			30 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = stubborn } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2057"					# Try to help her
+		random_list = {
+			50 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } popularity = 5 } }
+			50 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } popularity = -10 } }
+		}
+	}
+	option = {
+		name = "EVTOPTC2057"					# Frankly, there's nothing you can do
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = chaste } }
+			35 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = unnoticeable } }
+			30 = { random_child = { limit = { is_female = yes age = 5 not = { age = 16 } not = { num_of_traits = 2 } } add_trait = weak_willed } }
+		}
+	}
+}
+
+#################################################
+#		Scared child			#
+#################################################
+character_event = {
+
+	id = 2058
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = no
+			age = 3
+			not = { age = 10 }
+			not = { num_of_traits = 2 }
+			not = { traits = sceptical }
+			not = { traits = self_controlled }
+			not = { traits = suspicious }
+			not = { traits = pious }
+			not = { traits = gluttonous }
+			not = { traits = trusting }
+		}
+		or = {
+			traits = aggressive
+			traits = abrasive
+			traits = cruel
+			traits = narrowminded
+			traits = assertive
+			traits = selfish
+			traits = deceitful
+			traits = arrogant
+			traits = cold
+			traits = inbred
+			traits = unhealthy
+			traits = plague
+			traits = leper
+			traits = pneumonia
+			traits = schizophrenic
+			traits = maniac
+			traits = invalid
+			traits = wounded
+			traits = maimed
+			traits = epileptic
+			traits = coward
+			traits = aggressive
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+		
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 3
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 4
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 5
+		}
+		modifier = {
+			factor = 0.9
+			not = { num_of_friends = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME2058"
+
+	desc = "EVTDESC2058"
+
+	option = {
+		name = "EVTOPTA2058"					# Try talking to him
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = sceptical } }
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = self_controlled } }
+			30 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = suspicious } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2058"					# He's such an embarrassment
+		random_list = {
+			45 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = pious } }
+			30 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = gluttonous } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = trusting } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2059
+
+	trigger = {
+		is_female = no
+		any_child = {
+			is_female = yes
+			age = 3
+			not = { age = 10 }
+			not = { num_of_traits = 2 }
+			not = { traits = sceptical }
+			not = { traits = self_controlled }
+			not = { traits = suspicious }
+			not = { traits = pious }
+			not = { traits = gluttonous }
+			not = { traits = trusting }
+		}
+		or = {
+			traits = aggressive
+			traits = abrasive
+			traits = cruel
+			traits = narrowminded
+			traits = assertive
+			traits = selfish
+			traits = deceitful
+			traits = arrogant
+			traits = cold
+			traits = inbred
+			traits = unhealthy
+			traits = plague
+			traits = leper
+			traits = pneumonia
+			traits = schizophrenic
+			traits = maniac
+			traits = invalid
+			traits = wounded
+			traits = maimed
+			traits = epileptic
+			traits = coward
+			traits = aggressive
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 72
+		
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 3
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 4
+		}
+		modifier = {
+			factor = 0.9
+			num_of_rivals = 5
+		}
+		modifier = {
+			factor = 0.9
+			not = { num_of_friends = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 9
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 8
+		}
+		modifier = {
+			factor = 1.2
+			charisma = 7
+		}
+	}
+
+	title = "EVTNAME2059"
+
+	desc = "EVTDESC2059"
+
+	option = {
+		name = "EVTOPTA2059"					# Try talking to her
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = sceptical } }
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = self_controlled } }
+			30 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = suspicious } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2059"					# She's such an embarrassment
+		random_list = {
+			45 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = pious } }
+			30 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = gluttonous } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 10 } not = { num_of_traits = 2 } } add_trait = trusting } }
+		}
+	}
+}
+
+#################################################
+#		New Friends			#
+#################################################
+character_event = {
+
+	id = 2060
+
+	trigger = {
+		age = 5
+		not = { age = 10 }
+		not = { num_of_friends = 1 }
+		country = {
+			any_character = {
+				age = 5
+				not = { age = 10 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 0.8
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.8
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.8
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.9
+			traits = good_natured
+		}
+		modifier = {
+			factor = 0.9
+			traits = generous
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			traits = unhealthy
+		}
+		modifier = {
+			factor = 1.1
+			traits = unnoticeable
+		}
+		modifier = {
+			factor = 1.1
+			traits = selfish
+		}
+		modifier = {
+			factor = 1.1
+			traits = cruel
+		}
+	}
+
+	title = "EVTNAME2060"
+
+	desc = "EVTDESC2060"
+
+	option = {
+		name = "EVTOPTA2060"					# That's good to hear
+		country = {
+			random_character = {
+				limit = { age = 5 not = { age = 10 } }
+				add_friend = this
+			}			
+		}
+	}
+}
+
+character_event = {
+
+	id = 2061
+
+	trigger = {
+		age = 10
+		not = { age = 16 }
+		not = { num_of_friends = 1 }
+		country = {
+			any_character = {
+				age = 10
+				not = { age = 16 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 0.8
+			charisma = 9
+		}
+		modifier = {
+			factor = 0.8
+			charisma = 8
+		}
+		modifier = {
+			factor = 0.8
+			charisma = 7
+		}
+		modifier = {
+			factor = 0.9
+			traits = good_natured
+		}
+		modifier = {
+			factor = 0.9
+			traits = generous
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			traits = unhealthy
+		}
+		modifier = {
+			factor = 1.1
+			traits = unnoticeable
+		}
+		modifier = {
+			factor = 1.1
+			traits = selfish
+		}
+		modifier = {
+			factor = 1.1
+			traits = cruel
+		}
+	}
+
+	title = "EVTNAME2060"
+
+	desc = "EVTDESC2060"
+
+	option = {
+		name = "EVTOPTA2060"					# That's good to hear
+		country = {
+			random_character = {
+				limit = { age = 10 not = { age = 16 } }
+				add_friend = this
+			}
+		}
+	}
+}
+
+#################################################
+#		Sticky Fingers			#
+#################################################
+character_event = {
+
+	id = 2062
+
+	trigger = {
+		is_female = no
+		not = { loyalty = 50 }
+		not = { traits = generous }
+		not = { traits = self_controlled }
+		not = { traits = modest }
+		or = {
+			traits = tolerant
+			traits = good_natured
+			traits = lapsed
+			traits = arbitrary
+			traits = corrupt
+			traits = incapable
+			traits = lustful
+			traits = selfish
+			traits = deceitful
+			traits = reckless
+			traits = ambitious
+			traits = jealous
+		}
+		any_child = {
+			is_female = no
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = deceitful }
+			not = { traits = arbitrary }
+			not = { traits = corrupt }
+			not = { traits = honest }
+			not = { traits = just }
+			not = { traits = righteous }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 1.2
+			finesse = 9
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 8
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+	}
+
+	title = "EVTNAME2062"
+
+	desc = "EVTDESC2062"
+
+	option = {
+		name = "EVTOPTA2062"					# It's hopeless...
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = deceitful } }
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = arbitrary } }
+			30 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = corrupt } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2062"					# Nothing is ever hopeless
+		random_list = {
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = honest } }
+			35 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = just } }
+			30 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = righteous } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2063
+
+	trigger = {
+		is_female = no
+		not = { loyalty = 50 }
+		not = { traits = generous }
+		not = { traits = self_controlled }
+		not = { traits = modest }
+		or = {
+			traits = tolerant
+			traits = good_natured
+			traits = lapsed
+			traits = arbitrary
+			traits = corrupt
+			traits = incapable
+			traits = lustful
+			traits = selfish
+			traits = deceitful
+			traits = reckless
+			traits = ambitious
+			traits = jealous
+		}
+		any_child = {
+			is_female = yes
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = deceitful }
+			not = { traits = arbitrary }
+			not = { traits = corrupt }
+			not = { traits = honest }
+			not = { traits = just }
+			not = { traits = righteous }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 1.2
+			finesse = 9
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 8
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 7
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 1 }
+		}
+	}
+
+	title = "EVTNAME2063"
+
+	desc = "EVTDESC2063"
+
+	option = {
+		name = "EVTOPTA2063"					# It's hopeless...
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = deceitful } }
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = arbitrary } }
+			30 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = corrupt } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2063"					# Nothing is ever hopeless
+		random_list = {
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = honest } }
+			35 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = just } }
+			30 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = righteous } }
+		}
+	}
+}
+
+#################################################
+#		Wonderchild			#
+#################################################
+character_event = {
+
+	id = 2064
+
+	trigger = {
+		is_female = no
+		not = { traits = arbitrary }
+		or = {
+			traits = silver_tongued
+			traits = devout
+			traits = crafty
+			traits = pious
+			traits = original_thinker
+			traits = founder
+			traits = inventor
+			traits = intelligent
+			traits = shrewd
+			traits = prominent
+			traits = loving
+			traits = ambitious
+			traits = wise
+			traits = orator
+			traits = victorious
+			traits = conqueror
+			traits = tactician
+			traits = disciplined
+		}
+		any_child = {
+			is_female = no
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = inventor }
+			not = { traits = founder }
+			not = { traits = cold }
+			not = { traits = narrowminded }
+			not = { traits = incapable }
+			not = { traits = loving }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 1.2
+			finesse = 9
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 8
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 7
+		}
+		modifier = {
+			factor = 1.2
+			military = 9
+		}
+		modifier = {
+			factor = 1.2
+			military = 8
+		}
+		modifier = {
+			factor = 1.2
+			military = 7
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 1 }
+		}
+	}
+
+	title = "EVTNAME2064"
+
+	desc = "EVTDESC2064"
+
+	option = {
+		name = "EVTOPTA2064"					# Well it kind of runs in the family
+		random_list = {
+			34 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = inventor } }
+			33 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = founder } }
+			33 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = cold } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2064"					# Oh? I haven't really noticed
+		random_list = {
+			34 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = narrowminded } }
+			33 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = incapable } }
+			33 = { random_child = { limit = { is_female = no age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = loving } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2065
+
+	trigger = {
+		is_female = no
+		not = { traits = arbitrary }
+		or = {
+			traits = silver_tongued
+			traits = devout
+			traits = crafty
+			traits = pious
+			traits = original_thinker
+			traits = founder
+			traits = inventor
+			traits = intelligent
+			traits = shrewd
+			traits = prominent
+			traits = loving
+			traits = ambitious
+			traits = wise
+			traits = orator
+			traits = victorious
+			traits = conqueror
+			traits = tactician
+			traits = disciplined
+		}
+		any_child = {
+			is_female = yes
+			age = 3
+			not = { age = 8 }
+			not = { num_of_traits = 2 }
+			not = { traits = inventor }
+			not = { traits = founder }
+			not = { traits = cold }
+			not = { traits = narrowminded }
+			not = { traits = incapable }
+			not = { traits = loving }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 1.2
+			finesse = 9
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 8
+		}
+		modifier = {
+			factor = 1.2
+			finesse = 7
+		}
+		modifier = {
+			factor = 1.2
+			military = 9
+		}
+		modifier = {
+			factor = 1.2
+			military = 8
+		}
+		modifier = {
+			factor = 1.2
+			military = 7
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { military = 1 }
+		}
+	}
+
+	title = "EVTNAME2065"
+
+	desc = "EVTDESC2065"
+
+	option = {
+		name = "EVTOPTA2065"					# Well it kind of runs in the family
+		random_list = {
+			34 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = inventor } }
+			33 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = founder } }
+			33 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = cold } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2065"					# Oh? I haven't really noticed
+		random_list = {
+			34 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = narrowminded } }
+			33 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = incapable } }
+			33 = { random_child = { limit = { is_female = yes age = 3 not = { age = 8 } not = { num_of_traits = 2 } } add_trait = loving } }
+		}
+	}
+}
+
+#################################################
+#		Aggressive Child		#
+#################################################
+character_event = {
+
+	id = 2066
+
+	trigger = {
+		is_female = no
+		not = { charisma = 3 }
+		not = { traits = loving }
+		not = { traits = good_natured }
+		not = { traits = generous }
+		any_child = {
+			is_female = no
+			age = 3
+			not = { age = 16 }
+			not = { num_of_traits = 1 }
+			not = { traits = reckless }
+			not = { traits = secure }
+			not = { traits = foolish }
+			not = { traits = cautious }
+			not = { traits = jealous }
+			not = { traits = shrewd }
+			not = { traits = vengeful }
+			not = { traits = forgiving }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 1 }
+		}
+	}
+
+	title = "EVTNAME2066"
+
+	desc = "EVTDESC2066"
+
+	option = {
+		name = "EVTOPTA2066"					# Talk? What good will that do?
+		random_list = {
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = reckless } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = secure } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = foolish } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = vengeful } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2066"					# I'll try to be more attentive
+		random_list = {
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = cautious } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = jealous } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = shrewd } }
+			25 = { random_child = { limit = { is_female = no age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = forgiving } }
+		}
+	}
+}
+
+character_event = {
+
+	id = 2067
+
+	trigger = {
+		is_female = no
+		not = { charisma = 3 }
+		not = { traits = loving }
+		not = { traits = good_natured }
+		not = { traits = generous }
+		any_child = {
+			is_female = yes
+			age = 3
+			not = { age = 16 }
+			not = { num_of_traits = 1 }
+			not = { traits = reckless }
+			not = { traits = secure }
+			not = { traits = foolish }
+			not = { traits = cautious }
+			not = { traits = jealous }
+			not = { traits = shrewd }
+			not = { traits = vengeful }
+			not = { traits = forgiving }
+		}		
+	}
+
+	mean_time_to_happen = {
+		months = 72
+
+		modifier = {
+			factor = 0.9
+			not = { charisma = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { charisma = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			not = { finesse = 1 }
+		}
+	}
+
+	title = "EVTNAME2067"
+
+	desc = "EVTDESC2067"
+
+	option = {
+		name = "EVTOPTA2067"					# Talk? What good will that do?
+		random_list = {
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = reckless } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = secure } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = foolish } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = vengeful } }
+		}
+	}
+	option = {
+		name = "EVTOPTB2067"					# I'll try to be more attentive
+		random_list = {
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = cautious } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = jealous } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = shrewd } }
+			25 = { random_child = { limit = { is_female = yes age = 3 not = { age = 16 } not = { num_of_traits = 1 } } add_trait = forgiving } }
+		}
+	}
+}
